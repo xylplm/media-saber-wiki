@@ -1,5 +1,5 @@
 {
-  "name": "theme-vdoing-doc",
+  "name": "media-saber-wiki",
   "version": "1.0.0",
   "scripts": {
     "dev": "vuepress dev docs",
