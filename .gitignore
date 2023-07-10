@@ -6,7 +6,7 @@ yarn-error.log
 # vscode
 .vscode
 
-#yarn
+# yarn
 yarn.lock
 
 # vuepress
@@ -17,3 +17,12 @@ urls.txt
 
 # mac
 .DS_Store
+
+# python venv
+venv/
+__pycache__/
+
+# python bot config & log
+code/config/config.json
+nohup.log
+bot.log
