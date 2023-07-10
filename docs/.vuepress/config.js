@@ -23,13 +23,9 @@ module.exports = {
       { text: '主页', link: '/' },
       { text: '文档', link: '/docs/' },
       { text: '示例', link: '/exp/' },
-      {
-        text: 'Github',
-        items: [{ text: 'khl.py', link: 'https://github.com/TWT233/khl.py' },
-        { text: 'khl.py.docs', link: 'https://github.com/musnows/khl.py.docs' }
-      ]
-      },
-      { text: 'KOOK', link: 'https://kook.top/exKy0f' },
+      { text: '社区', link: 'https://hub.docker.com/r/xylplm/media-saber' },
+      { text: '反馈', link: 'https://github.com/xylplm/media-saber-wiki/issues' },
+      { text: 'Docker', link: 'https://hub.docker.com/r/xylplm/media-saber' },
     ],
     sidebarDepth: 2, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
     logo: '/img/logo.png', // 导航栏logo
@@ -64,27 +60,12 @@ module.exports = {
     // archive: false, // 是否打开归档功能，默认true。 如打开，会做的事情有：1.自动生成归档页面（在@pages文件夹）。如关闭，则反之。
 
     author: { // 文章默认的作者信息，可在md文件中单独配置此信息 String | {name: String, href: String}
-      name: 'musnows', // 必需
-      href: 'https://github.com/musnows/khl.py.docs' // 可选的
-    },
-    social: { // 社交图标，显示于博主信息栏和页脚栏
-      iconfontCssFile: '//at.alicdn.com/t/c/font_4089315_n2ftippjofe.css', // 可选，阿里图标库在线css文件地址，对于主题没有的图标可自由添加
-      icons: [
-        {
-          iconClass: 'icon-github',
-          title: 'GitHub',
-          link: 'https://github.com/musnows/khl.py.docs'
-        },
-        {
-          iconClass: 'icon-a-huitu61',
-          title: 'KOOK',
-          link: 'https://kook.top/exKy0f'
-        }
-      ]
+      name: 'xylplm', // 必需
+      href: '' // 可选的
     },
     footer: { // 页脚信息
       createYear: 2023, // 博客创建年份
-      copyrightInfo: 'khl.py | MIT License', // 博客版权信息，支持a标签
+      copyrightInfo: 'msaber.fun | MIT License', // 博客版权信息，支持a标签
     },
     htmlModules,
   },
