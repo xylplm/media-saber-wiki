@@ -21,7 +21,7 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: '主页', link: '/' },
-      { text: '文档', link: '/pages/docs/start/info/' },
+      { text: '文档', link: '/docs/start/info/' },
       { text: '反馈', link: 'https://github.com/xylplm/media-saber-wiki/issues' },
       { text: 'Docker', link: 'https://hub.docker.com/r/xylplm/media-saber' },
     ],
