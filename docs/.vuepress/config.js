@@ -135,7 +135,7 @@ module.exports = {
         },
       },
     ],
-    [
+    /*  [
       "vuepress-plugin-vdoing-comment",
       {
         choosen: "artalk",
@@ -147,7 +147,7 @@ module.exports = {
           // disablePreview: false // 是否禁用预览（可选）
         },
       },
-    ],
+    ], */
   ],
 
   markdown: {
