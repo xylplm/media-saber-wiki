@@ -12,7 +12,7 @@ module.exports = {
   head: [ // 注入到页面<head> 中的标签，格式[tagName, { attrName: attrValue }, innerHTML?]
     ['link', { rel: 'icon', href: '/img/logo.png' }], //favicons，资源放在public文件夹
     ['meta', { name: 'keywords', content: 'vuepress,theme,blog,vdoing' }],
-    ['meta', { name: 'theme-color', content: '#11a8cd' }], // 移动浏览器主题颜色
+    ['meta', { name: 'theme-color', content: '#5e72e4' }], // 移动浏览器主题颜色
     ['script', { charset: 'UTF-8', id: 'LA_COLLECT', src: '//sdk.51.la/js-sdk-pro.min.js' }],
     ['script', {}, `LA.init({id:"K4jpll24hC6vwBJ0",ck:"K4jpll24hC6vwBJ0"})`]
   ],
@@ -21,9 +21,7 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: '主页', link: '/' },
-      { text: '文档', link: '/docs/' },
-      { text: '示例', link: '/exp/' },
-      { text: '社区', link: 'https://hub.docker.com/r/xylplm/media-saber' },
+      { text: '文档', link: '/pages/docs/start/info/' },
       { text: '反馈', link: 'https://github.com/xylplm/media-saber-wiki/issues' },
       { text: 'Docker', link: 'https://hub.docker.com/r/xylplm/media-saber' },
     ],
@@ -73,7 +71,7 @@ module.exports = {
   // 插件
   plugins: [
     // [require('./plugins/love-me'), { // 鼠标点击爱心特效
-    //   color: '#11a8cd', // 爱心颜色，默认随机色
+    //   color: '#5e72e4', // 爱心颜色，默认随机色
     //   excludeClassName: 'theme-vdoing-content' // 要排除元素的class, 默认空''
     // }],
 
