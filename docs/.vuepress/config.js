@@ -12,8 +12,8 @@ module.exports = {
     ["link", { rel: "icon", href: "/img/logo.png" }], //favicons，资源放在public文件夹
     ["meta", { name: "keywords", content: "vuepress,theme,blog,vdoing" }],
     ["meta", { name: "theme-color", content: "#5e72e4" }], // 移动浏览器主题颜色
-    ["script", { charset: "UTF-8", id: "LA_COLLECT", src: "//sdk.51.la/js-sdk-pro.min.js" }],
-    ["script", {}, `LA.init({id:"K4jpll24hC6vwBJ0",ck:"K4jpll24hC6vwBJ0"})`],
+    /*  ["script", { charset: "UTF-8", id: "LA_COLLECT", src: "//sdk.51.la/js-sdk-pro.min.js" }], */
+    /* ["script", {}, `LA.init({id:"K4jpll24hC6vwBJ0",ck:"K4jpll24hC6vwBJ0"})`], */
   ],
 
   // 主题配置
