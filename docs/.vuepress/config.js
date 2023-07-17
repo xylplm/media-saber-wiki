@@ -22,6 +22,7 @@ module.exports = {
       { text: "主页", link: "/" },
       { text: "文档", link: "/docs/start/info/" },
       { text: "更新日志", link: "/docs/start/update_version/" },
+      { text: "赞助", link: "/docs/start/zhanzhu" },
       { text: "反馈", link: "https://github.com/xylplm/media-saber-wiki/issues" },
       { text: "Docker", link: "https://hub.docker.com/r/xylplm/media-saber" },
     ],
