@@ -20,7 +20,7 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: "主页", link: "/" },
-      { text: "新手指引", link: "/guide/" },
+      { text: "新手指引", link: "/guide/start/info/" },
       { text: "使用文档", link: "/docs/start/info/" },
       { text: "更新日志", link: "/update_version/" },
       { text: "客户端", link: "/client/start/info/" },
