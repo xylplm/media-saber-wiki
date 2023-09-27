@@ -20,12 +20,22 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: "主页", link: "/" },
-      { text: "新手指引", link: "/guide/start/info/" },
+      {
+        text: "新手指引",
+        link: "/guide/start/info/",
+        items: [
+          { text: "开始", link: "/guide/start/info/" },
+          { text: "如何安装", link: "/guide/install/start/" },
+        ],
+      },
       { text: "使用文档", link: "/docs/start/info/" },
       { text: "更新日志", link: "/update_version/" },
       { text: "客户端", link: "/client/start/info/" },
       { text: "赞助", link: "/zhanzhu/" },
-      { text: "反馈", link: "https://github.com/xylplm/media-saber-wiki/issues" },
+      {
+        text: "反馈",
+        link: "https://github.com/xylplm/media-saber-wiki/issues",
+      },
       { text: "Docker", link: "https://hub.docker.com/r/xylplm/media-saber" },
     ],
     sidebarDepth: 2, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
@@ -106,7 +116,10 @@ module.exports = {
       "one-click-copy",
       {
         // 代码块复制按钮
-        copySelector: ['div[class*="language-"] pre', 'div[class*="aside-code"] aside'], // String or Array
+        copySelector: [
+          'div[class*="language-"] pre',
+          'div[class*="aside-code"] aside',
+        ], // String or Array
         copyMessage: "复制成功", // default is 'Copy successfully and then paste it for use.'
         duration: 1000, // prompt message display time.
         showInMobile: false, // whether to display on the mobile side, default: false.
