@@ -20,11 +20,11 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: "主页", link: "/" },
-      { text: "新手指引", link: "/pages/guide/start/info/" },
-      { text: "使用文档", link: "/pages/docs/start/info/" },
-      { text: "更新日志", link: "/pages/update_version/" },
-      { text: "客户端", link: "/pages/client/start/info/" },
-      { text: "赞助", link: "/pages/zhanzhu/" },
+      { text: "新手指引", link: "/guide/start/info/" },
+      { text: "使用文档", link: "/docs/start/info/" },
+      { text: "更新日志", link: "/update_version/" },
+      { text: "客户端", link: "/client/start/info/" },
+      { text: "赞助", link: "/zhanzhu/" },
       { text: "反馈", link: "https://github.com/xylplm/media-saber-wiki/issues" },
       { text: "Docker", link: "https://hub.docker.com/r/xylplm/media-saber" },
     ],
