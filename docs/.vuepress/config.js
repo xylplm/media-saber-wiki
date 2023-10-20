@@ -1,5 +1,5 @@
 const htmlModules = require("./config/htmlModules.js");
-const htmlModules = require('./config/nav.js');
+const nav = require('./config/nav.js');
 
 module.exports = {
   theme: "vdoing", // 使用依赖包主题
