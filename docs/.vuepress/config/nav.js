@@ -46,4 +46,4 @@ module.exports = [
     link: "https://github.com/xylplm/media-saber-wiki/issues",
   },
   { text: "Docker", link: "https://hub.docker.com/r/xylplm/media-saber" },
-],
+];
