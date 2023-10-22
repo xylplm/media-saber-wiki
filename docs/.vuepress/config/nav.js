@@ -29,9 +29,9 @@ module.exports = [
 
   {
     text: '客户端',
-    link: '/guide/start/info/',
+    link: '/client/start/info',
     items: [
-      { text: '开始', link: '/guide/start/info/' },
+      { text: '开始', link: '/client/start/info' },
       { text: 'IOS客户端', link: '/client/ios/install' },
       { text: 'Android客户端', link: '/client/android/info/' },
     ],
