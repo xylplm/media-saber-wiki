@@ -29,10 +29,10 @@ module.exports = [
 
   {
     text: '客户端',
-    link: '/client/start/info',
+    link: '/client/start/info/',
     items: [
-      { text: '开始', link: '/client/start/info' },
-      { text: 'IOS客户端', link: '/client/ios/install' },
+      { text: '开始', link: '/client/start/info/' },
+      { text: 'IOS客户端', link: '/client/ios/install/' },
       { text: 'Android客户端', link: '/client/android/info/' },
     ],
   },
