@@ -28,8 +28,6 @@ module.exports = [
     ],
   },
 
-  { text: "更新日志", link: "/update_version/" },
-
   {
     text: '客户端',
     link: '/client/start/info/',
@@ -39,6 +37,8 @@ module.exports = [
       { text: 'Android客户端', link: '/client/android/info/' },
     ],
   },
+
+  { text: "更新日志", link: "/update_version/" },
 
   { text: "赞助", link: "/zhanzhu/" },
   {
