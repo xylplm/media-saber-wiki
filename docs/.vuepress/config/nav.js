@@ -14,9 +14,8 @@ module.exports = [
 
   {
     text: '使用文档',
-    link: '/docs/start/info/',
+    link: '/docs/use/media_library/',
     items: [
-      { text: '开始', link: '/docs/start/info/' },
       { text: '功能使用', link: '/docs/use/media_library/' },
       { text: '系统设置', link: '/docs/setting/base/' },
       { text: '系统插件', link: '/docs/plugin/info/'},
@@ -30,7 +29,7 @@ module.exports = [
 
   {
     text: '客户端',
-    link: '/client/start/info/',
+    link: '/guide/start/info/',
     items: [
       { text: '开始', link: '/guide/start/info/' },
       { text: 'IOS客户端', link: '/client/ios/install' },
