@@ -14,15 +14,13 @@ module.exports = [
 
   {
     text: '使用文档',
-    link: '/docs/use/media_library/',
+    link: '/docs/server/library/',
     items: [
-      { text: '功能使用', link: '/docs/use/media_library/' },
-      { text: '系统设置', link: '/docs/setting/base/' },
-      { text: '系统插件', link: '/docs/plugin/info/'},
-      { text: '辅助功能', link: '/docs/tools/info/'},
-      { text: '外联服务', link: '/docs/link_service/info/'},
-      { text: '站点配置', link: '/docs/sites/setting/'},
-      { text: '媒体服务', link: '/docs/setting/ugos/'},
+      { text: '媒体服务', link: '/docs/server/library/' },
+      { text: '站点管理', link: '/docs/sites/setting/' },
+      { text: '媒体管理', link: '/docs/media/subscribe/'},
+      { text: '我的插件', link: '/docs/plugin/info/'},
+      { text: '系统设置', link: '/docs/setting/base/'},
       { text: '其它', link: '/docs/other/glossary/'},
     ],
   },
