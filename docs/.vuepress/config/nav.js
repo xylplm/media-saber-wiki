@@ -8,7 +8,7 @@ module.exports = [
       { text: '开始', link: '/guide/start/info/' },
       { text: '如何安装', link: '/guide/install/start/' },
       { text: '初始化配置', link: '/guide/init/setting/' },
-      { text: '如何更新', link: '/guide/update_version/start/'},
+      { text: '如何更新', link: '/guide/update_version/ugreen/'},
     ],
   },
 
@@ -17,7 +17,7 @@ module.exports = [
     link: '/docs/server/library/',
     items: [
       { text: '媒体服务', link: '/docs/server/library/' },
-      { text: '站点管理', link: '/docs/sites/setting/' },
+      { text: '站点管理', link: '/docs/sites/site/' },
       { text: '媒体管理', link: '/docs/media/subscribe/'},
       { text: '我的插件', link: '/docs/plugin/info/'},
       { text: '系统设置', link: '/docs/setting/base/'},
