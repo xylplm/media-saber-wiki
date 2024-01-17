@@ -24,3 +24,13 @@ features:
 # 文章列表显示方式: detailed 默认，显示详细版文章列表（包括作者、分类、标签、摘要、分页等）| simple => 显示简约版文章列表（仅标题和日期）| none 不显示文章列表
 postList: none
 ---
+## 🎉 诚邀加入
+
+欢迎各路大佬加盟MS，让它更健壮的走下去。
+目前MS坑位有限，技术大佬优先加入！只要技术栈是vue、python、flutter、swift、GO、会写NT规则、会基本的Html+CSS、会站点适配的其中一种的大佬，均可优先加入。
+满足条件的大佬可在[Issue](https://github.com/xylplm/media-saber-wiki/issues)留下邮箱，接收邀请。
+
+## ⚡ 反馈与交流
+
+在使用过程中有任何问题和想法，请给我提 [Issue](https://github.com/xylplm/media-saber-wiki/issues)。
+你也可以在Issue查看别人提的问题和给出解决方案。
