@@ -94,6 +94,14 @@ module.exports = {
     // }],
 
     [
+      'robots', {
+        host: "https://wiki.msaber.fun",
+        disallowAll: true,
+        sitemap: "/assets/xml/sitemap.xml",
+    },
+    ]
+
+    [
       "one-click-copy",
       {
         // 代码块复制按钮
