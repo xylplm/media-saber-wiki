@@ -24,6 +24,7 @@
     "yamljs": "^0.3.0"
   },
   "dependencies": {
+    "vuepress-plugin-robots": "^1.0.1",
     "vuepress-plugin-vdoing-comment": "^1.1.0"
   }
 }
