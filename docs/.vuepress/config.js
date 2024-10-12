@@ -155,6 +155,9 @@ module.exports = {
         },
       },
     ], */
+    [
+      "vuepress-plugin-mermaidjs"
+    ]
   ],
 
   markdown: {
