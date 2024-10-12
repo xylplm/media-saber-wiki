@@ -156,7 +156,7 @@ module.exports = {
       },
     ], */
     [
-      "mermaidjs"
+      "vuepress-plugin-mermaidjs"
     ]
   ],
 
