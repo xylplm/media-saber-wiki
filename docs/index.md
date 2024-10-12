@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /img/logo-blue.png
-heroText: Media Saber
+heroText: Media Saber (Old Python)
 tagline: 一款方便好用的媒体管理工具
 # actionText: 快速上手
 # actionLink: /docs/use/media_library/
