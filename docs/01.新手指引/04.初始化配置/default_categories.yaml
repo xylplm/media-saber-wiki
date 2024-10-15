@@ -1,0 +1,37 @@
+- name: 电影
+  subCategories:
+    - name: 动画电影
+      movieGenres: [ 16 ]
+    - name: 华语电影
+      movieGenres: [ 28, 12, 16, 35, 80, 99, 18, 10751, 14, 36, 27, 10402, 9648, 10749, 878, 10770, 53, 10752, 37 ]
+      originalLanguages: [ zh, cn, bo, za ]
+    - name: 外语电影
+      movieGenres: [ 28, 12, 16, 35, 80, 99, 18, 10751, 14, 36, 27, 10402, 9648, 10749, 878, 10770, 53, 10752, 37 ]
+- name: 电视剧
+  subCategories:
+    - name: 纪录片
+      tvGenres: [ 99 ]
+    - name: 儿童
+      tvGenres: [ 10762 ]
+    - name: 综艺
+      tvGenres: [ 10764, 10767 ]
+    - name: 国产剧
+      tvGenres: [ 10759, 16, 35, 80, 99, 18, 10751, 10762, 9648, 10763, 10764, 10765, 10766, 10767, 10768, 37 ]
+      originCountry: [ CN, TW, HK ]
+    - name: 欧美剧
+      tvGenres: [ 10759, 16, 35, 80, 99, 18, 10751, 10762, 9648, 10763, 10764, 10765, 10766, 10767, 10768, 37 ]
+      originCountry: [ US, FR, GB, DE, ES, IT, NL, PT, RU, UK ]
+    - name: 日韩剧
+      tvGenres: [ 10759, 16, 35, 80, 99, 18, 10751, 10762, 9648, 10763, 10764, 10765, 10766, 10767, 10768, 37 ]
+      originCountry: [ JP, KP, KR, TH, IN, SG ]
+- name: 动漫
+  subCategories:
+    - name: 国漫
+      tvGenres: [ 16 ]
+      originCountry: [ CN ]
+    - name: 日番
+      tvGenres: [ 16 ]
+      originCountry: [ JP ]
+- name: 未分类
+  subCategories:
+    - name: 未分类
