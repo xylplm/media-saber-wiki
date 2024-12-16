@@ -37,7 +37,7 @@ module.exports = [
 
   { text: "更新日志", link: "/update_version/" },
 
-  { text: "赞助", link: "/zhanzhu/" },
+  { text: "赞赏", link: "/zanshang/" },
   {
     text: "反馈",
     link: "https://github.com/xylplm/media-saber-wiki/issues",
