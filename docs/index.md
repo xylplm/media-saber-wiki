@@ -27,7 +27,7 @@ postList: none
 ## 🎉 诚邀加入
 
 欢迎各路大佬加盟MS，让它更健壮的走下去。
-目前MS坑位有限，技术大佬优先加入！只要技术栈是vue、python、flutter、swift、GO、会写NT规则、会基本的Html+CSS、会站点适配的其中一种的大佬，均可优先加入。
+目前Media Saber坑位已满，仅限技术大佬加入！只要技术栈是Angular、flutter、GO、会Html+CSS、会站点适配（需要html+CSS基础知识）的其中一种的大佬，均可优先加入。
 满足条件的大佬可在[Issue](https://github.com/xylplm/media-saber-wiki/issues)留下邮箱，接收邀请。
 
 ## ⚡ 反馈与交流
