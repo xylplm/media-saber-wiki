@@ -9,6 +9,7 @@ module.exports = [
       { text: '如何安装', link: '/guide/install/start/' },
       { text: '如何更新', link: '/guide/update_version/ugreen/'},
       { text: '初始化配置', link: '/guide/init/setting/' },
+      { text: '进阶教程', link: '/guide/advanced/start/' },
     ],
   },
 
@@ -34,6 +35,8 @@ module.exports = [
       { text: 'Android客户端', link: '/client/android/install/' },
     ],
   },
+
+  { text: "浏览器扩展", link: "/brower_tool/" },
 
   { text: "更新日志", link: "/update_version/" },
 
