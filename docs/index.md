@@ -2,7 +2,7 @@
 home: true
 heroImage: /img/logo-blue.png
 heroText: Media Saber
-tagline: 一款方便好用的媒体管理工具
+tagline: 由多位热心Pter共同努力，立足于开发自用，完全自主开发，做一款全新、高效、稳定、快速、方便好用、功能强大的媒体管理工具！
 # actionText: 快速上手
 # actionLink: /docs/use/media_library/
 bannerBg: none # auto => 网格纹背景(有bodyBgImg时无背景)，默认 | none => 无 | '大图地址' | background: 自定义背景样式       提示：如发现文本颜色不适应你的背景时可以到palette.styl修改$bannerTextColor变量
