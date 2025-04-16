@@ -8,7 +8,7 @@ module.exports = [
       { text: '开始', link: '/guide/start/info/' },
       { text: '如何安装', link: '/guide/install/start/' },
       { text: '如何更新', link: '/guide/update_version/ugreen/'},
-      { text: '初始化配置', link: '/guide/init/setting/' },
+      { text: '初始化配置', link: '/guide/init/initialize/' },
       { text: '进阶教程', link: '/guide/advanced/start/' },
     ],
   },
