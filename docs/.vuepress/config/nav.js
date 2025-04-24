@@ -17,7 +17,7 @@ module.exports = [
     text: '使用文档',
     link: '/docs/main_page/index/',
     items: [
-      { text: '主界面', link: '/docs/main_page/index/' },
+      { text: '首页', link: '/docs/main_page/index/' },
       { text: '媒体服务', link: '/docs/server/library/' },
       { text: '寻影探剧', link: '/docs/explore_series/drama_rankings/' },
       { text: '搜索', link: '/docs/search/search/' },
