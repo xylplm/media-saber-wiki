@@ -58,21 +58,26 @@ docker pull xylplm/media-saber:latest
 
 <div style="text-align: left; display: inline-block;">
 
+<span style="font-size: 16px;">👨‍💼 **CTO**：<span style="color: #3f51b5; font-weight: bold;">xbclub 🇸 🇮 🇩 🇪</span></span><br>
+
+<span style="font-size: 16px;">🐋 **Docker 免费代理**：<span style="color: #4caf50; font-weight: bold;">xbclub 🇸 🇮 🇩 🇪</span></span><br>
+
+<span style="font-size: 16px;">🤖 **AI**：<span style="color: #9c27b0; font-weight: bold;">xbclub 🇸 🇮 🇩 🇪</span></span><br>
+
+<span style="font-size: 16px;">💾 **服务器赞助商**：<span style="color: #607d8b; font-weight: bold;">Levies</span></span><br>
+
+<span style="font-size: 16px;">🎨 **图标设计师**：<span style="color: #ff4081; font-weight: bold;">卷王、东叔</span></span><br>
+
 <span style="font-size: 16px;">💻 **前端开发**：<span style="color: #2196f3; font-weight: bold;">xylplm 逍遥乐、syueya 夏夏子、Jolc、zjjxwhh Hervey、ufocjm Debugger.C、huangpj0210 未命名</span></span><br>
 
 <span style="font-size: 16px;">🛠️ **后端开发**：<span style="color: #4caf50; font-weight: bold;">Jolc、ufocjm Debugger.C、xylplm 逍遥乐、onlyLTY 唯依、syueya 夏夏子、huangpj0210 未命名、xxww0098、xbclub 🇸 🇮 🇩 🇪、HasakyZoro 疾风剑豪索隆、spiritMC、xiaonaiquan、AllenPu2020</span></span><br>
 
 <span style="font-size: 16px;">📱 **移动端开发**：<span style="color: #9c27b0; font-weight: bold;">奥特曼—迪迦</span></span><br>
 
-<span style="font-size: 16px;">🎨 **图标设计师**：<span style="color: #ff4081; font-weight: bold;">卷王、东叔</span></span><br>
-
 <span style="font-size: 16px;">🧩 **站点适配**：<span style="color: #673ab7; font-weight: bold;">mantou568、Jolc、傑仔、四丿季、zjjxwhh、Yaseen1314、syueya、iovejieba、xylplm、jackloves111</span></span><br>
 
 <span style="font-size: 16px;">🧪 **软件测试**：<span style="color: #ff9800; font-weight: bold;">四丿季、傑仔、紫邪、dingding、苹果、Harry</span></span><br>
 
-<span style="font-size: 16px;">💾 **服务器赞助商**：<span style="color: #607d8b; font-weight: bold;">Levies</span></span><br>
-
-<span style="font-size: 16px;">🐳 **Docker 部署**：<span style="color: #009688; font-weight: bold;">DDSRem</span></span><br>
 
 <span style="font-size: 16px;">🎉 **热心支持者**：<span style="color: #ff5722; font-weight: bold;">雨十一</span> —— 提供宝贵经验与无私分享</span><br>
 
@@ -87,3 +92,4 @@ docker pull xylplm/media-saber:latest
 </div>
 
 ---
+
