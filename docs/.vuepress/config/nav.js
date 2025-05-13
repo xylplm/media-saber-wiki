@@ -50,7 +50,7 @@ module.exports = [
   { text: "鸣谢", link: "/Acknowledgements/" },
   {
     text: "反馈",
-    link: "https://github.com/xylplm/media-saber-wiki/issues",
+    link: "https://github.com/xylplm/media-saber-public/issues",
   },
   { text: "Docker", link: "https://hub.docker.com/r/xylplm/media-saber" },
 ];
