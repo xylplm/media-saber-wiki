@@ -7,7 +7,7 @@ module.exports = [
     items: [
       { text: '开始', link: '/guide/start/info/' },
       { text: '如何安装', link: '/guide/install/start/' },
-      { text: '如何更新', link: '/guide/update_version/ugreen/'},
+      { text: '如何更新', link: '/guide/update_version/dc/'},
       { text: '初始化配置', link: '/guide/init/initialize/' },
       { text: '进阶教程', link: '/guide/advanced/start/' },
     ],
@@ -50,7 +50,7 @@ module.exports = [
   { text: "鸣谢", link: "/Acknowledgements/" },
   {
     text: "反馈",
-    link: "https://github.com/xylplm/media-saber-wiki/issues",
+    link: "https://github.com/xylplm/media-saber-public/issues",
   },
   { text: "Docker", link: "https://hub.docker.com/r/xylplm/media-saber" },
 ];

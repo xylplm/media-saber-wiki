@@ -27,7 +27,7 @@ Docker：https://hub.docker.com/repository/docker/xylplm/media-saber
 
 目前Media Saber坑位已满，仅限技术大佬加入！只要技术栈是Angular、flutter、GO、会Html+CSS、会站点适配（需要html+CSS基础知识）的其中一种的大佬，均可优先加入。
 
-满足条件的大佬可在[Issue](https://github.com/xylplm/media-saber-wiki/issues)留下邮箱，接收邀请。
+满足条件的大佬可在[Issue](https://github.com/xylplm/media-saber-public/issues)留下邮箱，接收邀请。
 
 ## 安装
 
@@ -42,7 +42,7 @@ docker pull xylplm/media-saber:latest
 
 ## ⚡ 反馈与交流
 
-在使用过程中有任何问题和想法，请给我提 [Issue](https://github.com/xylplm/media-saber-wiki/issues)。
+在使用过程中有任何问题和想法，请给我提 [Issue](https://github.com/xylplm/media-saber-public/issues)。
 你也可以在Issue查看别人提的问题和给出解决方案。
 
 ## ⚠️ 免责声明
