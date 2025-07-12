@@ -40,10 +40,9 @@ module.exports = [
       { text: '开始', link: '/client/start/info/' },
       { text: 'IOS客户端', link: '/client/ios/install/' },
       { text: 'Android客户端', link: '/client/android/install/' },
+      { text: "浏览器扩展", link: "/client/brower_tool/" },
     ],
   },
-
-  { text: "浏览器扩展", link: "/brower_tool/" },
 
   { text: "更新日志", link: "/update_version/" },
 
@@ -51,6 +50,5 @@ module.exports = [
   {
     text: "反馈",
     link: "https://github.com/xylplm/media-saber-public/issues",
-  },
-  { text: "Docker", link: "https://hub.docker.com/r/xylplm/media-saber" },
+  }
 ];
