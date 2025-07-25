@@ -26,7 +26,7 @@ module.exports = [
       { text: '下载管理', link: '/docs/download_management/current_downloads/' },
       { text: '目录管理', link: '/docs/directory_management/file_management/' },
       { text: '媒体整理', link: '/docs/media_organization/manual_identification/'},
-      { text: '网盘管理', link: '/docs/cloud_management/115/'},
+      { text: '云端存储', link: '/docs/cloud_management/115/'},
       { text: '修仙秘籍', link: '/docs/cultivation_secrets/main/'},
       { text: '系统设置', link: '/docs/system_settings/basic_settings/'},
       { text: '其它', link: '/docs/other/glossary/'},
