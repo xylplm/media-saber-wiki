@@ -1,0 +1,22 @@
+<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="96" height="96" rx="24" fill="url(#paint0_linear_mobile)"/>
+<rect x="24" y="16" width="24" height="40" rx="4" fill="#424242"/>
+<rect x="26" y="20" width="20" height="30" rx="2" fill="#2196F3"/>
+<circle cx="36" cy="54" r="2" fill="#757575"/>
+<rect x="48" y="24" width="24" height="32" rx="4" fill="#424242"/>
+<rect x="50" y="28" width="20" height="22" rx="2" fill="#4CAF50"/>
+<circle cx="60" cy="54" r="1.5" fill="#757575"/>
+<path d="M30 26L30 44L42 44L42 26L30 26Z" fill="#E3F2FD"/>
+<path d="M54 32L54 46L66 46L66 32L54 32Z" fill="#E8F5E8"/>
+<rect x="32" y="30" width="8" height="1" fill="#1976D2"/>
+<rect x="32" y="34" width="6" height="1" fill="#1976D2"/>
+<rect x="32" y="38" width="7" height="1" fill="#1976D2"/>
+<rect x="56" y="36" width="6" height="1" fill="#2E7D32"/>
+<rect x="56" y="40" width="5" height="1" fill="#2E7D32"/>
+<defs>
+<linearGradient id="paint0_linear_mobile" x1="0" y1="0" x2="96" y2="96" gradientUnits="userSpaceOnUse">
+<stop stop-color="#667EEA"/>
+<stop offset="1" stop-color="#764BA2"/>
+</linearGradient>
+</defs>
+</svg>

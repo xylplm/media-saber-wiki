@@ -1,0 +1,19 @@
+<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="96" height="96" rx="24" fill="url(#paint0_linear_cloud)"/>
+<path d="M24 56C24 49.3726 29.3726 44 36 44C42.6274 44 48 49.3726 48 56" stroke="#03A9F4" stroke-width="4" stroke-linecap="round" fill="none"/>
+<path d="M48 56C48 49.3726 53.3726 44 60 44C66.6274 44 72 49.3726 72 56" stroke="#03A9F4" stroke-width="4" stroke-linecap="round" fill="none"/>
+<ellipse cx="48" cy="56" rx="28" ry="12" fill="#E1F5FE"/>
+<ellipse cx="48" cy="56" rx="24" ry="8" fill="#B3E5FC"/>
+<path d="M40 32L44 36L48 28L52 36L56 32" stroke="#81C784" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M32 40L36 44L40 36L44 44L48 40" stroke="#81C784" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M48 40L52 44L56 36L60 44L64 40" stroke="#81C784" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="28" cy="28" r="2" fill="#4CAF50"/>
+<circle cx="68" cy="28" r="2" fill="#4CAF50"/>
+<circle cx="48" cy="24" r="2" fill="#4CAF50"/>
+<defs>
+<linearGradient id="paint0_linear_cloud" x1="0" y1="0" x2="96" y2="96" gradientUnits="userSpaceOnUse">
+<stop stop-color="#667EEA"/>
+<stop offset="1" stop-color="#764BA2"/>
+</linearGradient>
+</defs>
+</svg>
