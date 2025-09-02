@@ -26,17 +26,17 @@ features:
     
   - title: 🤖 AI智能体
     details: 智能识别、自动整理、MCP服务，让媒体管理更加智能化
-    link: /docs/agent/info/
+    link: /docs/ai/ai/
     imgUrl: /images/ai.svg
     
   - title: 🔍 寻影探剧
     details: 剧榜风云、影踪寻宝、开播日历，发现精彩内容从未如此简单
-    link: /docs/discovery/info/
+    link: /docs/movie_tv_discovery/
     imgUrl: /images/search.svg
     
   - title: ☁️ 云端存储
     details: 多平台云端存储支持，统一管理你的媒体资源
-    link: /docs/storage/info/
+    link: /docs/cloud_storage/
     imgUrl: /images/cloud.svg
 
 # 文章列表显示方式: detailed 默认，显示详细版文章列表（包括作者、分类、标签、摘要、分页等）| simple => 显示简约版文章列表（仅标题和日期）| none 不显示文章列表
