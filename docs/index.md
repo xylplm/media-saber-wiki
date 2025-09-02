@@ -43,6 +43,14 @@ features:
 postList: none
 ---
 
+<style>
+/* 覆盖features hover时的紫色文字 */
+.home-wrapper .banner .banner-conent .feature:hover h2[data-v-7d2bb426], 
+.home-wrapper .banner .banner-conent .feature:hover p[data-v-7d2bb426] {
+    color: #fff !important;
+}
+</style>
+
 <div style="margin: 3rem 0;">
 
 ## ✨ 为什么选择 Media Saber？
@@ -76,17 +84,13 @@ postList: none
 
 ## 🎉 开发者社区
 
-<div style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); padding: 2rem; border-radius: 12px; margin: 2rem 0; text-align: center;">
+<div style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); padding: 1.5rem 2rem; border-radius: 12px; margin: 2rem 0; text-align: center;">
 
-### 欢迎技术大佬加入我们！
+<h3 style="margin: 0 0 1rem 0; font-size: 1.2rem;">欢迎技术大佬加入我们！</h3>
 
-我们正在寻找掌握以下技术栈的开发者：
-- **Angular** 前端开发
-- **Flutter** 移动端开发  
-- **GO** 后端开发
-- **HTML+CSS** 站点适配
+<p style="margin: 0 0 1rem 0; line-height: 1.4;">我们正在寻找掌握以下技术栈的开发者：<strong>Angular</strong> 前端开发 | <strong>Flutter</strong> 移动端开发 | <strong>GO</strong> 后端开发 | <strong>HTML+CSS</strong> 站点适配</p>
 
-**加入方式：** 在 [GitHub Issues](https://github.com/xylplm/media-saber-public/issues) 留下你的邮箱，我们会主动联系你！
+<p style="margin: 0; font-weight: bold;">加入方式：在 <a href="https://github.com/xylplm/media-saber-public/issues" target="_blank" style="color: #333; text-decoration: underline;">GitHub Issues</a> 留下你的邮箱，我们会主动联系你！</p>
 
 </div>
 
