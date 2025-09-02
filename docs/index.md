@@ -104,13 +104,13 @@ postList: none
 </div>
 </a>
 
-<a href="https://github.com/xylplm/media-saber-public/discussions" target="_blank" style="text-decoration: none;">
+<a href="https://wiki.msaber.fun/update_version/" target="_blank" style="text-decoration: none;">
 <div style="background: #0969da; color: white; padding: 1rem 1.5rem; border-radius: 8px; display: flex; align-items: center; transition: transform 0.2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
-💭 <span style="margin-left: 0.5rem;">社区讨论</span>
+💭 <span style="margin-left: 0.5rem;">更新日志</span>
 </div>
 </a>
 
-<a href="#" target="_blank" style="text-decoration: none;">
+<a href="https://wiki.msaber.fun/docs/main_page/index/" target="_blank" style="text-decoration: none;">
 <div style="background: #10b981; color: white; padding: 1rem 1.5rem; border-radius: 8px; display: flex; align-items: center; transition: transform 0.2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
 📖 <span style="margin-left: 0.5rem;">查看文档</span>
 </div>
