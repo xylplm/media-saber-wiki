@@ -5,7 +5,7 @@ heroText: Media Saber
 tagline: 🚀 新一代智能媒体管理平台 | 高效稳定 | 功能强大 | 开箱即用
 actionText: 立即开始 →
 actionLink: /guide/start/info/
-bannerBg: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' # 现代渐变背景
+bannerBg: background:linear-gradient(135deg, #667eea 0%, #764ba2 100%)
 hideRightBar: true
 
 features:
