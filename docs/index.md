@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /img/logo-blue.png
+heroImage: /img/logo-w.png
 heroText: Media Saber
 tagline: 🚀 新一代智能媒体管理平台 | 高效稳定 | 功能强大 | 开箱即用
 actionText: 立即开始 →
