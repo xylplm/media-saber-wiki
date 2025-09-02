@@ -47,7 +47,7 @@ postList: none
 /* 覆盖features hover时的紫色文字 */
 .home-wrapper .banner .banner-conent .feature:hover h2, 
 .home-wrapper .banner .banner-conent .feature:hover p {
-    color: #fff !important;
+    color: #e1c7fc !important;
 }
 </style>
 
