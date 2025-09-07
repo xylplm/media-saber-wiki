@@ -1,41 +1,55 @@
 ---
 home: true
-heroImage: /img/logo-blue.png
+heroImage: /img/logo-w.png
 heroText: Media Saber
 tagline: 🚀 新一代智能媒体管理平台 | 高效稳定 | 功能强大 | 开箱即用
 actionText: 立即开始 →
 actionLink: /guide/start/info/
-bannerBg: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' # 现代渐变背景
+bannerBg: "background:linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
+hideRightBar: true
 
 features:
   - title: 🎯 新手指引
     details: 从零开始，快速上手Media Saber，详细的安装配置教程助你轻松入门
     link: /guide/start/info/
     imgUrl: /images/rocket.svg
-  - title: 📚 使用文档  
+    
+  - title: 📚 使用文档
     details: 全面的功能说明文档，让你的Media Saber发挥最大潜能
     link: /docs/server/library/
     imgUrl: /images/books.svg
+    
   - title: 📱 多端客户端
     details: 支持Android、iOS、浏览器插件，随时随地管理你的媒体库
     link: /client/start/info/
     imgUrl: /images/mobile.svg
+    
   - title: 🤖 AI智能体
     details: 智能识别、自动整理、MCP服务，让媒体管理更加智能化
-    link: /docs/agent/info/
+    link: /docs/ai/ai/
     imgUrl: /images/ai.svg
+    
   - title: 🔍 寻影探剧
     details: 剧榜风云、影踪寻宝、开播日历，发现精彩内容从未如此简单
-    link: /docs/discovery/info/
+    link: /docs/movie_tv_discovery/
     imgUrl: /images/search.svg
+    
   - title: ☁️ 云端存储
     details: 多平台云端存储支持，统一管理你的媒体资源
-    link: /docs/storage/info/
+    link: /docs/cloud_storage/
     imgUrl: /images/cloud.svg
 
 # 文章列表显示方式: detailed 默认，显示详细版文章列表（包括作者、分类、标签、摘要、分页等）| simple => 显示简约版文章列表（仅标题和日期）| none 不显示文章列表
 postList: none
 ---
+
+<style>
+/* 覆盖features hover时的紫色文字 */
+.home-wrapper .banner .banner-conent .feature:hover h2, 
+.home-wrapper .banner .banner-conent .feature:hover p {
+    color: #e1c7fc !important;
+}
+</style>
 
 <div style="margin: 3rem 0;">
 
@@ -70,17 +84,13 @@ postList: none
 
 ## 🎉 开发者社区
 
-<div style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); padding: 2rem; border-radius: 12px; margin: 2rem 0; text-align: center;">
+<div style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); padding: 1.5rem 2rem; border-radius: 12px; margin: 2rem 0; text-align: center;">
 
-### 欢迎技术大佬加入我们！
+<h3 style="margin: 0 0 1rem 0; font-size: 1.2rem;">欢迎技术大佬加入我们！</h3>
 
-我们正在寻找掌握以下技术栈的开发者：
-- **Angular** 前端开发
-- **Flutter** 移动端开发  
-- **GO** 后端开发
-- **HTML+CSS** 站点适配
+<p style="margin: 0 0 1rem 0; line-height: 1.4;">我们正在寻找掌握以下技术栈的开发者：<strong>Angular</strong> 前端开发 | <strong>Flutter</strong> 移动端开发 | <strong>GO</strong> 后端开发 | <strong>HTML+CSS</strong> 站点适配</p>
 
-**加入方式：** 在 [GitHub Issues](https://github.com/xylplm/media-saber-public/issues) 留下你的邮箱，我们会主动联系你！
+<p style="margin: 0; font-weight: bold;">加入方式：在 <a href="https://github.com/xylplm/media-saber-public/issues" target="_blank" style="color: #333; text-decoration: underline;">GitHub Issues</a> 留下你的邮箱，我们会主动联系你！</p>
 
 </div>
 
@@ -94,15 +104,21 @@ postList: none
 </div>
 </a>
 
-<a href="https://github.com/xylplm/media-saber-public/discussions" target="_blank" style="text-decoration: none;">
+<a href="/update_version/" target="_blank" style="text-decoration: none;">
 <div style="background: #0969da; color: white; padding: 1rem 1.5rem; border-radius: 8px; display: flex; align-items: center; transition: transform 0.2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
-💭 <span style="margin-left: 0.5rem;">社区讨论</span>
+💭 <span style="margin-left: 0.5rem;">更新日志</span>
 </div>
 </a>
 
-<a href="#" target="_blank" style="text-decoration: none;">
+<a href="/docs/main_page/index/" target="_blank" style="text-decoration: none;">
 <div style="background: #10b981; color: white; padding: 1rem 1.5rem; border-radius: 8px; display: flex; align-items: center; transition: transform 0.2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
 📖 <span style="margin-left: 0.5rem;">查看文档</span>
+</div>
+</a>
+
+<a href="/Acknowledgements/" style="text-decoration: none;">
+<div style="background: #8b5cf6; color: white; padding: 1rem 1.5rem; border-radius: 8px; display: flex; align-items: center; transition: transform 0.2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+🙏 <span style="margin-left: 0.5rem;">特别感谢</span>
 </div>
 </a>
 
