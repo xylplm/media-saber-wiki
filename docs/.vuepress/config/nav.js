@@ -18,6 +18,7 @@ module.exports = [
     link: '/docs/main_page/index/',
     items: [
       { text: '首页', link: '/docs/main_page/index/' },
+      { text: '智能体', link: '/docs/ai/ai/' },
       { text: '媒体服务', link: '/docs/server/library/' },
       { text: '寻影探剧', link: '/docs/explore_series/drama_rankings/' },
       { text: '搜索', link: '/docs/search/search/' },
@@ -26,7 +27,7 @@ module.exports = [
       { text: '下载管理', link: '/docs/download_management/current_downloads/' },
       { text: '目录管理', link: '/docs/directory_management/file_management/' },
       { text: '媒体整理', link: '/docs/media_organization/manual_identification/'},
-      { text: '云端存储', link: '/docs/cloud_management/115/'},
+      { text: '云端存储', link: '/docs/cloud_storage/'},
       { text: '修仙秘籍', link: '/docs/cultivation_secrets/main/'},
       { text: '系统设置', link: '/docs/system_settings/basic_settings/'},
       { text: '其它', link: '/docs/other/glossary/'},
