@@ -19,15 +19,17 @@ Docker：https://hub.docker.com/repository/docker/xylplm/media-saber
 
 由多位热心Pter共同努力，立足于开发自用，完全自主开发，做一款全新、高效、稳定、快速、方便好用、功能强大的媒体管理工具！
 
-鉴于NT MP等项目的不稳定性，本项目为私密项目，仅开发组自用和受邀用户小范围使用。
+鉴于NT MP等公开项目的不稳定性，本项目为私密项目，仅开发组自用和受邀用户小范围使用。
 
-## 🎉 诚邀加入
+## 🎉 坑位说明
 
-欢迎各路大佬加盟MS，让它更健壮的走下去。
+目前Media Saber坑位已满，不再对外招募！
 
-目前Media Saber坑位已满，仅限技术大佬加入！只要技术栈是Angular、flutter、GO、会Html+CSS、会站点适配（需要html+CSS基础知识）的其中一种的大佬，均可优先加入。
+不过为保持社群活跃性，会不定期放开一定有能力、有贡献精神的大佬！ 只要技术栈是Angular、flutter、GO、会站点适配的其中一种的大佬，即可申请。
 
 满足条件的大佬可在[Issue](https://github.com/xylplm/media-saber-public/issues)留下邮箱，接收邀请。
+
+注意：由于开发组精力有限，人数受到严格限制，即使申请也不一定通过，请谅解！
 
 ## 安装
 
