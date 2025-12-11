@@ -28,3 +28,6 @@ nohup.log
 bot.log
 
 .idea/
+docs/.vuepress/.temp/
+docs/.vuepress/.cache/
+docs/.vuepress/dist/

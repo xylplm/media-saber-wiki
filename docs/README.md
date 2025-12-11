@@ -5,7 +5,7 @@ heroText: Media Saber
 tagline: 新一代智能媒体管理平台 | 高效稳定 | 功能强大 | 开箱即用
 actions:
   - text: 立即开始 →
-    link: /01.新手指引/01.开始/
+    link: /guide/start/info
     type: primary
 
 features:
@@ -79,19 +79,19 @@ footer: MIT License | Copyright © 2023-present xylplm
 </div>
 </a>
 
-<a href="/04.更新日志/" target="_blank" style="text-decoration: none;" class="no-external-link-icon">
+<a href="/update_version" target="_blank" style="text-decoration: none;" class="no-external-link-icon">
 <div style="background: #0969da; color: white; padding: 0.75rem 1.25rem; border-radius: 8px; display: flex; align-items: center; transition: transform 0.2s; cursor: pointer;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
   更新日志
 </div>
 </a>
 
-<a href="/02.使用文档/" target="_blank" style="text-decoration: none;" class="no-external-link-icon">
+<a href="/docs/main_page/index/" target="_blank" style="text-decoration: none;" class="no-external-link-icon">
 <div style="background: #10b981; color: white; padding: 0.75rem 1.25rem; border-radius: 8px; display: flex; align-items: center; transition: transform 0.2s; cursor: pointer;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
   查看文档
 </div>
 </a>
 
-<a href="/05.鸣谢/" style="text-decoration: none;">
+<a href="/Acknowledgements" style="text-decoration: none;">
 <div style="background: #8b5cf6; color: white; padding: 0.75rem 1.25rem; border-radius: 8px; display: flex; align-items: center; transition: transform 0.2s; cursor: pointer;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
   特别感谢
 </div>
