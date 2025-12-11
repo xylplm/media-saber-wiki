@@ -79,7 +79,7 @@ footer: MIT License | Copyright © 2023-present xylplm
 </div>
 </a>
 
-<a href="/update_version" target="_blank" style="text-decoration: none;" class="no-external-link-icon">
+<a href="/update_version/" target="_blank" style="text-decoration: none;" class="no-external-link-icon">
 <div style="background: #0969da; color: white; padding: 0.75rem 1.25rem; border-radius: 8px; display: flex; align-items: center; transition: transform 0.2s; cursor: pointer;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
   更新日志
 </div>
@@ -91,7 +91,7 @@ footer: MIT License | Copyright © 2023-present xylplm
 </div>
 </a>
 
-<a href="/Acknowledgements" style="text-decoration: none;">
+<a href="/acknowledgements/" style="text-decoration: none;">
 <div style="background: #8b5cf6; color: white; padding: 0.75rem 1.25rem; border-radius: 8px; display: flex; align-items: center; transition: transform 0.2s; cursor: pointer;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
   特别感谢
 </div>
