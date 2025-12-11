@@ -1,5 +1,5 @@
 ---
-title: 寻影探剧概览
+title: 寻影探剧
 article: false
 tags: 
   - 寻影探剧

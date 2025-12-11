@@ -1,5 +1,5 @@
 ---
-title: 目录管理概览
+title: 目录管理
 article: false
 tags: 
   - 目录管理

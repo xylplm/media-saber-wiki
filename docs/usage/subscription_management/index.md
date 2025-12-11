@@ -1,5 +1,5 @@
 ---
-title: 订阅管理概览
+title: 订阅管理
 article: false
 tags: 
   - 订阅管理

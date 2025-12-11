@@ -6,7 +6,6 @@ tags:
 categories: 更新日志
 editor: markdown
 dateCreated: 2023-05-12T04:26:30.172Z
-permalink: /update_version
 ---
 
 # 更新日志
