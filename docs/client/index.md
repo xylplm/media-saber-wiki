@@ -10,8 +10,8 @@ date: 2023-05-22T08:51:16.561Z
 
 ## 1、下载安装
 
-- [安卓安装](/client/android/install/)
-- [IOS安装](/client/ios/install/)
+- [安卓安装](/client/android/)
+- [IOS安装](/client/ios/)
 
 ## 2、消息通知
 
