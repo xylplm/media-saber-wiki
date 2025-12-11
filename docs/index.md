@@ -88,9 +88,11 @@ postList: none
 
 <h3 style="margin: 0 0 1rem 0; font-size: 1.2rem;">欢迎技术大佬加入我们！</h3>
 
-<p style="margin: 0 0 1rem 0; line-height: 1.4;">我们正在寻找掌握以下技术栈的开发者：<strong>Angular</strong> 前端开发 | <strong>Flutter</strong> 移动端开发 | <strong>GO</strong> 后端开发 | <strong>HTML+CSS</strong> 站点适配</p>
+<p style="margin: 0 0 1rem 0; line-height: 1.4;">我们正在寻找掌握以下技术栈的人才用户：<strong>Angular</strong> 前端开发 | <strong>Flutter</strong> 移动端开发 | <strong>GO</strong> 后端开发 | <strong>VUE</strong> 浏览器扩展开发 | <strong>HTML+CSS</strong> 站点适配</p>
 
-<p style="margin: 0; font-weight: bold;">加入方式：在 <a href="https://github.com/xylplm/media-saber-public/issues" target="_blank" style="color: #333; text-decoration: underline;">GitHub Issues</a> 留下你的邮箱，我们会主动联系你！</p>
+<p style="margin: 0 0 0.5rem 0; font-weight: bold;">加入方式：在 <a href="https://github.com/xylplm/media-saber-public/issues" target="_blank" style="color: #333; text-decoration: underline;">GitHub Issues</a> 留下你的邮箱，我们会主动联系你！</p>
+
+<p style="margin: 0; font-size: 0.9rem; color: #666;">📌 加入初期可获得项目使用权限，加入开发组需根据开发组实际需求进行考核评估</p>
 
 </div>
 
