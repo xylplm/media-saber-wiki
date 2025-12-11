@@ -1,0 +1,49 @@
+---
+title: strm 一条龙玩法
+article: false
+date: 2025-04-02T19:06:00.188Z
+tags:
+categories:
+  - 新手指引
+  - 进阶教程
+editor: markdown
+dateCreated: 2025-04-02T19:06:00.188Z
+---
+
+# strm 一条龙玩法
+
+只有截图，懒得写字了
+
+## 目录分类
+
+<img src="./images/strm/目录分类1.png" alt="drawing" width="800"/>
+<img src="./images/strm/目录分类2.png" alt="drawing" width="800"/>
+
+## 目录管理
+
+<img src="./images/strm/目录管理.png" alt="drawing" width="800"/>
+
+## 目录同步
+
+<img src="./images/strm/目录同步.png" alt="drawing" width="800"/>
+
+## 网盘配置
+
+<img src="./images/strm/网盘配置.png" alt="drawing" width="800"/>
+
+## 网盘目录
+
+<img src="./images/strm/网盘目录.png" alt="drawing" width="800"/>
+
+## 网盘整理
+
+<img src="./images/strm/网盘整理.png" alt="drawing" width="800"/>
+
+## 生成 strm
+
+<img src="./images/strm/生成 strm.png" alt="drawing" width="800"/>
+
+## emby 端口代理
+
+<img src="./images/strm/媒体服务端口代理.png" alt="drawing" width="800"/>
+
