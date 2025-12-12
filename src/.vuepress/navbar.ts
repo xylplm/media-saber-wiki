@@ -11,7 +11,7 @@ export default navbar([
     icon: "compass",
     prefix: "/guide/",
     children: [
-      { text: "开始", icon: "play", link: "start/info" },
+      { text: "开始", icon: "play", link: "" },
       { text: "如何安装", icon: "download", link: "install/env" },
       { text: "如何更新", icon: "arrows-rotate", link: "update_version/dc" },
       { text: "初始化配置", icon: "gear", link: "init/initialize" },

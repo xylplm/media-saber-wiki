@@ -1,14 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
   <defs>
-    <linearGradient id="heroBgDark" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.32" />
-      <stop offset="50%" style="stop-color:#1e40af;stop-opacity:0.25" />
-      <stop offset="100%" style="stop-color:#1e3a8a;stop-opacity:0.22" />
+    <linearGradient id="heroBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#5d87ff;stop-opacity:0.32" />
+      <stop offset="50%" style="stop-color:#3d5cc8;stop-opacity:0.25" />
+      <stop offset="100%" style="stop-color:#2d3a9b;stop-opacity:0.22" />
     </linearGradient>
   </defs>
-  <rect width="1200" height="800" fill="url(#heroBgDark)"/>
-  <circle cx="200" cy="150" r="100" fill="#3b82f6" opacity="0.28"/>
-  <circle cx="1000" cy="650" r="150" fill="#3b82f6" opacity="0.25"/>
-  <circle cx="600" cy="100" r="80" fill="#60a5fa" opacity="0.22"/>
-  <rect x="0" y="0" width="1200" height="800" fill="none" stroke="#3b82f6" stroke-width="2" opacity="0.15"/>
+  <rect width="1200" height="800" fill="url(#heroBg)"/>
+  <circle cx="200" cy="150" r="100" fill="#5d87ff" opacity="0.28"/>
+  <circle cx="1000" cy="650" r="150" fill="#5d87ff" opacity="0.25"/>
+  <circle cx="600" cy="100" r="80" fill="#8da3ff" opacity="0.22"/>
+  <rect x="0" y="0" width="1200" height="800" fill="none" stroke="#5d87ff" stroke-width="2" opacity="0.15"/>
 </svg>

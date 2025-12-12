@@ -25,7 +25,7 @@ actions:
 highlights:
   - header: 🚀 新手指引
     description: 从零开始，快速上手 Media Saber
-    color: "#3b82f6"
+    color: "#5d87ff"
     image: /images/highlight-guide.svg
     bgImage: /images/bg-guide-light.svg
     bgImageDark: /images/bg-guide-dark.svg
