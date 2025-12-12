@@ -4,16 +4,17 @@ import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 
 export default hopeTheme({
-  hostname: "https://vuepress-theme-hope-docs-demo.netlify.app",
+  hostname: "https://wiki.media-saber.com",
 
   author: {
-    name: "Mr.Hope",
-    url: "https://mister-hope.com",
+    name: "xylplm",
+    url: "https://github.com/xylplm",
   },
 
-  logo: "https://theme-hope-assets.vuejs.press/logo.svg",
+  logo: "/img/logo.png",
+  logoDark: "/img/logo-w.png",
 
-  repo: "vuepress-theme-hope/vuepress-theme-hope",
+  repo: "xylplm/media-saber-public",
 
   docsDir: "src",
 
@@ -24,18 +25,8 @@ export default hopeTheme({
   sidebar,
 
   // 页脚
-  footer: "默认页脚",
+  footer: "MIT License | Copyright © 2023-present xylplm",
   displayFooter: true,
-
-  // 加密配置
-  encrypt: {
-    config: {
-      "/demo/encrypt.html": {
-        hint: "Password: 1234",
-        password: "1234",
-      },
-    },
-  },
 
   // 多语言配置
   metaLocales: {
@@ -51,28 +42,13 @@ export default hopeTheme({
     attrs: true,
     codeTabs: true,
     component: true,
-    demo: true,
     figure: true,
     gfm: true,
     imgLazyload: true,
     imgSize: true,
     include: true,
     mark: true,
-    plantuml: true,
     spoiler: true,
-    stylize: [
-      {
-        matcher: "Recommended",
-        replacer: ({ tag }) => {
-          if (tag === "em")
-            return {
-              tag: "Badge",
-              attrs: { type: "tip" },
-              content: "Recommended",
-            };
-        },
-      },
-    ],
     sub: true,
     sup: true,
     tabs: true,
