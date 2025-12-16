@@ -1,6 +1,7 @@
 ---
 title: TMDB相关
 article: false
+order: 2
 categories: 
   - 新手指引
   - 开始

@@ -1,6 +1,8 @@
 ---
 title: 进阶教程
 article: false
+dir:
+  order: 40
 tags: 
   - 进阶
   - 教程

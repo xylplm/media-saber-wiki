@@ -1,6 +1,8 @@
 ---
 title: Android客户端
 article: false
+dir:
+  order: 30
 tags:
 categories: 
   - 客户端

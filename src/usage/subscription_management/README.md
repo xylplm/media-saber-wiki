@@ -1,6 +1,8 @@
 ---
 title: 订阅管理
 article: false
+dir:
+  order: 70
 tags: 
   - 订阅管理
   - RSS订阅

@@ -1,6 +1,8 @@
 ---
 title: 目录管理
 article: false
+dir:
+  order: 90
 tags: 
   - 目录管理
   - 文件管理

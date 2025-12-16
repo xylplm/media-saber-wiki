@@ -1,6 +1,8 @@
 ---
 title: 首页
 article: false
+dir:
+  order: 10
 tags: null
 categories: null
 editor: markdown

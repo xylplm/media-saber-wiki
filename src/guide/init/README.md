@@ -1,6 +1,8 @@
 ---
 title: 初始化配置
 article: false
+dir:
+  order: 30
 tags: 
   - 初始化
   - 配置

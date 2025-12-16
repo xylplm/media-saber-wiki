@@ -1,6 +1,8 @@
 ---
 title: 系统设置
 article: false
+dir:
+  order: 130
 tags: 
   - 系统设置
   - 配置

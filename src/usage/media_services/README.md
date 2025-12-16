@@ -1,6 +1,8 @@
 ---
 title: 媒体服务
 article: false
+dir:
+  order: 30
 tags: 
   - 媒体服务
   - 媒体库

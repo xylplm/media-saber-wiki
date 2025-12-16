@@ -1,6 +1,8 @@
 ---
 title: 修仙秘籍
 article: false
+dir:
+  order: 120
 tags: 
   - 修仙秘籍
   - 插件系统

@@ -1,6 +1,8 @@
 ---
 title: 如何安装
 article: false
+dir:
+  order: 10
 tags: 
   - 安装
   - 部署

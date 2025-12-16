@@ -1,6 +1,8 @@
 ---
 title: 智能体
 article: false
+dir:
+  order: 20
 tags: 
   - 智能体
   - AI

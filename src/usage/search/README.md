@@ -1,6 +1,8 @@
 ---
 title: 搜索功能
 article: false
+dir:
+  order: 50
 tags: 
   - 搜索
   - 查询

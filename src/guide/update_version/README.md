@@ -1,6 +1,8 @@
 ---
 title: 更新版本
 article: false
+dir:
+  order: 20
 tags: 
   - 更新
   - 升级

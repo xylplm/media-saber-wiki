@@ -1,6 +1,7 @@
 ---
 title: 引言
 article: false
+order: 0
 categories: 
   - 新手指引
   - 开始

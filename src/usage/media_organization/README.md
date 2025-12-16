@@ -1,6 +1,8 @@
 ---
 title: 媒体整理
 article: false
+dir:
+  order: 100
 tags: 
   - 媒体整理
   - 文件管理

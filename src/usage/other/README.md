@@ -1,6 +1,8 @@
 ---
 title: 其它功能
 article: false
+dir:
+  order: 140
 tags: 
   - 其它
   - 杂项
