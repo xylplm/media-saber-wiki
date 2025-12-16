@@ -12,8 +12,8 @@ export default navbar([
     prefix: "/guide/",
     children: [
       { text: "开始", icon: "play", link: "" },
-      { text: "如何安装", icon: "download", link: "install/env" },
-      { text: "如何更新", icon: "arrows-rotate", link: "update_version/dc" },
+      { text: "如何安装", icon: "download", link: "install/" },
+      { text: "如何更新", icon: "arrows-rotate", link: "update/" },
       { text: "初始化配置", icon: "gear", link: "init/initialize" },
       { text: "进阶教程", icon: "graduation-cap", link: "advanced/start" },
     ],
@@ -50,7 +50,7 @@ export default navbar([
       { text: "浏览器扩展", icon: "puzzle-piece", link: "brower_tool" },
     ],
   },
-  { text: "更新日志", icon: "clock-rotate-left", link: "/update_version/" },
+  { text: "更新日志", icon: "clock-rotate-left", link: "/version_logs" },
   { text: "鸣谢", icon: "heart", link: "/acknowledgements/" },
   {
     text: "反馈",

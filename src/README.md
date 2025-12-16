@@ -124,7 +124,7 @@ footer: MIT License | Copyright © 2023-present xylplm
 ## 🤝 社区交流
 
 - 💬 [反馈问题](https://github.com/xylplm/media-saber-public/issues)
-- 📋 [更新日志](/update_version/)
+- 📋 [更新日志](/version_logs)
 - ❤️ [特别感谢](/acknowledgements/)
 
 ## ⚖️ 重要声明

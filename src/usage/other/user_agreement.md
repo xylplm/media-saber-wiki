@@ -111,7 +111,7 @@ editor: markdown
 - 用户自行添加的第三方资源内容
 - 用户违反法律法规的使用行为
 - 因用户服务器配置不当导致的数据泄露
-- 第三方服务（如[TMDB](/docs/media_services/tmdb_usage/)、[豆瓣](/docs/media_services/douban_usage/)）的准确性
+- 第三方服务（如 TMDB、豆瓣）的准确性
 - 不可抗力导致的服务中断
 - 用户自行修改代码导致的问题
 - 第三方服务中断或数据变更

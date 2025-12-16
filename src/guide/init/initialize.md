@@ -39,7 +39,7 @@ Media Saber 使用 TMDB 提供的电影和电视剧元数据服务，需先申�
 - 昵称  
 - 用户名  
 - 密码  
-- TMDB API KEY （[TMDB详细注册教程](/guide/start/tmdb/) ）
+- TMDB API KEY （[TMDB详细注册教程](/guide/tmdb) ）
 - 代理服务器（可选）  
 
 <div align="center"><img src="./images/cshsz/csh02.png" width="800"/></div>

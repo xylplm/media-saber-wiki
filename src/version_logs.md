@@ -1,6 +1,7 @@
 ---
 title: 更新版本
 article: false
+index: false
 date: 2023-06-28T05:11:48.294Z
 tags:
 categories: 更新日志

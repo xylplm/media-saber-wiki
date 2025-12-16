@@ -12,7 +12,7 @@ dateCreated: 2023-05-12T04:25:24.817Z
 
 :::warning
 - Media-saber 使用 Redis 作为数据库，需要单独安装，推荐使用 `docker.io/redis:7.0.14-alpine`。
-- 更新可参考 [dc 一键更新](/guide/update_version/dc/) 里的 `使用 - 更新` 部分内容。
+- 更新可参考 [dc 一键更新](/guide/update/dc/) 里的 `使用 - 更新` 部分内容。
 :::
 
 ## 各品牌安装方式
