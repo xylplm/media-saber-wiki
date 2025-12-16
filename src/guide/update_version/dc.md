@@ -1,0 +1,63 @@
+---
+title: 使用 DC 一键更新
+article: false
+tags: null
+categories:
+  - 新手指引
+  - 如何更新
+editor: markdown
+date: 2024-05-13 19:43:47
+---
+
+:::tip 提示
+GitHub 项目地址：<https://github.com/onlyLTY/dockerCopilot>  
+如果觉得好用，欢迎为项目点个 Star 支持开发者。  
+
+如需反馈 Bug 或提出建议，请前往 GitHub 提交 Issue，或通过邮箱联系作者： `onlylty@lty.wiki` 
+:::
+
+### 一、dc 简介
+
+**dc** 是一款 Docker 容器管理工具，主要功能包括：
+
+- 容器更新：直观显示更新状态，一键更新或更换版本；
+- 镜像管理：清理未使用的镜像；
+- 容器备份与恢复：更换设备或处理硬盘故障时可轻松还原。
+
+---
+
+### dc 安装指南
+
+- 在 `docker` 目录下新建文件夹：`/path/to/docker/dockercopilot/data`。（请替换为实际路径）  
+- 打开 **Container Manager - 项目 - 新增项目**，命名为 `dockercopilot`，路径设为新建的文件夹。  
+- 来源选择「创建 docker-compose.yaml」，并填入以下内容（现代 Compose 推荐删除 `version` 字段）：  
+
+```yaml
+services:
+  dockerCopilot:
+    image: qqaazz.msaber.fun/0nlylty/dockercopilot:latest
+    container_name: dockercopilot
+    ports:
+      - "12712:12712"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /path/to/docker/dockercopilot/data:/data
+    environment:
+      - PUID=501
+      - PGID=20
+      - secretKey=your-secret-key-here   # 必须大于8个字符且非纯数字
+      - DOCKER_HOST=unix:///var/run/docker.sock
+      - hubURL=https://docker.nju.edu.cn
+    restart: always
+    privileged: true
+    networks:
+      - bridge-network
+
+networks:
+  bridge-network:
+    driver: bridge
+```
+
+- 修改路径为你本地实际路径，设置好环境变量后，点击 **下一步** 完成部署。
+
+---

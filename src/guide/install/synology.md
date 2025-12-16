@@ -1,0 +1,254 @@
+---
+title: 群晖NAS如何安装
+article: false
+date: 2023-05-15T09:22:05.263Z
+tags:
+categories: 
+  - 新手指引
+  - 如何安装
+editor: markdown
+dateCreated: 2023-05-12T04:25:24.817Z
+---
+
+### 一、文件夹准备
+
+打开 **群晖 File Station**，在 `docker` 目录下新建以下文件夹：
+
+- `/docker/redis/data`
+- `/docker/Media-Saber/config`
+- `/docker/pgsql/data`
+确保这些文件夹具有**写入权限**。
+
+<div align="center"><img src="./synology_images/01.png" width="800"/></div>  
+<div align="center"><img src="./synology_images/02.png" width="800"/></div>  
+
+---
+
+### 二、部署 Redis
+
+适用于 DSM 7.2 及以上版本，推荐使用 **Container Manager** 进行部署。
+
+打开 Container Manager → 项目 → 新增项目：
+
+- 项目名称：`redis`
+- 项目路径：指向刚刚创建的文件夹路径
+- 来源：选择「创建 docker-compose.yaml」
+- 粘贴以下内容：
+
+```yaml
+version: "3.3"
+services:
+  redis:
+    image: qqaazz.msaber.fun/redis:7.4-alpine
+    container_name: redis
+    ports:
+      - 6379:6379
+    environment:
+      - REDIS_PASSWORD=******
+    volumes:
+      - /volume1/docker/redis/data:/data
+    network_mode: host
+    restart: always
+```
+将 /volume1/docker/redis/data 修改为你实际的路径，并为 REDIS_PASSWORD 设置你的 Redis 密码。
+
+<div align="center"><img src="./synology_images/03.png" width="800"/></div>
+<div align="center"><img src="./synology_images/04.png" width="800"/></div>
+<div align="center"><img src="./synology_images/05.png" width="800"/></div>
+点击「完成」，系统将自动从 Docker Hub 拉取 Redis 镜像并构建容器。
+
+### 三、部署 pgsql
+
+适用于 DSM 7.2 及以上版本，推荐使用 **Container Manager** 进行部署。
+
+打开 Container Manager → 项目 → 新增项目：
+
+- 项目名称：`pgsql`
+- 项目路径：指向刚刚创建的文件夹路径
+- 来源：选择「创建 docker-compose.yaml」
+- 粘贴以下内容：
+
+```yaml
+version: "3.8"
+services:
+  pgsql:
+    image: qqaazz.msaber.fun/postgres:17-alpine
+    container_name: ms-pgsql
+    restart: unless-stopped
+    networks:
+      - ms_network
+    volumes:
+      - /volume1/docker/pgsql/data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: ms
+      POSTGRES_PASSWORD: ms888888
+      POSTGRESQL_WAL_COMPRESSION: lz4
+      POSTGRESQL_MAX_CONNECTIONS: 2048
+    ports:
+      - 5431:5432
+networks:
+  ms_network:
+    driver: bridge
+```
+- 修改/volume1/docker/pgsql/data为你实际的路径
+- 设置数据库名称POSTGRES_DB: ms
+- 设置数据库密码POSTGRES_PASSWORD: ms888888
+- 设置端口为可用且未被占用端口
+
+点击「完成」，系统将自动从 Docker Hub 拉取 pgsql 镜像并构建容器。
+
+### 四、部署 Media-Saber
+部署方式同 Redis，新增一个项目：
+
+项目名称：media-saber
+
+项目路径：指向 /docker/Media-Saber
+
+来源：选择「创建 docker-compose.yaml」
+
+粘贴以下内容：
+```shell
+version: "3"
+services:
+  msgo:
+    image: qqaazz.msaber.fun/xylplm/media-saber:latest
+    container_name: media-saber-go
+    privileged: true
+    volumes:
+      - /volume1/docker/media-saber/config:/app/config
+      - /volume2/Medium:/Medium
+    environment:
+      - PUID=0
+      - PGID=0
+      - TZ=Asia/Shanghai
+      - MS_PORT=3000
+      - MS_REDIS_HOST=10.0.0.1 # redis ip:端口
+      - MS_REDIS_PASS=******
+      - MS_TIMEOUT=60000
+      - MS_PGSQL_USERNAME=postgres
+      - MS_PGSQL_PASSWORD=ms888888
+      - MS_PGSQL_PATH=10.0.0.1 # 替换为pgsql所在服务器的实际IP
+      - MS_PGSQL_PORT=5431 # 端口一般保持为5432
+      - MS_PGSQL_DBNAME=ms
+      - MS_AUTH_EMAIL=name@sample.com # 认证邮箱
+      - MS_AUTH_SLOGAN=大佬牛逼 # 认证口令
+      - MS_LOG_LEVEL=debug
+      - MS_PGSQL_LOG_MODE=silent #ports
+      - MS_LOG_KEEP_DAYS=1 # 日志保留天数
+    ports:
+      - 3000:3000 # 映射容器内的3000端口到主机的3000端口
+    network_mode: host
+    restart: always
+```
+点击下一步，完成即可
+<div align="center"><img src="./synology_images/06.png" width="800"/></div>
+
+:::warning ⚙️ 请修改以下参数为你的实际参数：
+
+- REDIS_HOST 地址
+- REDIS_PASS 密码
+- MS_PGSQL_PATH pgsql数据库地址
+- MS_PGSQL_PORT pgsql数据库端口
+- MS_PGSQL_DBNAME pgsql数据库名
+- MS_PGSQL_PASSWORD pgsql数据库密码
+- MS_AUTH_EMAIL 访问邮箱认证
+- MS_AUTH_SLOGAN 认证口令
+
+其余参数保持默认即可
+:::
+
+### 五、使用一个 compose 部署 Media-Saber redis pgsql
+部署方式同上
+
+项目名称：media-saber
+
+项目路径：指向 /docker/Media-Saber
+
+来源：选择「创建 docker-compose.yaml」
+
+粘贴以下内容：
+```shell
+services:
+  msgo:
+    image: xylplm/media-saber:latest
+    container_name: msgo
+    networks: 
+      - ms_network
+    environment:
+      - PUID=0
+      - PGID=0
+      - UMASK=022
+      - TZ=Asia/Shanghai
+      - MS_PORT=3005
+      - MS_AUTH_EMAIL=name@sample.com
+      - MS_AUTH_SLOGAN=大佬牛逼
+      - MS_LOG_LEVEL=debug
+      - MS_REDIS_HOST=ms-redis:6379
+      - MS_REDIS_PASS=**********
+      - MS_TIMEOUT=60000
+      - MS_PGSQL_USERNAME=postgres
+      - MS_PGSQL_PASSWORD=ms888888
+      - MS_PGSQL_PATH=ms-pgsql
+      - MS_PGSQL_PORT=5432
+      - MS_PGSQL_DBNAME=ms
+      - MS_PGSQL_LOG_MODE=prod
+      - MS_LOG_KEEP_DAYS=14
+    restart: unless-stopped
+    privileged: true
+    volumes:
+      - /volume2/docker/media-saberGo/ms/config:/app/config
+      - /volume2/video:/video
+    ports:
+      - "3005:3005"
+
+  redis:
+    image: redis:latest
+    container_name: ms-redis
+    restart: unless-stopped
+    networks: 
+      - ms_network
+    volumes:
+      - ./redis/config:/data
+    environment:
+      - TZ=Asia/Shanghai
+      - GOSU_VERSION=1.17
+
+  pgsql:
+    image: postgres:17-alpine
+    container_name: ms-pgsql
+    restart: unless-stopped
+    networks: 
+      - ms_network
+    volumes:
+      - /volume2/docker/media-saberGo/pgsql/data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=ms
+      - POSTGRESQL_WAL_COMPRESSION=lz4
+      - POSTGRESQL_MAX_CONNECTIONS=2048
+      - POSTGRES_PASSWORD=ms888888
+
+networks:
+  ms_network:
+    name: ms_network
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.31.126.0/24
+          gateway: 172.31.126.1
+```
+
+:::warning ⚙️ 请修改以下参数：
+
+**********：Redis 密码
+
+MS_AUTH_EMAIL：访问邮箱认证
+
+MS_AUTH_SLOGAN：认证口令
+
+其余参数保持默认即可
+:::
+
+点击「完成」，Container Manager 会自动拉取 Media-Saber 镜像并构建服务。
+
