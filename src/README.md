@@ -15,7 +15,7 @@ tagline: 新一代智能媒体管理平台 | 高效稳定 | 功能强大 | 开�
 heroFullScreen: true
 actions:
   - text: 立即开始 💡
-    link: /guide/start/info
+    link: /guide/
     type: primary
 
   - text: 使用文档 📚
