@@ -40,15 +40,7 @@ media saber 不提供任何站点资源服务，但支持网友自行适配站�
     - [站点公共配置 JSON 说明](#站点公共配置-json-说明)
 - [注意事项](#注意事项)
 
-## 原理
 
-```mermaid
-sequenceDiagram
-Alice->John: Hello John, how are you?
-loop every minute
-    John-->Alice: Great!
-end
-```
 ### 站点适配流程图
 ```mermaid
 flowchart TB

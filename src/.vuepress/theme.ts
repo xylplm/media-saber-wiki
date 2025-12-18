@@ -4,7 +4,7 @@ import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 
 export default hopeTheme({
-  hostname: "https://wiki.media-saber.com",
+  hostname: "https://wiki.msaber.fun",
 
   author: {
     name: "xylplm",
@@ -14,7 +14,7 @@ export default hopeTheme({
   logo: "/img/logo.png",
   logoDark: "/img/logo-w.png",
 
-  repo: "xylplm/media-saber-public",
+  docsRepo: "xylplm/media-saber-wiki",
 
   docsDir: "src",
 
@@ -54,6 +54,7 @@ export default hopeTheme({
     tabs: true,
     tasklist: true,
     vPre: true,
+    mermaid: true,
 
     // 取消注释它们如果你需要 TeX 支持
     // math: {
@@ -110,6 +111,10 @@ export default hopeTheme({
 
     icon: {
       prefix: "fa6-solid:",
+    },
+
+    search: {
+      // ...
     },
 
     // 如果你需要 PWA。安装 @vuepress/plugin-pwa 并取消下方注释
