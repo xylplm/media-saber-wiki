@@ -17,10 +17,29 @@ date: 2023-09-27 12:16:17
 
 在 [基础设置](/docs/system_settings/basic_settings/#_7%EF%B8%8F%E2%83%A3-%E6%9C%8D%E5%8A%A1%E9%85%8D%E7%BD%AE) 的"服务配置"部分，找到"OCR服务地址"进行配置：
 
-**支持的服务类型：**
+### 支持的服务类型
 - 🌐 **第三方服务**：免费，依赖外部稳定性
+- 🐳 **自建 C++ Paddle OCR 服务**：高性能，完全免费，高识别率，本地部署
 - 🐳 **自建 Paddle OCR (Node.js版)**：PP-OCRv5模型，高识别率，轻量级本地部署，完全免费
 - 🔍 **自建 Baidu OCR (Go版)**：GO高性能API调用，支持所有架构，资源占用极低
+
+### 服务选择建议
+
+| 使用场景 | 推荐方案 | 说明 |
+|----------|----------|------|
+| 轻度使用 | 第三方服务 | 免费，但稳定性差，无需配置 |
+| 重度使用 | 自建 Paddle OCR | 完全免费，高精度，本地部署 |
+| ARM 设备 | 自建 Baidu OCR | 支持所有架构 |
+| 网络受限 | 自建 Baidu OCR | API 调用，稳定性好 |
+| 高性能需求 | 自建 Baidu OCR (Go版) | 最低延迟，最小内存 |
+| 本地性能需求 | 自建 C++ Paddle OCR 服务 | 基于 C++ 实现，处理速度最快 |
+
+### 性能优化提示
+
+- **Paddle OCR (Node.js版)**：建议分配 1GB+ 内存，CPU 2核+
+- **Baidu OCR (Go版)**：建议分配 256MB+ 内存，CPU 1核+
+- **网络优化**：使用国内镜像加速下载
+- **API 优化**：百度 OCR 注意 API 调用次数限制，可升级套餐
 
 配置完成后请点击"测试"按钮验证服务有效性。
 
@@ -58,7 +77,59 @@ https://ocr.ddsrem.com/captcha/base64
 
 ---
 
-## 🐳 自建 Paddle OCR 服务（完全免费，高识别率，本地部署）
+## 🐳 自建 C++ Paddle OCR 服务（高性能，完全免费，高识别率，本地部署）
+
+来自C++ 大佬的作品，比之前的nodejs版本性能更好
+
+### 服务特点
+
+- ✅ **高性能**：基于 C++ 实现，处理速度快
+- ✅ **高识别率**：基于 PP-OCRv5 模型
+- ✅ **完全免费**：本地部署，无费用
+- ✅ **本地部署**：安全可控
+
+### Docker 部署
+
+**镜像地址：**
+```
+https://hub.docker.com/r/naiquan1007/ocr_engine
+```
+
+#### 方式一：命令行部署（推荐）
+
+```bash
+docker run -d --name naiquan1007-ocr-engine --network bridge -p 1234:1234 naiquan1007/ocr_engine:latest
+```
+
+#### 方式二：Docker Compose 部署（推荐）
+
+创建 `docker-compose.yml` 文件：
+
+```yaml
+version: "3.8"
+
+services:
+  ocr-engine:
+    image: naiquan1007/ocr_engine:latest
+    ports:
+      - "1234:1234"
+    environment:
+      - TZ=Asia/Shanghai
+    restart: unless-stopped
+    container_name: naiquan1007-ocr-engine
+    networks:
+      - bridge
+```
+
+运行：
+
+```bash
+docker-compose up -d
+```
+
+---
+
+## 🐳 自建 Nodejs Paddle OCR 服务（完全免费，高识别率，本地部署）
 
 ### 服务特点
 
@@ -421,22 +492,7 @@ http://127.0.0.1:9899/captcha/base64
 | 百度OCR报错 | API配置错误 | 验证三个环境变量 |
 | ARM设备无法使用Paddle | 架构不支持 | 改用百度OCR服务 |
 
-### 服务选择建议
 
-| 使用场景 | 推荐方案 | 说明 |
-|----------|----------|------|
-| 轻度使用 | 第三方服务 | 免费，但稳定性差，无需配置 |
-| 重度使用 | 自建 Paddle OCR | 完全免费，高精度，本地部署 |
-| ARM 设备 | 自建 Baidu OCR | 支持所有架构 |
-| 网络受限 | 自建 Baidu OCR | API 调用，稳定性好 |
-| 高性能需求 | 自建 Baidu OCR (Go版) | 最低延迟，最小内存 |
-
-### 性能优化提示
-
-- **Paddle OCR (Node.js版)**：建议分配 1GB+ 内存，CPU 2核+
-- **Baidu OCR (Go版)**：建议分配 256MB+ 内存，CPU 1核+
-- **网络优化**：使用国内镜像加速下载
-- **API 优化**：百度 OCR 注意 API 调用次数限制，可升级套餐
 
 ---
 
