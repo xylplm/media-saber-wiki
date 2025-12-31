@@ -20,13 +20,13 @@ date: 2023-09-27 12:16:17
 
 寻影探剧包含以下主要功能模块：
 
-### 🏆 [剧榜风云](/docs/movie_tv_discovery/tv_rankings/)
+### 🏆 [剧榜风云](/docs/explore_series/drama_rankings/)
 展示热门电视剧榜单，包括不同地区的热门剧集和各类排行榜。
 
-### 🎥 [影踪寻宝](/docs/movie_tv_discovery/movie_discovery/)
+### 🎥 [影踪寻宝](/docs/explore_series/movie_treasure_hunt/)
 推荐热门电影和值得关注的影片，帮助用户发现新的观影选择。
 
-### 📅 [开播日历](/docs/movie_tv_discovery/upcoming_releases/)
+### 📅 [开播日历](/docs/explore_series/premiere_calendar/)
 以日历形式展示即将开播的电视剧和上映的电影，方便用户提前了解和安排观影计划。
 
 ## 🔑 核心概念

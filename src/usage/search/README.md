@@ -24,5 +24,5 @@ date: 2025-01-01 12:16:17
 ## 🔗 相关链接
 
 - [回到使用文档](/usage/)
-- [搜索任务](/usage/search_tasks/)
-- [站点管理](/usage/sites/)
+- [搜索任务](/usage/search/search_tasks)
+- [搜索](/usage/search/search)
