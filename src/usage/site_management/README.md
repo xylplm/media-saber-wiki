@@ -20,28 +20,28 @@ date: 2023-09-27 12:16:17
 
 站点管理包含以下主要功能模块：
 
-### 🛠️ [站点维护](/docs/sites/site/)
+### 🛠️ [站点维护](/usage/site_management/site/)
 添加、配置和管理各种站点，设置站点的基本信息和访问参数。
 
-### 📊 [站点数据](/docs/sites/site_data/)
+### 📊 [站点数据](/usage/site_management/site_data/)
 查看和分析各站点的数据统计信息，包括流量、发布数量等。
 
-### 📅 [签到任务](/docs/sites/check_in/)
+### 📅 [签到任务](/usage/site_management/check_in/)
 配置和管理站点自动签到任务，维持站点活跃度。
 
-### 💎 [站点资源](/docs/sites/site_resources/)
+### 💎 [站点资源](/usage/site_management/site_resources/)
 浏览和管理站点提供的资源信息。
 
-### 📢 [站点公告](/docs/sites/site_announcements/)
+### 📢 [站点公告](/usage/site_management/site_announcements/)
 查看各站点的公告信息。
 
-### 📩 [站点消息](/docs/sites/site_messages/)
+### 📩 [站点消息](/usage/site_management/site_messages/)
 管理和回复站点的站内消息。
 
-### 📋 [站点请求](/docs/sites/site_requests/)
+### 📋 [站点请求](/usage/site_management/site_requests/)
 查看和管理站点的求种请求。
 
-### 🔧 [站点适配](/docs/sites/site_adaptation/)
+### 🔧 [站点适配](/usage/site_management/site_adaptation/)
 配置站点的适配规则，确保系统能正确解析站点内容。
 
 ## 📘 核心概念

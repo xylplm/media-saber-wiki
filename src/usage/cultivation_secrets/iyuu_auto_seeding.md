@@ -437,10 +437,10 @@ IYUU Token: "IYUUTxxxxxxxxxxxxxxxxx"
 
 ## 🔗 相关链接
 
-- [修仙秘籍主页](/docs/cultivation_secrets/main/)
-- [下载器配置文档](/docs/download/download_downloader/)
-- [站点管理文档](/docs/site/site_manage/)
-- [Cron表达式说明](/docs/other/cron_rule/)
+- [修仙秘籍主页](/usage/cultivation_secrets/main/)
+- [下载器配置文档](/usage/download_management/downloader_management/)
+- [站点管理文档](/usage/site_management/)
+- [Cron表达式说明](/usage/other/cron_rule/)
 
 ---
 

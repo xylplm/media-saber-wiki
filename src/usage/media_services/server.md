@@ -45,11 +45,11 @@ date: 2023-09-27 12:16:17
 
 系统支持多种主流媒体服务器：
 
-- 🎬 **Emby**：功能强大的媒体服务器 [[查看配置教程]](/docs/server/emby)
-- 🧊 **Jellyfin**：开源的媒体服务器 [[查看配置教程]](/docs/server/jellyfin)
-- 🔵 **Plex**：流行的媒体服务器 [[查看配置教程]](/docs/server/plex)
-- 🟢 **绿影视 (UGoS)**：绿联私有云设备上的媒体服务器 [[查看配置教程]](/docs/server/ugos)
-- 🔵 **极影视 (极空间)**：极空间私有云设备上的媒体服务器 [[查看配置教程]](/docs/server/zspace)
+- 🎬 **Emby**：功能强大的媒体服务器 [[查看配置教程]](/usage/media_services/emby)
+- 🧊 **Jellyfin**：开源的媒体服务器 [[查看配置教程]](/usage/media_services/jellyfin)
+- 🔵 **Plex**：流行的媒体服务器 [[查看配置教程]](/usage/media_services/plex)
+- 🟢 **绿影视 (UGoS)**：绿联私有云设备上的媒体服务器 [[查看配置教程]](/usage/media_services/ugos)
+- 🔵 **极影视 (极空间)**：极空间私有云设备上的媒体服务器 [[查看配置教程]](/usage/media_services/zspace)
 
 每种媒体服务器都需要相应的配置信息，如服务器地址和API密钥。 点击上面的查看配置教程可以获得每一种支持的媒体服务器的详细配置方式。
 ---

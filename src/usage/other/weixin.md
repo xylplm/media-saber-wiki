@@ -13,7 +13,7 @@ dateCreated: 2023-05-12T04:26:30.172Z
 
 微信消息通知功能允许用户通过企业微信接收系统通知，并支持远程交互控制。本文档详细介绍如何配置企业微信作为消息通知渠道。
 
-> 配置前请确保已在 [消息通知](/docs/system_settings/message_notifications/) 页面了解基本配置流程
+> 配置前请确保已在 [消息通知](/usage/system_settings/message_notifications/) 页面了解基本配置流程
 
 ## 📋 配置流程概览
 
@@ -77,7 +77,7 @@ https://ip:port/api/v1/webhook/wechat/AgentId?apiKey=用户密钥
 - `ip`: 你的域名或公网IP
 - `port`: 你的反向代理端口
 - `AgentId`: 你的企业微信应用AgentId
-- `用户密钥`: 请参考 [我的信息](/docs/main_page/my_info/) 页面获取API KEY，详细配置说明见 [API鉴权文档](/docs/other/api_auth/)
+- `用户密钥`: 请参考 [我的信息](/usage/main_page/my_info/) 页面获取API KEY，详细配置说明见 [API鉴权文档](/usage/other/api_auth/)
 
 示例：
 ```
@@ -146,6 +146,6 @@ http://demo.mediasaber.example:5858/api/v1/webhook/wechat/1000002?apiKey=sk-0c97
 
 1. **网络访问**：确保微信代理地址公网可访问
 2. **IP配置**：正确配置企业可信IP以保证消息推送正常
-3. **API Key**：生成和管理请参考 [我的信息](/docs/main_page/my_info/)，配置说明请参考 [API鉴权文档](/docs/other/api_auth/)
+3. **API Key**：生成和管理请参考 [我的信息](/usage/main_page/my_info/)，配置说明请参考 [API鉴权文档](/usage/other/api_auth/)
 4. **推送配置**：建议开启所有推送业务类型以获得完整通知体验
 5. **测试验证**：配置完成后使用测试功能验证配置正确性

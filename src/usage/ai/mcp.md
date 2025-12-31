@@ -38,7 +38,7 @@ Media Saber-MCP 把「我想看」变成「已订阅」—— 只需一句话，
 
 在使用MCP服务前，需要先配置OpenAI API相关设置：
 
-1. 前往 [基础设置](/docs/system_settings/basic_settings/) 页面
+1. 前往 [基础设置](/usage/system_settings/basic_settings/) 页面
 2. 在"智能体配置"部分配置以下项目：
    - **OpenAI API URL**：如 `https://api.openai.com/v1`
    - **OpenAI API Key**：您的API密钥
@@ -53,7 +53,7 @@ Media Saber-MCP 把「我想看」变成「已订阅」—— 只需一句话，
 MS_MCP_SERVER_HTTP_ADDR="0.0.0.0:22696"
 ```
 
-配置此环境变量后重启容器即可开启内置MCP服务。此时在 [智能体](/docs/ai/ai/) 页面的"新增MCP服务列表"中将会看到：
+配置此环境变量后重启容器即可开启内置MCP服务。此时在 [智能体](/usage/ai/ai/) 页面的"新增MCP服务列表"中将会看到：
 - **媒体服务**
 - **MS 媒体服务**：包含媒体、订阅、站点、媒体服务、云存储、系统等服务
 
@@ -94,14 +94,14 @@ http://192.168.1.100:22696
 API KEY 需要在Media Saber系统中获取：
 
 1. 登录Media Saber系统
-2. 前往 [我的信息](/docs/main_page/my_info/) 页面
+2. 前往 [我的信息](/usage/main_page/my_info/) 页面
 3. 切换到"安全配置"标签页
 4. 在"API KEY 管理"区域新增或使用现有的API KEY
 5. 复制API KEY值用于MCP客户端配置
 
-> 💡 **提示**：详细的API KEY管理操作请参考 [API鉴权文档](/docs/other/api_auth)。
+> 💡 **提示**：详细的API KEY管理操作请参考 [API鉴权文档](/usage/other/api_auth)。
 
-> ⚠️ **注意**：配置MCP客户端时，需要将API KEY作为请求头添加，具体格式请参考 [API鉴权文档](/docs/other/api_auth) 中的说明。
+> ⚠️ **注意**：配置MCP客户端时，需要将API KEY作为请求头添加，具体格式请参考 [API鉴权文档](/usage/other/api_auth) 中的说明。
 
 以下是效果示例：
 
@@ -114,14 +114,14 @@ API KEY 需要在Media Saber系统中获取：
 
 Q: 为啥我的 MCP 服务无法使用？ 发送 订阅 xxx 直接给我回复解释？  
 A: 请检查以下配置：
-1. 确认已在 [基础设置](/docs/system_settings/basic_settings/) 中配置了OpenAI API相关信息
+1. 确认已在 [基础设置](/usage/system_settings/basic_settings/) 中配置了OpenAI API相关信息
 2. 确认已启用MCP功能
 3. 确认Docker环境变量 `MS_MCP_SERVER_HTTP_ADDR="0.0.0.0:22696"` 已配置
 4. 确认MCP客户端中已正确配置API KEY请求头
 5. 如问题仍存在，可以尝试更换客户端重新添加MCP服务
 
 Q: 如何获取API KEY？  
-A: 在 [我的信息](/docs/main_page/my_info/) 页面的"安全配置"标签中，通过"API KEY 管理"功能新增或管理现有的API KEY。
+A: 在 [我的信息](/usage/main_page/my_info/) 页面的"安全配置"标签中，通过"API KEY 管理"功能新增或管理现有的API KEY。
 
 Q: API KEY配置错误会怎样？  
 A: 如果API KEY配置错误或未配置，MCP服务将无法正常工作，可能返回认证失败的错误信息。
@@ -130,15 +130,15 @@ Q: 支持哪些话语？
 A: 订阅+名字 / 订阅+名字+年份 / 订阅+名字+季数 / 订阅+名字+季数+年份
 
 Q: 如何在智能体中使用MCP服务？  
-A: 配置完成后，在 [智能体](/docs/ai/ai/) 页面即可看到可用的MCP服务，包括媒体服务和MS媒体服务等。
+A: 配置完成后，在 [智能体](/usage/ai/ai/) 页面即可看到可用的MCP服务，包括媒体服务和MS媒体服务等。
 
 ---
 
 ## 5. 相关文档
 
-- [智能体使用指南](/docs/ai/ai/) - 了解如何使用智能体功能
-- [基础设置](/docs/system_settings/basic_settings/) - 配置OpenAI API和MCP相关设置
-- [我的信息 - API KEY管理](/docs/main_page/my_info/) - 获取和管理MCP服务所需的API KEY
+- [智能体使用指南](/usage/ai/ai/) - 了解如何使用智能体功能
+- [基础设置](/usage/system_settings/basic_settings/) - 配置OpenAI API和MCP相关设置
+- [我的信息 - API KEY管理](/usage/main_page/my_info/) - 获取和管理MCP服务所需的API KEY
 
 ## 💡 推荐服务
 

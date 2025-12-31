@@ -69,5 +69,5 @@ date: 2025-11-19 00:00:00
 
 ## 🔗 相关链接
 
-- [修仙秘籍主页](/docs/cultivation_secrets/main/)
-- [Cron 表达式说明](/docs/other/cron_rule/)
+- [修仙秘籍主页](/usage/cultivation_secrets/main/)
+- [Cron 表达式说明](/usage/other/cron_rule/)

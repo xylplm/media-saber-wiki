@@ -102,7 +102,7 @@ static.example.com
 
 合理设置优选频率：
 
-> 📖 **详细说明**：关于Cron表达式的完整语法和更多示例，请参考：[Cron表达式说明文档](/docs/other/cron_rule)
+> 📖 **详细说明**：关于Cron表达式的完整语法和更多示例，请参考：[Cron表达式说明文档](/usage/other/cron_rule)
 
 **推荐频率**：
 - **每日优选**：`0 6 * * *` - 每天早上6点
@@ -212,10 +212,10 @@ static.example.com
 
 ## 🔗 相关链接
 
-- [修仙秘籍主页](/docs/cultivation_secrets/main/)
-- [Cron表达式说明](/docs/other/cron_rule)
-- [自定义Hosts](/docs/cultivation_secrets/custom_hosts/)
-- [小米路由Hosts](/docs/cultivation_secrets/mi_hosts/)
+- [修仙秘籍主页](/usage/cultivation_secrets/main/)
+- [Cron表达式说明](/usage/other/cron_rule)
+- [自定义Hosts](/usage/cultivation_secrets/custom_hosts/)
+- [小米路由Hosts](/usage/cultivation_secrets/mi_hosts/)
 
 ---
 

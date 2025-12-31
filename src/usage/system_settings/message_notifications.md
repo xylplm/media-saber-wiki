@@ -134,11 +134,11 @@ date: 2023-09-27 12:16:17
 
 ## 🪝 Webhook集成
 
-系统支持通过Webhook方式接收外部系统的消息，并通过配置的消息渠道进行推送。详细配置说明请参考：[Webhook文档](/docs/other/webhook)
+系统支持通过Webhook方式接收外部系统的消息，并通过配置的消息渠道进行推送。详细配置说明请参考：[Webhook文档](/usage/other/webhook)
 
 ## 📱 微信渠道配置
 
-微信渠道需要特殊配置，详细配置方法请参考：[微信信息通知](/docs/other/weixin/)
+微信渠道需要特殊配置，详细配置方法请参考：[微信信息通知](/usage/other/weixin/)
 
 ## ⚠️ 注意事项
 

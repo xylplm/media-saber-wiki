@@ -25,7 +25,7 @@ date: 2023-09-27 12:16:17
 
 ### 🍪 获取Cookie
 
-极空间设备可能需要Cookie进行身份验证，获取方式请参考[极空间获取Cookie教程](/docs/other/zspace_cookie)。
+极空间设备可能需要Cookie进行身份验证，获取方式请参考[极空间获取Cookie教程](/usage/other/zspace_cookie)。
 
 ### 📋 配置步骤
 

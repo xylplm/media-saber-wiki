@@ -158,7 +158,7 @@ Tracker: http://announce.thddl.com:8080/announce.php
 0 4 1 * *
 ```
 
-> 📖 **详细说明**：关于Cron表达式的完整语法和更多示例，请参考：[Cron表达式说明文档](/docs/other/cron_rule)
+> 📖 **详细说明**：关于Cron表达式的完整语法和更多示例，请参考：[Cron表达式说明文档](/usage/other/cron_rule)
 
 ### 操作功能
 
@@ -235,10 +235,10 @@ Tracker: http://announce.thddl.com:8080/announce.php
 
 ## 🔗 相关链接
 
-- [修仙秘籍主页](/docs/cultivation_secrets/main/)
-- [Cron表达式说明](/docs/other/cron_rule)
-- [自动删种](/docs/cultivation_secrets/auto_delete_torrent/)
-- [Tracker替换](/docs/cultivation_secrets/tracker_editor/)
+- [修仙秘籍主页](/usage/cultivation_secrets/main/)
+- [Cron表达式说明](/usage/other/cron_rule)
+- [自动删种](/usage/cultivation_secrets/auto_delete_torrent/)
+- [Tracker替换](/usage/cultivation_secrets/tracker_editor/)
 
 ---
 

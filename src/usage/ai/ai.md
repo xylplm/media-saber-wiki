@@ -137,7 +137,7 @@ MCP (Model Context Protocol) 是一个协议标准，允许AI模型访问外部�
 
 **Media Saber 系统内置服务**：
 
-> 💡 **前置要求**：系统内置服务需要在Docker环境中配置环境变量 `MS_MCP_SERVER_HTTP_ADDR="0.0.0.0:22696"` 并重启容器后才能使用。详细配置请参考 [MCP服务文档](/docs/ai/mcp/)。
+> 💡 **前置要求**：系统内置服务需要在Docker环境中配置环境变量 `MS_MCP_SERVER_HTTP_ADDR="0.0.0.0:22696"` 并重启容器后才能使用。详细配置请参考 [MCP服务文档](/usage/ai/mcp/)。
 
 - 📺 **媒体服务**：基础媒体管理功能
 - 🎬 **MS 媒体服务**：包含媒体、订阅、站点、媒体服务、云存储、系统等完整服务
@@ -200,7 +200,7 @@ MCP (Model Context Protocol) 是一个协议标准，允许AI模型访问外部�
 > - 确保网络连接正常，部分服务可能需要稳定的网络环境
 > - 第三方服务的可用性和功能由相应的服务提供商维护
 
-> 💡 **配置要求**：使用MCP服务前，需要先在 [基础设置](/docs/system_settings/basic_settings/) 中配置OpenAI API相关信息并启用MCP功能。
+> 💡 **配置要求**：使用MCP服务前，需要先在 [基础设置](/usage/system_settings/basic_settings/) 中配置OpenAI API相关信息并启用MCP功能。
 
 **服务配置选项**
 - 📂 **服务列表管理**：查看和管理已配置的MCP服务
@@ -314,12 +314,12 @@ MCP (Model Context Protocol) 是一个协议标准，允许AI模型访问外部�
 ### ⚠️ 使用限制
 
 **模型依赖**
-- 🔗 **API配置**：需要在 [基础设置](/docs/system_settings/basic_settings/) 中正确配置AI API才能使用
+- 🔗 **API配置**：需要在 [基础设置](/usage/system_settings/basic_settings/) 中正确配置AI API才能使用
 - 🌐 **网络连接**：需要稳定的网络连接保证正常使用
 - 💰 **使用额度**：注意AI API的使用配额和费用限制
 
 **功能限制**
-- 🔌 **MCP依赖**：MCP功能需要额外的服务配置，详见 [MCP服务文档](/docs/ai/mcp/)
+- 🔌 **MCP依赖**：MCP功能需要额外的服务配置，详见 [MCP服务文档](/usage/ai/mcp/)
 - �️ **内置服务**：Media Saber系统内置MCP服务需要配置环境变量 `MS_MCP_SERVER_HTTP_ADDR` 才能启用
 - �🎤 **浏览器支持**：语音功能需要浏览器支持语音识别API
 - 📱 **设备兼容**：某些功能在不同设备上可能有差异
@@ -346,5 +346,5 @@ MCP (Model Context Protocol) 是一个协议标准，允许AI模型访问外部�
 
 ## 📖 相关文档
 
-- [MCP服务](/docs/ai/mcp/) - 了解如何配置和使用MCP服务
-- [基础设置](/docs/system_settings/basic_settings/) - 配置OpenAI API和智能体相关设置
+- [MCP服务](/usage/ai/mcp/) - 了解如何配置和使用MCP服务
+- [基础设置](/usage/system_settings/basic_settings/) - 配置OpenAI API和智能体相关设置

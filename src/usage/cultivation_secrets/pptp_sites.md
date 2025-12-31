@@ -200,9 +200,9 @@ date: 2023-09-27 12:16:17
 
 ## 🔗 相关链接
 
-- [修仙秘籍主页](/docs/cultivation_secrets/main/)
-- [站点管理配置](/docs/advanced/site_management/)
-- [Cookie管理指南](/docs/advanced/cookie_management/)
+- [修仙秘籍主页](/usage/cultivation_secrets/main/)
+- [站点管理配置](/usage/site_management/)
+- [系统设置](/usage/system_settings/)
 
 ---
 

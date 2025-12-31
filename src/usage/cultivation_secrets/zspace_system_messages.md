@@ -123,7 +123,7 @@ http://192.168.31.88        # 缺少端口
 0 */1 * * *
 ```
 
-> 📖 **详细说明**：关于Cron表达式的完整语法和更多示例，请参考：[Cron表达式说明文档](/docs/other/cron_rule)
+> 📖 **详细说明**：关于Cron表达式的完整语法和更多示例，请参考：[Cron表达式说明文档](/usage/other/cron_rule)
 
 ### 使用步骤
 
@@ -241,9 +241,9 @@ http://192.168.31.88        # 缺少端口
 
 ## 🔗 相关链接
 
-- [修仙秘籍主页](/docs/cultivation_secrets/main/)
-- [Cron表达式说明](/docs/other/cron_rule)
-- [推送渠道配置](/docs/advanced/notification_channels/)
+- [修仙秘籍主页](/usage/cultivation_secrets/main/)
+- [Cron表达式说明](/usage/other/cron_rule)
+- [消息通知](/usage/system_settings/message_notifications/)
 
 ---
 

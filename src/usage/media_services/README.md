@@ -20,25 +20,25 @@ date: 2023-09-27 12:16:17
 
 媒体服务包含以下主要功能模块：
 
-### 📚 [我的媒体库](/docs/media_services/my_media_library/)
+### 📚 [我的媒体库](/usage/media_services/my_media_library/)
 展示个人媒体库的概览信息，包括电影、电视剧的数量和存储情况。
 
-### 🖥️ [媒体服务器](/docs/media_services/media_server/)
+### 🖥️ [媒体服务器](/usage/media_services/media_server/)
 管理和配置媒体服务器的基本设置和连接信息。
 
-### 🟢 [绿影视](/docs/media_services/green_movie/)
+### 🟢 [绿影视](/usage/media_services/green_movie/)
 配置和管理绿影视媒体服务器的相关设置。
 
-### 🔵 [极影视](/docs/media_services/jellyfin_movie/)
+### 🔵 [极影视](/usage/media_services/jellyfin_movie/)
 配置和管理极影视媒体服务器的相关设置。
 
-### 🎬 [Emby](/docs/media_services/emby/)
+### 🎬 [Emby](/usage/media_services/emby/)
 配置和管理Emby媒体服务器的相关设置。
 
-### 🎥 [Plex](/docs/media_services/plex/)
+### 🎥 [Plex](/usage/media_services/plex/)
 配置和管理Plex媒体服务器的相关设置。
 
-### 🐙 [Jellyfin](/docs/media_services/jellyfin/)
+### 🐙 [Jellyfin](/usage/media_services/jellyfin/)
 配置和管理Jellyfin媒体服务器的相关设置。
 
 ## 🔑 核心概念

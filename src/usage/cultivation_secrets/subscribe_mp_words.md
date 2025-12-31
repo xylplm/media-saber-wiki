@@ -105,7 +105,7 @@ https://cdn.example.org/anime_words.txt
 0 4 1 * *
 ```
 
-> 📖 **详细说明**：关于Cron表达式的完整语法和更多示例，请参考：[Cron表达式说明文档](/docs/other/cron_rule)
+> 📖 **详细说明**：关于Cron表达式的完整语法和更多示例，请参考：[Cron表达式说明文档](/usage/other/cron_rule)
 
 ### 操作功能
 
@@ -181,9 +181,9 @@ https://cdn.example.org/anime_words.txt
 
 ## 🔗 相关链接
 
-- [修仙秘籍主页](/docs/cultivation_secrets/main/)
-- [Cron表达式说明](/docs/other/cron_rule)
-- [豆瓣榜单订阅](/docs/cultivation_secrets/douban_subject_subscribe/)
+- [修仙秘籍主页](/usage/cultivation_secrets/main/)
+- [Cron表达式说明](/usage/other/cron_rule)
+- [豆瓣榜单订阅](/usage/cultivation_secrets/douban_subject_subscribe/)
 
 ---
 

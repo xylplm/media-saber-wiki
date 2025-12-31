@@ -165,7 +165,7 @@ date: 2025-01-01 12:16:17
 - 本地网络可正常访问系统地址
 
 #### 外网同步
-- 需要配置[基础设置](/docs/system_settings/basic_settings/)中的"外网访问地址"
+- 需要配置[基础设置](/usage/system_settings/basic_settings/)中的"外网访问地址"
 - 确保外网可以正常访问Media Saber系统
 - 防火墙需要开放相应端口
 
@@ -223,9 +223,9 @@ date: 2025-01-01 12:16:17
 
 ## 相关文档
 
-- [基础设置](/docs/system_settings/basic_settings/) - 配置外网访问地址
-- [电影订阅](/docs/subscription_management/movie_subscription/) - 了解电影订阅管理
-- [电视剧订阅](/docs/subscription_management/tv_subscription/) - 了解电视剧订阅管理
-- [订阅管理概览](/docs/subscription_management/) - 订阅功能总体介绍
+- [基础设置](/usage/system_settings/basic_settings/) - 配置外网访问地址
+- [电影订阅](/usage/subscription_management/movie_subscription/) - 了解电影订阅管理
+- [电视剧订阅](/usage/subscription_management/tv_subscription/) - 了解电视剧订阅管理
+- [订阅管理概览](/usage/subscription_management/) - 订阅功能总体介绍
 
 ---

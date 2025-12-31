@@ -133,7 +133,7 @@ https://movie.douban.com/annual/2023/
 0 */6 * * *
 ```
 
-> 📖 **详细说明**：关于Cron表达式的完整语法和更多示例，请参考：[Cron表达式说明文档](/docs/other/cron_rule)
+> 📖 **详细说明**：关于Cron表达式的完整语法和更多示例，请参考：[Cron表达式说明文档](/usage/other/cron_rule)
 
 ### 使用步骤
 
@@ -264,9 +264,9 @@ https://movie.douban.com/annual/2023/
 
 ## 🔗 相关链接
 
-- [修仙秘籍主页](/docs/cultivation_secrets/main/)
-- [Cron表达式说明](/docs/other/cron_rule)
-- [系统配置说明](/docs/configuration/system_config/)
+- [修仙秘籍主页](/usage/cultivation_secrets/main/)
+- [Cron表达式说明](/usage/other/cron_rule)
+- [系统配置说明](/usage/system_settings/)
 
 ---
 

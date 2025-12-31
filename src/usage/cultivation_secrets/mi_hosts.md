@@ -148,7 +148,7 @@ date: 2023-09-27 12:16:17
 0 2 1 * *
 ```
 
-> 📖 **详细说明**：关于Cron表达式的完整语法和更多示例，请参考：[Cron表达式说明文档](/docs/other/cron_rule)
+> 📖 **详细说明**：关于Cron表达式的完整语法和更多示例，请参考：[Cron表达式说明文档](/usage/other/cron_rule)
 
 ## ⚠️ 注意事项
 
@@ -213,10 +213,10 @@ date: 2023-09-27 12:16:17
 
 ## 🔗 相关链接
 
-- [修仙秘籍主页](/docs/cultivation_secrets/main/)
-- [Cron表达式说明](/docs/other/cron_rule)
-- [自定义Hosts](/docs/cultivation_secrets/custom_hosts/)
-- [Cloudflare IP优选](/docs/cultivation_secrets/cloudflare_ip_optimization/)
+- [修仙秘籍主页](/usage/cultivation_secrets/main/)
+- [Cron表达式说明](/usage/other/cron_rule)
+- [自定义Hosts](/usage/cultivation_secrets/custom_hosts/)
+- [Cloudflare IP优选](/usage/cultivation_secrets/cloudflare_ip_optimization/)
 
 ---
 

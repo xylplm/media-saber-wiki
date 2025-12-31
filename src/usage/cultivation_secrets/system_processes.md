@@ -415,9 +415,9 @@ date: 2023-09-27 12:16:17
 
 ## 🔗 相关链接
 
-- [修仙秘籍主页](/docs/cultivation_secrets/main/)
-- [系统资源监控最佳实践](/docs/optimization/resource_monitoring/)
-- [故障诊断指南](/docs/troubleshooting/system_issues/)
+- [修仙秘籍主页](/usage/cultivation_secrets/main/)
+- [系统进程](/cultivation_secrets/system_processes/)
+- [网络诊断](/usage/cultivation_secrets/network_diagnosis/)
 
 ---
 

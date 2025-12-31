@@ -21,7 +21,7 @@ dateCreated: 2023-10-11T16:25:24.817Z
 - 🔄 [strm 一条龙玩法](/guide/advanced/strm/)  
   > 如何通过一套流程从订阅、识别、整理再到展示，实现真正意义上的“自动化”。
 
-- 📖 [详细使用文档](/docs/main_page/index/)  
+- 📖 [详细使用文档](/usage/main_page/index/)  
   > 包含更多功能说明、页面讲解和使用场景推荐，适合系统性掌握 Media Saber 的全部能力。
 
 ---

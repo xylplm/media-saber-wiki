@@ -21,19 +21,19 @@ date: 2023-09-27 12:16:17
 
 媒体整理包含以下主要功能模块：
 
-### 🎯 [手动识别](/docs/media_organization/manual_identification/)
+### 🎯 [手动识别](/usage/media_organization/manual_identification/)
 处理未被自动识别的媒体文件，用户可以对这些文件进行重新识别或手动指定媒体信息。
 
-### 📚 [历史记录](/docs/media_organization/history/)
+### 📚 [历史记录](/usage/media_organization/history/)
 查看所有已成功整理的媒体文件记录，可以查看文件转移详情并对相关文件进行管理。
 
-### 🎬 [TMDB 缓存](/docs/media_organization/tmdb_cache/)
+### 🎬 [TMDB 缓存](/usage/media_organization/tmdb_cache/)
 管理从TMDB获取的媒体信息缓存数据，通过缓存机制减少对TMDB的访问频率，提高识别速度。
 
-### 🔤 [自定义识别词](/docs/media_organization/custom_identification_words/)
+### 🔤 [自定义识别词](/usage/media_organization/custom_identification_words/)
 当种子标题名称、文件名称无法识别时，可以通过自定义识别词对原名称进行修改，以符合识别要求。
 
-### 🧪 [名称识别测试](/docs/media_organization/name_recognition_test/)
+### 🧪 [名称识别测试](/usage/media_organization/name_recognition_test/)
 测试文件名是否能被正确识别，验证自定义识别词的效果。
 
 ## 🔄 工作流程
@@ -50,9 +50,9 @@ date: 2023-09-27 12:16:17
 
 媒体整理功能的相关设置可以在以下位置找到：
 
-- **[基础设置](/docs/setting/base/)**：配置整理的基本参数
-- **[目录管理](/docs/directory_management/directory_management/)**：设置源目录和目标目录
-- **[系统设置](/docs/system_settings/)**：配置TMDB API等系统参数
+- **[基础设置](/usage/system_settings/basic_settings/)**：配置整理的基本参数
+- **[目录管理](/usage/directory_management/directory_management/)**：设置源目录和目标目录
+- **[系统设置](/usage/system_settings/)**：配置TMDB API等系统参数
 
 ## 📝 注意事项
 

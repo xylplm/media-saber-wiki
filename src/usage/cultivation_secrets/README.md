@@ -64,53 +64,53 @@ date: 2023-09-27 12:16:17
 
 ### 📺 媒体管理类
 
-- **[追剧提醒](/docs/cultivation_secrets/drama_reminder/)**：自动提醒订阅的剧集更新
-- **[Emby2Alist](/docs/cultivation_secrets/emby2alist/)**：Emby与Alist集成插件
-- **[一键生成云存储Strm](/docs/cultivation_secrets/generate_pan_strm/)**：批量生成云存储Strm文件
+- **[追剧提醒](/usage/cultivation_secrets/drama_reminder/)**：自动提醒订阅的剧集更新
+- **[Emby2Alist](/usage/cultivation_secrets/emby2alist/)**：Emby与Alist集成插件
+- **[一键生成云存储Strm](/usage/cultivation_secrets/generate_pan_strm/)**：批量生成云存储Strm文件
 
 ### 📥 下载管理类
 
-- **[IYUU自动辅种](/docs/cultivation_secrets/iyuu_auto_seeding/)**：自动辅种管理工具
-- **[自动转移做种](/docs/cultivation_secrets/auto_transfer_seeding/)**：种子文件自动转移
-- **[DC助手](/docs/cultivation_secrets/dc_helper/)**：下载客户端管理助手
-- **[自动删种](/docs/cultivation_secrets/auto_delete_torrent/)**：智能删除符合条件的种子
-- **[刷流](/docs/cultivation_secrets/brush/)**：PT站点流量管理工具（刷子神器）
-- **[Tracker替换](/docs/cultivation_secrets/tracker_editor/)**：批量替换种子Tracker地址
-- **[下载器站点标签](/docs/cultivation_secrets/downloader_site_tag/)**：为种子添加站点标签
-- **[NullBr剧集下载器](/docs/cultivation_secrets/null_br_episode_download/)**：专业剧集自动下载工具
+- **[IYUU自动辅种](/usage/cultivation_secrets/iyuu_auto_seeding/)**：自动辅种管理工具
+- **[自动转移做种](/usage/cultivation_secrets/auto_transfer_seeding/)**：种子文件自动转移
+- **[DC助手](/usage/cultivation_secrets/dc_helper/)**：下载客户端管理助手
+- **[自动删种](/usage/cultivation_secrets/auto_delete_torrent/)**：智能删除符合条件的种子
+- **[刷流](/usage/cultivation_secrets/brush/)**：PT站点流量管理工具（刷子神器）
+- **[Tracker替换](/usage/cultivation_secrets/tracker_editor/)**：批量替换种子Tracker地址
+- **[下载器站点标签](/usage/cultivation_secrets/downloader_site_tag/)**：为种子添加站点标签
+- **[NullBr剧集下载器](/usage/cultivation_secrets/null_br_episode_download/)**：专业剧集自动下载工具
 
 ### 🌐 网络工具类
 
-- **[网络Ping](/docs/cultivation_secrets/network_ping/)**：网络连通性测试
-- **[网络诊断](/docs/cultivation_secrets/network_diagnosis/)**：全面的网络诊断工具
-- **[自定义Hosts](/docs/cultivation_secrets/custom_hosts/)**：自定义域名解析
-- **[Cloudflare IP优选](/docs/cultivation_secrets/cloudflare_ip_optimization/)**：优选最快的CF节点
-- **[小米路由Hosts](/docs/cultivation_secrets/mi_hosts/)**：同步Hosts到小米路由器
+- **[网络Ping](/usage/cultivation_secrets/network_ping/)**：网络连通性测试
+- **[网络诊断](/usage/cultivation_secrets/network_diagnosis/)**：全面的网络诊断工具
+- **[自定义Hosts](/usage/cultivation_secrets/custom_hosts/)**：自定义域名解析
+- **[Cloudflare IP优选](/usage/cultivation_secrets/cloudflare_ip_optimization/)**：优选最快的CF节点
+- **[小米路由Hosts](/usage/cultivation_secrets/mi_hosts/)**：同步Hosts到小米路由器
 
 ### 💻 系统工具类
 
-- **[系统进程](/docs/cultivation_secrets/system_processes/)**：监控系统进程状态
-- **[自动备份](/docs/cultivation_secrets/auto_backup/)**：数据自动备份工具
-- **[媒体服务清理](/docs/cultivation_secrets/media_server_clean/)**：清理媒体服务器大文件和特定内容
+- **[系统进程](/usage/cultivation_secrets/system_processes/)**：监控系统进程状态
+- **[自动备份](/usage/cultivation_secrets/auto_backup/)**：数据自动备份工具
+- **[媒体服务清理](/usage/cultivation_secrets/media_server_clean/)**：清理媒体服务器大文件和特定内容
 
 ### ✅ 签到工具类
 
 - **[音乐磁场签到](/guide/plugin/music-signin)**：音乐磁场自动签到
 - **[药丸签到](/guide/plugin/yw-signin)**：药丸网自动签到
-- **[晋江文学签到](/docs/cultivation_secrets/jjwxc_sign_in/)**：晋江文学网自动签到
-- **[98签到](/docs/cultivation_secrets/sign_98/)**：98论坛自动签到
-- **[什么值得买签到](/docs/cultivation_secrets/smzdm/)**：什么值得买自动签到
-- **[柠檬神游](/docs/cultivation_secrets/lemon_shengyou/)**：柠檬站点自动神游
+- **[晋江文学签到](/usage/cultivation_secrets/jjwxc_sign_in/)**：晋江文学网自动签到
+- **[98签到](/usage/cultivation_secrets/sign_98/)**：98论坛自动签到
+- **[什么值得买签到](/usage/cultivation_secrets/smzdm/)**：什么值得买自动签到
+- **[柠檬神游](/usage/cultivation_secrets/lemon_shengyou/)**：柠檬站点自动神游
 
 ### 📊 订阅管理类
 
-- **[豆瓣榜单订阅](/docs/cultivation_secrets/douban_subject_subscribe/)**：自动订阅豆瓣热门影视
-- **[订阅MP共享识别词](/docs/cultivation_secrets/subscribe_mp_words/)**：订阅MP共享的识别词数据
+- **[豆瓣榜单订阅](/usage/cultivation_secrets/douban_subject_subscribe/)**：自动订阅豆瓣热门影视
+- **[订阅MP共享识别词](/usage/cultivation_secrets/subscribe_mp_words/)**：订阅MP共享的识别词数据
 
 ### 🔧 特殊功能类
 
-- **[PPTP站点](/docs/cultivation_secrets/pptp_sites/)**：PPTP相关工具
-- **[极空间系统消息](/docs/cultivation_secrets/zspace_system_messages/)**：极空间系统集成
+- **[PPTP站点](/usage/cultivation_secrets/pptp_sites/)**：PPTP相关工具
+- **[极空间系统消息](/usage/cultivation_secrets/zspace_system_messages/)**：极空间系统集成
 
 ## 📖 使用指南
 
@@ -126,7 +126,7 @@ date: 2023-09-27 12:16:17
 
 大部分插件支持定时执行，使用Cron表达式设置执行时间。
 
-> 📖 **详细说明**：关于Cron表达式的完整语法和更多示例，请参考：[Cron表达式说明文档](/docs/other/cron_rule)
+> 📖 **详细说明**：关于Cron表达式的完整语法和更多示例，请参考：[Cron表达式说明文档](/usage/other/cron_rule)
 
 常用示例：
 - `0 2 * * *`：每天凌晨2点执行

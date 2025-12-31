@@ -369,9 +369,9 @@ A: 一般来说，国内网络延迟<50ms较好，<100ms可接受，>200ms可能
 
 ## 🔗 相关链接
 
-- [修仙秘籍主页](/docs/cultivation_secrets/main/)
-- [网络 Ping 插件](/docs/cultivation_secrets/network_ping/)
-- [自定义Hosts插件](/docs/cultivation_secrets/custom_hosts/)
+- [修仙秘籍主页](/usage/cultivation_secrets/main/)
+- [网络 Ping 插件](/usage/cultivation_secrets/network_ping/)
+- [自定义Hosts插件](/usage/cultivation_secrets/custom_hosts/)
 
 ---
 

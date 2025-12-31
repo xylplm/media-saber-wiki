@@ -174,7 +174,7 @@ date: 2023-09-27 12:16:17
 0 4 1 * *
 ```
 
-> 📖 **详细说明**：关于Cron表达式的完整语法和更多示例，请参考：[Cron表达式说明文档](/docs/other/cron_rule)
+> 📖 **详细说明**：关于Cron表达式的完整语法和更多示例，请参考：[Cron表达式说明文档](/usage/other/cron_rule)
 
 ### 操作功能
 
@@ -251,9 +251,9 @@ date: 2023-09-27 12:16:17
 
 ## 🔗 相关链接
 
-- [修仙秘籍主页](/docs/cultivation_secrets/main/)
-- [Cron表达式说明](/docs/other/cron_rule)
-- [下载器站点标签](/docs/cultivation_secrets/downloader_site_tag/)
+- [修仙秘籍主页](/usage/cultivation_secrets/main/)
+- [Cron表达式说明](/usage/other/cron_rule)
+- [下载器站点标签](/usage/cultivation_secrets/downloader_site_tag/)
 
 ---
 

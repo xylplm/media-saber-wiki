@@ -189,6 +189,6 @@ docker run -d \
 
 ## 🔗 相关链接
 
-- [修仙秘籍主页](/docs/cultivation_secrets/main/)
-- [Cron 表达式说明](/docs/other/cron_rule/)
-- [媒体服务器配置指南](/docs/usage/media_services/)
+- [修仙秘籍主页](/usage/cultivation_secrets/main/)
+- [Cron 表达式说明](/usage/other/cron_rule/)
+- [媒体服务器配置指南](/usage/media_services/)

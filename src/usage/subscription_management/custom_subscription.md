@@ -71,12 +71,12 @@ date: 2025-01-01 12:16:17
 - 利用**排序规则**优化资源选择策略
 
 ### 通过系统设置优化
-- 在[过滤规则](/docs/system_settings/filter_rules/)中创建专用规则组
-- 在[种子排序](/docs/system_settings/torrent_sort/)中配置个性化排序
-- 在[种子匹配](/docs/system_settings/torrent_match/)中设置精确匹配条件
+- 在[过滤规则](/usage/system_settings/filter_rules/)中创建专用规则组
+- 在[种子排序](/usage/system_settings/torrent_sort/)中配置个性化排序
+- 在[种子匹配](/usage/system_settings/torrent_match/)中设置精确匹配条件
 
 ### 通过站点管理
-- 在[站点管理](/docs/sites/site/)中精确配置站点用途
+- 在[站点管理](/usage/site_management/site/)中精确配置站点用途
 - 使用站点的RSS订阅功能
 - 配置站点的搜索参数和权重
 
@@ -123,15 +123,15 @@ date: 2025-01-01 12:16:17
 在等待自定义订阅功能的同时，建议了解和使用以下相关功能：
 
 ### 核心订阅功能
-- [电影订阅](/docs/subscription_management/movie_subscription/) - 电影自动订阅功能
-- [电视剧订阅](/docs/subscription_management/tv_subscription/) - 电视剧自动订阅功能
-- [订阅日历](/docs/subscription_management/subscription_calendar/) - 订阅时间可视化管理
+- [电影订阅](/usage/subscription_management/movie_subscription/) - 电影自动订阅功能
+- [电视剧订阅](/usage/subscription_management/tv_subscription/) - 电视剧自动订阅功能
+- [订阅日历](/usage/subscription_management/subscription_calendar/) - 订阅时间可视化管理
 
 ### 配置和优化
-- [过滤规则](/docs/system_settings/filter_rules/) - 资源过滤和筛选
-- [种子排序](/docs/system_settings/torrent_sort/) - 资源排序和优选
-- [种子匹配](/docs/system_settings/torrent_match/) - 精确匹配条件
-- [基础设置](/docs/system_settings/basic_settings/) - 系统基础配置
+- [过滤规则](/usage/system_settings/filter_rules/) - 资源过滤和筛选
+- [种子排序](/usage/system_settings/torrent_sort/) - 资源排序和优选
+- [种子匹配](/usage/system_settings/torrent_match/) - 精确匹配条件
+- [基础设置](/usage/system_settings/basic_settings/) - 系统基础配置
 
 ---
 

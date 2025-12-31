@@ -110,7 +110,7 @@ date: 2025-01-01 12:16:17
 - 所有规则都不匹配的资源会被过滤掉
 - 根据优先级进行排序择优下载
 
-**操作建议：** 可在 [过滤规则](/docs/system_settings/filter_rules/) 页面创建专用规则组
+**操作建议：** 可在 [过滤规则](/usage/system_settings/filter_rules/) 页面创建专用规则组
 
 #### 排序规则  
 **说明：** 指定搜索资源时使用的排序规则
@@ -124,7 +124,7 @@ date: 2025-01-01 12:16:17
 - 评分越高的资源排序越靠前
 - 优先下载排序靠前的高质量资源
 
-**操作建议：** 可在 [种子排序](/docs/system_settings/torrent_sort/) 页面创建个性化排序规则
+**操作建议：** 可在 [种子排序](/usage/system_settings/torrent_sort/) 页面创建个性化排序规则
 
 ### 📥 下载配置
 
@@ -282,11 +282,11 @@ date: 2025-01-01 12:16:17
 
 ## 相关文档
 
-- [过滤规则](/docs/system_settings/filter_rules/) - 配置资源过滤条件
-- [种子排序](/docs/system_settings/torrent_sort/) - 配置资源排序规则
-- [种子匹配](/docs/system_settings/torrent_match/) - 配置精确匹配条件
-- [基础设置](/docs/system_settings/basic_settings/) - 配置订阅基础参数
-- [站点管理](/docs/sites/site/) - 管理订阅和搜索站点
-- [下载管理](/docs/download_management/) - 配置下载器和参数
+- [过滤规则](/usage/system_settings/filter_rules/) - 配置资源过滤条件
+- [种子排序](/usage/system_settings/torrent_sort/) - 配置资源排序规则
+- [种子匹配](/usage/system_settings/torrent_match/) - 配置精确匹配条件
+- [基础设置](/usage/system_settings/basic_settings/) - 配置订阅基础参数
+- [站点管理](/usage/site_management/site/) - 管理订阅和搜索站点
+- [下载管理](/usage/download_management/) - 配置下载器和参数
 
 ---

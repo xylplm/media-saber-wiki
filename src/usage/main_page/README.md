@@ -25,33 +25,33 @@ MediaSaber 的首页是用户进入系统后的主界面，包含主页面布局
 
 - **位置**：顶部导航栏左侧
 - **功能**：打开搜索对话框
-- **详情**：[搜索功能文档](/docs/search/search/)
+- **详情**：[搜索功能文档](/usage/search/search/)
 
 #### 📢 消息中心
 
 - **位置**：顶部导航栏右侧（铃铛图标）
 - **功能**：查看系统消息和通知
-- **详情**：[消息中心文档](/docs/main_page/message_center/)
+- **详情**：[消息中心文档](/usage/main_page/message_center/)
 
 #### 📋 系统日志
 
 - **位置**：顶部导航栏右侧（文档图标）
 - **功能**：查看系统运行日志
-- **详情**：[系统日志文档](/docs/main_page/system_log/)
+- **详情**：[系统日志文档](/usage/main_page/system_log/)
 
 #### 📊 业务日志
 
 - **位置**：顶部导航栏右侧（带搜索图标的文档图标）
 - **功能**：查看业务操作日志
-- **详情**：[业务日志文档](/docs/main_page/business_log/)
+- **详情**：[业务日志文档](/usage/main_page/business_log/)
 
 #### 👤 用户信息
 
 - **位置**：顶部导航栏最右侧（用户头像）
 - **功能**：访问用户相关设置和功能
 - **子功能**：
-  - [我的信息](/docs/main_page/my_info/)
-  - [定时任务](/docs/main_page/scheduled_tasks/)
+  - [我的信息](/usage/main_page/my_info/)
+  - [定时任务](/usage/main_page/scheduled_tasks/)
   - 帮助文档
   - 退出登录
 
@@ -89,7 +89,7 @@ MediaSaber 的首页是用户进入系统后的主界面，包含主页面布局
 
 - 通过用户头像菜单中的"界面自定义"打开
 - 支持主题、颜色、布局等个性化设置
-- 详情请参考：[界面自定义文档](/docs/main_page/ui_customization/)
+- 详情请参考：[界面自定义文档](/usage/main_page/ui_customization/)
 
 ### 📱 页面功能按钮
 
@@ -167,7 +167,7 @@ graph TD
 - **侧边栏状态**：展开/收缩默认状态
 - **卡片样式**：阴影/边框样式切换
 
-详细配置请参考：[界面自定义文档](/docs/main_page/ui_customization/)
+详细配置请参考：[界面自定义文档](/usage/main_page/ui_customization/)
 
 ### 📐 响应式适配
 

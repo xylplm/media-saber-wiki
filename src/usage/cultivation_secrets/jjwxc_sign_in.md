@@ -86,7 +86,7 @@ date: 2023-09-27 12:16:17
 
 建议的签到时间设置：
 
-> 📖 **详细说明**：关于Cron表达式的完整语法和更多示例，请参考：[Cron表达式说明文档](/docs/other/cron_rule)
+> 📖 **详细说明**：关于Cron表达式的完整语法和更多示例，请参考：[Cron表达式说明文档](/usage/other/cron_rule)
 
 **推荐时间**：
 - **上午签到**：`30 8 * * *` - 每天上午8点30分
@@ -174,9 +174,9 @@ date: 2023-09-27 12:16:17
 
 ## 🔗 相关链接
 
-- [修仙秘籍主页](/docs/cultivation_secrets/main/)
-- [Cron表达式说明](/docs/other/cron_rule)
-- [什么值得买签到](/docs/cultivation_secrets/smzdm/)
+- [修仙秘籍主页](/usage/cultivation_secrets/main/)
+- [Cron表达式说明](/usage/other/cron_rule)
+- [什么值得买签到](/usage/cultivation_secrets/smzdm/)
 
 ---
 

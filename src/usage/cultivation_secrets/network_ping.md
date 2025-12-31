@@ -272,9 +272,9 @@ date: 2023-09-27 12:16:17
 
 ## 🔗 相关链接
 
-- [修仙秘籍主页](/docs/cultivation_secrets/main/)
-- [网络诊断插件](/docs/cultivation_secrets/network_diagnostics/)
-- [系统配置说明](/docs/configuration/system_config/)
+- [修仙秘籍主页](/usage/cultivation_secrets/main/)
+- [网络诊断插件](/usage/cultivation_secrets/network_diagnostics/)
+- [系统配置说明](/usage/system_settings/)
 
 ---
 

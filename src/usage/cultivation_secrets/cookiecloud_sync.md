@@ -93,5 +93,5 @@ date: 2025-11-19 00:00:00
 
 ## 🔗 相关链接
 
-- [修仙秘籍主页](/docs/cultivation_secrets/main/)
+- [修仙秘籍主页](/usage/cultivation_secrets/main/)
 - CookieCloud 官方文档（根据你的部署情况填写）
