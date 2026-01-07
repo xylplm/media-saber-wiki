@@ -30,7 +30,7 @@ Media Saber 未内置任何站点支持！**在添加站点前必须先配置站
 快速操作按钮：
 
 - 🔄 **刷新**：重新加载站点列表数据
-- 🌐 **连通性测试**：测试站点是否可以正常连接（[遇到问题？](/guide/start/problem/#站点无法连通)）
+- 🌐 **连通性测试**：测试站点是否可以正常连接（[遇到问题？](/guide/problem.html#站点无法连通)）
 - 📡 **RSS 测试**：测试站点 RSS 功能是否正常工作
 
 **更多操作菜单：**
@@ -93,7 +93,7 @@ Media Saber 未内置任何站点支持！**在添加站点前必须先配置站
 
 | 字段 | 说明 |
 |------|------|
-| 🍪 **Cookie** | 在浏览器 F12 → 网络选项卡获取，或使用 [Cookie 插件](/usage/other/browser_sync_plugin/) 快速获取 |
+| 🍪 **Cookie** | 在浏览器 F12 → 网络选项卡获取，或使用 [Cookie 插件](/client/brower_tool.html) 快速获取 |
 | 📥 **自定义请求头** | 格式：`key:value`，多个换行分隔。某些站点（馒头、飞天拉面等）需要配置才能使用 |
 | 🌐 **User-Agent** | 站点签到/搜索/数据获取时的标识信息，为空则使用系统默认设置 |
 | 🔐 **两步验证 Key** | 部分站点需要配置 2FA 认证，可通过二维码扫描或选择获取 |
@@ -196,7 +196,7 @@ Media Saber 未内置任何站点支持！**在添加站点前必须先配置站
 
 ### 方式二：插件同步
 
-使用浏览器同步插件自动获取和更新 Cookie。详见 [浏览器同步插件](/usage/other/browser_sync_plugin/)。
+使用浏览器同步插件自动获取和更新 Cookie。详见 [浏览器同步插件](/client/brower_tool.html)。
 
 ## 🌐 站点连通性测试
 
@@ -204,7 +204,7 @@ Media Saber 未内置任何站点支持！**在添加站点前必须先配置站
 
 **操作**：站点列表 → 点击「连通性测试」按钮
 
-**遇到错误**：根据报错信息调整站点设置和网络环境，参考 [站点无法连通](/guide/start/problem/#站点无法连通)
+**遇到错误**：根据报错信息调整站点设置和网络环境，参考 [站点无法连通](/guide/problem.html#站点无法连通)
 
 ## 📡 站点 RSS 测试
 
@@ -243,8 +243,8 @@ Media Saber 未内置任何站点支持！**在添加站点前必须先配置站
 ## 📚 相关文档
 
 - 📖 [站点管理配置指南](/guide/init/sites) - 初始化站点配置
-- 🔌 [浏览器同步插件](/usage/other/browser_sync_plugin/) - Cookie 自动同步
+- 🔌 [浏览器同步插件](/client/brower_tool.html) - Cookie 自动同步
 - ⚙️ [代理服务器设置](/usage/system_settings/basic_settings.html#代理服务器) - 代理配置
 - 📋 [Cron 规则文档](/usage/other/cron_rule) - 定时任务表达式
 - 🔍 [过滤规则](/usage/other/) - 种子过滤配置
-- 🚨 [故障排查](/guide/start/problem/#站点无法连通) - 常见问题解决
+- 🚨 [故障排查](/guide/problem.html#站点无法连通) - 常见问题解决
