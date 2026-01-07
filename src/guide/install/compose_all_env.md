@@ -192,8 +192,8 @@ services:
       - PGID=${PGID}
       - TZ=Asia/Shanghai
       - MS_PORT=${MS_PORT}  # 前端端口
-      - MS_AUTH_EMAIL=${AUTH_EMAIL}
-      - MS_AUTH_SLOGAN=${AUTH_SLOGAN}
+      - MS_AUTH_EMAIL=${AUTH_EMAIL}  # 必填：访问认证邮箱
+      - MS_AUTH_SLOGAN=${AUTH_SLOGAN}  # 必填：认证口令
       - MS_LOG_LEVEL=debug
       - MS_LOG_KEEP_DAYS=14
       - MS_REDIS_HOST=${LOCAL_IP}:${REDIS_PORT}  # redis 局域网 ip:端口

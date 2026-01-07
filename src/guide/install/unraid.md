@@ -90,8 +90,8 @@ dateCreated: 2023-05-12T04:25:24.817Z
   <Config Name="MS_PGSQL_PATH" Target="MS_PGSQL_PATH" Default="" Mode="" Description="PostgreSQL 服务器 IP" Type="Variable" Display="always" Required="false" Mask="false">127.0.0.1</Config>
   <Config Name="MS_PGSQL_PORT" Target="MS_PGSQL_PORT" Default="" Mode="" Description="PostgreSQL 端口" Type="Variable" Display="always" Required="false" Mask="false">5431</Config>
   <Config Name="MS_PGSQL_DBNAME" Target="MS_PGSQL_DBNAME" Default="" Mode="" Description="数据库名" Type="Variable" Display="always" Required="false" Mask="false">ms</Config>
-  <Config Name="MS_AUTH_EMAIL" Target="MS_AUTH_EMAIL" Default="" Mode="" Description="认证邮箱" Type="Variable" Display="always" Required="false" Mask="false">your-email@example.com</Config>
-  <Config Name="MS_AUTH_SLOGAN" Target="MS_AUTH_SLOGAN" Default="" Mode="" Description="认证口令" Type="Variable" Display="always" Required="false" Mask="false">YourAuthSlogan</Config>
+  <Config Name="MS_AUTH_EMAIL" Target="MS_AUTH_EMAIL" Default="" Mode="" Description="认证邮箱（必填）" Type="Variable" Display="always" Required="true" Mask="false">your-email@example.com</Config>
+  <Config Name="MS_AUTH_SLOGAN" Target="MS_AUTH_SLOGAN" Default="" Mode="" Description="认证口令（必填）" Type="Variable" Display="always" Required="true" Mask="false">YourAuthSlogan</Config>
   <Config Name="MS_LOG_LEVEL" Target="MS_LOG_LEVEL" Default="" Mode="" Description="日志级别" Type="Variable" Display="always" Required="false" Mask="false">info</Config>
   <Config Name="MS_LOG_KEEP_DAYS" Target="MS_LOG_KEEP_DAYS" Default="" Mode="" Description="日志保留天数" Type="Variable" Display="always" Required="false" Mask="false">7</Config>
   <Config Name="UMASK" Target="UMASK" Default="" Mode="" Description="文件权限掩码" Type="Variable" Display="always" Required="false" Mask="false">022</Config>

@@ -116,8 +116,8 @@ services:
     environment:
       TZ: Asia/Shanghai
       MS_PORT: 8888
-      MS_AUTH_EMAIL: xxx  # 修改为实际邮箱
-      MS_AUTH_SLOGAN: xxx  # 修改为实际标语
+      MS_AUTH_EMAIL: xxx  # 修改为实际邮箱（必填）
+      MS_AUTH_SLOGAN: xxx  # 修改为实际标语（必填）
       MS_LOG_LEVEL: debug
       MS_LOG_KEEP_DAYS: 14
       MS_REDIS_HOST: redis:6379

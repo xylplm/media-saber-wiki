@@ -22,8 +22,8 @@ dateCreated: 2023-05-12T04:26:30.172Z
 |------|------|--------|------|
 | `TZ` | 时区设置 | 无 | `Asia/Shanghai` |
 | `MS_PORT` | 前端访问端口 | 3000 | `8888` |
-| `MS_AUTH_EMAIL` | 初始化邮箱 | 无 | `admin@example.com` |
-| `MS_AUTH_SLOGAN` | 系统标语 | 无 | `我的媒体库` |
+| `MS_AUTH_EMAIL` | 认证邮箱（必填） | 无 | `admin@example.com` |
+| `MS_AUTH_SLOGAN` | 认证口令（必填） | 无 | `YourPassword123` |
 
 ---
 

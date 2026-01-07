@@ -159,8 +159,8 @@ services:
 | `MS_PGSQL_PATH` | PostgreSQL 服务器 IP | `192.168.1.100` |
 | `MS_PGSQL_PORT` | PostgreSQL 端口 | `5431` |
 | `MS_PGSQL_PASSWORD` | PostgreSQL 密码 | `ms888888` |
-| `MS_AUTH_EMAIL` | 初始化邮箱 | `admin@example.com` |
-| `MS_AUTH_SLOGAN` | 系统标语 | `我的媒体库` |
+| `MS_AUTH_EMAIL` | 认证邮箱（必填） | `admin@example.com` |
+| `MS_AUTH_SLOGAN` | 认证口令（必填） | `YourPassword123` |
 | `/volume1/docker/*` | 存储路径 | `/mnt/data/docker/*` |
 | `/volume2/Medium` | 媒体路径 | `/mnt/media/*` |
 
