@@ -1,5 +1,5 @@
 ---
-title: Compose全家桶安装
+title: Docker Compose 全家桶安装
 article: false
 date: 2025-03-11T12:20:20.888Z
 tags:
@@ -10,25 +10,58 @@ editor: markdown
 dateCreated: 2025-03-11T12:20:20.888Z
 ---
 
-此处以UGOS Pro设备为例
+## 🐳 Docker Compose 全家桶安装
 
-## 项目目录
-![图片1.png](./images/ugospro/project_dir.png)
+此处以 UGOS Pro 设备为例，完整演示全家桶安装方式。
 
-## 配置
-- 全家桶 docker-compose 一键部署
-- 项目存放路径选 /共享文件夹/docker/msgo
-- 默认使用自定义网络，容器之间互访使用容器名+内部端口
-- 如需使用 host 网络，记得把容器改为 ip
-- 需要修改的地方使用 xxx 代替了
+:::info 📋 本页包含内容
+- Redis 缓存数据库（必选）
+- PostgreSQL 主数据库（必选）
+- Media Saber 主服务（必选）
+- Emby 媒体服务器（可选）
+- qBittorrent 下载器（可选）
+- 百度 OCR 识别服务（可选）
+- Asynq 任务监控（可选）
+:::
+
+---
+
+## 📁 项目目录结构
+
+![项目目录结构](./images/ugospro/project_dir.png)
+
+```txt
+msgo/
+├── redis/           # Redis 数据存储
+├── pgsql/           # PostgreSQL 数据库
+├── ms/              # Media Saber 配置
+├── emby/            # Emby 配置（可选）
+├── qb/              # qBittorrent 配置（可选）
+└── docker-compose.yml   # Compose 配置文件
+```
+
+---
+
+## 🔧 Compose 配置说明
+
+:::warning ⚠️ 配置注意事项
+- **全家桶方式**：一个 docker-compose.yml 文件部署所有服务
+- **自定义网络**：默认使用自定义网络，容器间通过容器名+内部端口互访
+- **Host 网络**：如需使用 host 网络，需将容器 IP 改为主机 IP
+- **修改标记**：需要修改的地方使用 `xxx` 代替，请根据实际情况修改
+:::
+
+---
+
+## 📝 完整 docker-compose.yml 配置
+
 ```yaml
 services:
-  # redis 缓存数据，加速运行，必选
+  # Redis 缓存数据库，必选
   redis:
     image: redis:latest
     container_name: redis
     restart: unless-stopped
-#    network_mode: host
     networks:
       - msgo_network
     volumes:
@@ -36,110 +69,93 @@ services:
     environment:
       TZ: Asia/Shanghai
       GOSU_VERSION: 1.17
-#    ports:
-#      - "6379:6379" # 仅外部使用
 
-  # pgsql 主数据库，必选
+  # PostgreSQL 主数据库，必选
   pgsql:
     image: postgres:17-alpine
     container_name: pgsql
     restart: unless-stopped
-#    network_mode: host
     networks:
       - msgo_network
     volumes:
-        - ./pgsql/data:/var/lib/postgresql/data
+      - ./pgsql/data:/var/lib/postgresql/data
     environment:
-      POSTGRES_DB: ms # 数据库
-      POSTGRESQL_WAL_COMPRESSION: lz4  # 压缩算法
-      POSTGRESQL_MAX_CONNECTIONS: 2048 # 最大连接数
-      POSTGRES_USER: postgres # 用户
-      POSTGRES_PASSWORD: ms888888 # 密码
-#    ports:
-#      - "5432:5432" # 仅外部使用
+      POSTGRES_DB: ms
+      POSTGRESQL_WAL_COMPRESSION: lz4
+      POSTGRESQL_MAX_CONNECTIONS: 2048
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ms888888
 
-  # emby 媒体服务器，可选
+  # Emby 媒体服务器，可选
   emby:
     image: linuxserver/emby:latest
     container_name: emby
-    network_mode: bridge # DLNA and Wake-on-Lan 需要 bridge
+    network_mode: bridge  # DLNA 和 Wake-on-Lan 需要 bridge
     environment:
-      - PUID=0 # 设置容器用户 ID 为 0 (通常是 root)
-      - PGID=0 # 设置容器组 ID 为 0 (通常是 root)
-      - GIDLIST=0 # 设置容器组 ID 列表为 0
-      - TZ=Asia/Shanghai # 设置容器的时区为亚洲/上海
+      - PUID=0
+      - PGID=0
+      - GIDLIST=0
+      - TZ=Asia/Shanghai
     devices:
-      - /dev/dri:/dev/dri             # 将主机的 /dev/dri 设备挂载到容器 开启硬解
+      - /dev/dri:/dev/dri  # 硬件解码
     ports:
-      - 8096:8096 # 对外访问端口
+      - 8096:8096
     restart: unless-stopped
     privileged: true
     volumes:
       - ./emby/config:/config
-      # strm 目录，emby 添加这个目录到媒体库
-      - /home/xxx/strm:/strm
+      - /home/xxx/strm:/strm  # 修改为实际的 strm 目录路径
 
-  # msgo go 重写船新版本
+  # Media Saber 主服务
   msgo:
     image: xylplm/media-saber:latest
     container_name: msgo
     restart: unless-stopped
-#    network_mode: host
     networks:
       - msgo_network
     environment:
       TZ: Asia/Shanghai
-      MS_PORT: 8888 # 前端端口
-      MS_AUTH_EMAIL: xxx # 邮箱
-      MS_AUTH_SLOGAN: xxx # 授权码
-      MS_LOG_LEVEL: debug # 日志级别
-      MS_LOG_KEEP_DAYS: 14 # 日志保留天数
-      MS_REDIS_HOST: redis:6379 # redis 容器名:端口
-      MS_REDIS_PASS:  # redis 密码
-      MS_TIMEOUT: 60000 # 接口请求超时，单位毫秒
-      MS_PGSQL_DBNAME: ms # pgsql 数据库
-      MS_PGSQL_USERNAME: postgres #  pgsql 用户
-      MS_PGSQL_PASSWORD: ms888888 # pgsql 密码
-      MS_PGSQL_PATH: pgsql # pgsql 容器名
-      MS_PGSQL_PORT: 5432 # pgsql 端口
-      MS_PGSQL_LOG_MODE: prod # 数据库日志 options=dev|test|prod|silent
-      MS_MQ_CONCURRENCY: 10 # MQ 最大并发数
-      MS_MCP_SERVER_HTTP_ADDR: "0.0.0.0:5000" # mcp streamable http addr
-      MS_PATH_WATCH_TIME: 30 #目录监听时间间隔，默认30s
+      MS_PORT: 8888
+      MS_AUTH_EMAIL: xxx  # 修改为实际邮箱
+      MS_AUTH_SLOGAN: xxx  # 修改为实际标语
+      MS_LOG_LEVEL: debug
+      MS_LOG_KEEP_DAYS: 14
+      MS_REDIS_HOST: redis:6379
+      MS_REDIS_PASS:  # 如有密码请填写
+      MS_TIMEOUT: 60000
+      MS_PGSQL_DBNAME: ms
+      MS_PGSQL_USERNAME: postgres
+      MS_PGSQL_PASSWORD: ms888888
+      MS_PGSQL_PATH: pgsql
+      MS_PGSQL_PORT: 5432
+      MS_PGSQL_LOG_MODE: prod
+      MS_MQ_CONCURRENCY: 10
+      MS_MCP_SERVER_HTTP_ADDR: "0.0.0.0:5000"
+      MS_PATH_WATCH_TIME: 30
     privileged: true
     volumes:
       - ./ms/config:/app/config
-#      - ./qb:/qb # 挂载 qb 目录，转种要用到
     ports:
-      - "8888:8888" # 前端端口
-#      - "22698:22698" # 后端端口
-#      - "8091:8091" # 使用 strm302 功能后，emby/jellyfin 代理端口
-#      - "8091:8091" # 使用 strm302 功能后，emby/jellyfin 代理端口
-#      - "6060:6060" # pprof 端口
-#      - "6080:5000" # mcp 端口
+      - "8888:8888"
 
-  # ocr 
+  # 百度 OCR 识别服务，可选
   ms-baidu-ocr:
     image: xylplm/media-saber-baidu-ocr:latest
     container_name: ms-baidu-ocr
-    # network_mode: bridge
     networks:
       - msgo_network
     environment:
       - TZ=Asia/Shanghai
-      - OCR_APP_ID=xxx # 应用 id
-      - OCR_API_KEY=xxx # apikey
-      - OCR_SECRET_KEY=xxx # 密钥
-    # ports:
-    #   - 29898:9898
+      - OCR_APP_ID=xxx  # 修改为实际 app id
+      - OCR_API_KEY=xxx  # 修改为实际 api key
+      - OCR_SECRET_KEY=xxx  # 修改为实际密钥
     restart: unless-stopped
 
-  # qb 下载器，可选
+  # qBittorrent 下载器，可选
   qb:
     image: lscr.io/linuxserver/qbittorrent:14.3.9
     container_name: qb
     restart: unless-stopped
-#    network_mode: host
     networks:
       - msgo_network
     environment:
@@ -172,3 +188,33 @@ networks:
   msgo_network:
     name: msgo_network
 ```
+
+---
+
+## 🚀 启动和管理
+
+### 启动全部服务
+
+```bash
+docker compose up -d
+```
+
+### 停止全部服务
+
+```bash
+docker compose down
+```
+
+### 查看日志
+
+```bash
+docker compose logs msgo -f
+```
+
+---
+
+## 📌 相关文档
+
+- [Compose 全家桶 + env 方案](/guide/install/compose_all_env.md) - 使用 .env 文件的完整配置方案
+- [系统初始化](/guide/init/) - 完成安装后进行初始化配置
+- [常见问题](/guide/problem.md) - 遇到问题时查看

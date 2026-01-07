@@ -10,78 +10,101 @@ editor: markdown
 dateCreated: 2023-10-11T16:25:24.817Z
 ---
 
-### 一、目录分类
-<p> 
-  <strong>路径：</strong>
-  目录管理 → 目录分类 →
-  <svg xmlns="http://www.w3.org/2000/svg"
-       viewBox="0 0 24 24"
-       width="20" height="20"
-       stroke="rgb(255, 174, 31)"
-       fill="none"
-       style="vertical-align: middle;">
-    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-    <path d="M4.05 11a8 8 0 1 1 .5 4m-.5 5v-5h5"/>
-  </svg>
-  <strong>点击生成默认分类</strong>
-</p>
+## 🗂️ 目录管理设置
 
-:::warning
-- 分类匹配顺序是从上到下，请注意顺序！！！
-- 自定义分类如动漫、纪录片之类的自定义分类，请放在电影和电视剧之前！！！
-- 为了避免无法匹配的情况发生，建议每一种标签类型的分类最后加一个全部来兜底，避免无法区分的媒体
+本页面介绍如何在 Media Saber 中设置和管理媒体库目录、下载目录等关键路径配置。
+
+---
+
+## 📂 第一步：目录分类
+
+**访问路径：** 目录管理 → 目录分类 → 点击生成默认分类
+
+系统会自动生成默认的媒体分类（如电影、电视剧等），您也可以自定义分类。
+
+:::warning ⚠️ 分类顺序很重要
+- **匹配顺序**：系统从上到下匹配分类，请务必调整正确的顺序
+- **自定义分类优先**：自定义分类（如动漫、纪录片）应放在电影和电视剧之前
+- **兜底分类**：建议在每种标签类型的分类最后添加一个"全部"分类，避免媒体无法匹配
 :::
 
+<div align="center"><img src="./images/mlgl/ml01.png" width="800"/></div>
+<div align="center"><img src="./images/mlgl/ml02.png" width="800"/></div>
 
-<div align="center"><img src="./images/mlgl/ml01.png" width="800"/></div>  
-<div align="center"><img src="./images/mlgl/ml02.png" width="800"/></div>  
+---
 
-### 二、目录管理
+## 🌐 第二步：目录管理
 
-路径：**目录管理 → 目录管理 → 右上角 "+"** 
+**访问路径：** 目录管理 → 目录管理 → 右上角 "+"
 
-:::warning
-- 下载目录请不要填写标签，其他自定义目录区分 比如 115网盘填【115】，媒体库专属目录填写【媒体库】，strm目录填【strm】
+### 2.1 创建下载目录
+
+按照目录分类为每个分类创建对应的下载目录。
+
+<div align="center"><img src="./images/mlgl/ml03.png" width="800"/></div>
+
+### 2.2 创建媒体目录
+
+按照目录分类为每个分类创建对应的媒体目录。
+
+<div align="center"><img src="./images/mlgl/ml04.png" width="800"/></div>
+
+:::info 📝 目录标签说明
+- **下载目录**：不填写标签
+- **媒体库目录**：标签栏填写 `媒体库`
+- **其他自定义目录**：根据用途标记，如 `115`（115网盘）、`strm`（Strm目录）等
+- **二级目录**：根据需要勾选二级目录选项
+:::  
+
 :::
 
-按照目录分类设置下载目录
-<div align="center"><img src="./images/mlgl/ml03.png" width="800"/></div>  
+### 2.3 调整目录顺序
 
-按照目录分类设置媒体目录
+创建完成后，点击每个目录最左边的拖动按钮，调整目录的优先级顺序。
 
-<div align="center"><img src="./images/mlgl/ml04.png" width="800"/></div>  
+<div align="center"><img src="./images/mlgl/ml06.png" width="800"/></div>
 
-根据需要在设置下载目录和媒体目录的时候勾选二级目录，媒体目录需要在标签栏中输入`媒体库`  
+---
 
-<p>
-  <strong>创建完成后用鼠标点击每个目录最左边的按钮：</strong>
-  <svg xmlns="http://www.w3.org/2000/svg"
-       viewBox="0 0 24 24"
-       width="20" height="20"
-       stroke="black"
-       fill="none"
-       style="vertical-align: middle; margin-left: 4px;">
-    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-    <path d="M4 10h16"/>
-    <path d="M4 14h16"/>
-    <path d="M9 18l3 3l3 -3"/>
-    <path d="M9 6l3 -3l3 3"/>
-  </svg>
-  <strong>，拖动调整目录顺序</strong>
-</p>  
+## 🔄 第三步：目录同步
 
-<div align="center"><img src="./images/mlgl/ml06.png" width="800"/></div>  
+**访问路径：** 目录管理 → 目录同步 → 右上角 "+"
 
-### 三、目录同步
+自动同步和处理下载的媒体文件。
 
-路径：**目录管理 → 目录同步 → 右上角 "+"**  
+<div align="center"><img src="./images/mlgl/ml07.png" width="800"/></div>
 
-<div align="center"><img src="./images/mlgl/ml07.png" width="800"/></div>  
+### 3.1 创建同步规则
 
-分别创建`电影、电视剧、动漫`三个同步参数，这里以`电影`为例，勾选`状态、识别重命名、刮削、刷新媒体库、仅媒体文件、媒体库缺失`六个项，填入名称，选择同步方式，填入源目录路径（前面的下载目录路径），填入目标目录标签（媒体库）
+分别为 `电影`、`电视剧`、`动漫` 创建同步规则。以 `电影` 为例：
 
-<div align="center"><img src="./images/mlgl/ml08.png" width="800"/></div>  
+**必选项：**
+- ✅ 状态
+- ✅ 识别重命名
+- ✅ 刮削
+- ✅ 刷新媒体库
+- ✅ 仅媒体文件
+- ✅ 媒体库缺失
 
-完成后点击保存
+**填写内容：**
+- 名称：电影
+- 同步方式：选择合适的方式
+- 源目录路径：前面设置的下载目录路径
+- 目标目录标签：`媒体库`
 
-<div align="center"><img src="./images/mlgl/ml09.png" width="800"/></div>  
+<div align="center"><img src="./images/mlgl/ml08.png" width="800"/></div>
+
+### 3.2 保存同步规则
+
+完成配置后点击保存。
+
+<div align="center"><img src="./images/mlgl/ml09.png" width="800"/></div>
+
+---
+
+## 📌 下一步
+
+完成目录管理设置后，您可以进行以下操作：
+- [返回初始化设置](/guide/init/)
+- [进行下载器配置](/guide/init/download)
+- [查看站点配置](/guide/init/sites)

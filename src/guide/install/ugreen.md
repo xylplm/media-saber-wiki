@@ -10,18 +10,43 @@ editor: markdown
 dateCreated: 2023-05-12T04:25:24.817Z
 ---
 
-### 一、创建目录
+## 🖥️ 绿联 NAS 安装指南
 
-打开绿联 文件管理器，在 docker 目录下新建 media-saber-go 文件夹。
+:::info
+本指南适用于 **绿联 NAS** 用户，使用 **Docker 项目编排** 功能一键部署 Media Saber 全栈服务。
+:::
 
-![图片1.png](./ugreen_images/1.png)
+### 第一步：准备目录结构
 
-### 二、使用compose部署
+打开 **文件管理器**，在 `docker` 目录下创建所需文件夹：
 
-绿联用户使用docker直接部署。 这里使用一个compose部署完全。想要分开部署的自己摸索
-
-把下面写了中文的地方全部设置好。
 ```
+docker/
+├── ms/
+│   └── config               # Media Saber 配置文件
+├── pg/
+│   └── data                 # PostgreSQL 数据持久化
+└── [你的媒体目录]/           # 根据下载器配置添加
+```
+
+![文件结构示意图](./ugreen_images/1.png)
+
+:::tip
+- 建议将 Docker 配置存放在 **SSD** 或高速存储位置
+- 媒体目录应与下载器的输出目录一致
+:::
+
+---
+
+### 第二步：部署全栈服务
+
+打开 **Docker**，使用 **项目编排** 功能，粘贴以下配置：
+
+**docker-compose.yaml**：
+
+```yaml
+version: '3.8'
+
 services:
   msgo:
     image: xylplm/media-saber:latest
@@ -32,27 +57,27 @@ services:
         condition: service_healthy
       ms-postgres:
         condition: service_healthy
-    volumes:
-      - ./ms/config:/app/config 
-      - 写你自己的:和下载器一样 #媒体文件目录映射，这里下载器里面写了几个这里就写几个
+    ports:
+      - "3000:3000"
     environment:
-      - MS_REDIS_HOST=ms-redis:6379
-      - MS_REDIS_PASS= #和下面的REDIS_PASSWORD保持一致
       - MS_PORT=3000
-      - MS_SITE_CONFIG_DIR=/app/config/site_configs
-      - MS_LOG_MODE=file
-      - MS_LOG_LEVEL=debug
-      - MS_PGSQL_LOG_MODE=prod
-      - MS_LOG_KEEP_DAYS=14 
-      - MS_AUTH_EMAIL= # 认证邮箱,填你自己的
-      - MS_AUTH_SLOGAN= # 认证口令，填你自己的
+      - MS_REDIS_HOST=ms-redis:6379
+      - MS_REDIS_PASS=your-redis-password            # 修改为你的 Redis 密码
       - MS_PGSQL_USER=postgres
-      - MS_PGSQL_PASSWORD= # 和下面的PGSQL_PASSWORD保持一致
-      - MS_PGSQL_DBNAME=media_saber
+      - MS_PGSQL_PASSWORD=your-db-password           # 修改为你的数据库密码
       - MS_PGSQL_PATH=ms-postgres
       - MS_PGSQL_PORT=5432
-    ports:
-      - "3000:3000" 
+      - MS_PGSQL_DBNAME=media_saber
+      - MS_AUTH_EMAIL=your-email@example.com         # 修改为你的邮箱
+      - MS_AUTH_SLOGAN=YourAuthSlogan                # 修改为你的认证口令
+      - MS_SITE_CONFIG_DIR=/app/config/site_configs
+      - MS_LOG_MODE=file
+      - MS_LOG_LEVEL=info
+      - MS_PGSQL_LOG_MODE=prod
+      - MS_LOG_KEEP_DAYS=14
+    volumes:
+      - ./ms/config:/app/config                      # Media Saber 配置目录
+      - /path/to/your/media:/video1                  # 修改为实际媒体路径（可添加多个）
     restart: always
     networks:
       - bridge-network
@@ -61,8 +86,8 @@ services:
     image: redis:7.0.14-alpine
     container_name: media-saber-redis
     restart: always
+    command: redis-server --requirepass your-redis-password  # 设置 Redis 密码
     environment:
-      - REDIS_PASSWORD= #和上面的MS_REDIS_PASS保持一致
       - PUID=1000
       - PGID=10
     healthcheck:
@@ -70,6 +95,8 @@ services:
       interval: 5s
       timeout: 3s
       retries: 5
+    volumes:
+      - ./redis/data:/data
     networks:
       - bridge-network
 
@@ -77,17 +104,17 @@ services:
     image: postgres:17-alpine
     container_name: media-saber-postgres
     restart: always
-    volumes:
-      - ./pg/data:/var/lib/postgresql/data
     environment:
       - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD= #和上面的PGSQL_PASSWORD保持一致
+      - POSTGRES_PASSWORD=your-db-password           # 设置数据库密码
       - POSTGRES_DB=media_saber
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres"]
       interval: 5s
       timeout: 3s
       retries: 5
+    volumes:
+      - ./pg/data:/var/lib/postgresql/data
     networks:
       - bridge-network
 
@@ -96,13 +123,94 @@ networks:
     driver: bridge
 ```
 
-![图片2.png](./ugreen_images/2.png)
+---
 
-注意。存放位置填你希望放docker配置的目录。我个人推荐是固态
-点击 立即部署
+### 必须修改的参数
 
-![图片3.png](./ugreen_images/3.png)
+| 参数 | 说明 | 示例 |
+|------|------|------|
+| `MS_REDIS_PASS` | Redis 密码 | 设置强密码（8+ 字符） |
+| `MS_PGSQL_PASSWORD` | PostgreSQL 密码 | 与 Redis 密码保持一致风格 |
+| `MS_AUTH_EMAIL` | 访问认证邮箱 | `your-email@example.com` |
+| `MS_AUTH_SLOGAN` | 认证口令 | 自定义口令 |
+| `/path/to/your/media` | 媒体存储路径 | 与下载器配置一致的路径 |
+| `./ms/config` | Media Saber 配置目录 | 根据实际位置修改 |
+| `./pg/data` | PostgreSQL 数据目录 | 根据实际位置修改 |
 
-部署完后，点击 完成即可。
+:::warning
+**注意事项**：
+- 密码参数要保持一致（Redis 密码、PostgreSQL 密码）
+- 媒体目录映射需与下载器配置相一致
+- 建议所有文件夹都在同一存储位置，避免跨盘
+:::
 
-好了。可以开始使用了
+---
+
+### 部署步骤
+
+![部署示意图](./ugreen_images/2.png)
+
+1. 打开 **Docker** → **项目编排**
+2. 点击 **新增项目**
+3. 选择 **存放位置**（建议 SSD）
+4. 粘贴上述 docker-compose.yaml 配置
+5. 点击 **立即部署**
+
+![部署完成](./ugreen_images/3.png)
+
+6. 部署完成后点击 **完成**
+
+:::success
+部署通常需要 1-3 分钟，期间会自动拉取镜像和初始化数据库。可通过日志查看进度。
+:::
+
+---
+
+### 启动和管理
+
+| 操作 | 说明 |
+|------|------|
+| 查看日志 | 在 Docker 中选择容器，查看日志选项卡 |
+| 停止服务 | 在项目编排中点击项目，选择停止 |
+| 重启服务 | 在项目编排中点击项目，选择重启 |
+| 删除服务 | 在项目编排中点击项目，选择删除 |
+
+---
+
+### 常见问题
+
+**Q: 部署后无法访问 Web UI？**
+
+1. 确认三个容器都在运行中（查看 Docker 容器列表）
+2. 检查端口 3000 是否被占用
+3. 尝试在浏览器访问 `http://nas-ip:3000`
+
+**Q: 容器启动失败？**
+
+检查步骤：
+- [ ] Redis 和 PostgreSQL 已成功启动（查看 healthcheck 状态）
+- [ ] 密码参数一致
+- [ ] 媒体目录路径正确
+- [ ] 查看日志获取具体错误信息
+
+**Q: 无法连接到数据库？**
+
+- 确保 PostgreSQL 容器已启动
+- 检查密码是否正确（`POSTGRES_PASSWORD` 与 `MS_PGSQL_PASSWORD` 一致）
+- 验证网络配置（所有服务在 `bridge-network` 中）
+
+**Q: 硬链接不工作？**
+
+- 确保媒体目录与 Docker 配置在同一存储空间
+- 避免跨越不同的物理存储设备
+- 查看 [Linux 硬链接概念](https://developer.aliyun.com/article/1468577)
+
+---
+
+### 相关文档
+
+- [群晖 NAS 安装](/guide/install/synology.md)
+- [UGOS PRO 安装](/guide/install/ugos.md)
+- [Unraid 安装](/guide/install/unraid.md)
+- [极空间 NAS 安装](/guide/install/zspace.md)
+- [故障排查](/guide/problem.md)

@@ -9,223 +9,333 @@ categories:
 editor: markdown
 dateCreated: 2023-05-12T04:25:24.817Z
 ---
-## 一 部署之前需要了解的-目录映射
 
->
-> 新手在目录映射经常会犯错，对于刚接触 Docker 或者 Media Saber 的，建议仔细阅读这一部分。
->
+## 🖥️ 极空间 NAS 安装指南
 
-由于 Docker 容器是**独立运行**的，并不能直接访问 Nas 上的文件，Nas 也不能直接访问 Docker 容器里的内容，所以要实现容器与 Nas 的文件互访，就要进行**容器映射**。
+:::info
+本指南适用于 **极空间 NAS** 用户，通过 **Docker Compose** 一键部署 Media Saber 全栈服务。
+:::
 
-为了便于理解，先来看一个映射案例：
+---
 
+## 第一步：理解容器目录映射
+
+:::warning **重要概念**
+新手经常在目录映射时出错。为避免硬链接失败，必须理解以下映射原理。
+:::
+
+### 容器映射的基本原理
+
+由于 Docker 容器是**隔离运行**的，容器无法直接访问 NAS 上的文件。通过 **目录映射** 可以让容器访问 NAS 上的文件。
+
+**映射语法**：
 ```
-/docker/emby/config:/config
-```
-
-冒号左边为 Nas 上的路径，冒号右边为容器内的路径，也就是把 Nas 上的 `/docker/emby/config` 这个目录映射到了容器内的 `/config` 目录里，让我们可以便捷地在 Nas 的目录里管理容器内的 config 配置文件。反过来，如果我们在 Nas 上有媒体文件，也可以通过映射让容器能访问这些文件。
-
-> [!IMPORTANT]
->
-> 注意：同一存储空间的目录应直接映射根目录到容器中，不同映射目录在系统层会被认为是跨盘，从而无法进行硬链接。新同学建议认真学习一下[Linux中的硬链接与软链接：原理、应用与最佳实践](https://developer.aliyun.com/article/1468577)
-
-#### 1. 错误的映射方式：
-
-下载目录和媒体库目录分别映射
-
-- 映射一 `/media/download:/media/download`
-- 映射二 `/media/link:/media/link`
-
-```mermaid
-graph TD;
-	A[ /media/download] --> B[ /movie]
-	A --> C[ /tv]
-	A --> D[ /anime]
+宿主机路径:容器内路径
 ```
 
-```mermaid
-graph TD;
-	A[ /media/link] --> B[ /movie]
-	A --> C[ /tv]
-	A --> D[ /anime]
+例如：`/docker/emby/config:/config`
+- **左侧** (`/docker/emby/config`)：NAS 上的实际路径
+- **右侧** (`/config`)：容器内的对应路径
+
+### ❌ 错误的映射方式
+
+将下载目录和媒体库目录分别映射：
+
+```
+映射一：/media/download:/media/download
+映射二：/media/link:/media/link
 ```
 
-如果这样映射，在容器自身看来，`/media/download` `/media/link` 这两个是独立的目录，也就会被认为是不同硬盘里的目录，在执行硬链接的时候，就会报错。
+**问题**：容器会将这两个目录视为不同的物理存储，无法进行硬链接。
 
-#### 2. 正确的映射方式：
+### ✅ 正确的映射方式
 
-- `/media:/media`
+只使用一条映射，映射到统一的父目录：
 
-```mermaid
-graph TD;
-	A[ /media] --> B[ /download] --> C[ /movie]
-	B --> D[ /tv]
-	B --> E[ /anime]
-	A --> F[ /link] --> G[ /movie]
-	F --> H[ /tv]
-	F --> I[ /anime]
+```
+/media:/media
 ```
 
-这样**只用一条映射**，不仅省时省力，还解决了跨盘的问题。所以一定要这样配置映射结构，目录名称可以按照下面的来。
+**优点**：
+- 容器内所有文件位于同一逻辑存储
+- 硬链接正常工作
+- 配置简洁高效
 
-### 二 目录配置
+:::tip
+📌 记住：**同一存储空间的所有目录应映射到容器的同一根目录**，而非分别映射子目录。详见 [Linux 硬链接与软链接详解](https://developer.aliyun.com/article/1468577)
+:::
 
-> [!IMPORTANT]
->
-> 一个**清晰明了的目录**对于后续的方便维护有着至关重要的作用，所以尽量在安装前配置好目录，便于后续管理。
+---
 
-#### 1. Docker 容器配置目录
+## 第二步：规划目录结构
 
-如果你之前已经部署过 Docker 容器，那应该已经有存放 Docker 容器配置的目录了。如果你还没有，则可以参照以下示例新建目录：（建议优先存放在 **SSD 固态硬盘上**以提高运行效能）
+### Docker 容器配置目录
 
-```mermaid
-graph LR;
-		A[Docker] --> B[ms-go] --> H[ms] --> C[config]
-		B --> D[redis] --> J[data]
-		B --> E[pgsql] --> I[data]
-		B --> F[emby] --> K[config]
-		B --> G[qb] --> L[config]
+在 **SSD 固态硬盘** 上创建如下结构（用于存放配置，提高性能）：
+
+```
+Docker/
+├── ms-go/
+│   ├── ms/
+│   │   └── config         # Media Saber 配置
+│   ├── redis/
+│   │   └── data           # Redis 数据
+│   ├── pgsql/
+│   │   └── data           # PostgreSQL 数据
+│   ├── emby/
+│   │   └── config         # Emby 配置（可选）
+│   └── qb/
+│       └── config         # qBittorrent 配置（可选）
 ```
 
-#### 2. 媒体目录
+### 媒体目录结构
 
-为了方便映射，需要把下载目录、媒体库目录等目录放到一个**统一的父目录**中，这里就以 “media” 父目录为例：
+将所有媒体相关目录放在统一的父目录中：
+
+```
+media/
+├── download               # 下载目录
+│   ├── movie
+│   ├── tv
+│   └── anime
+├── link                   # 硬链接目录（Media Saber 整理后）
+│   ├── movie
+│   ├── tv
+│   └── anime
+└── other                  # 其他媒体文件
+```
 
 <div align="center"><img src="./zspace_images/1.png" width="800"/></div>
 
-### 三 配置 Docker 代理
+---
 
-在正式部署前，首先请确保自己的 Docker 能正常拉取镜像。可以使用极空间自带的 Docker 代理，如下图，根据自己的代理地址进行设置，也可以通过加速镜像的方式自定义拉取镜像。
+## 第三步：配置 Docker 环境
 
-<div align="center"><img src="./zspace_images/2.png" width="800"/></div> 
+### 配置镜像加速器
 
-### 四 Compose 部署
+确保 Docker 能正常拉取镜像。在极空间 Docker 设置中配置代理地址：
 
-极空间最近更新了 Docker Compose 功能，部署更加方便。
+<div align="center"><img src="./zspace_images/2.png" width="800"/></div>
+
+:::tip
+使用极空间自带的 Docker 代理或自定义加速镜像，以加快镜像拉取速度。
+:::
+
+---
+
+## 第四步：部署 Docker Compose
+
+### 创建项目
+
+进入 **Docker** → **Compose** 菜单，点击右上角 **新增项目**
 
 <div align="center"><img src="./zspace_images/3.png" width="800"/></div>
 
-进入 Docker 的 `Compose` 界面，点击右上角的 `新增项目` 。项目名称自选，把以下内容复制到下面的代码框。其中要自行修改的内容已在代码中注明，请自行更改。
+### Compose 配置文件
+
+粘贴以下配置，**自行修改带有注释的部分**：
 
 ```yaml
+version: '3.8'
+
 services:
-  # redis 缓存数据，加速运行，必选
+  # Redis 缓存服务（必选）
   redis:
-    image: redis:latest
+    image: redis:7-alpine
     container_name: redis
     restart: unless-stopped
     network_mode: bridge
+    command: redis-server --requirepass your-redis-password  # 设置 Redis 密码
+    ports:
+      - "16379:6379"  # 极空间 6379 已被占用，改用 16379
     volumes:
-      - /tmp/zfsv3/nvme12/(你的手机号)/data/Docker/ms-go/redis/data:/data  
-      # 请根据实际情况，点击极空间“创建项目”界面的“查询路径”，选择或新建 redis 配置目录，点击“复制路径”，粘贴替换冒号前的内容
+      - /path/to/docker/ms-go/redis/data:/data  # 修改为实际路径
     environment:
       TZ: Asia/Shanghai
-      GOSU_VERSION: 1.17
-    ports:
-      - "16379:6379" # 极空间6379端口已被占用，更换端口为16379
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
 
-  # pgsql 主数据库，必选
+  # PostgreSQL 数据库（必选）
   pgsql:
     image: postgres:17-alpine
     container_name: pgsql
     restart: unless-stopped
     network_mode: bridge
-    volumes:
-        - /tmp/zfsv3/nvme12/(你的手机号)/data/Docker/ms-go/pgsql/data:/var/lib/postgresql/data
-        # 请根据实际情况，点击极空间“创建项目”界面的“查询路径”，选择或新建 pgsql 配置目录，点击“复制路径”，粘贴替换冒号前的内容
-    environment:
-      POSTGRES_DB: ms # 数据库
-      POSTGRESQL_WAL_COMPRESSION: lz4  # 压缩算法
-      POSTGRESQL_MAX_CONNECTIONS: 2048 # 最大连接数
-      POSTGRES_USER: postgres # 用户，不建议修改
-      POSTGRES_PASSWORD: ms888888 # 密码，不建议修改
     ports:
       - "5432:5432"
+    volumes:
+      - /path/to/docker/ms-go/pgsql/data:/var/lib/postgresql/data  # 修改为实际路径
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: ms
+      POSTGRES_PASSWORD: your-db-password  # 设置数据库密码
+      POSTGRESQL_WAL_COMPRESSION: lz4
+      POSTGRESQL_MAX_CONNECTIONS: 2048
+      TZ: Asia/Shanghai
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
 
-  # msgo go 重写船新版本
+  # Media Saber（必选）
   msgo:
     image: xylplm/media-saber:latest
     container_name: msgo
     restart: unless-stopped
     network_mode: bridge
+    privileged: true
+    depends_on:
+      redis:
+        condition: service_healthy
+      pgsql:
+        condition: service_healthy
+    ports:
+      - "8888:8888"      # Web UI 端口
+      - "8091:8091"      # Strm 代理端口（Emby 反代）
+    volumes:
+      - /path/to/docker/ms-go/ms/config:/app/config  # 修改为实际路径
+      - /path/to/media:/media                        # 修改为实际媒体根目录
     environment:
       TZ: Asia/Shanghai
-      MS_PORT: 8888 # 前端端口
-      MS_AUTH_EMAIL: xxx # 修改为你的邮箱
-      MS_AUTH_SLOGAN: xxx # 修改为你的授权码
-      MS_LOG_LEVEL: debug # 日志级别
-      MS_LOG_KEEP_DAYS: 14 # 日志保留天数
-      MS_REDIS_HOST: 172.17.0.1:16379 # redis 所在子网网关 ip:端口, bridge 网关默认为 172.17.0.1
-      MS_REDIS_PASS:  # redis 密码，前面没设置这里就为空
-      MS_TIMEOUT: 60000 # 接口请求超时，单位毫秒
-      MS_PGSQL_DBNAME: ms # pgsql 数据库
-      MS_PGSQL_USERNAME: postgres #  pgsql 用户
-      MS_PGSQL_PASSWORD: ms888888 # pgsql 密码
-      MS_PGSQL_PATH: 172.17.0.1 # pgsql 所在子网网关 ip, bridge 网关默认为 172.17.0.1
-      MS_PGSQL_PORT: 5432 # pgsql 端口
-      MS_PGSQL_LOG_MODE: prod # 数据库日志 options=dev|test|prod|silent
-      MS_MQ_CONCURRENCY: 10 # MQ 最大并发数
-    privileged: true
-    volumes:
-      - /tmp/zfsv3/nvme12/(你的手机号)/data/Docker/ms-go/ms/config:/app/config
-      # 请根据实际情况，点击极空间“创建项目”界面的“查询路径”，选择或新建 msgo 配置目录，点击“复制路径”，粘贴替换冒号前的内容
-      - /tmp/zfsv3/sata1/(你的手机号)/data/media:/media 
-      # 请根据实际情况，点击极空间“创建项目”界面的“查询路径”，选择你的媒体库根目录，点击“复制路径”，粘贴替换冒号前的内容
-    ports:
-      - "8888:8888" # 后面容器内的端口需要和环境“MS_PORT”的端口相同
-      - "8091:8091" # 使用 strm302 功能后，emby/jellyfin 代理端口
+      MS_PORT: 8888                                    # Web UI 端口
+      MS_AUTH_EMAIL: your-email@example.com           # 修改为你的邮箱
+      MS_AUTH_SLOGAN: YourAuthSlogan                  # 修改为认证口令
+      MS_LOG_LEVEL: info                              # 日志级别
+      MS_LOG_KEEP_DAYS: 14                            # 日志保留天数
+      MS_REDIS_HOST: 172.17.0.1:16379                 # Docker bridge 网关 IP（通常为 172.17.0.1）
+      MS_REDIS_PASS: your-redis-password              # 与 Redis 密码一致
+      MS_TIMEOUT: 60000                               # 请求超时（毫秒）
+      MS_PGSQL_DBNAME: ms
+      MS_PGSQL_USERNAME: postgres
+      MS_PGSQL_PASSWORD: your-db-password             # 与 PostgreSQL 密码一致
+      MS_PGSQL_PATH: 172.17.0.1                       # Docker bridge 网关 IP
+      MS_PGSQL_PORT: 5432
+      MS_PGSQL_LOG_MODE: prod
+      MS_MQ_CONCURRENCY: 10
 
-  # emby 媒体服务器，可选
+  # Emby 媒体服务器（可选）
   emby:
     image: amilys/embyserver:4.9.0.42
     container_name: emby
-    network_mode: bridge # DLNA and Wake-on-Lan 需要 bridge
-    environment:
-      - UID=0 # 设置容器用户 ID 为 0 (通常是 root)
-      - GID=0 # 设置容器组 ID 为 0 (通常是 root)
-      - GIDLIST=0 # 设置容器组 ID 列表为 0
-      - TZ=Asia/Shanghai # 设置容器的时区为亚洲/上海
-    devices:
-      - /dev/dri:/dev/dri # 将主机的 /dev/dri 设备挂载到容器 开启硬解
-    ports:
-      - 8096:8096 # 对外访问端口,如果有冲突可自行修改冒号前面映射到主机的端口号
-      - 1900:1900
-      - 7359:7359
-      - 8920:8920
     restart: unless-stopped
-    privileged: true
+    network_mode: bridge
+    ports:
+      - "8096:8096"     # Web UI
+      - "1900:1900"     # DLNA 发现
+      - "7359:7359"     # DLNA 广播
+      - "8920:8920"     # HTTPS
+    devices:
+      - /dev/dri:/dev/dri  # 硬件解码（GPU 加速）
     volumes:
-      - /tmp/zfsv3/nvme12/(你的手机号)/data/Docker/ms-go/emby/config:/config
-      # 请根据实际情况，点击极空间“创建项目”界面的“查询路径”，选择或新建 emby 配置目录，点击“复制路径”，粘贴替换冒号前的内容
-      - /tmp/zfsv3/sata1/(你的手机号)/data/media:/media # 和 ms 的挂载保持相同
+      - /path/to/docker/ms-go/emby/config:/config  # 修改为实际路径
+      - /path/to/media:/media                       # 与 msgo 保持一致
+    environment:
+      UID: 0
+      GID: 0
+      GIDLIST: 0
+      TZ: Asia/Shanghai
+    privileged: true
 
-  # qb 下载器，可选
+  # qBittorrent 下载器（可选）
   qb:
     image: johngong/qbittorrent:4.3.9
     container_name: qb
     restart: unless-stopped
-    network_mode: host # 便于自动 UPnP 映射及 ipv6 连接
+    network_mode: host  # 用于 UPnP 端口映射和 IPv6
+    ports:
+      - "8989:8989"     # Web UI
+    volumes:
+      - /path/to/docker/ms-go/qb/config:/config  # 修改为实际路径
+      - /path/to/media:/media                    # 与 msgo 保持一致
     environment:
-      GID: 0
       UID: 0
+      GID: 0
       UMASK: 022
       TZ: Asia/Shanghai
-      WEBUIPORT: 8989 # 后台访问端口号，如果冲突可以自行修改
-    volumes:
-      - /tmp/zfsv3/nvme12/(你的手机号)/data/Docker/ms-go/qb/config:/config
-      # 请根据实际情况，点击极空间“创建项目”界面的“查询路径”，选择或新建 qb 配置目录，点击“复制路径”，粘贴替换冒号前的内容
-      - /tmp/zfsv3/sata1/(你的手机号)/data/media:/media # 和 ms 的挂载保持相同
+      WEBUIPORT: 8989
 ```
 
-修改完成后，点击 `创建` 等待镜像拉取和部署。
+### 路径修改指南
 
-如果没有问题，容器会自动运行。使用 `Nas IP:8888` 即可访问 msgo。
+点击极空间"创建项目"界面中的 **查询路径** 按钮，选择或新建目录，然后点击 **复制路径**，粘贴替换配置中的路径。
 
-如果你没有修改上述代码的端口号，默认可以用以下地址访问 Web 后台：
+| 参数 | 说明 | 示例 |
+|------|------|------|
+| `/path/to/docker/...` | Docker 配置目录 | `/tmp/zfsv3/nvme12/xxx/data/Docker/ms-go/...` |
+| `/path/to/media` | 媒体根目录 | `/tmp/zfsv3/sata1/xxx/data/media` |
+| `your-redis-password` | Redis 密码 | 自定义强密码 |
+| `your-db-password` | PostgreSQL 密码 | 自定义强密码 |
+| `MS_AUTH_EMAIL` | 认证邮箱 | 你的真实邮箱 |
+| `MS_AUTH_SLOGAN` | 认证口令 | 自定义口令 |
 
-| 容器        | Web 访问地址 |
-| ----------- | ------------ |
-| msgo        | Nas IP:8888  |
-| qBittorrent | Nas IP:8989  |
-| Emby        | Nas IP:8096  |
+:::warning
+**重要提示**：
+- 所有密码参数务必设置，且需保持一致
+- Redis 和 PostgreSQL 的密码务必在 Redis 配置和 msgo 配置中一致
+- 媒体路径在所有容器中应保持相同（避免跨盘）
+:::
+
+---
+
+## 启动和访问
+
+修改配置完成后，点击 **创建** 等待镜像拉取和容器启动。
+
+### Web 访问地址
+
+| 服务 | 访问地址 | 说明 |
+|------|---------|------|
+| Media Saber | `http://nas-ip:8888` | 主 Web 应用 |
+| qBittorrent | `http://nas-ip:8989` | 下载器（可选） |
+| Emby | `http://nas-ip:8096` | 媒体服务器（可选） |
+
+---
+
+## 常见问题
+
+**Q: 容器无法启动？**
+
+检查步骤：
+1. 进入 Docker 容器列表，查看容器状态
+2. 点击容器日志查看错误信息
+3. 常见原因：路径不存在、密码不一致、端口被占用
+
+**Q: 无法连接到数据库或缓存？**
+
+- 确认 Redis 和 PostgreSQL 容器已启动且状态为 **healthy**
+- 检查 Redis 密码和 PostgreSQL 密码是否在所有配置中一致
+- 极空间 Docker bridge 网关通常为 `172.17.0.1`（可通过 `docker network inspect bridge` 确认）
+
+**Q: 硬链接失败？**
+
+- 确保所有服务的媒体目录映射指向同一个路径
+- 确保目录结构在同一存储空间中（不跨盘）
+- 不要分别映射 `download` 和 `link` 目录，应映射它们的父目录 `media`
+
+**Q: 镜像拉取失败？**
+
+- 检查 Docker 代理配置是否正确
+- 尝试手动配置国内镜像加速器
+- 检查网络连接是否正常
+
+**Q: 如何重启或更新容器？**
+
+在 Compose 界面：
+- 点击项目名称旁的 **操作** 按钮
+- 选择 **重启**、**停止** 或 **删除** 等操作
+- 更新镜像后重新创建项目
+
+---
+
+### 相关文档
+
+- [群晖 NAS 安装](/guide/install/synology.md)
+- [UGOS PRO 安装](/guide/install/ugos.md)
+- [绿联 NAS 安装](/guide/install/ugreen.md)
+- [Unraid 安装](/guide/install/unraid.md)
+- [故障排查](/guide/problem.md)
 
