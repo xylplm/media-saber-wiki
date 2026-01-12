@@ -11,6 +11,14 @@ date: 2023-05-22T08:51:16.561Z
 ---
 ## Android 客户端
 
-| <img src="./images/MediaSaber.jpg" alt="media saber" width="200" /> | <img src="./images/DockerCopilot.jpg" alt="docker copilot" width="200" /> |
+### Media Saber
+
+<img src="./images/MediaSaber.jpg" alt="media saber" width="300" />
+
+| 下载 | 反馈 |
 |:--:|:--:|
-| [点击下载 media saber](https://github.com/singleton-altman/media_saber_go/releases) <br> [问题反馈](https://github.com/singleton-altman/media_saber_go/issues) | [点击下载 docker copilot](https://github.com/singleton-altman/docker_copilot_andriod_app/releases) <br> [问题反馈](https://github.com/singleton-altman/docker_copilot_andriod_app/issues) |
+| [点击下载 Media Saber](https://github.com/singleton-altman/media_saber_go/releases) | [GitHub Issues](https://github.com/singleton-altman/media_saber_go/issues) |
+
+### 其他应用
+
+- [Docker Copilot](../docker-copilot/) - Docker 容器管理工具，详见独立模块

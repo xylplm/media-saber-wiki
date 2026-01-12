@@ -24,6 +24,10 @@ GitHub 项目地址：<https://github.com/onlyLTY/dockerCopilot>
 - 镜像管理：清理未使用的镜像；
 - 容器备份与恢复：更换设备或处理硬盘故障时可轻松还原。
 
+:::info 相关应用
+也可参考 [Docker Copilot 客户端工具](../../client/docker_copilot/) 了解更多相关资源。
+:::
+
 ---
 
 ### dc 安装指南
