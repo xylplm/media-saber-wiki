@@ -123,11 +123,12 @@ date: 2023-09-27 12:16:17
 **操作建议：** 点击箭头按钮自动生成。
 
 ### GitHub Token
-**说明：** GitHub 访问令牌，用于访问 GitHub API
+**说明：** GitHub 个人访问令牌（PAT），用于访问 GitHub API。突破 GitHub API 的匿名访问限制（60 次/小时），提升至 5000 次/小时，确保程序更新、站点配置文件拉取、CTMD 自建 TMDB 信息文件获取等功能的稳定性和速度。详细获取教程请参见 [GitHub Token 生成获取教程](/usage/other/github_token.md)
 
 **默认值/示例：** 空
+- `ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`
 
-**操作建议：** 用于程序更新、插件管理等功能。
+**操作建议：** 用于程序更新、站点配置文件拉取、CTMD 信息文件获取等功能。强烈推荐配置此项以获得更好的使用体验。Token 建议设置 30-90 天的有效期并定期轮换。[点击查看详细教程](/usage/other/github_token.md)
 
 ### 显示所有文件类型
 **说明：** 本地文件管理文件列表显示所有文件类型，不开启只显示媒体文件
