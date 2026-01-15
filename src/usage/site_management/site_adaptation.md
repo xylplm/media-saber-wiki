@@ -141,6 +141,7 @@ flowchart TB
 | split        | 分割文本，获取第 n 段的子文本                 |
 | strip        | 去除字符串两端的空白字符（空格、制表符、换行符等）        |
 | timestamp    | 日期转为 unix 时间戳                    |
+| timezone     | 时间戳时区转换，支持时区偏移加减                |
 
 #### append_left
 
@@ -361,6 +362,43 @@ value 支持 string、number、bool 类型
       "2006-01-02 15:04:05",
       "2006-01-0215:04:05"
     ]
+  }
+]
+```
+
+#### timezone
+
+时间戳时区转换，将时间戳进行时区偏移加减，默认为 +8 时区。支持传入格式："+8"、"-5"、"8"、"-5" 等
+
+```json
+[
+  {
+    "name": "timezone"
+  },
+  {
+    "name": "timezone",
+    "args": ["+8"]
+  },
+  {
+    "name": "timezone",
+    "args": ["-5"]
+  }
+]
+```
+
+配合 timestamp 使用示例：
+
+```json
+[
+  {
+    "name": "timestamp",
+    "args": [
+      "2006-01-02 15:04:05"
+    ]
+  },
+  {
+    "name": "timezone",
+    "args": ["+8"]
   }
 ]
 ```
