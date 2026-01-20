@@ -7,7 +7,7 @@ export default navbar([
     link: "/",
   },
   {
-    text: "新手指引",
+    text: "快速上手",
     icon: "compass",
     prefix: "/guide/",
     children: [
@@ -15,7 +15,7 @@ export default navbar([
       { text: "如何安装", icon: "download", link: "install/" },
       { text: "如何更新", icon: "arrows-rotate", link: "update/" },
       { text: "初始化配置", icon: "gear", link: "init/" },
-      { text: "进阶教程", icon: "graduation-cap", link: "advanced/start" },
+      { text: "进阶教程", icon: "graduation-cap", link: "advanced/" },
     ],
   },
   {
