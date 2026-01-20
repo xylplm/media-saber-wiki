@@ -49,11 +49,12 @@ dateCreated: 2023-05-12T04:25:24.817Z
 docker run -d \
   --name media-saber-go \
   --restart always \
-  --network host \
+  --network bridge \
+  -p 8888:8888 \
   -e PUID=0 \
   -e PGID=0 \
   -e TZ=Asia/Shanghai \
-  -e MS_PORT=3000 \
+  -e MS_PORT=8888 \
   -e MS_REDIS_HOST=10.0.0.1 \
   -e MS_REDIS_PASS=****** \
   -e MS_TIMEOUT=60000 \
@@ -88,7 +89,7 @@ services:
       - PUID=0
       - PGID=0
       - TZ=Asia/Shanghai
-      - MS_PORT=3000
+      - MS_PORT=8888
       - MS_REDIS_HOST=10.0.0.1
       - MS_REDIS_PASS=******
       - MS_TIMEOUT=60000
@@ -102,7 +103,9 @@ services:
       - MS_LOG_LEVEL=debug
       - MS_PGSQL_LOG_MODE=silent
       - MS_LOG_KEEP_DAYS=1
-    network_mode: host
+    ports:
+      - "8888:8888"
+    network_mode: bridge
     restart: always
 ```
 

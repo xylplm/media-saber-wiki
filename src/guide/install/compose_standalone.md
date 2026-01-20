@@ -45,7 +45,7 @@ services:
       - REDIS_PASSWORD=your_password  # 修改为实际密码
     volumes:
       - /volume1/docker/redis/data:/data
-    network_mode: host
+    network_mode: bridge
     restart: always
 ```
 
@@ -122,7 +122,7 @@ services:
       - PUID=0
       - PGID=0
       - TZ=Asia/Shanghai
-      - MS_PORT=3000
+      - MS_PORT=8888
       - MS_REDIS_HOST=10.0.0.1:6379  # 修改为 Redis 实际 IP:端口
       - MS_REDIS_PASS=your_password  # 修改为 Redis 密码
       - MS_TIMEOUT=60000
@@ -138,8 +138,8 @@ services:
       - MS_LOG_KEEP_DAYS=7
       - MS_PATH_WATCH_TIME=30
     ports:
-      - 3000:3000  # 映射容器端口到宿主机
-    network_mode: host
+      - 8888:8888  # 映射容器端口到宿主机
+    network_mode: bridge
     restart: always
 ```
 

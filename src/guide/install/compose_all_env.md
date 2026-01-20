@@ -180,7 +180,9 @@ services:
     image: xylplm/media-saber:dev  # dev 比 latest 更适合
     container_name: msgo-server
     restart: always
-    network_mode: host  # 使用 host 模式，可以使用 ipv6
+    network_mode: bridge
+    ports:
+      - "${MS_PORT}:${MS_PORT}"
     volumes:
       - ${DOCKER_PATH}/msgo/common/hosts:/etc/hosts:rw
       - ${DOCKER_PATH}/msgo/ms/config:/app/config

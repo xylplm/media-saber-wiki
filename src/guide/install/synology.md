@@ -156,7 +156,7 @@ services:
       - PUID=0
       - PGID=0
       - TZ=Asia/Shanghai
-      - MS_PORT=3000
+      - MS_PORT=8888
       - MS_REDIS_HOST=redis-host-ip:6379  # Redis 服务器 IP 和端口
       - MS_REDIS_PASS=your-redis-password  # Redis 密码
       - MS_TIMEOUT=60000
@@ -170,7 +170,7 @@ services:
       - MS_LOG_LEVEL=info
       - MS_LOG_KEEP_DAYS=7  # 日志保留天数
     ports:
-      - 3000:3000  # 容器端口映射
+      - 8888:8888  # 容器端口映射
     restart: unless-stopped
 ```
 
@@ -262,7 +262,7 @@ services:
       - PUID=0
       - PGID=0
       - TZ=Asia/Shanghai
-      - MS_PORT=3000
+      - MS_PORT=8888
       - MS_REDIS_HOST=ms-redis:6379
       - MS_REDIS_PASS=your-redis-password
       - MS_TIMEOUT=60000
@@ -276,7 +276,7 @@ services:
       - MS_LOG_LEVEL=info
       - MS_LOG_KEEP_DAYS=7
     ports:
-      - 3000:3000
+      - 8888:8888
     volumes:
       - /volume1/docker/Media-Saber/config:/app/config
       - /volume2/Medium:/Medium

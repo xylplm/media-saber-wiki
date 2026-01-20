@@ -57,9 +57,9 @@ services:
       ms-postgres:
         condition: service_healthy
     ports:
-      - "3000:3000"
+      - "8888:8888"
     environment:
-      - MS_PORT=3000
+      - MS_PORT=8888
       - MS_REDIS_HOST=ms-redis:6379
       - MS_REDIS_PASS=your-redis-password            # 修改为你的 Redis 密码
       - MS_PGSQL_USER=postgres
@@ -181,8 +181,8 @@ networks:
 **Q: 部署后无法访问 Web UI？**
 
 1. 确认三个容器都在运行中（查看 Docker 容器列表）
-2. 检查端口 3000 是否被占用
-3. 尝试在浏览器访问 `http://nas-ip:3000`
+2. 检查端口 8888 是否被占用
+3. 尝试在浏览器访问 `http://nas-ip:8888`
 
 **Q: 容器启动失败？**
 

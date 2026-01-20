@@ -55,14 +55,14 @@ services:
     container_name: msgo
     restart: unless-stopped
     ports:
-      - 4000:4000                      # Web UI 端口
+      - 8888:8888                      # Web UI 端口
       - 8092:8092                      # 媒体服务器反代端口
     environment:
       - PUID=0
       - PGID=0
       - UMASK=022
       - TZ=Asia/Shanghai
-      - MS_PORT=4000                   # Web UI 端口
+      - MS_PORT=8888                   # Web UI 端口
       - MS_AUTH_EMAIL=your-email@example.com  # 修改为你的邮箱
       - MS_AUTH_SLOGAN=YourAuthSlogan  # 修改为你的认证口令
       - MS_SITE_CONFIG_DIR=/app/config/site_configs
@@ -174,7 +174,7 @@ networks:
 检查步骤：
 1. 查看项目编排的日志信息
 2. 确认所有目录路径已正确修改
-3. 检查端口是否被占用（4000、6379、5432）
+3. 检查端口是否被占用（8888、6379、5432）
 
 **Q: 无法连接到数据库？**
 
