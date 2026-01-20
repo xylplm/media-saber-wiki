@@ -115,7 +115,6 @@ services:
   msgo:
     image: xylplm/media-saber:latest
     container_name: media-saber-go
-    privileged: true
     volumes:
       - /volume1/docker/media-saber/config:/app/config
       - /volume2/Medium:/Medium  # 修改为实际媒体路径

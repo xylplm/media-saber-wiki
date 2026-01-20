@@ -101,7 +101,7 @@ services:
     ports:
       - 8096:8096
     restart: unless-stopped
-    privileged: true
+    #privileged: true   #开启神医助手需要特权模式
     volumes:
       - ./emby/config:/config
       - /home/xxx/strm:/strm  # 修改为实际的 strm 目录路径
@@ -132,7 +132,6 @@ services:
       MS_MQ_CONCURRENCY: 10
       MS_MCP_SERVER_HTTP_ADDR: "0.0.0.0:5000"
       MS_PATH_WATCH_TIME: 30
-    privileged: true
     volumes:
       - ./ms/config:/app/config
     ports:

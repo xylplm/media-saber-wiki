@@ -187,7 +187,6 @@ services:
     container_name: msgo
     restart: unless-stopped
     network_mode: bridge
-    privileged: true
     depends_on:
       redis:
         condition: service_healthy
@@ -238,7 +237,7 @@ services:
       GID: 0
       GIDLIST: 0
       TZ: Asia/Shanghai
-    privileged: true
+    #privileged: true   #开启神医助手需要特权模式
 
   # qBittorrent 下载器（可选）
   qb:

@@ -180,7 +180,6 @@ services:
     image: xylplm/media-saber:dev  # dev 比 latest 更适合
     container_name: msgo-server
     restart: always
-    privileged: true
     network_mode: host  # 使用 host 模式，可以使用 ipv6
     volumes:
       - ${DOCKER_PATH}/msgo/common/hosts:/etc/hosts:rw
@@ -251,7 +250,7 @@ services:
     image: amilys/embyserver:4.8.11.0  # 4.9 修改了数据库结构，4.8 不兼容
     container_name: msgo-emby
     restart: always
-    privileged: true
+    #privileged: true   #开启神医助手需要特权模式
     network_mode: bridge  # DLNA 和 Wake-on-Lan 需要 bridge
     ports:
       - "${EMBY_PORT}:8096"  # 对外访问端口

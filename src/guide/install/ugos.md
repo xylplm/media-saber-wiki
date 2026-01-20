@@ -75,7 +75,6 @@ services:
       - MS_PGSQL_PATH=pgsql
       - MS_PGSQL_PORT=5432
       - MS_PGSQL_DBNAME=ms
-    privileged: true
     volumes:
       - /path/to/docker/msgo/configs:/app/config    # 修改为实际路径
       - /path/to/video:/video                       # 修改为实际路径

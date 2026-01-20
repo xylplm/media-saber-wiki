@@ -51,7 +51,6 @@ services:
   msgo:
     image: xylplm/media-saber:latest
     container_name: media-saber-go
-    privileged: true
     depends_on:
       ms-redis:
         condition: service_healthy

@@ -74,7 +74,7 @@ dateCreated: 2023-05-12T04:25:24.817Z
   <Repository>qqaazz.msaber.fun/xylplm/media-saber:latest</Repository>
   <Network>host</Network>
   <Shell>sh</Shell>
-  <Privileged>true</Privileged>
+  <Privileged>false</Privileged>
   <WebUI>http://[IP]:[PORT:8888]</WebUI>
   <Config Name="PUID" Target="PUID" Default="0" Mode="" Description="用户 ID" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
   <Config Name="PGID" Target="PGID" Default="0" Mode="" Description="用户组 ID" Type="Variable" Display="always" Required="false" Mask="false">0</Config>

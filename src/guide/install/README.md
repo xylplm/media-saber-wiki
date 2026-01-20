@@ -48,7 +48,6 @@ dateCreated: 2023-05-12T04:25:24.817Z
 ```shell
 docker run -d \
   --name media-saber-go \
-  --privileged \
   --restart always \
   --network host \
   -e PUID=0 \
@@ -82,7 +81,6 @@ services:
   msgo:
     image: qqaazz.msaber.fun/xylplm/media-saber:latest
     container_name: media-saber-go
-    privileged: true
     volumes:
       - /volume1/docker/media-saber/config:/app/config
       - /volume2/Medium:/Medium

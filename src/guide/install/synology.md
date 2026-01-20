@@ -149,7 +149,6 @@ services:
   msgo:
     image: qqaazz.msaber.fun/xylplm/media-saber:latest
     container_name: media-saber-go
-    privileged: true
     volumes:
       - /volume1/docker/Media-Saber/config:/app/config
       - /volume2/Medium:/Medium  # 修改为你的媒体目录
@@ -259,7 +258,6 @@ services:
   msgo:
     image: qqaazz.msaber.fun/xylplm/media-saber:latest
     container_name: media-saber-go
-    privileged: true
     environment:
       - PUID=0
       - PGID=0
