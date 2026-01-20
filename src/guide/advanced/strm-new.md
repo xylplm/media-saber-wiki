@@ -12,7 +12,7 @@ dateCreated: 2026-01-14T16:06:00.188Z
 
 ## strm 流程图
 
-<font color="#c00000" >**总流程：1.订阅下载到目录->2.自动上传云盘->3.自动整理网盘后分类->4.生成strm到本地->5.emby读取strm走302**</font>
+<font color="#c00000" >总流程：1.订阅下载到目录->2.自动上传云盘->3.自动整理网盘后分类->4.生成strm到本地->5.emby读取strm走302</font>
 
 ```mermaid
 flowchart LR
@@ -180,13 +180,13 @@ flowchart LR
     - 选取你要整理的 云端 115目录，看下图即可。
     - <img src="./images/strmnew/订阅自动上传115待整理目录.jpg" alt="drawing" width="800"/>
 
-###  3.3 网盘分类目录
+### 3.3 网盘分类目录
 
 - ms-目录管理-目录管理
     - 新建`3个云盘分类目录`，打上同一个标签，如：`115`、天翼、夸克等。
     - 本文是打上了：115标签，用于识别115云盘，自动整理网盘。
 
-###  3.4 生成strm目录
+### 3.4 生成strm目录
 
 - ms-目录管理-目录管理
     - 新建3个strm路径，打上对应的目录分类标签
@@ -226,7 +226,7 @@ flowchart LR
     - <img src="./images/strmnew/strm生成.jpg" alt="drawing" width="800"/>
 
 
-###  4.5 配置 Emby
+### 4.5 配置 Emby
 
 - 在emby中配置媒体库，添加strm文件夹到媒体库并扫库，准备测试302播放
 
