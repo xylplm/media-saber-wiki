@@ -14,7 +14,7 @@ export default navbar([
       { text: "开始", icon: "play", link: "" },
       { text: "如何安装", icon: "download", link: "install/" },
       { text: "如何更新", icon: "arrows-rotate", link: "update/" },
-      { text: "初始化配置", icon: "gear", link: "init/initialize" },
+      { text: "初始化配置", icon: "gear", link: "guide/init" },
       { text: "进阶教程", icon: "graduation-cap", link: "advanced/start" },
     ],
   },
