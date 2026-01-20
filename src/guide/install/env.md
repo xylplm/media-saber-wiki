@@ -4,7 +4,7 @@ article: false
 date: 2023-06-28T05:11:48.294Z
 tags:
 categories:
-  - 新手指引
+  - 快速上手
   - 开始
 editor: markdown
 dateCreated: 2023-05-12T04:26:30.172Z

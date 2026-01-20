@@ -3,7 +3,7 @@ title: PostgreSQL跨版本升级后数据迁移
 article: false
 tags: null
 categories: 
-  - 新手指引
+  - 快速上手
   - 如何更新
 editor: markdown
 date: 2024-05-13 19:43:47

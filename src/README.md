@@ -23,7 +23,7 @@ actions:
     type: default
 
 highlights:
-  - header: 🚀 新手指引
+  - header: 🚀 快速上手
     description: 从零开始，快速上手 Media Saber
     color: "#5d87ff"
     image: /images/highlight-guide.svg

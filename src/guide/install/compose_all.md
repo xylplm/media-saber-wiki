@@ -4,7 +4,7 @@ article: false
 date: 2025-03-11T12:20:20.888Z
 tags:
 categories: 
-  - 新手指引
+  - 快速上手
   - 如何安装
 editor: markdown
 dateCreated: 2025-03-11T12:20:20.888Z

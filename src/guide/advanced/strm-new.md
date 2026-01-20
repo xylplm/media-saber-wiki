@@ -4,7 +4,7 @@ article: false
 date: 2026-01-20T17:26:00.188Z
 tags:
 categories:
-  - 新手指引
+  - 快速上手
   - 进阶教程
 editor: markdown
 dateCreated: 2026-01-14T16:06:00.188Z

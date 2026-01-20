@@ -3,7 +3,7 @@ title: TMDB 配置指南
 article: false
 order: 2
 categories: 
-  - 新手指引
+  - 快速上手
   - 开始
 editor: markdown
 date: 2023-06-28 05:11:48

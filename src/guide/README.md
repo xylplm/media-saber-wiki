@@ -3,7 +3,7 @@ title: 引言
 article: false
 order: 0
 categories: 
-  - 新手指引
+  - 快速上手
   - 开始
 date: 2023-05-22 08:51:16
 ---

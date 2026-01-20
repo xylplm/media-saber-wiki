@@ -6,7 +6,7 @@ order: 1
 dir:
   order: 30
 categories:
-  - 新手指引
+  - 快速上手
   - 初始化配置
 editor: markdown
 date: 2023-10-12 09:22:05
