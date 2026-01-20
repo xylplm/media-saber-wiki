@@ -1,6 +1,6 @@
 ---
 
-title: STRM 一条龙玩法（详细进阶版）
+title: 云盘详细配置教程
 article: false
 tags: null
 order: 1
@@ -15,9 +15,9 @@ categories:
 
 ---
 
-## 🚀 开始 STRM 一条龙配置
+## 🚀 开始云盘挂载配置
 
-本文将完整演示 Media Saber 下 **STRM 一条龙自动化方案**：
+本文将完整演示 Media Saber 下 **云盘挂载订阅及播放自动化方案**：
 
 > **订阅下载 → 自动上传云盘 → 云端整理分类 → 生成 STRM → Emby 302 直链播放**
 
