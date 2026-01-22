@@ -2,11 +2,13 @@
 title: 云盘存储设置
 article: false
 tags: null
-order: 30
-dir:
+order: 1
 categories:
   - 快速上手
   - 进阶教程
+author:
+  - 四丿季
+  - 凌霄
 editor: markdown
 date: 2026-01-20 17:26:00
 
