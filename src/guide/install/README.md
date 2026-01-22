@@ -2,6 +2,9 @@
 title: 安装之前
 article: false
 date: 2023-05-15T09:22:05.263Z
+dir:
+  order: 3
+  text: 如何安装
 tags:
 categories: 
   - 快速上手

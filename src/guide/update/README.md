@@ -2,7 +2,8 @@
 title: 更新版本
 article: false
 dir:
-  order: 20
+  order: 4
+  text: 如何安装
 tags: 
   - 更新
   - 升级

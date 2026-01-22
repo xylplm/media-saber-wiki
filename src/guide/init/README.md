@@ -4,7 +4,8 @@ article: false
 tags: null
 order: 1
 dir:
-  order: 30
+  order: 4
+  text: 如何安装
 categories:
   - 快速上手
   - 初始化配置
