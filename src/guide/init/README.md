@@ -5,7 +5,7 @@ tags: null
 order: 1
 dir:
   order: 4
-  text: 如何安装
+  text: 基础设置
 categories:
   - 快速上手
   - 初始化配置

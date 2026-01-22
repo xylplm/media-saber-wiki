@@ -3,7 +3,7 @@ title: 更新版本
 article: false
 dir:
   order: 4
-  text: 如何安装
+  text: 如何更新
 tags: 
   - 更新
   - 升级

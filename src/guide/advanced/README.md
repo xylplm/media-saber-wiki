@@ -5,7 +5,7 @@ date: 2023-10-12T09:22:05.263Z
 tags:
 dir:
   order: 5
-  text: 如何安装
+  text: 高手进阶
 categories: 
   - 快速上手
   - 进阶教程
