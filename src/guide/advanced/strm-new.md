@@ -83,19 +83,11 @@ flowchart LR
     style Workflow fill:#F5F5F7,stroke:#E5E5E7
     style Playback fill:#F5F5F7,stroke:#E5E5E7
 
-
-
-
-
-
-
-
 ```
 
 ## 一、前置准备
 
 ### 1.1 挂载硬盘路径
-@@ -102,18 +107,16 @@ flowchart LR
 
 - ms-系统配置-系统配置-基础配置
     - 设置：存储空间目录、文件管理目录
