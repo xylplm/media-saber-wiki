@@ -4,7 +4,7 @@ article: false
 tags: null
 order: 1
 dir:
-  order: 4
+  order: 5
   text: 基础设置
 categories:
   - 快速上手
