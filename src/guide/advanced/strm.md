@@ -2,15 +2,13 @@
 title: 云盘存储设置
 article: false
 tags: null
-order: 1
-dir:
 order: 30
+dir:
 categories:
-
-* 快速上手
-* 进阶教程
-  editor: markdown
-  date: 2026-01-20 17:26:00
+  - 快速上手
+  - 进阶教程
+editor: markdown
+date: 2026-01-20 17:26:00
 
 ---
 
