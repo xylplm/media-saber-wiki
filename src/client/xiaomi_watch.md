@@ -59,6 +59,16 @@ dateCreated: 2026-02-01T00:00:00.000Z
 - **REDMI 系列**：REDMI Watch 5、REDMI Watch 6
 - **Xiaomi 系列**：Xiaomi Watch S1 Pro、Xiaomi Watch S3、Xiaomi Watch S4 等主流小米手表
 
+::: warning 📱 手机端要求
+
+**Media Saber 手机客户端配置要求：**
+- ✅ **Android**：仅支持最新安卓客户端
+- ❌ **iOS**：暂不支持 iOS 版本
+
+手表客户端需要通过手机端 Media Saber 进行账户同步，请确保使用的是最新的 Android 客户端版本。
+
+:::
+
 ---
 
 ## ✨ 核心功能
