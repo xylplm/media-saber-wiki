@@ -81,13 +81,12 @@ highlights:
         icon: sliders
         details: 全面的系统配置选项
         link: /usage/system_settings/
-  - header: 📱 多端支持
+  - header: 📱 全平台支持
     description: 随时随地管理你的媒体库
     color: "#f59e0b"
     image: /images/highlight-mobile.svg
     bgImage: /images/bg-mobile-light.svg
     bgImageDark: /images/bg-mobile-dark.svg
-    features:rk: /images/bg-mobile-dark.svg
     features:
       - title: 🍎 iOS 客户端
         icon: apple
@@ -98,6 +97,11 @@ highlights:
         icon: android
         details: Android 设备上的 Media Saber
         link: /client/android/
+
+      - title: ⌚ 小米手表客户端
+        icon: watch
+        details: 在手腕上管理媒体和查看数据
+        link: /client/xiaomi_watch
 
       - title: 🧩 浏览器扩展
         icon: puzzle-piece
