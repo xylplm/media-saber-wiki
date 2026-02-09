@@ -7,45 +7,47 @@ editor: markdown
 date: 2025-08-09 12:16:17
 ---
 
-# Media Saber-MCP 简介
+# 🤖 Media Saber-MCP 简介
 
-> 一个基于 MCP（Model Context Protocol）的本地电影 / 电视剧订阅服务，让订阅像聊天一样简单。
+> 💬 一个基于 MCP（Model Context Protocol）的本地电影 / 电视剧订阅服务，让订阅像聊天一样简单。
 
 ---
 
-## 1. 项目定位
+## 🎯 项目定位
 
-Media Saber-MCP 把「我想看」变成「已订阅」—— 只需一句话，系统就能帮你追踪影片更新、自动入库，并实时推送状态。  
-它完全跑在本地，无需注册、无需云同步，隐私可控，速度飞快。
+Media Saber-MCP 把「我想看」变成「已订阅」—— 只需一句话，系统就能帮你追踪影片更新、自动入库，并实时推送状态。
+
+**核心优势：**
+- 🏠 **完全本地化** - 无需注册、无需云同步
+- 🔒 **隐私可控** - 数据完全掌握在自己手中
+- ⚡ **速度飞快** - 本地处理，即时响应
 
 ---
 
 ## 2. 功能一览
 
-| 功能     | 说明            | 示例                                                              |
-|--------|---------------|-----------------------------------------------------------------|
-| 自然语言订阅 | 解析影片名、年份、季数   | `订阅 复仇者联盟 2012`                                                 |
-| 多类型支持  | 电影 / 电视剧 / 动漫 | `订阅 权力的游戏 S01`                                                  |
-| 本地服务   | 零配置局域网访问      | 支持标准 streamable-http 协议连接 |
+| 功能 | 说明 | 示例 |
+|------|------|------|
+| 🗣️ **自然语言订阅** | 解析影片名、年份、季数 | `订阅 复仇者联盟 2012` |
+| 🎬 **多类型支持** | 电影 / 电视剧 / 动漫 | `订阅 权力的游戏 S01` |
+| 🌐 **本地服务** | 零配置局域网访问 | 支持标准 streamable-http 协议连接 |
 
 ---
 
-## 3. 快速上手
+## 🚀 快速上手
 
-### 3.1 启动服务
-
-#### 前置条件
+### 📋 前置条件
 
 在使用MCP服务前，需要先配置OpenAI API相关设置：
 
 1. 前往 [基础设置](/usage/system_settings/basic_settings/) 页面
-2. 在"智能体配置"部分配置以下项目：
-   - **OpenAI API URL**：如 `https://api.openai.com/v1`
-   - **OpenAI API Key**：您的API密钥
-   - **默认模型**：如 `gpt-3.5-turbo` 或 `gpt-4`
-   - **启用 MCP**：开启此选项
+2. 在 **"智能体配置"** 部分配置以下项目：
+   - 🔗 **OpenAI API URL**：如 `https://api.openai.com/v1`
+   - 🔑 **OpenAI API Key**：您的API密钥
+   - 🤖 **默认模型**：如 `gpt-3.5-turbo` 或 `gpt-4`
+   - ✅ **启用 MCP**：开启此选项
 
-#### 启动MCP服务
+### ⚙️ 启动MCP服务
 
 在Docker环境中，需要配置环境变量来启动内置MCP服务：
 
@@ -54,12 +56,15 @@ MS_MCP_SERVER_HTTP_ADDR="0.0.0.0:22696"
 ```
 
 配置此环境变量后重启容器即可开启内置MCP服务。此时在 [智能体](/usage/ai/ai/) 页面的"新增MCP服务列表"中将会看到：
-- **媒体服务**
-- **MS 媒体服务**：包含媒体、订阅、站点、媒体服务、云存储、系统等服务
 
-### 3.2 第三方客户端连接
+- 🎬 **媒体服务**
+- 📦 **MS 媒体服务**：包含媒体、订阅、站点、媒体服务、云存储、系统等服务
 
-#### 端口映射配置
+---
+
+### 🔌 第三方客户端连接
+
+#### 🌐 端口映射配置
 
 如需第三方客户端连接到Media Saber的MCP服务，需要将环境变量中的22696端口映射出去：
 
@@ -68,94 +73,126 @@ MS_MCP_SERVER_HTTP_ADDR="0.0.0.0:22696"
 -p 22696:22696
 ```
 
-#### 连接地址
+#### 🔗 连接地址
 
-**新版本连接方式**：
-- 连接地址：`http://IP:映射端口号`
-- 协议：使用标准的 streamable-http 协议
+**新版本连接方式：**
+- 📍 **连接地址**：`http://IP:映射端口号`
+- 🔄 **协议**：使用标准的 streamable-http 协议
 
-**示例**：
+**示例：**
 ```text
 http://192.168.1.100:22696
 ```
 
-#### 客户端配置
+#### ⚙️ 客户端配置
 
 在可以使用的MCP客户端中添加服务：
 
-1. **选择手动添加**
-2. **填入连接地址**：如 `http://192.168.1.100:22696`
-3. **配置请求头**：
+1. ➕ **选择手动添加**
+2. 📝 **填入连接地址**：如 `http://192.168.1.100:22696`
+3. 🔧 **配置请求头**：
    - 字段名：`apiKey`
    - 字段值：您在Media Saber中设置的API KEY
 
-#### API KEY 获取
+#### 🔑 API KEY 获取
 
 API KEY 需要在Media Saber系统中获取：
 
-1. 登录Media Saber系统
-2. 前往 [我的信息](/usage/main_page/my_info/) 页面
-3. 切换到"安全配置"标签页
-4. 在"API KEY 管理"区域新增或使用现有的API KEY
-5. 复制API KEY值用于MCP客户端配置
+1. 🔐 登录Media Saber系统
+2. 👤 前往 [我的信息](/usage/main_page/my_info/) 页面
+3. 🔒 切换到 **"安全配置"** 标签页
+4. 🔑 在 **"API KEY 管理"** 区域新增或使用现有的API KEY
+5. 📋 复制API KEY值用于MCP客户端配置
 
-> 💡 **提示**：详细的API KEY管理操作请参考 [API鉴权文档](/usage/other/api_auth)。
+::: tip 💡 提示
+详细的API KEY管理操作请参考 [API鉴权文档](/usage/other/api_auth)。
+:::
 
-> ⚠️ **注意**：配置MCP客户端时，需要将API KEY作为请求头添加，具体格式请参考 [API鉴权文档](/usage/other/api_auth) 中的说明。
+::: warning ⚠️ 注意
+配置MCP客户端时，需要将API KEY作为请求头添加，具体格式请参考 [API鉴权文档](/usage/other/api_auth) 中的说明。
+:::
 
-以下是效果示例：
+#### 📸 效果示例
 
-<img src="./images/dingyue.png" alt="drawing" width="600"/>
-<img src="./images/chenggong.png" alt="drawing" width="600"/>
-
----
-
-## 4. 常见问题
-
-Q: 为啥我的 MCP 服务无法使用？ 发送 订阅 xxx 直接给我回复解释？  
-A: 请检查以下配置：
-1. 确认已在 [基础设置](/usage/system_settings/basic_settings/) 中配置了OpenAI API相关信息
-2. 确认已启用MCP功能
-3. 确认Docker环境变量 `MS_MCP_SERVER_HTTP_ADDR="0.0.0.0:22696"` 已配置
-4. 确认MCP客户端中已正确配置API KEY请求头
-5. 如问题仍存在，可以尝试更换客户端重新添加MCP服务
-
-Q: 如何获取API KEY？  
-A: 在 [我的信息](/usage/main_page/my_info/) 页面的"安全配置"标签中，通过"API KEY 管理"功能新增或管理现有的API KEY。
-
-Q: API KEY配置错误会怎样？  
-A: 如果API KEY配置错误或未配置，MCP服务将无法正常工作，可能返回认证失败的错误信息。
-
-Q: 支持哪些话语？  
-A: 订阅+名字 / 订阅+名字+年份 / 订阅+名字+季数 / 订阅+名字+季数+年份
-
-Q: 如何在智能体中使用MCP服务？  
-A: 配置完成后，在 [智能体](/usage/ai/ai/) 页面即可看到可用的MCP服务，包括媒体服务和MS媒体服务等。
+<img src="./images/dingyue.png" alt="订阅示例" width="600"/>
+<img src="./images/chenggong.png" alt="成功示例" width="600"/>
 
 ---
 
-## 5. 相关文档
+## ❓ 常见问题
 
-- [智能体使用指南](/usage/ai/ai/) - 了解如何使用智能体功能
-- [基础设置](/usage/system_settings/basic_settings/) - 配置OpenAI API和MCP相关设置
-- [我的信息 - API KEY管理](/usage/main_page/my_info/) - 获取和管理MCP服务所需的API KEY
+### 🔧 MCP 服务无法使用？
 
-## 💡 推荐服务
+**Q：为啥我的 MCP 服务无法使用？发送 订阅 xxx 直接给我回复解释？**
 
-::: tip 硅基流动推荐
+**A：** 请检查以下配置：
 
-推荐用户使用硅基流动AI服务。现在点击链接填写邀请码注册，可立即获得2000万Tokens。
+1. ✅ 确认已在 [基础设置](/usage/system_settings/basic_settings/) 中配置了OpenAI API相关信息
+2. ✅ 确认已启用MCP功能
+3. ✅ 确认Docker环境变量 `MS_MCP_SERVER_HTTP_ADDR="0.0.0.0:22696"` 已配置
+4. ✅ 确认MCP客户端中已正确配置API KEY请求头
+5. 🔄 如问题仍存在，可以尝试更换客户端重新添加MCP服务
 
-邀请链接：[https://cloud.siliconflow.cn/i/LUTcWF0b](https://cloud.siliconflow.cn/i/LUTcWF0b)
+---
 
-邀请码：LUTcWF0b
+### 🔑 API KEY 相关
 
-注册时请填写邀请码以获得奖励。
+**Q：如何获取API KEY？**
+
+**A：** 在 [我的信息](/usage/main_page/my_info/) 页面的 **"安全配置"** 标签中，通过 **"API KEY 管理"** 功能新增或管理现有的API KEY。
+
+**Q：API KEY配置错误会怎样？**
+
+**A：** 如果API KEY配置错误或未配置，MCP服务将无法正常工作，可能返回认证失败的错误信息。
+
+---
+
+### 💬 支持的订阅语法
+
+**Q：支持哪些话语？**
+
+**A：** 支持以下格式：
+- 📝 `订阅 + 名字`
+- 📅 `订阅 + 名字 + 年份`
+- 📺 `订阅 + 名字 + 季数`
+- 🎯 `订阅 + 名字 + 季数 + 年份`
+
+---
+
+### 🤖 智能体使用
+
+**Q：如何在智能体中使用MCP服务？**
+
+**A：** 配置完成后，在 [智能体](/usage/ai/ai/) 页面即可看到可用的MCP服务，包括媒体服务和MS媒体服务等。
+
+---
+
+## 📚 相关文档
+
+- 🤖 [智能体使用指南](/usage/ai/ai/) - 了解如何使用智能体功能
+- ⚙️ [基础设置](/usage/system_settings/basic_settings/) - 配置OpenAI API和MCP相关设置
+- 🔑 [我的信息 - API KEY管理](/usage/main_page/my_info/) - 获取和管理MCP服务所需的API KEY
+
+---
+
+## 💎 推荐服务
+
+::: tip 🚀 硅基流动推荐
+
+推荐用户使用 **硅基流动AI服务**。现在点击链接填写邀请码注册，可立即获得 **2000万Tokens**！
+
+**邀请链接：** [https://cloud.siliconflow.cn/i/LUTcWF0b](https://cloud.siliconflow.cn/i/LUTcWF0b)
+
+**邀请码：** `LUTcWF0b`
+
+💰 注册时请填写邀请码以获得奖励。
 
 :::
 
-## 6. 开发 & 贡献
+---
 
-- 作者: 强大的`J佬`
+## 👨‍💻 开发 & 贡献
+
+**作者：** 强大的 `J佬` 💪
 
 ---
