@@ -31,6 +31,16 @@ date: 2025-08-09 12:16:17
 
 :::
 
+::: tip 🚀 智谱 GLM Coding 订阅计划推荐
+
+速来拼好模，智谱 GLM Coding 超值订阅，邀你一起薅羊毛！Claude Code、Cline 等 20+ 大编程工具无缝支持，"码力"全开，越拼越爽！
+
+**邀请链接：** [https://www.bigmodel.cn/glm-coding?ic=LHA31MTWXQ](https://www.bigmodel.cn/glm-coding?ic=LHA31MTWXQ)
+
+💰 立即开拼，享限时最低7折惊喜价，受邀用户额外再降低1折！
+
+:::
+
 ---
 
 ## 📋 页面功能概览
