@@ -17,53 +17,38 @@ date: 2023-09-27 12:16:17
 
 媒体服务功能用于管理和配置各种媒体服务器，构建个人媒体库，实现媒体内容的集中存储、管理和播放。
 
-## 📋 功能模块
+## ⚡ 快速开始
 
-媒体服务包含以下主要功能模块：
+建议按以下顺序完成配置：
 
-### 📚 [我的媒体库](/usage/media_services/my_media_library/)
-展示个人媒体库的概览信息，包括电影、电视剧的数量和存储情况。
+1. 先进入 [媒体服务器](/usage/media_services/media_server/) 添加并测试服务器连接
+2. 再按你的服务器类型查看对应教程（Emby / Jellyfin / Plex / UGoS / FNOS / 极影视）
+3. 若使用网盘 `.strm` 播放，务必配置 [媒体代理](/usage/media_services/media_proxy/)
 
-### 🖥️ [媒体服务器](/usage/media_services/media_server/)
-管理和配置媒体服务器的基本设置和连接信息。
+## 🧭 功能导航
 
-### 🚀 [媒体代理](/usage/media_services/media_proxy/)
-查看媒体代理的工作原理、分发模式与兼容性设计。
+### 核心页面
 
-### 🟢 [绿影视](/usage/media_services/green_movie/)
-配置和管理绿影视媒体服务器的相关设置。
+- 📚 [我的媒体库](/usage/media_services/my_media_library/)：查看电影、电视剧等媒体数据总览
+- 🖥️ [媒体服务器](/usage/media_services/media_server/)：管理服务器新增、编辑、同步、定时任务
+- 🚀 [媒体代理](/usage/media_services/media_proxy/)：配置播放分发策略、直链探测和回退机制
 
-### 🟠 [飞牛影视](/usage/media_services/fnos/)
-配置和管理飞牛影视（FNOS）媒体服务器的相关设置。
+### 服务器配置教程
 
-### 🔵 [极影视](/usage/media_services/jellyfin_movie/)
-配置和管理极影视媒体服务器的相关设置。
-
-### 🎬 [Emby](/usage/media_services/emby/)
-配置和管理Emby媒体服务器的相关设置。
-
-### 🎥 [Plex](/usage/media_services/plex/)
-配置和管理Plex媒体服务器的相关设置。
-
-### 🐙 [Jellyfin](/usage/media_services/jellyfin/)
-配置和管理Jellyfin媒体服务器的相关设置。
+- 🎬 [Emby](/usage/media_services/emby/)
+- 🐙 [Jellyfin](/usage/media_services/jellyfin/)
+- 🎥 [Plex](/usage/media_services/plex/)
+- 🟢 [绿影视](/usage/media_services/green_movie/)
+- 🟠 [飞牛影视](/usage/media_services/fnos/)
+- 🔵 [极影视](/usage/media_services/jellyfin_movie/)
 
 ## 🔑 核心概念
 
-### 媒体服务器
-媒体服务器是用于存储、管理和播放媒体内容的软件服务，常见的媒体服务器包括Emby、Plex、Jellyfin等。通过媒体服务器，用户可以在各种设备上方便地浏览和播放媒体内容。
-
-### 媒体库
-媒体库是媒体服务器中组织和管理媒体内容的逻辑结构，通常按照电影、电视剧、音乐等类型进行分类。系统会自动扫描指定目录，将媒体文件添加到相应的媒体库中。
-
-### 元数据
-元数据是描述媒体内容的信息，包括标题、简介、演员、导演、海报、评分等。媒体服务器通过刮削器从互联网获取这些信息，使媒体库更加丰富和易于浏览。
-
-### 刮削
-刮削是从互联网上的数据库（如TheMovieDB、TheTVDB等）获取媒体元数据的过程。系统会根据文件名和目录结构识别媒体内容，并自动下载相关的元数据和图片。
-
-### 直链播放
-直链播放是指通过网络直接访问存储在远程服务器上的媒体文件进行播放，无需将文件下载到本地。这种方式可以节省本地存储空间，但需要稳定的网络连接。
+- **媒体服务器**：用于存储、管理和播放媒体内容的软件服务（如 Emby、Plex、Jellyfin）
+- **媒体库**：按电影、电视剧等类型组织媒体内容的逻辑结构
+- **元数据**：标题、简介、演员、海报、评分等描述信息
+- **刮削**：从 TheMovieDB、TheTVDB 等来源自动获取元数据和图片
+- **直链播放**：客户端直接访问资源地址进行播放，对网络质量要求较高
 
 ## 🔄 工作流程
 
@@ -77,30 +62,21 @@ date: 2023-09-27 12:16:17
 
 ## ⚙️ 支持的媒体服务器
 
-系统支持多种主流媒体服务器：
+系统支持以下主流媒体服务器：
 
-### Emby
-功能丰富的商业媒体服务器，提供优秀的用户界面和广泛的设备支持。
-
-### Plex
-流行的媒体服务器，拥有庞大的插件生态系统和良好的用户体验。
-
-### Jellyfin
-开源的媒体服务器，完全免费且功能强大，是Plex的优秀开源替代品。
-
-### 绿影视
-国产媒体服务器，针对中文用户优化，支持更多的中文内容。
-
-### 飞牛影视
-飞牛系统中的媒体服务，支持通过账号密码连接媒体库。
-
-### 极影视
-另一款国产媒体服务器，界面简洁，易于使用。
+| 类型 | 说明 | 教程 |
+| --- | --- | --- |
+| Emby | 功能丰富、生态成熟，设备兼容性好 | [查看](/usage/media_services/emby/) |
+| Jellyfin | 免费开源、社区活跃 | [查看](/usage/media_services/jellyfin/) |
+| Plex | 体验完善、生态丰富 | [查看](/usage/media_services/plex/) |
+| 绿影视 (UGoS) | 面向中文场景的国产媒体服务 | [查看](/usage/media_services/green_movie/) |
+| 飞牛影视 (FNOS) | 飞牛系统中的媒体服务，账号密码接入 | [查看](/usage/media_services/fnos/) |
+| 极影视 (极空间) | 极空间设备上的媒体服务 | [查看](/usage/media_services/jellyfin_movie/) |
 
 ## 📝 注意事项
 
-- 选择合适的媒体服务器需要考虑个人需求、设备兼容性和功能要求
-- 确保媒体服务器能够访问到媒体文件存储目录
-- 定期更新媒体服务器软件以获取最新功能和安全补丁
-- 合理配置刮削设置以获取准确的媒体信息
-- 注意媒体服务器的系统资源占用，确保流畅运行
+- 选择服务器时优先考虑设备兼容性、远程访问场景与维护成本
+- 确保媒体服务器可访问媒体文件目录，且 API 权限配置正确
+- Emby、Jellyfin、Plex 在网盘 `.strm` 场景建议先配置媒体代理（[[查看媒体代理配置说明]](/usage/media_services/media_proxy)），否则通常无法完成 `302` 跳转播放
+- 定期更新服务器版本，并关注版本兼容与变更说明
+- 合理设置刮削与路径映射，减少识别错误
