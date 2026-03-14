@@ -19,7 +19,7 @@ dateCreated: 2023-05-12T04:26:30.172Z
 
 ### 如何正确安装和启动 Media Saber？
 
-前往 [安装教程](/guide/init/initialize)，根据你的平台（极空间、群晖、UGOS 等）选择对应的安装方案。
+前往 [安装教程](/guide/init/)，根据你的平台（极空间、群晖、UGOS 等）选择对应的安装方案。
 
 **安装完成后如无法正常工作，请查看下面的其他常见问题。**
 
@@ -257,7 +257,7 @@ docker exec media-saber ls /app/config/data/site_config/sites/
 
 2. **检查 TMDB API Key**
    - 初始化配置时是否填写了 TMDB API Key？
-   - 进入 [初始化配置](/guide/init/initialize) 重新配置
+   - 进入 [初始化配置](/guide/init/) 重新配置
    - 验证 API Key 是否正确且未过期
    - 📖 **如何申请 TMDB API Key？** 详见 [TMDB 配置指南](/guide/tmdb)
 

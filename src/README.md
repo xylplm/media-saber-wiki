@@ -33,17 +33,17 @@ highlights:
       - title: 📖 开始
         icon: play
         details: 了解 Media Saber 的基本信息和核心功能
-        link: /guide/start/info
+        link: /guide/
 
       - title: 📥 如何安装
         icon: download
         details: 详细的安装配置教程，支持多种系统
-        link: /guide/install/env
+        link: /guide/install/
 
       - title: ⚙️ 初始化配置
         icon: gear
         details: 第一次使用的配置指南，快速上手
-        link: /guide/init/initialize
+        link: /guide/init/
 
   - header: 📚 使用文档
     description: 全面的功能说明文档，助您快速上手
@@ -70,7 +70,7 @@ highlights:
       - title: 📋 搜索任务
         icon: list-check
         details: 自动搜索和订阅管理
-        link: /usage/search_tasks/
+        link: /usage/search/
 
       - title: 📥 下载管理
         icon: download

@@ -187,7 +187,7 @@ TMDB 对免费 API 有请求限制：
 - 🌐 [TMDB 官方网站](https://www.themoviedb.org/)
 - 📖 [TMDB API 官方文档](https://developer.themoviedb.org/docs)
 - 🚨 [常见问题排查](/guide/problem#无法正常显示剧集信息和海报)
-- ⚙️ [初始化配置](/guide/init/initialize)
+- ⚙️ [初始化配置](/guide/init/)
 - 🔧 [基础设置](/usage/system_settings/basic_settings)
 
 ---
@@ -203,6 +203,6 @@ TMDB 对免费 API 有请求限制：
 :::info 📚 下一步
 配置完 TMDB API Key 后，继续进行：
 1. [站点配置](/guide/init/sites) - 配置媒体站点
-2. [初始化设置](/guide/init/initialize) - 完成系统初始化
+2. [初始化设置](/guide/init/) - 完成系统初始化
 3. [开始使用](/usage/) - 搜索、订阅、下载媒体
 :::
