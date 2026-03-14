@@ -26,6 +26,9 @@ date: 2023-09-27 12:16:17
 ### 🖥️ [媒体服务器](/usage/media_services/media_server/)
 管理和配置媒体服务器的基本设置和连接信息。
 
+### 🚀 [媒体代理](/usage/media_services/media_proxy/)
+查看媒体代理的工作原理、分发模式与兼容性设计。
+
 ### 🟢 [绿影视](/usage/media_services/green_movie/)
 配置和管理绿影视媒体服务器的相关设置。
 
