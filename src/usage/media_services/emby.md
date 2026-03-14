@@ -1,6 +1,7 @@
 ---
 title: Emby
 article: false
+order: 60
 tags: 
   - Emby
   - 媒体服务器

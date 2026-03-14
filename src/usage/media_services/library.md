@@ -1,6 +1,7 @@
 ---
 title: 我的媒体库
 article: false
+order: 30
 tags: 
   - 媒体库
   - 媒体服务器

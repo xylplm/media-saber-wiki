@@ -1,6 +1,7 @@
 ---
 title: Jellyfin
 article: false
+order: 70
 tags: 
   - Jellyfin
   - 媒体服务器
