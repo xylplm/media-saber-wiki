@@ -2,7 +2,11 @@
 title: 开始进阶
 article: false
 date: 2023-10-12T09:22:05.263Z
-tags:
+tags: 
+  - 云端存储
+  - STRM
+  - 进阶教程
+  - 自动化
 order: 0
 dir:
   order: 6

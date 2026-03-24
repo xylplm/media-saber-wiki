@@ -1,8 +1,11 @@
 ---
 title: Strm生成
 article: false
-tags: null
-categories:
+tags: 
+  - STRM
+  - 云端存储
+  - 文件生成
+categories: null
 editor: markdown
 date: 2023-09-27 12:16:17
 ---
