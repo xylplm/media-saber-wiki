@@ -72,7 +72,7 @@ dateCreated: 2023-10-11T16:25:24.817Z
 
 ::: tip 📌 快速导入选项
 
-**推荐方案：** [🔗 115网盘目录树生成STRM](/usage/cloud_storage/115_tree_gen_strm/)
+**推荐方案：** [🔗 115网盘目录树生成STRM](/usage/cloud_storage/115_tree_gen_strm)
 
 - 在 115 网盘端一键导出目录树
 - 在 Media Saber 中导入并批量生成 STRM

@@ -169,7 +169,7 @@ flowchart LR
 
 如需进行 **首次大规模导入** 115 网盘内容并生成 STRM，不想手动一步步配置，可使用以下方案快速完成：
 
-**[🔗 115网盘目录树生成STRM](/usage/cloud_storage/115_tree_gen_strm/)** ⭐ **推荐首次快速导入**
+**[🔗 115网盘目录树生成STRM](/usage/cloud_storage/115_tree_gen_strm)** ⭐ **推荐首次快速导入**
 
 - 在 115 网盘端一键导出目录树
 - 在 Media Saber 中导入并批量生成 STRM

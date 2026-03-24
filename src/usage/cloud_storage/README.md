@@ -32,7 +32,7 @@ date: 2023-09-27 12:16:17
 ### 🔗 [Strm生成](/usage/cloud_storage/strm_generate/)
 创建和管理STRM文件生成任务，用于流媒体播放。
 
-### 🚀 [首次大批量Strm生成](/usage/cloud_storage/115_tree_gen_strm/)
+### 🚀 [首次大批量Strm生成](/usage/cloud_storage/115_tree_gen_strm)
 通过 115 网盘目录树快速批量生成 STRM，特别适合首次大规模导入场景。
 
 ### 🚧 [进行中任务](/usage/cloud_storage/task_undone/)

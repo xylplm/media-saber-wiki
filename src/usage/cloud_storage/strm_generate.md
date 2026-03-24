@@ -20,7 +20,7 @@ Strm生成页面用于配置和管理STRM文件的自动生成任务。STRM文�
 
 - 🔄 **刷新**：重新加载STRM生成任务列表
 - ➕ **添加**：创建新的STRM生成配置
-- 📄 **按文件生成**：通过导入目录树文件批量生成STRM（[详见 115目录树生成STRM](/usage/cloud_storage/115_tree_gen_strm/)）
+- 📄 **按文件生成**：通过导入目录树文件批量生成STRM（[详见 115目录树生成STRM](/usage/cloud_storage/115_tree_gen_strm)）
 - 🎨 **Strm修复**：修复已存在的STRM文件
 
 ---
@@ -29,7 +29,7 @@ Strm生成页面用于配置和管理STRM文件的自动生成任务。STRM文�
 
 如需进行 **首次大规模导入** 115 网盘内容并生成 STRM，推荐使用「**按文件生成**」功能结合 115 目录树导出，相比逐个手动配置可节省大量时间。
 
-详见：[🔗 115网盘目录树生成STRM](/usage/cloud_storage/115_tree_gen_strm/)
+详见：[🔗 115网盘目录树生成STRM](/usage/cloud_storage/115_tree_gen_strm)
 
 :::
 

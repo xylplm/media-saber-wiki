@@ -214,7 +214,7 @@ volumes:
 
 如需一次性批量生成大量 STRM 文件，推荐使用以下快速方案：
 
-**[🔗 115网盘目录树生成STRM](/usage/cloud_storage/115_tree_gen_strm/)** ⭐ **快速导入**
+**[🔗 115网盘目录树生成STRM](/usage/cloud_storage/115_tree_gen_strm)** ⭐ **快速导入**
 
 - 在 115 网盘端一键导出目录树  
 - 在 MS 中导入并批量生成 STRM
