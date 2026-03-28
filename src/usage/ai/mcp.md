@@ -49,50 +49,167 @@ Media Saber-MCP 把「我想看」变成「已订阅」—— 只需一句话，
 
 ### ⚙️ 启动MCP服务
 
-在Docker环境中，需要配置环境变量来启动内置MCP服务：
+MCP服务已内置于Media Saber后端服务中，无需额外配置环境变量即可使用。
 
-```bash
-MS_MCP_SERVER_HTTP_ADDR="0.0.0.0:22696"
-```
+::: warning ⚠️ 注意
+旧版本中的环境变量 `MS_MCP_SERVER_HTTP_ADDR` 已废弃，无需再配置该变量。MCP服务现在直接集成在后端服务中。
+:::
 
-配置此环境变量后重启容器即可开启内置MCP服务。此时在 [智能体](/usage/ai/ai/) 页面的"新增MCP服务列表"中将会看到：
+确认已在基础设置中启用MCP后，在 [智能体](/usage/ai/ai/) 页面的"新增MCP服务列表"中将会看到：
 
 - 🎬 **媒体服务**
 - 📦 **MS 媒体服务**：包含媒体、订阅、站点、媒体服务、云存储、系统等服务
 
 ---
 
+### 🔩 内置MCP工具一览
+
+Media Saber MCP服务内置了丰富的工具，涵盖媒体管理、订阅、站点、云存储、系统等多个方面。
+
+::: tip 💡 提示
+以下工具列表仅供参考，具体可用工具请以实际MCP服务返回为准。
+:::
+
+#### 🎬 媒体相关
+
+| 工具名称 | 说明 |
+|---------|------|
+| `search_tmdb` | 搜索电影/电视剧 TMDB 信息 |
+| `get_tmdb_info` | 获取电影/电视剧 TMDB 详细信息 |
+| `get_media_status` | 查询媒体状态（已发布站点、是否已入库等） |
+| `get_miss_episodes` | 查询媒体库中有漏集的电视剧 |
+| `get_media_servers` | 查询媒体服务列表 |
+| `sync_libraries` | 同步媒体库 |
+
+#### 📺 订阅相关
+
+| 工具名称 | 说明 |
+|---------|------|
+| `subscribe_movie` | 订阅电影，订阅后自动搜索、下载 |
+| `subscribe_tv` | 订阅电视剧，支持指定季数、起始集数 |
+| `refresh_subscribe` | 刷新订阅列表，立即开始搜索下载 |
+
+#### 🌐 站点相关
+
+| 工具名称 | 说明 |
+|---------|------|
+| `get_sites` | 查询站点列表 |
+| `get_site_data` | 查询站点数据 |
+| `today_site_data` | 查询站点今日数据汇总（上传量、下载量等） |
+| `total_site_data` | 查询站点总数据统计（上传、下载、魔力、做种等） |
+| `get_site_message` | 查询站点消息 |
+| `get_site_notice` | 查询站点公告 |
+| `sync_site_data` | 同步站点数据 |
+| `sync_site_message` | 同步站点消息 |
+| `sync_site_notice` | 同步站点公告 |
+| `site_sign_in` | 站点签到 |
+| `test_site` | 站点连通性测试 |
+| `test_site_rss` | 站点 RSS 测试 |
+| `update_site_configs` | 更新站点适配文件 |
+
+#### 🎯 推荐相关
+
+| 工具名称 | 说明 |
+|---------|------|
+| `recommend_movies` | 推荐电影（支持按年代、地区、类型、排序筛选） |
+| `recommend_tvs` | 推荐电视剧（支持按年代、地区、类型、排序筛选） |
+
+#### ☁️ 云存储 & 下载
+
+| 工具名称 | 说明 |
+|---------|------|
+| `add_offline_download` | 添加云下载任务（支持 ed2k、magnet 链接） |
+| `cloud_share_receive` | 云存储转存（支持 115 资源链接） |
+
+#### 🔧 系统相关
+
+| 工具名称 | 说明 |
+|---------|------|
+| `test_network` | 网络连接测试 |
+| `get_zspace_system_state` | 获取极空间系统状态和硬件信息 |
+
+---
+
 ### 🔌 第三方客户端连接
-
-#### 🌐 端口映射配置
-
-如需第三方客户端连接到Media Saber的MCP服务，需要将环境变量中的22696端口映射出去：
-
-```bash
-# Docker 端口映射示例
--p 22696:22696
-```
 
 #### 🔗 连接地址
 
-**新版本连接方式：**
-- 📍 **连接地址**：`http://IP:映射端口号`
-- 🔄 **协议**：使用标准的 streamable-http 协议
+MCP服务现在直接通过Media Saber后端服务提供，有两种连接方式：
 
-**示例：**
+**方式一：使用容器默认端口（推荐）**
+
+直接使用容器对外暴露的端口（如8888），加上 `/message` 路径即可：
+
 ```text
-http://192.168.1.100:22696
+http://IP:8888/message
 ```
 
-#### ⚙️ 客户端配置
+**方式二：使用后端内部端口**
+
+后端服务默认监听 `22698` 端口，Docker中默认未映射该端口，需要自行添加端口映射：
+
+```bash
+# Docker 端口映射示例
+-p 22698:22698
+```
+
+映射后连接地址为：
+
+```text
+http://IP:22698/message
+```
+
+::: tip 💡 提示
+推荐使用方式一，无需额外映射端口，直接复用已有的服务端口即可。
+:::
+
+#### ⚙️ 客户端手动配置
 
 在可以使用的MCP客户端中添加服务：
 
 1. ➕ **选择手动添加**
-2. 📝 **填入连接地址**：如 `http://192.168.1.100:22696`
+2. 📝 **填入连接地址**：如 `http://192.168.1.100:8888/message`
 3. 🔧 **配置请求头**：
-   - 字段名：`apiKey`
-   - 字段值：您在Media Saber中设置的API KEY
+   - 字段名：`Authorization`
+   - 字段值：`Bearer 您的API_KEY`
+
+#### 📋 MCP JSON 配置（一键导入）
+
+如果您使用的客户端支持通过JSON导入MCP配置（如Cherry Studio、Cline、Claude Desktop等），可以直接使用以下JSON配置：
+
+```json
+{
+  "mcpServers": {
+    "MediaSaber": {
+      "transport": "streamable-http",
+      "url": "http://IP:端口/message",
+      "headers": {
+        "Authorization": "Bearer 您的API_KEY"
+      }
+    }
+  }
+}
+```
+
+**示例（假设Media Saber地址为 `192.168.1.100:8888`，API KEY为 `sk-xxxx`）：**
+
+```json
+{
+  "mcpServers": {
+    "MediaSaber": {
+      "transport": "streamable-http",
+      "url": "http://192.168.1.100:8888/message",
+      "headers": {
+        "Authorization": "Bearer sk-xxxx"
+      }
+    }
+  }
+}
+```
+
+::: tip 💡 提示
+将上述JSON中的 `IP:端口` 替换为您的Media Saber实际访问地址，`您的API_KEY` 替换为实际的API KEY即可。如果使用HTTPS，请将 `http` 替换为 `https`。
+:::
 
 #### 🔑 API KEY 获取
 
@@ -109,7 +226,7 @@ API KEY 需要在Media Saber系统中获取：
 :::
 
 ::: warning ⚠️ 注意
-配置MCP客户端时，需要将API KEY作为请求头添加，具体格式请参考 [API鉴权文档](/usage/other/api_auth) 中的说明。
+配置MCP客户端时，需要将API KEY以 `Bearer` 格式添加到 `Authorization` 请求头中，如 `Bearer sk-xxxx`。具体API KEY获取方式请参考 [API鉴权文档](/usage/other/api_auth) 中的说明。
 :::
 
 #### 📸 效果示例
@@ -129,8 +246,8 @@ API KEY 需要在Media Saber系统中获取：
 
 1. ✅ 确认已在 [基础设置](/usage/system_settings/basic_settings/) 中配置了OpenAI API相关信息
 2. ✅ 确认已启用MCP功能
-3. ✅ 确认Docker环境变量 `MS_MCP_SERVER_HTTP_ADDR="0.0.0.0:22696"` 已配置
-4. ✅ 确认MCP客户端中已正确配置API KEY请求头
+3. ✅ 确认MCP客户端连接地址正确（如 `http://IP:8888/message`）
+4. ✅ 确认MCP客户端中已正确配置Authorization请求头（格式为 `Bearer 您的API_KEY`）
 5. 🔄 如问题仍存在，可以尝试更换客户端重新添加MCP服务
 
 ---
