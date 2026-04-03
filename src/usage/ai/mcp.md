@@ -11,6 +11,10 @@ date: 2025-08-09 12:16:17
 
 > 💬 一个基于 MCP（Model Context Protocol）的本地电影 / 电视剧订阅服务，让订阅像聊天一样简单。
 
+::: tip 📦 Skills 技能包
+如果您是第一次接触Media Saber的技能系统，推荐先查看[**Skills 技能包文档**](./skills.md)了解所有可用的技能和工具。本文档主要讲解MCP服务的配置和单个工具的详细说明。
+:::
+
 ---
 
 ## 🎯 项目定位
@@ -286,6 +290,7 @@ API KEY 需要在Media Saber系统中获取：
 
 ## 📚 相关文档
 
+- 🎯 [Skills 技能包](/usage/ai/skills.md) - Media Saber 官方技能包集合，包含28个MCP工具和完整使用指南
 - 🤖 [智能体使用指南](/usage/ai/ai/) - 了解如何使用智能体功能
 - ⚙️ [基础设置](/usage/system_settings/basic_settings/) - 配置OpenAI API和MCP相关设置
 - 🔑 [我的信息 - API KEY管理](/usage/main_page/my_info/) - 获取和管理MCP服务所需的API KEY

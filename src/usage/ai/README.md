@@ -7,6 +7,8 @@ tags:
   - 智能体
   - AI
   - 智能识别
+  - OpenClaw
+  - 小龙虾
 categories: 
 editor: markdown
 date: 2025-01-01 12:16:17
@@ -43,6 +45,16 @@ Model Context Protocol (MCP) 让AI拥有更强大的能力：
 - 🔧 **灵活配置**：简单配置即可启用强大功能
 
 👉 [了解 MCP 服务配置](./mcp.md)
+
+### 🎯 官方 Skills 技能包
+
+Media Saber 提供了官方技能包集合，包含6个核心技能和28个MCP工具：
+
+- 📦 **完整工具集**：订阅、站点、推荐、云存储、系统等全方位支持
+- 🚀 **一键导入**：支持 OpenClaw 小龙虾 和兼容客户端
+- 🎭 **实战指导**：详细的配置步骤和使用示例
+
+👉 [探索 Skills 技能包](./skills.md)
 
 ---
 
@@ -127,6 +139,15 @@ Model Context Protocol (MCP) 让AI拥有更强大的能力：
   - 🔧 第三方服务配置
   - 🔑 API KEY 管理
   - ❓ 常见问题解答
+
+### 🎯 Skills 技能包
+
+- [Skills 技能包文档](./skills.md) - Media Saber 官方技能包集合
+  - 📦 6个核心技能介绍
+  - 🔧 28个 MCP 工具详解
+  - 🚀 快速导入和配置
+  - 💬 实际使用示例
+  - ⚠️ 安全和隐私说明
 
 ---
 
