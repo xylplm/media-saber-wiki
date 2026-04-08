@@ -97,9 +97,10 @@ PostgreSQL 是系统的主要数据存储，不可省略。
 
 | 变量 | 说明 | 默认值 | 示例 |
 |------|------|--------|------|
-| `MS_MCP_SERVER_HTTP_ADDR` | MCP 服务 HTTP 地址 | `0.0.0.0:22696` | `0.0.0.0:22696` |
+| `MS_MCP_SERVER_HTTP_ADDR` | MCP 服务 HTTP 地址（已废弃） | 已废弃 | 不再使用 |
 
 :::tip 📡 MCP 配置
+- `MS_MCP_SERVER_HTTP_ADDR` 已废弃，无需配置
 - 确保容器端口映射正确
 - 如使用 Docker Compose，端口需在配置文件中映射
 :::

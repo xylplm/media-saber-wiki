@@ -130,7 +130,6 @@ services:
       MS_PGSQL_PORT: 5432
       MS_PGSQL_LOG_MODE: prod
       MS_MQ_CONCURRENCY: 10
-      MS_MCP_SERVER_HTTP_ADDR: "0.0.0.0:5000"
       MS_PATH_WATCH_TIME: 30
     volumes:
       - ./ms/config:/app/config
