@@ -179,7 +179,9 @@ http://IP:22698/message
 
 #### 📋 MCP JSON 配置（一键导入）
 
-如果您使用的客户端支持通过JSON导入MCP配置（如Cherry Studio、Cline、Claude Desktop等），可以直接使用以下JSON配置：
+如果您使用的是 Cline、Claude Desktop 等采用通用 MCP 配置结构的客户端，可以直接使用以下 JSON：
+
+若您使用 Cherry Studio，请参考下方“Cherry Studio 导入格式示例”。
 
 ```json
 {
@@ -210,6 +212,32 @@ http://IP:22698/message
   }
 }
 ```
+
+#### 🍒 Cherry Studio 导入格式示例
+
+Cherry Studio 用于导入的 JSON 结构与通用 MCP 配置略有不同（如使用 `baseUrl`、`type: streamableHttp` 等字段），可参考以下格式：
+
+```json
+{
+  "mcpServers": {
+    "MvZt2NGC-JQRWGi-4t6dT": {
+      "name": "MediaSaber",
+      "description": "",
+      "baseUrl": "http://IP:端口/message",
+      "command": "",
+      "args": [],
+      "env": {},
+      "isActive": true,
+      "type": "streamableHttp",
+      "headers": {
+        "Authorization": "Bearer 您的API_KEY"
+      }
+    }
+  }
+}
+```
+
+其中 `MvZt2NGC-JQRWGi-4t6dT` 为 Cherry Studio 自动生成的服务 ID，实际导入时可保持默认生成值或替换为您自己的唯一标识。
 
 ::: tip 💡 提示
 将上述JSON中的 `IP:端口` 替换为您的Media Saber实际访问地址，`您的API_KEY` 替换为实际的API KEY即可。如果使用HTTPS，请将 `http` 替换为 `https`。
