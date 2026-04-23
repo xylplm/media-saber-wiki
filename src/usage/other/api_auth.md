@@ -55,6 +55,6 @@ apiKey: sk-xxxxxxxxxxxxxxxx
 
 以下功能均使用相同鉴权方式：
 - Webhook接口（本指南）
-- 微信消息通知（详见[微信文档](/usage/other/weixin)）
+- 微信消息通知（详见[微信文档](/usage/system_settings/message/weixin)）
 - MCP服务接口（详见[MCP文档](/usage/ai/mcp/)）
 - 自定义API调用

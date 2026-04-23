@@ -90,7 +90,7 @@ date: 2023-09-27 12:16:17
 
 - **MCP服务认证**：用于第三方MCP客户端连接Media Saber的MCP服务，详见 [MCP服务文档](/usage/ai/mcp/)
 - **Webhook集成**：媒体服务器（Emby/Jellyfin）通过Webhook与Media Saber通信时的身份验证，详见 [Webhook文档](/usage/other/webhook)
-- **微信消息通知**：企业微信接收Media Saber消息通知时的API认证，详见 [微信文档](/usage/other/weixin)
+- **微信消息通知**：企业微信接收Media Saber消息通知时的API认证，详见 [微信文档](/usage/system_settings/message/weixin)
 - **API调用**：外部工具调用Media Saber API时的身份验证
 - **自动化脚本**：脚本或程序访问系统功能时使用
 

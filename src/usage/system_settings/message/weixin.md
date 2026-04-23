@@ -31,32 +31,30 @@ dateCreated: 2023-05-12T04:26:30.172Z
 
 访问企业微信官网注册并登录：
 https://work.weixin.qq.com/
-
 ### 2. 获取企业ID
 
 进入管理后台后，点击右上角"我的企业"，在页面最下方获取企业ID：
-
-![img](./images/0703.png)
+![img](./image/weixin/0703.png)
 
 ### 3. 创建应用
 
 打开"应用管理"，在自建应用中点击"创建应用"：
 
-![img](./images/0704.png)
+![img](./image/weixin/0704.png)
 
 填写必要信息创建应用：
 
-![img](./images/0705.png)
+![img](./image/weixin/0705.png)
 
 ### 4. 获取应用信息
 
 在应用管理界面可以获取到以下信息：
 
 1. **AgentId**：应用ID
-   ![img](./images/0706.png)
+   ![img](./image/weixin/0706.png)
 
 2. **Secret**：点击"Secret"的查看按钮，在手机端企业微信获取
-   ![img](./images/0707.png)
+   ![img](./image/weixin/0707.png)
 
 ## 🔧 API接收配置
 
@@ -64,7 +62,7 @@ https://work.weixin.qq.com/
 
 点击应用设置中的"API接收"：
 
-![img](./images/0708.png)
+![img](./image/weixin/0708.png)
 
 ### 2. 填写URL
 
@@ -94,7 +92,7 @@ http://demo.mediasaber.example:5858/api/v1/webhook/wechat/1000002?apiKey=sk-0c97
 
 进入`系统设置` → `消息通知`页面，点击"添加渠道"：
 
-![img](./images/0709.png)
+![img](./image/weixin/0709.png)
 
 ### 2. 填写配置信息
 
@@ -109,7 +107,7 @@ http://demo.mediasaber.example:5858/api/v1/webhook/wechat/1000002?apiKey=sk-0c97
 
 勾选`是否交互`，在下方推送业务类型中勾选需要推送的业务，推荐全选所有推送业务：
 
-![img](./images/0710.png)
+![img](./image/weixin/0710.png)
 
 ## 🔒 安全配置
 
@@ -117,14 +115,14 @@ http://demo.mediasaber.example:5858/api/v1/webhook/wechat/1000002?apiKey=sk-0c97
 
 回到企业微信的API接收配置页面，点击保存，会出现保存成功的提示，此时API接收变成已启用状态：
 
-![img](./images/0711.png)
+![img](./image/weixin/0711.png)
 
 ### 2. 配置企业可信IP
 
 点击返回，下滑找到"企业可信IP"并点击编辑，在弹出对话框中填入微信代理IP后点击确定：
 
-![img](./images/0712.png)
-![img](./images/0713.png)
+![img](./image/weixin/0712.png)
+![img](./image/weixin/0713.png)
 
 > 在企业微信控制台`我的企业->微信插件`找到邀请关注二维码，使用微信扫码后可直接在微信使用，无需打开企业微信客户端。
 
@@ -132,7 +130,7 @@ http://demo.mediasaber.example:5858/api/v1/webhook/wechat/1000002?apiKey=sk-0c97
 
 进入`设置` → `消息通知`，点击已创建的微信通知渠道，点击`生成菜单`按钮：
 
-![img](./images/0714.png)
+![img](./image/weixin/0714.png)
 
 ## 🌐 微信代理参考
 
