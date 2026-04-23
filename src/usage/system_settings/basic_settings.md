@@ -769,7 +769,7 @@ date: 2023-09-27 12:16:17
 - [过滤规则](/usage/system_settings/filter_rules/) - 创建和管理订阅搜索的过滤规则
 - [种子排序](/usage/system_settings/torrent_sort/) - 自定义种子排序规则
 - [用户管理](/usage/system_settings/user_management/) - 账户和权限配置
-- [消息通知](/usage/system_settings/message_notifications/) - 通知渠道和规则
+- [消息通知](/usage/system_settings/message/) - 通知渠道和规则
 
 ### AI 和第三方服务
 - [智能体](/usage/ai/ai/) - AI 聊天和识别功能

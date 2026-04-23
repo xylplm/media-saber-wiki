@@ -243,7 +243,7 @@ http://192.168.31.88        # 缺少端口
 
 - [修仙秘籍主页](/usage/cultivation_secrets/main/)
 - [Cron表达式说明](/usage/other/cron_rule)
-- [消息通知](/usage/system_settings/message_notifications/)
+- [消息通知](/usage/system_settings/message/)
 
 ---
 

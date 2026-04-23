@@ -34,7 +34,7 @@ date: 2023-09-27 12:16:17
 ### 🔤 [OCR服务配置](./ocr_service)
 光学字符识别服务的配置和使用指南。
 
-### 📨 [消息通知](./message_notifications)
+### 📨 [消息通知](./message)
 系统消息通知的配置，包括邮件、微信、Telegram等通知方式。
 
 ### 🔍 [过滤规则](./filter_rules)

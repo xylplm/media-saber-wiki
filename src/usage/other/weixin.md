@@ -13,7 +13,7 @@ dateCreated: 2023-05-12T04:26:30.172Z
 
 微信消息通知功能允许用户通过企业微信接收系统通知，并支持远程交互控制。本文档详细介绍如何配置企业微信作为消息通知渠道。
 
-> 配置前请确保已在 [消息通知](/usage/system_settings/message_notifications/) 页面了解基本配置流程
+> 配置前请确保已在 [消息通知](/usage/system_settings/message/) 页面了解基本配置流程
 
 ## 📋 配置流程概览
 
