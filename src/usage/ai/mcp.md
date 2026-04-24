@@ -40,29 +40,9 @@ Media Saber-MCP 把「我想看」变成「已订阅」—— 只需一句话，
 
 ## 🚀 快速上手
 
-### 📋 前置条件
-
-在使用MCP服务前，需要先配置OpenAI API相关设置：
-
-1. 前往 [基础设置](/usage/system_settings/basic_settings/) 页面
-2. 在 **"智能体配置"** 部分配置以下项目：
-   - 🔗 **OpenAI API URL**：如 `https://api.openai.com/v1`
-   - 🔑 **OpenAI API Key**：您的API密钥
-   - 🤖 **默认模型**：如 `gpt-3.5-turbo` 或 `gpt-4`
-   - ✅ **启用 MCP**：开启此选项
-
-### ⚙️ 启动MCP服务
-
-MCP服务已内置于Media Saber后端服务中，无需额外配置环境变量即可使用。
-
-::: warning ⚠️ 注意
-旧版本中的环境变量 `MS_MCP_SERVER_HTTP_ADDR` 已废弃，无需再配置该变量。MCP服务现在直接集成在后端服务中。
+::: tip 💡 提示
+MCP服务已内置于Media Saber后端服务中，无需额外配置环境变量即可使用内置的 **MS MCP服务**（包含媒体、订阅、站点、媒体服务、云存储、系统等能力）。
 :::
-
-确认已在基础设置中启用MCP后，在 [智能体](/usage/ai/ai/) 页面的"新增MCP服务列表"中将会看到：
-
-- 🎬 **媒体服务**
-- 📦 **MS 媒体服务**：包含媒体、订阅、站点、媒体服务、云存储、系统等服务
 
 ---
 
@@ -277,10 +257,9 @@ API KEY 需要在Media Saber系统中获取：
 **A：** 请检查以下配置：
 
 1. ✅ 确认已在 [基础设置](/usage/system_settings/basic_settings/) 中配置了OpenAI API相关信息
-2. ✅ 确认已启用MCP功能
-3. ✅ 确认MCP客户端连接地址正确（如 `http://IP:8888/message`）
-4. ✅ 确认MCP客户端中已正确配置Authorization请求头（格式为 `Bearer 您的API_KEY`）
-5. 🔄 如问题仍存在，可以尝试更换客户端重新添加MCP服务
+2. ✅ 确认MCP客户端连接地址正确（如 `http://IP:8888/message`）
+3. ✅ 确认MCP客户端中已正确配置Authorization请求头（格式为 `Bearer 您的API_KEY`）
+4. 🔄 如问题仍存在，可以尝试更换客户端或重新配置连接信息
 
 ---
 
@@ -308,19 +287,11 @@ API KEY 需要在Media Saber系统中获取：
 
 ---
 
-### 🤖 智能体使用
-
-**Q：如何在智能体中使用MCP服务？**
-
-**A：** 配置完成后，在 [智能体](/usage/ai/ai/) 页面即可看到可用的MCP服务，包括媒体服务和MS媒体服务等。
-
----
 
 ## 📚 相关文档
 
 - 🎯 [Skills 技能包](/usage/ai/skills.md) - Media Saber 官方技能包集合，包含28个MCP工具和完整使用指南
-- 🤖 [智能体使用指南](/usage/ai/ai/) - 了解如何使用智能体功能
-- ⚙️ [基础设置](/usage/system_settings/basic_settings/) - 配置OpenAI API和MCP相关设置
+- ⚙️ [基础设置](/usage/system_settings/basic_settings/) - 配置OpenAI API相关设置
 - 🔑 [我的信息 - API KEY管理](/usage/main_page/my_info/) - 获取和管理MCP服务所需的API KEY
 
 ---

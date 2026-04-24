@@ -1,681 +1,654 @@
 ---
-title: Skills 技能包
+title: MS 技能包
 article: false
-tags: 
-  - Skills
+tags:
+  - MS
   - 技能包
-  - MCP
   - OpenClaw
+  - 爱马仕
+  - Hermes
   - 小龙虾
-categories: 
+  - npx
+categories:
 editor: markdown
-date: 2025-04-03 10:00:00
+date: 2026-04-24 00:00:00
 ---
 
-# 🎯 Media Saber Skills 技能包
+# 🎯 MS 技能包
 
-> 💡 Media Saber 官方技能包集合，基于 MCP（Model Context Protocol）协议开发，为 OpenClaw 和兼容客户端提供强大的功能扩展。
+> 💡 MS 技能包是一组专为 Media Saber 设计的 AI Agent 技能，安装后可直接在 OpenClaw 小龙虾、Hermes 爱马仕等客户端中通过自然语言完成影视订阅、漏集补齐、榜单浏览、系统查询等操作。
 
----
-
-## ✨ 技能概览
-
-Media Saber 提供了 **6 个核心技能包**，涵盖订阅管理、站点操作、推荐系统、云存储等多个方面。所有技能都已上架至 [ClawHub.ai](https://clawhub.ai)，可在 OpenClaw 小龙虾 中一键安装：
-
-| 技能名称 | 功能描述 | 工具数量 | ClawHub 链接 |
-|---------|--------|--------|--------|
-| 🔌 **Media Saber MCP** | 完整MCP工具集 | 28个 | [📦 安装](https://clawhub.ai/xylplm/media-saber-mcp) |
-| 📺 **订阅助手** | 订阅工作流优化 | - | [📦 安装](https://clawhub.ai/xylplm/media-saber-subscribe-assistant) |
-| 🌐 **站点操作** | PT站点管理 | 13+ | [📦 安装](https://clawhub.ai/xylplm/media-saber-site-ops) |
-| 🎬 **推荐助手** | 影视推荐系统 | - | [📦 安装](https://clawhub.ai/xylplm/media-saber-recommend-helper) |
-| ☁️ **云助手** | 云存储和下载 | - | [📦 安装](https://clawhub.ai/xylplm/media-saber-cloud-assistant) |
-| 💻 **极空间监控** | NAS系统监控 | - | [📦 安装](https://clawhub.ai/xylplm/media-saber-zspace-monitor) |
+📦 技能包仓库：<https://github.com/fanxuankai/cli-anything-harnesses>
 
 ---
 
-## 🔌 Media Saber MCP - 核心技能
+## 📋 技能包列表
 
-Media Saber MCP 是官方提供的完整技能，包含 **28 个强大的工具**，几乎覆盖了 Media Saber 的所有核心功能。
+仓库 `skills/` 目录下目前共有 **6 个技能包**：
 
-👉 [了解 MCP 服务详情](./mcp.md)
+| 技能包 | 功能简介 | 依赖 CLI |
+|---|---|---|
+| `ms-sub` | 影视订阅 | `cli-anything-ms` |
+| `ms-gap-filler` | 漏集补齐 | `cli-anything-ms` |
+| `ms-recommend` | 影视推荐 | `cli-anything-ms` |
+| `ms-rank` | 影视榜单 | `cli-anything-ms` |
+| `ms-zspace-state` | 极空间系统状态 | `cli-anything-ms` |
+| `cli-anything-cliproxyapi` | CLIProxyAPI 代理管理 | `cli-anything-cliproxyapi` |
 
-### 🎬 工具分类
-
-#### 1. 📺 媒体服务工具（6个）
-通过自然语言查询和管理媒体库：
-
-- `search_tmdb` - 搜索电影/电视剧 TMDB 信息
-- `get_tmdb_info` - 获取电影/电视剧详细信息
-- `get_media_status` - 查询媒体状态和库位置
-- `get_miss_episodes` - 查询缺失集数
-- `get_media_servers` - 查询可用媒体服务器
-- `sync_libraries` - 同步媒体库
-
-#### 2. 📦 订阅管理工具（3个）
-一句话完成订阅：
-
-- `subscribe_movie` - 订阅电影
-- `subscribe_tv` - 订阅电视剧（支持指定季数）
-- `refresh_subscribe` - 刷新订阅列表
-
-#### 3. 🌐 站点操作工具（13+个）
-完整的PT站点管理能力：
-
-- `get_sites` - 查询站点列表
-- `get_site_data` - 查询站点数据统计
-- `today_site_data` - 查询站点今日数据
-- `total_site_data` - 查询站点总体数据
-- `get_site_message` - 查询站点消息
-- `get_site_notice` - 查询站点公告
-- `sync_site_data` - 同步站点数据
-- `sync_site_message` - 同步站点消息
-- `sync_site_notice` - 同步站点公告
-- `site_sign_in` - 自动站点签到
-- `test_site` - 站点连通性测试
-- `test_site_rss` - 站点 RSS 测试
-- `update_site_configs` - 更新站点适配
-
-#### 4. 🎯 推荐系统工具（2个）
-智能影视推荐：
-
-- `recommend_movies` - 推荐电影（支持多条件筛选）
-- `recommend_tvs` - 推荐电视剧（支持多条件筛选）
-
-#### 5. ☁️ 云存储和下载工具（2个）
-管理云盘和离线任务：
-
-- `add_offline_download` - 添加离线下载（支持ed2k、磁力链接）
-- `cloud_share_receive` - 云存储转存（支持115资源）
-
-#### 6. 🔧 系统管理工具（2个）
-系统运维和监控：
-
-- `test_network` - 网络连通性测试
-- `get_zspace_system_state` - 获取极空间系统状态和硬件信息
-
----
-
-## 🚀 快速开始
-
-### 📊 三种安装方式对比
-
-选择最适合你的安装方式：
-
-| 方式 | 难度 | 速度 | 特点 | 适合人群 |
-|------|------|------|------|---------|
-| 🌐 **Web UI** | ⭐ 极简 | ⭐⭐ 快 | 一键安装，无需配置 | 新手用户 |
-| 💻 **CLI 命令** | ⭐⭐ 中等 | ⭐⭐⭐ 最快 | 批量安装，自动化 | 高级用户 |
-| 🤖 **Agent 对话** | ⭐ 极简 | ⭐⭐ 快 | 自然语言，智能执行 | 所有用户 |
-
-**推荐搭配使用**：
-- 🆕 **初次体验**：先用 Web UI 或 Agent 对话快速启动
-- 🔄 **日常维护**：用 CLI 命令快速更新或batch操作
-- ✨ **快速询问**：用 Agent 对话了解 Skill 信息
-
----
-
-### 🌐 推荐方式：ClawHub 一键安装
-
-最快速、最便捷的安装方式：
-
-1. 访问 [ClawHub.ai](https://clawhub.ai) 或点击上面表格中的「📦 安装」链接
-2. 点击「添加到 OpenClaw」按钮
-3. 在 OpenClaw 中确认并授权安装
-4. 完成前置配置后即可使用
-
-::: tip 💡 ClawHub 优势
-- ✅ **一键安装**：无需手动配置 JSON
-- ✅ **自动更新**：ClawHub 会推送最新版本
-- ✅ **版本管理**：轻松切换不同版本
-- ✅ **社区反馈**：了解其他用户的使用体验
-:::
-### 💻 使用 CLI 工具安装
-
-如果你偏好使用命令行工具，可以通过 ClawHub CLI 快速安装和管理 Skills。
-
-#### 1. 安装 ClawHub CLI
-
-选择以下命令之一安装：
+::: tip 💡 前置依赖
+`ms-sub`、`ms-gap-filler`、`ms-recommend`、`ms-rank`、`ms-zspace-state` 这 5 个技能均依赖 `cli-anything-ms`，技能安装完成后需确保该 CLI 可用：
 
 ```bash
-# 使用 npm
-npm i -g clawhub
-
-# 或使用 pnpm
-pnpm add -g clawhub
+pip install cli-anything-ms
 ```
-
-#### 2. 搜索 Skills
-
-在安装前，可以先搜索 Media Saber 相关技能：
-
-```bash
-clawhub search "media-saber"
-```
-
-或搜索特定功能：
-
-```bash
-clawhub search "订阅"
-clawhub search "站点签到"
-clawhub search "推荐"
-```
-
-#### 3. 一键安装 Skills
-
-安装 Media Saber MCP（完整工具集）：
-
-```bash
-clawhub install media-saber-mcp
-```
-
-安装其他技能：
-
-```bash
-# 订阅助手
-clawhub install media-saber-subscribe-assistant
-
-# 站点操作
-clawhub install media-saber-site-ops
-
-# 推荐助手
-clawhub install media-saber-recommend-helper
-
-# 云助手
-clawhub install media-saber-cloud-assistant
-
-# 极空间监控
-clawhub install media-saber-zspace-monitor
-```
-
-#### 4. 更新已安装的 Skills
-
-更新所有已安装的 Skills 到最新版本：
-
-```bash
-clawhub update --all
-```
-
-更新特定 Skill：
-
-```bash
-clawhub update media-saber-mcp
-```
-
-::: tip 💡 CLI 工作目录说明
-- 默认情况下，CLI 会将 Skills 安装到当前工作目录下的 `./skills`
-- 如果已配置 OpenClaw 工作区，clawhub 会自动使用该工作区
-- 可通过 `--workdir`（或环境变量 `CLAWHUB_WORKDIR`）来指定自定义工作目录
-- OpenClaw 从 `<workspace>/skills` 加载工作区 Skills，在下一个会话中生效
-- 工作区 Skills 优先级高于 `~/.openclaw/skills` 和内置 Skills
-:::
-### 🤖 通过 Agent 对话安装（最智能）
-
-最简单、最直观的方式 - **直接告诉 OpenClaw Agent（小龙虾）安装 Skill**：
-
-在 OpenClaw 的对话窗口中，直接输入自然语言命令：
-
-```
-请使用 clawhub 安装 Media Saber MCP 技能
-
-或者
-
-帮我安装 media-saber-subscribe-assistant Skill
-
-或者
-
-我想要安装所有 Media Saber 技能，你能帮我吗？
-```
-
-**Agent 会自动执行以下操作：**
-1. ✅ 理解你的需求
-2. ✅ 调用 clawhub 命令
-3. ✅ 为你完成安装
-4. ✅ 提示最终结果
-
-::: tip 💡 Agent 安装优势
-- ✅ **最简洁**：仅需一句自然语言
-- ✅ **最智能**：Agent 自动理解意图
-- ✅ **最快捷**：适合快速体验
-- ✅ **交互友好**：有问题 Agent 会主动说明
-- ⚡ **即时反馈**：安装进度实时显示
 :::
 
-**常见 Agent 命令示例：**
-
-```
-"请帮我安装 media-saber-mcp"
-
-"能否使用 clawhub 安装订阅助手？"
-
-"给我装上所有 Media Saber 技能"
-
-"更新一下已安装的 Media Saber Skills"
-
-"搜索一下有哪些媒体相关的 Skills"
-```
 ---
 
-### �📋 前置条件
+## 📦 一次性安装全部技能
 
-::: tip 💡 前置要求
-- 已部署 Media Saber 系统（含MCP服务）
-- 已安装 OpenClaw 或兼容的MCP客户端
-- 获得 Media Saber API Key
-:::
+如果你想一次装好所有技能包：
 
-### 1️⃣ 配置AI API
+::: tabs
 
-在开始使用Skills之前，需要先配置 AI 服务：
+@tab npx
 
-1. 前往 [基础设置](/usage/system_settings/basic_settings/)
-2. 配置 **OpenAI API URL** 和 **API Key**
-3. 选择默认使用的 **AI 模型**
-4. 启用 **MCP 功能**
+```bash
+npx -y @openclaw/skills install fanxuankai/cli-anything-harnesses/skills/ms-sub --force
+npx -y @openclaw/skills install fanxuankai/cli-anything-harnesses/skills/ms-gap-filler --force
+npx -y @openclaw/skills install fanxuankai/cli-anything-harnesses/skills/ms-recommend --force
+npx -y @openclaw/skills install fanxuankai/cli-anything-harnesses/skills/ms-rank --force
+npx -y @openclaw/skills install fanxuankai/cli-anything-harnesses/skills/ms-zspace-state --force
+npx -y @openclaw/skills install fanxuankai/cli-anything-harnesses/skills/cli-anything-cliproxyapi --force
+```
 
-### 2️⃣ 获取 MCP 服务地址
+@tab OpenClaw 小龙虾
 
-Media Saber MCP 服务通常通过以下方式暴露：
+在 OpenClaw 对话框中逐条粘贴：
 
-**方式一：容器端口（推荐）**
 ```text
-http://IP:8888/message
+请安装技能 https://github.com/fanxuankai/cli-anything-harnesses/tree/main/skills/ms-sub
+请安装技能 https://github.com/fanxuankai/cli-anything-harnesses/tree/main/skills/ms-gap-filler
+请安装技能 https://github.com/fanxuankai/cli-anything-harnesses/tree/main/skills/ms-recommend
+请安装技能 https://github.com/fanxuankai/cli-anything-harnesses/tree/main/skills/ms-rank
+请安装技能 https://github.com/fanxuankai/cli-anything-harnesses/tree/main/skills/ms-zspace-state
+请安装技能 https://github.com/fanxuankai/cli-anything-harnesses/tree/main/skills/cli-anything-cliproxyapi
 ```
 
-**方式二：后端内部端口**
+@tab Hermes 爱马仕
+
+```bash
+hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-sub --force
+hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-gap-filler --force
+hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-recommend --force
+hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-rank --force
+hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-zspace-state --force
+hermes skills install fanxuankai/cli-anything-harnesses/skills/cli-anything-cliproxyapi --force
+```
+
+:::
+
+::: tip 💡 提示
+`--force` 参数用于覆盖已存在的同名技能，避免旧版本残留，建议每次安装都带上。
+:::
+
+---
+
+## ✨ 技能介绍
+
+### 📺 ms-sub · 影视订阅
+
+> 用 `cli-anything-ms` 自动搜索 TMDB 并新增影视订阅
+
+**工作流程：**
+
+1. **拆分意图** — 一句话里有多个订阅对象时，按顺序逐个处理
+2. **识别媒体类型** — 明确区分 `电影 (movie)` 或 `电视剧 (tv)`，类型不明确时会停下来询问
+3. **提取标题** — 去掉「订阅电影」「帮我订阅」等外壳词，保留用于 TMDB 搜索的标题
+4. **搜索 TMDB** — 唯一搜索源，不搜豆瓣
+5. **筛选候选** — 精确匹配优先；多个候选时展示最多 3 个让用户确认；无结果时明确告知
+6. **检查是否已订阅** — 通过 `rssId` 判断，已订阅直接回复 `ℹ️ 已订阅`，不重复操作
+7. **新增订阅** — 未订阅时调用 `subscribe add`，成功后回复 `✅ 订阅成功`
+
+**触发场景举例：**
+- 订阅电影流浪地球
+- 订阅电视剧西游记第二季
+- 检查复仇者联盟有没有订阅，没有就订阅
+
+::: tip 💡 说明
+- 电视剧未指定季数时，默认订阅第 1 季
+- 一句话包含多个订阅意图时，逐条处理并逐条返回结果
+- 使用 TMDB 返回的规范标题和年份，不使用用户输入的原始文字
+:::
+
+**效果演示：**
+
+<img src="./images/skill/自动订阅.png" alt="影视订阅演示" style="max-width:100%;border-radius:8px;" />
+
+**安装：**
+
+::: tabs
+
+@tab npx
+
+```bash
+npx -y @openclaw/skills install fanxuankai/cli-anything-harnesses/skills/ms-sub --force
+```
+
+@tab OpenClaw 小龙虾
+
+在 OpenClaw 对话框中粘贴 GitHub 链接：
+
 ```text
-http://IP:22698/message
+请安装技能 https://github.com/fanxuankai/cli-anything-harnesses/tree/main/skills/ms-sub
 ```
 
-### 3️⃣ 获取 API Key
+或使用命令行：
 
-1. 登录 Media Saber 系统
-2. 进入 **[我的信息](/usage/main_page/my_info/)** 页面
-3. 在 **安全配置** 中复制 **API Key**
-
-### 4️⃣ 在 OpenClaw 中导入 Skills
-
-复制以下配置到 OpenClaw 的 `mcpServers` 设置：
-
-**配置模板**
-```json
-{
-  "media-saber-mcp": {
-    "command": "node",
-    "args": ["path/to/media-saber-mcp"],
-    "env": {
-      "MCP_ENDPOINT_URL": "http://localhost:8888/message",
-      "API_KEY": "your-api-key-here"
-    }
-  }
-}
+```bash
+openclaw skills install fanxuankai/cli-anything-harnesses/skills/ms-sub
 ```
 
-::: warning ⚠️ 安全提示
-- 不要在公开渠道分享 API Key
-- API Key 密钥管理由 OpenClaw 负责
-- 所有操作在本地执行，数据不上报
+@tab Hermes 爱马仕
+
+```bash
+hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-sub --force
+```
+
 :::
 
 ---
 
-## � 常用工作流
+### 🔍 ms-gap-filler · 漏集补齐
 
-### 🚀 第一次使用 - 快速上手
+> 查电视剧漏集、确认补订阅，并按剧逐季转成 Media Saber 订阅
 
-**方式 A：Web UI（推荐新手）**
-```bash
-# 1. 访问 ClawHub.ai
-# 2. 搜索 media-saber-mcp
-# 3. 点击"添加到 OpenClaw"
-# 4. 在 OpenClaw 中确认安装
-```
+**工作流程：**
 
-**方式 B：CLI（推荐高级用户）**
-```bash
-# 1. 全局安装 CLI
-npm i -g clawhub
+1. **检查漏集** — 无论说「查漏集」还是「补漏集」，都先调用 `media-server miss-episodes-check` 获取完整漏集列表
+2. **汇总展示** — 按剧为单位给出摘要（标题、年份、漏集季数、缺少哪些集），不直接倾倒 JSON
+3. **确认补齐范围** — 支持两种方式：
+   - 指定某一部剧名（按标题近似匹配）
+   - 补前 N 个（默认前 3 个，最多 10 个，按原始顺序计数）
+4. **执行补订阅** — 直接使用漏集结果里的 `title`、`year`、`season`，不做 TMDB 搜索；每个漏集季执行一次 `subscribe add`
+5. **返回结果** — 执行前告知将补哪些剧哪些季，执行后逐条返回并给出成功/失败汇总
 
-# 2. 进入 OpenClaw 工作区
-cd ~/your-openclaw-workspace
+**触发场景举例：**
+- 查漏集
+- 补漏集
+- 把前 3 个补一下
+- 补猎罪图鉴
 
-# 3. 安装所有 Media Saber 技能
-clawhub install media-saber-mcp
-clawhub install media-saber-subscribe-assistant
-clawhub install media-saber-site-ops
-```
-
-**方式 C：Agent 对话（推荐最便捷）**
-```
-# 直接在 OpenClaw 对话框中输入：
-"请帮我安装 media-saber-mcp 技能"
-
-# Agent 小龙虾会自动：
-# ✅ 理解你的需求
-# ✅ 调用 clawhub 安装命令
-# ✅ 完成安装并报告结果
-```
-
-### 📦 日常维护工作流
-
-**检查可用更新**
-```bash
-clawhub search "media-saber"
-```
-
-**更新所有 Skills 到最新版本**
-```bash
-clawhub update --all
-```
-
-**更新特定 Skill**
-```bash
-clawhub update media-saber-mcp
-```
-
-### 🔍 快速查询工作流
-
-**搜索特定功能的 Skill**
-```bash
-# 搜索订阅相关
-clawhub search "media-saber-subscribe"
-
-# 搜索推荐相关
-clawhub search "media-saber-recommend"
-
-# 搜索站点相关
-clawhub search "media-saber-site"
-```
-
-### 🛠️ 多 Skill 混合使用
-
-同时安装多个 Skill 组成完整工作流：
-
-```bash
-# 安装核心 MCP 工具
-clawhub install media-saber-mcp
-
-# 安装订阅工作流优化
-clawhub install media-saber-subscribe-assistant
-
-# 安装站点运维工具
-clawhub install media-saber-site-ops
-
-# 完成后重启 OpenClaw，所有 Skill 立即生效
-```
-
----
-
-## �💬 使用示例
-
-### 🎬 电影订阅
-```
-"帮我订阅《复仇者联盟》2012年的电影"
-"我想看最新的科幻电影"
-```
-
-### 📺 电视剧订阅
-```
-"订阅《权力的游戏》第8季"
-"帮我追的那部日剧最新更新了吗"
-```
-
-### 🌐 站点操作
-```
-"帮我签到所有站点"
-"查看站点今天的上传流量"
-"测试所有站点的连接"
-```
-
-### 🎯 推荐系统
-```
-"推荐一些2023年的欧美科幻电影"
-"有没有关于历史的电视剧推荐"
-```
-
-### ☁️ 云存储和下载
-```
-"帮我把这个115资源转存到云盘"
-"添加这个磁力链接到离线下载"
-```
-
-### 🔍 媒体查询
-```
-"查一下《肖申克的救赎》的详细信息"
-"我的媒体库中有哪些漏集的电视剧"
-```
-
----
-
-## 🔐 安全和隐私
-
-### 凭证管理
-
-Skills 需要以下凭证确保正常运行：
-
-| 凭证 | 说明 | 敏感性 |
-|------|------|-------|
-| `MCP_ENDPOINT_URL` | MCP 服务地址 | 低 |
-| `API_KEY` | Media Saber API 密钥 | ⚠️ 高 |
-
-### 数据隐私
-
-- ✅ 所有操作在本地执行
-- ✅ API Key 不发送至第三方
-- ✅ 操作日志存储在本地
-- ✅ 完全隐私可控
-
----
-
-## 📂 Skills 管理和加载
-
-### 加载路径优先级
-
-OpenClaw 按以下优先级加载 Skills（由高到低）：
-
-1. **🏆 工作区 Skills** - `<workspace>/skills`（最高优先级）
-2. **📦 用户 Skills** - `~/.openclaw/skills`
-3. 📀 **内置 Skills** - OpenClaw 内置的官方 Skills（最低优先级）
-
-::: tip 💡 优先级说明
-- 工作区 Skills 优先级最高，会覆盖其他位置的同名 Skill
-- 新安装的 Skill 会在下一个 OpenClaw 会话中生效
-- 如果你使用 `~/.openclaw/skills` 或内置 Skills，工作区中的 Skill 会优先使用
+::: tip 💡 说明
+- 此技能只处理电视剧，不处理电影
+- 漏集结果为空时直接告知「无漏集」，不继续执行
+- 同一部剧有多个漏集季时，默认全部补，不逐季二次确认
+- 单条失败不中断后续，最终给出完整汇总
 :::
 
-### 使用 CLI 时的工作目录
+**效果演示：**
 
-使用 ClawHub CLI 安装 Skills 时，需要注意工作目录配置：
+<img src="./images/skill/电视剧查漏集.png" alt="漏集补齐演示" style="max-width:100%;border-radius:8px;" />
+
+**安装：**
+
+::: tabs
+
+@tab npx
 
 ```bash
-# 方式1：在 OpenClaw 工作区目录中执行
-cd ~/your-openclaw-workspace
-clawhub install media-saber-mcp
-
-# 方式2：使用 --workdir 参数指定位置
-clawhub install media-saber-mcp --workdir /path/to/workspace
-
-# 方式3：使用环境变量指定
-export CLAWHUB_WORKDIR=/path/to/workspace
-clawhub install media-saber-mcp
+npx -y @openclaw/skills install fanxuankai/cli-anything-harnesses/skills/ms-gap-filler --force
 ```
 
-### Skills 共享和权限
+@tab OpenClaw 小龙虾
 
-OpenClaw Skills 支持以下功能：
+在 OpenClaw 对话框中粘贴 GitHub 链接：
 
-- 📤 **共享**：可以将 Skills 作为版本发布到 ClawHub
-- 🔐 **权限控制**：通过 SKILL.md 中的权限声明控制访问权限
-- 📝 **审核**：ClawHub 提供审核钩子用于审批和审计
+```text
+请安装技能 https://github.com/fanxuankai/cli-anything-harnesses/tree/main/skills/ms-gap-filler
+```
 
-有关 Skills 加载、共享和权限控制的更多详情，请参考 [OpenClaw Skills 文档](https://docs.openclaw.ai/skills)。
+或使用命令行：
+
+```bash
+openclaw skills install fanxuankai/cli-anything-harnesses/skills/ms-gap-filler
+```
+
+@tab Hermes 爱马仕
+
+```bash
+hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-gap-filler --force
+```
+
+:::
+
+---
+
+### 🌟 ms-recommend · 影视推荐
+
+> 用 `cli-anything-ms` 按平台、频道、动态选项逐步筛选并展示影视推荐
+
+**工作流程：**
+
+1. **确定推荐来源** — 用户未指定平台时，先列出可用来源让用户选择；已指定时映射为 CLI alias（如 `豆瓣` → `douban`，`TMDB` → `tmdb`）
+2. **确定频道** — 通常为 `movie` 或 `tv`，不明确时展示选项让用户确认
+3. **读取动态选项** — 必须先读取当前平台和频道的筛选项，不硬编码参数；用户提到的偏好（如「高分」「2025」「动作」）按 `text` 匹配成真实 `value`
+4. **获取推荐条目** — 构造完整 `--options` JSON 后查询，默认第 1 页、每页 10 条
+5. **展示结果** — 输出简洁摘要（标题、年份、类型、评分、RSS 状态、入库状态），不直接倾倒 JSON
+
+**触发场景举例：**
+- 影视推荐
+- 豆瓣电影推荐
+- TMDB 高分电影推荐
+- 推荐 2025 年动作片
+- 推荐豆瓣电视剧，近期热度，华语
+
+::: tip 💡 说明
+- 此技能只做推荐浏览，不执行订阅
+- 用户提到的筛选条件不在当前平台选项里时，会明确告知并要求调整
+- 未指定筛选项时，为所有选项组填空字符串（使用平台默认值）
+:::
+
+**效果演示：**
+
+<img src="./images/skill/影视推荐.png" alt="影视推荐演示" style="max-width:100%;border-radius:8px;" />
+
+**安装：**
+
+::: tabs
+
+@tab npx
+
+```bash
+npx -y @openclaw/skills install fanxuankai/cli-anything-harnesses/skills/ms-recommend --force
+```
+
+@tab OpenClaw 小龙虾
+
+在 OpenClaw 对话框中粘贴 GitHub 链接：
+
+```text
+请安装技能 https://github.com/fanxuankai/cli-anything-harnesses/tree/main/skills/ms-recommend
+```
+
+或使用命令行：
+
+```bash
+openclaw skills install fanxuankai/cli-anything-harnesses/skills/ms-recommend
+```
+
+@tab Hermes 爱马仕
+
+```bash
+hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-recommend --force
+```
+
+:::
+
+---
+
+### 🏆 ms-rank · 影视榜单
+
+> 用 `cli-anything-ms` 按平台、分类、主题逐步查看影视榜单
+
+**工作流程：**
+
+1. **确定榜单来源** — 用户未指定平台时，先列出可用来源；已指定时映射为 CLI alias（如 `豆瓣` → `douban`，`TMDB` → `tmdb`）
+2. **确定榜单分类** — 按 `name` 优先、`code` 次之匹配用户意图；多个候选时展示让用户确认
+3. **确定榜单主题** — 同样按名称匹配，不明确时先展示候选，不自动选择
+4. **获取榜单条目** — 默认第 1 页、每页 10 条；支持「前 N 个」和「第 N 页」
+5. **展示结果** — 输出简洁摘要（标题、年份、类型、评分、是否已订阅、是否已入库）
+
+**触发场景举例：**
+- 影视榜单
+- 豆瓣电视榜单
+- 看豆瓣热播国产剧
+- 榜单前 10 个
+- 看电影年榜 2025
+
+::: tip 💡 说明
+- 此技能只做榜单浏览，不执行订阅
+- 分类和主题有歧义时，一律要求用户确认，不猜测
+:::
+
+**效果演示：**
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+  <img src="./images/skill/榜单-豆瓣热播.png" alt="豆瓣热播榜单演示" style="width:100%;border-radius:8px;" />
+  <img src="./images/skill/榜单-tmdb高分电影推荐.png" alt="TMDB高分电影榜单演示" style="width:100%;border-radius:8px;" />
+</div>
+
+**安装：**
+
+::: tabs
+
+@tab npx
+
+```bash
+npx -y @openclaw/skills install fanxuankai/cli-anything-harnesses/skills/ms-rank --force
+```
+
+@tab OpenClaw 小龙虾
+
+在 OpenClaw 对话框中粘贴 GitHub 链接：
+
+```text
+请安装技能 https://github.com/fanxuankai/cli-anything-harnesses/tree/main/skills/ms-rank
+```
+
+或使用命令行：
+
+```bash
+openclaw skills install fanxuankai/cli-anything-harnesses/skills/ms-rank
+```
+
+@tab Hermes 爱马仕
+
+```bash
+hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-rank --force
+```
+
+:::
+
+---
+
+### 🖥️ ms-zspace-state · 极空间系统状态
+
+> 用 `cli-anything-ms` 调用极空间插件并总结当前系统状态与硬件信息
+
+**工作流程：**
+
+1. **调用接口** — 固定执行 `plugin call --code zspace_service_assistant --body '{"action":"get_recent_state","body":{}}'`，不调用其他接口
+2. **解析数据** — 真实状态在插件返回对象的 `data` 列表中，取最新一条记录
+3. **提取重点信息** — 优先提取以下字段：
+   - 设备名称、型号、运行时长
+   - CPU 名称、占用率、温度
+   - 内存总量、使用率
+   - GPU 名称、占用率、温度（如有）
+   - 网络上下行速度
+   - 风扇转速
+   - HDD 和 SSD 的容量、已用空间、温度、状态
+4. **总结回复** — 先给一句整体状态概述，再补充关键指标摘要；只问某类指标时优先回答该部分
+
+**触发场景举例：**
+- 查极空间系统信息
+- 查 CPU 温度
+- 查内存使用率
+- 查磁盘状态
+- 查网络速度
+
+::: warning ⚠️ 注意
+此技能需要在 Media Saber 中已安装并启用「极空间服务助手」插件，否则接口调用会失败。
+:::
+
+::: tip 💡 异常提示规则
+- CPU、GPU、磁盘或 SSD 温度明显偏高时，会显式提示关注
+- 内存使用率较高时，会显式提示
+- 某块磁盘或 SSD 的 `state` 不正常时，会点名指出
+- 不做历史对比和趋势分析，不主动给出修复建议（除非用户追问）
+:::
+
+**效果演示：**
+
+<img src="./images/skill/极空间nas系统状态.png" alt="极空间系统状态演示" style="max-width:100%;border-radius:8px;" />
+
+**安装：**
+
+::: tabs
+
+@tab npx
+
+```bash
+npx -y @openclaw/skills install fanxuankai/cli-anything-harnesses/skills/ms-zspace-state --force
+```
+
+@tab OpenClaw 小龙虾
+
+在 OpenClaw 对话框中粘贴 GitHub 链接：
+
+```text
+请安装技能 https://github.com/fanxuankai/cli-anything-harnesses/tree/main/skills/ms-zspace-state
+```
+
+或使用命令行：
+
+```bash
+openclaw skills install fanxuankai/cli-anything-harnesses/skills/ms-zspace-state
+```
+
+@tab Hermes 爱马仕
+
+```bash
+hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-zspace-state --force
+```
+
+:::
+
+---
+
+### 🔧 cli-anything-cliproxyapi · CLIProxyAPI 代理管理
+
+> 通过 Management API 管理 CLIProxyAPI 代理服务器的完整 CLI 工具
+
+**连接配置：**
+
+优先级：`--url/--key` 参数 > 环境变量 `CPA_URL/CPA_KEY` > `~/.cliproxyapi-cli.yaml` 配置文件
+
+```bash
+# 方式一：环境变量
+export CPA_URL=http://127.0.0.1:8317
+export CPA_KEY=your-management-key
+
+# 方式二：保存到配置文件
+cli-anything-cliproxyapi config save-connection --url http://127.0.0.1:8317 --key your-key
+```
+
+**功能模块一览：**
+
+| 模块 | 主要命令 | 说明 |
+|---|---|---|
+| `server` | `status` / `version` | 健康检查、获取最新版本 |
+| `config` | `get` / `set-yaml` / `proxy-url` / `routing` / `retry` | 配置读写 |
+| `auth` | `list` / `upload` / `download` / `status` / `codex-quota` | 认证文件管理 |
+| `oauth` | `login` / `iflow-cookie` / `callback` / `status` | OAuth 登录 |
+| `keys` | `list` / `add` / `delete`（支持 claude / gemini / codex / openai-compat / vertex） | API 密钥管理 |
+| `models` | `list` / `aliases` / `excluded` | 模型管理 |
+| `usage` | `stats` / `export` / `import` | 使用统计 |
+| `logs` | `list` / `clear` / `errors` / `by-id` | 日志管理 |
+| `amp` | `config` / `upstream-url` / `model-mappings` | Amp 集成 |
+| `api-call` | `-X METHOD --url URL` | 通过代理发起通用请求 |
+
+**OAuth 支持的登录提供商：**
+`anthropic` / `codex` / `gemini` / `antigravity` / `qwen` / `kimi` / `iflow`
+
+**使用示例：**
+
+```bash
+# 检查服务器状态
+cli-anything-cliproxyapi server status
+
+# 列出所有认证文件
+cli-anything-cliproxyapi auth list
+
+# 获取已启用 Codex 凭证额度
+cli-anything-cliproxyapi auth codex-quota
+
+# 发起 Claude OAuth 登录
+cli-anything-cliproxyapi oauth login anthropic
+
+# 添加 API 密钥
+cli-anything-cliproxyapi keys claude add --api-key "sk-ant-..."
+
+# 查看使用统计
+cli-anything-cliproxyapi usage stats
+```
+
+**安装：**
+
+::: tabs
+
+@tab npx
+
+```bash
+npx -y @openclaw/skills install fanxuankai/cli-anything-harnesses/skills/cli-anything-cliproxyapi --force
+```
+
+@tab OpenClaw 小龙虾
+
+在 OpenClaw 对话框中粘贴 GitHub 链接：
+
+```text
+请安装技能 https://github.com/fanxuankai/cli-anything-harnesses/tree/main/skills/cli-anything-cliproxyapi
+```
+
+或使用命令行：
+
+```bash
+openclaw skills install fanxuankai/cli-anything-harnesses/skills/cli-anything-cliproxyapi
+```
+
+@tab Hermes 爱马仕
+
+```bash
+hermes skills install fanxuankai/cli-anything-harnesses/skills/cli-anything-cliproxyapi --force
+```
+
+:::
 
 ---
 
 ## ❓ 常见问题
 
-### Q1: 如何确认 MCP 服务已启动？
+### 🔧 安装失败
 
-**A:** 在 [AI对话](/usage/ai/ai/) 页面的"MCP服务列表"中，应该能看到 **Media Saber MCP** 服务显示为"已连接"状态。
+**Q：执行安装命令后报错 `command not found: npx`？**
 
-### Q2: API Key 在哪里获取？
+**A：** 说明本机未安装 Node.js。请先安装 Node.js（建议 v18 及以上）：
 
-**A:** 
-1. 登录 Media Saber 后台
-2. 前往 [我的信息](/usage/main_page/my_info/) 
-3. 在 **安全配置** 中生成或复制 API Key
+- 官网下载：<https://nodejs.org>
+- 或使用 nvm：`nvm install --lts`
 
-### Q3: 能否同时使用多个 Skills？
+安装完成后重新执行安装命令。
 
-**A:** 可以。在 OpenClaw 中可以配置多个 MCP 服务，并在对话中同时使用多个技能。
+---
 
-### Q4: Skills 是否需要网络连接？
+**Q：执行安装命令后报错 `command not found: hermes`？**
 
-**A:** 需要局域网内能访问 Media Saber MCP 服务。对于本地部署的系统，通常直接使用 `localhost` 或内网IP即可。
+**A：** 说明 Hermes 爱马仕未安装或未加入 PATH。请参考 Hermes 官方文档完成安装，或改用 npx 方式安装技能。
 
-### Q5: 如何更新 Skills 版本？
+---
 
-**A:** 推荐通过 ClawHub 安装，将自动推送最新版本更新。或从 [Media Saber Skills GitHub](https://github.com/yourusername/media-saber-skills) 仓库获取最新版本，更新配置后重启 OpenClaw 即可。
+**Q：OpenClaw 对话框输入 GitHub 链接后没有反应或提示找不到技能？**
 
-### Q6: 能否在不同客户端中使用这些 Skills？
+**A：** 请检查以下几点：
+1. ✅ 确认粘贴的是完整 GitHub URL，格式为 `https://github.com/...`，不是短路径
+2. ✅ 确认网络可以正常访问 GitHub，必要时配置代理
+3. ✅ 确认 OpenClaw 版本支持从 GitHub 子目录安装技能（建议使用最新版本）
+4. 🔄 如仍无法安装，改用命令行方式：`openclaw skills install fanxuankai/cli-anything-harnesses/skills/<技能名>`
 
-**A:** Media Saber Skills 基于标准 MCP 协议开发，理论上支持所有兼容 MCP 协议的客户端。但我们主要针对 OpenClaw 进行优化和测试，推荐在 OpenClaw 中使用以获得最佳体验。
+---
 
-### Q7: ClawHub 上的 Skills 和手动配置有区别吗？
+**Q：安装时提示 `pip install cli-anything-ms` 失败？**
 
-**A:** 功能上没有区别。ClawHub 方式只是简化了安装过程，自动处理配置。两种方式都推荐使用。
+**A：** 常见原因及解决方法：
 
-### Q8: 如何使用 ClawHub CLI？
+- **网络问题**：配置 pip 国内镜像源：
+  ```bash
+  pip install cli-anything-ms -i https://pypi.tuna.tsinghua.edu.cn/simple
+  ```
+- **Python 版本过低**：需要 Python 3.9 及以上，执行 `python --version` 确认版本
+- **权限问题**：尝试加 `--user` 参数：
+  ```bash
+  pip install cli-anything-ms --user
+  ```
 
-**A:** 
-1. 安装 CLI：`npm i -g clawhub` 或 `pnpm add -g clawhub`
-2. 搜索 Skill：`clawhub search "media-saber"`
-3. 安装 Skill：`clawhub install media-saber-mcp`
-4. 更新 Skill：`clawhub update --all` 或 `clawhub update media-saber-mcp`
+---
 
-详见本文档的【常用工作流】和【使用 CLI 工具安装】部分。
+### 🎯 技能不生效
 
-### Q9: CLI 和 Web UI 安装有什么区别？
+**Q：技能安装成功，但 AI 没有按技能流程执行，直接给了普通回复？**
 
-**A:** 
-- **Web UI**：更直观，适合新手，可直接点击"添加到 OpenClaw"
-- **CLI**：更快速，适合自动化部署，支持批量安装和版本管理
-- **功能**：两者功能完全相同，最终效果一样
+**A：** 技能安装后需要在新会话中才能生效（OpenClaw 在会话开始时加载技能快照）。请关闭当前对话，重新开启一个新会话后再试。
 
-### Q10: Skills 会自动安装到哪个位置？
+---
 
-**A:** 
-- 使用 CLI 时，默认安装到当前工作目录的 `./skills`
-- 如果配置了 OpenClaw 工作区，会自动使用该工作区的 `<workspace>/skills` 目录
-- 工作区 Skills 优先级高于 `~/.openclaw/skills` 和内置 Skills
-- 可通过 `--workdir` 参数或 `CLAWHUB_WORKDIR` 环境变量自定义安装路径
+**Q：技能安装成功，执行时提示 `cli-anything-ms: command not found`？**
 
-### Q11: 如何一次性安装所有 Media Saber Skills？
-
-**A:** 使用 CLI 工作流逐个安装：
+**A：** 技能依赖的 CLI 工具未安装。执行以下命令安装：
 
 ```bash
-clawhub install media-saber-mcp
-clawhub install media-saber-subscribe-assistant
-clawhub install media-saber-site-ops
-clawhub install media-saber-recommend-helper
-clawhub install media-saber-cloud-assistant
-clawhub install media-saber-zspace-monitor
+pip install cli-anything-ms
 ```
 
-或按需要只安装必要的 Skill。
+安装完成后确认可用：
 
-### Q12: 能否通过 Agent 对话安装 Skills？
-
-**A:** 可以！这是最简便的方式。直接在 OpenClaw 对话框中告诉 Agent（小龙虾）你的需求：
-
-```
-"请帮我安装 media-saber-mcp 技能"
-"使用 clawhub 安装订阅助手"
-"给我装上所有 Media Saber Skills"
+```bash
+cli-anything-ms --version
 ```
 
-Agent 会自动理解你的意图，调用 clawhub 命令为你完成安装。详见本文档的【🤖 通过 Agent 对话安装】部分。
+如果安装后仍提示找不到命令，可能是 pip 安装路径不在 PATH 中，尝试：
 
-### Q13: Agent 安装和手动 CLI 有什么区别？
-
-**A:**
-- **Agent 安装**：最简单，用自然语言，Agent 自动执行，适合快速体验
-- **手动 CLI**：需要记住命令，但更灵活，适合自动化脚本
-- **最终效果**：完全相同，都是调用 clawhub 命令
-
-### Q14: 用什么样的自然语言可以让 Agent 理解安装需求？
-
-**A:** Agent 很聪明，以下表述都能被理解：
-
+```bash
+python -m pip install cli-anything-ms
+# 或
+pip install cli-anything-ms --user
+# 然后将 ~/.local/bin 加入 PATH
 ```
-# 直接要求
-"安装 media-saber-mcp"
-"我要 Media Saber MCP 技能"
-
-# 间接表述
-"帮我装个完整的 MCP 工具集"
-"我想要订阅功能，装对应的 Skill"
-
-# 批量操作
-"把所有 Media Saber 技能都给我装上"
-"更新一下 Media Saber 的技能"
-
-# 查询操作
-"有没有关于媒体的技能？"
-"搜索一下 Media Saber 相关的技能"
-```
-
-Agent 会理解你的意图并自动执行相应操作。
-
-### Q15: Agent 安装失败怎么办？
-
-**A:**
-1. 检查 OpenClaw 是否已安装并启动
-2. 确保能访问 ClawHub 服务
-3. 尝试手动使用 CLI 命令：`clawhub install media-saber-mcp`
-4. 查看 Agent 的错误提示，通常会提示具体原因
-5. 如问题持续存在，可参考【常见问题】其他部分或《获取帮助》
 
 ---
 
-## 🔗 相关链接
+**Q：执行订阅时提示「还没有安装秘籍」或「插件未启用」？**
 
-### 📦 ClawHub 官方技能链接
-
-所有技能都已发布到 ClawHub，可直接一键安装到 OpenClaw：
-
-- 🔌 [Media Saber MCP](https://clawhub.ai/xylplm/media-saber-mcp) - 完整MCP工具集（28个工具）
-- 📺 [订阅助手](https://clawhub.ai/xylplm/media-saber-subscribe-assistant) - 订阅工作流优化
-- 🌐 [站点操作](https://clawhub.ai/xylplm/media-saber-site-ops) - PT站点管理工具
-- 🎬 [推荐助手](https://clawhub.ai/xylplm/media-saber-recommend-helper) - 影视推荐系统
-- ☁️ [云助手](https://clawhub.ai/xylplm/media-saber-cloud-assistant) - 云存储和离线下载
-- 💻 [极空间监控](https://clawhub.ai/xylplm/media-saber-zspace-monitor) - NAS系统监控
-
-### 📚 文档和工具
-
-- 📖 [MCP 服务配置详解](./mcp.md)
-- 🤖 [AI 对话功能介绍](./ai.md)
-- ⚙️ [基础设置指南](/usage/system_settings/basic_settings/)
-- 👤 [获取 API Key](/usage/main_page/my_info/)
-- 🌐 [ClawHub 官方网站](https://clawhub.ai)
-- � [ClawHub CLI 文档](https://docs.clawhub.ai) - CLI 工具详细使用文档
-- �🐙 [Media Saber Skills 源码仓库](https://github.com/yourusername/media-saber-skills)
+**A：** 这是 Media Saber 后端返回的错误，说明对应插件未安装或未启用：
+- `ms-sub` / `ms-gap-filler` / `ms-recommend` / `ms-rank`：确认 Media Saber 已正常运行，且 `cli-anything-ms` 配置的连接地址和 API Key 正确
+- `ms-zspace-state`：需要在 Media Saber 中安装并启用「极空间服务助手」插件
 
 ---
 
-## 📝 许可证
+**Q：`ms-zspace-state` 返回空列表或「状态数据结构异常」？**
 
-Media Saber Skills 采用 **MIT** 开源许可证。
+**A：** 可能原因：
+1. 极空间服务助手插件未启用，或插件版本过旧
+2. 极空间设备当前离线或无法连接
+3. Media Saber 与极空间之间的通信异常
+
+建议先在 Media Saber 插件页面确认插件状态，再重试。
 
 ---
 
-## 🆘 获取帮助
+### 🔄 更新技能
 
-如遇到问题，可以：
+**Q：如何更新已安装的技能到最新版本？**
 
-1. 📖 查阅本文档的 **常见问题** 部分
-2. 📘 查看 [MCP 服务配置](./mcp.md) 文档
-3. 🐛 提交 Issue 到 [GitHub仓库](https://github.com/yourusername/media-saber-skills)
-4. 💬 加入社区讨论获取帮助
+**A：** 重新执行安装命令并带上 `--force` 参数即可覆盖旧版本：
 
+::: tabs
+
+@tab npx
+
+```bash
+npx -y @openclaw/skills install fanxuankai/cli-anything-harnesses/skills/<技能名> --force
+```
+
+@tab Hermes 爱马仕
+
+```bash
+hermes skills install fanxuankai/cli-anything-harnesses/skills/<技能名> --force
+```
+
+:::
+
+---
+
+## 📚 相关文档
+
+- 🤖 [智能体介绍](./README.md) - AI 功能模块总览
+- 🔌 [MCP 服务文档](./mcp.md) - MCP 集成和配置指南
+- ⚙️ [基础设置](/usage/system_settings/basic_settings/) - 配置 AI API 相关设置
+- 🔑 [我的信息](/usage/main_page/my_info/) - 获取和管理 API Key
+
+---
+
+## 🔗 相关仓库
+
+- 📦 技能包仓库：<https://github.com/fanxuankai/cli-anything-harnesses>
