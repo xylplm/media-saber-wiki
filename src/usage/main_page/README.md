@@ -2,6 +2,7 @@
 title: 首页
 article: false
 dir:
+  text: 首页
   order: 10
 tags: null
 categories: null

@@ -1,7 +1,8 @@
 ---
-title: 媒体整理
+title: 介绍
 article: false
 dir:
+  text: 媒体整理
   order: 100
 tags: 
   - 媒体整理

@@ -2,6 +2,7 @@
 title: 介绍
 article: false
 dir:
+  text: 智能体
   order: 20
 tags: 
   - 智能体

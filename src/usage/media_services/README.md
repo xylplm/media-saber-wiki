@@ -1,8 +1,9 @@
 ---
-title: 媒体服务
+title: 介绍
 article: false
 order: 10
 dir:
+  text: 媒体服务
   order: 30
 tags: 
   - 媒体服务
