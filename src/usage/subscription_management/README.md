@@ -1,7 +1,8 @@
 ---
-title: 订阅管理
+title: 介绍
 article: false
 dir:
+  text: 订阅管理
   order: 70
 tags: 
   - 订阅管理

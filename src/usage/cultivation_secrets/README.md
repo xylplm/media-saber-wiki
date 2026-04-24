@@ -1,7 +1,8 @@
 ---
-title: 修仙秘籍
+title: 介绍
 article: false
 dir:
+  text: 修仙秘籍
   order: 120
 tags: 
   - 修仙秘籍

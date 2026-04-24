@@ -1,7 +1,8 @@
 ---
-title: 站点管理
+title: 介绍
 article: false
 dir:
+  text: 站点管理
   order: 60
 tags: 
   - 站点管理

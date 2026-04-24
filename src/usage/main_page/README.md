@@ -1,5 +1,5 @@
 ---
-title: 首页
+title: 介绍
 article: false
 dir:
   text: 首页

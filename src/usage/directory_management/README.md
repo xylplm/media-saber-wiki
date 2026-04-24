@@ -1,7 +1,8 @@
 ---
-title: 目录管理
+title: 介绍
 article: false
 dir:
+  text: 目录管理
   order: 90
 tags: 
   - 目录管理

@@ -1,7 +1,8 @@
 ---
-title: 其它功能
+title: 介绍
 article: false
 dir:
+  text: 其它功能
   order: 140
 tags: 
   - 其它

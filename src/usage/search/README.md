@@ -1,7 +1,8 @@
 ---
-title: 搜索功能
+title: 介绍
 article: false
 dir:
+  text: 搜索功能
   order: 50
 tags: 
   - 搜索

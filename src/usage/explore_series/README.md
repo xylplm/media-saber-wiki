@@ -1,7 +1,8 @@
 ---
-title: 寻影探剧
+title: 介绍
 article: false
 dir:
+  text: 寻影探剧
   order: 40
 tags: 
   - 寻影探剧

@@ -1,7 +1,8 @@
 ---
-title: 下载管理
+title: 介绍
 article: false
 dir:
+  text: 下载管理
   order: 80
 tags: 
   - 下载管理
