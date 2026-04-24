@@ -1,5 +1,8 @@
 User-agent: Algolia Crawler
 Allow: /
 
+User-agent: Algolia bot
+Allow: /
+
 User-agent: *
 Disallow: /
