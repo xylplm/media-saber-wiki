@@ -16,7 +16,7 @@ date: 2026-04-24 00:00:00
 
 # 🎯 MS 技能包
 
-> 💡 MS 技能包是一组专为 Media Saber 设计的 AI Agent 技能，安装后可直接在 OpenClaw 小龙虾、Hermes 爱马仕等客户端中通过自然语言完成影视订阅、漏集补齐、榜单浏览、系统查询等操作。
+> 💡 MS 技能包是一组专为 Media Saber 设计的 AI Agent 技能，安装后可直接在 OpenClaw 小龙虾、Hermes 爱马仕等客户端中通过自然语言完成影视订阅、漏集补齐、推荐与榜单浏览、云端资源查询、站点与下载管理、系统状态查询等操作。
 
 📦 技能包仓库：<https://github.com/fanxuankai/cli-anything-harnesses>
 
@@ -24,7 +24,7 @@ date: 2026-04-24 00:00:00
 
 ## 📋 技能包列表
 
-仓库 `skills/` 目录下目前共有 **6 个技能包**：
+仓库 `skills/` 目录下目前共有 **12 个技能包**：
 
 | 技能包 | 功能简介 | 依赖 CLI |
 |---|---|---|
@@ -32,11 +32,17 @@ date: 2026-04-24 00:00:00
 | `ms-gap-filler` | 漏集补齐 | `cli-anything-ms` |
 | `ms-recommend` | 影视推荐 | `cli-anything-ms` |
 | `ms-rank` | 影视榜单 | `cli-anything-ms` |
+| `ms-cloud-resource` | 云端资源查询与下载/转存 | `cli-anything-ms` |
+| `ms-cloud-resource-rank` | 云端资源贡献榜 | `cli-anything-ms` |
+| `ms-media-server` | 媒体服务器状态与同步 | `cli-anything-ms` |
+| `ms-site-state` | 站点状态与统计 | `cli-anything-ms` |
+| `ms-site-signin` | 站点签到查询与执行 | `cli-anything-ms` |
+| `ms-download` | 下载器与下载任务管理 | `cli-anything-ms` |
 | `ms-zspace-state` | 极空间系统状态 | `cli-anything-ms` |
 | `cli-anything-cliproxyapi` | CLIProxyAPI 代理管理 | `cli-anything-cliproxyapi` |
 
 ::: tip 💡 前置依赖
-`ms-sub`、`ms-gap-filler`、`ms-recommend`、`ms-rank`、`ms-zspace-state` 这 5 个技能均依赖 `cli-anything-ms`，技能安装完成后需确保该 CLI 可用：
+除 `cli-anything-cliproxyapi` 外，其余 11 个技能均依赖 `cli-anything-ms`，技能安装完成后需确保该 CLI 可用：
 
 ```bash
 pip install cli-anything-ms
@@ -51,16 +57,44 @@ pip install cli-anything-ms
 
 ::: tabs
 
-@tab npx
+@tab npx 首次安装
+
+```bash
+npx skills add fanxuankai/cli-anything-harnesses --list
+npx skills add fanxuankai/cli-anything-harnesses --skill ms-sub
+npx skills add fanxuankai/cli-anything-harnesses --skill ms-gap-filler
+npx skills add fanxuankai/cli-anything-harnesses --skill ms-recommend
+npx skills add fanxuankai/cli-anything-harnesses --skill ms-rank
+npx skills add fanxuankai/cli-anything-harnesses --skill ms-cloud-resource
+npx skills add fanxuankai/cli-anything-harnesses --skill ms-cloud-resource-rank
+npx skills add fanxuankai/cli-anything-harnesses --skill ms-media-server
+npx skills add fanxuankai/cli-anything-harnesses --skill ms-site-state
+npx skills add fanxuankai/cli-anything-harnesses --skill ms-site-signin
+npx skills add fanxuankai/cli-anything-harnesses --skill ms-download
+npx skills add fanxuankai/cli-anything-harnesses --skill ms-zspace-state
+npx skills add fanxuankai/cli-anything-harnesses --skill cli-anything-cliproxyapi
+```
+
+注：`npx skills add ...` 适合首次安装或交互式添加/查看可用技能（更偏“添加/列出”语义）。
+
+@tab npx 强制安装 / 覆盖（@openclaw/skills）
 
 ```bash
 npx -y @openclaw/skills install fanxuankai/cli-anything-harnesses/skills/ms-sub --force
 npx -y @openclaw/skills install fanxuankai/cli-anything-harnesses/skills/ms-gap-filler --force
 npx -y @openclaw/skills install fanxuankai/cli-anything-harnesses/skills/ms-recommend --force
 npx -y @openclaw/skills install fanxuankai/cli-anything-harnesses/skills/ms-rank --force
+npx -y @openclaw/skills install fanxuankai/cli-anything-harnesses/skills/ms-cloud-resource --force
+npx -y @openclaw/skills install fanxuankai/cli-anything-harnesses/skills/ms-cloud-resource-rank --force
+npx -y @openclaw/skills install fanxuankai/cli-anything-harnesses/skills/ms-media-server --force
+npx -y @openclaw/skills install fanxuankai/cli-anything-harnesses/skills/ms-site-state --force
+npx -y @openclaw/skills install fanxuankai/cli-anything-harnesses/skills/ms-site-signin --force
+npx -y @openclaw/skills install fanxuankai/cli-anything-harnesses/skills/ms-download --force
 npx -y @openclaw/skills install fanxuankai/cli-anything-harnesses/skills/ms-zspace-state --force
 npx -y @openclaw/skills install fanxuankai/cli-anything-harnesses/skills/cli-anything-cliproxyapi --force
 ```
+
+注：`@openclaw/skills install ... --force` 保证覆盖已安装的同名技能，用于强制更新或脚本化安装（自动确认 `-y`）。
 
 @tab OpenClaw 小龙虾
 
@@ -71,6 +105,12 @@ npx -y @openclaw/skills install fanxuankai/cli-anything-harnesses/skills/cli-any
 请安装技能 https://github.com/fanxuankai/cli-anything-harnesses/tree/main/skills/ms-gap-filler
 请安装技能 https://github.com/fanxuankai/cli-anything-harnesses/tree/main/skills/ms-recommend
 请安装技能 https://github.com/fanxuankai/cli-anything-harnesses/tree/main/skills/ms-rank
+请安装技能 https://github.com/fanxuankai/cli-anything-harnesses/tree/main/skills/ms-cloud-resource
+请安装技能 https://github.com/fanxuankai/cli-anything-harnesses/tree/main/skills/ms-cloud-resource-rank
+请安装技能 https://github.com/fanxuankai/cli-anything-harnesses/tree/main/skills/ms-media-server
+请安装技能 https://github.com/fanxuankai/cli-anything-harnesses/tree/main/skills/ms-site-state
+请安装技能 https://github.com/fanxuankai/cli-anything-harnesses/tree/main/skills/ms-site-signin
+请安装技能 https://github.com/fanxuankai/cli-anything-harnesses/tree/main/skills/ms-download
 请安装技能 https://github.com/fanxuankai/cli-anything-harnesses/tree/main/skills/ms-zspace-state
 请安装技能 https://github.com/fanxuankai/cli-anything-harnesses/tree/main/skills/cli-anything-cliproxyapi
 ```
@@ -82,6 +122,12 @@ hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-sub --force
 hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-gap-filler --force
 hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-recommend --force
 hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-rank --force
+hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-cloud-resource --force
+hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-cloud-resource-rank --force
+hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-media-server --force
+hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-site-state --force
+hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-site-signin --force
+hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-download --force
 hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-zspace-state --force
 hermes skills install fanxuankai/cli-anything-harnesses/skills/cli-anything-cliproxyapi --force
 ```
@@ -96,9 +142,9 @@ hermes skills install fanxuankai/cli-anything-harnesses/skills/cli-anything-clip
 
 ## ✨ 技能介绍
 
-### 📺 ms-sub · 影视订阅
+### 📺 ms-sub · 搜索与影视订阅
 
-> 用 `cli-anything-ms` 自动搜索 TMDB 并新增影视订阅
+> 用 `cli-anything-ms` 搜索影视、订阅影视，并支持查看订阅列表
 
 **工作流程：**
 
@@ -226,7 +272,7 @@ hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-gap-filler --f
 
 ### 🌟 ms-recommend · 影视推荐
 
-> 用 `cli-anything-ms` 按平台、频道、动态选项逐步筛选并展示影视推荐
+> 查看 ms 影视推荐时使用，通过 `cli-anything-ms` 逐步查询推荐来源、频道、动态选项和条目
 
 **工作流程：**
 
@@ -289,7 +335,7 @@ hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-recommend --fo
 
 ### 🏆 ms-rank · 影视榜单
 
-> 用 `cli-anything-ms` 按平台、分类、主题逐步查看影视榜单
+> 查看 ms 影视榜单时使用，通过 `cli-anything-ms` 逐步查询榜单来源、分类、主题和条目
 
 **工作流程：**
 
@@ -352,9 +398,320 @@ hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-rank --force
 
 ---
 
+### ☁️ ms-cloud-resource · 云端资源查询与下载
+
+> 用 `cli-anything-ms` 查询云端资源，并可继续发起下载或转存
+
+**工作流程：**
+
+1. **解析查询意图** — 识别关键词、页码、前 N 个等筛选条件
+2. **查询云端资源** — 调用云端资源搜索接口，返回可读摘要列表
+3. **确认执行动作** — 用户可选择下载或转存某条资源
+4. **执行任务** — 按选中序号或资源 ID 创建下载/转存任务
+5. **结果回报** — 返回任务是否创建成功与关键提示
+
+**触发场景举例：**
+- 查庆余年云端资源
+- 搜网盘资源
+- 下载第 1 个云端资源
+- 转存这个资源
+
+**安装：**
+
+::: tabs
+
+@tab npx
+
+```bash
+npx skills add fanxuankai/cli-anything-harnesses --skill ms-cloud-resource
+```
+
+@tab OpenClaw 小龙虾
+
+在 OpenClaw 对话框中粘贴 GitHub 链接：
+
+```text
+请安装技能 https://github.com/fanxuankai/cli-anything-harnesses/tree/main/skills/ms-cloud-resource
+```
+
+或使用命令行：
+
+```bash
+openclaw skills install fanxuankai/cli-anything-harnesses/skills/ms-cloud-resource
+```
+
+@tab Hermes 爱马仕
+
+```bash
+hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-cloud-resource --force
+```
+
+:::
+
+---
+
+### 🏅 ms-cloud-resource-rank · 云端资源贡献榜
+
+> 用 `cli-anything-ms` 查看云端资源 HASH 上报贡献榜
+
+**工作流程：**
+
+1. **识别榜单类型** — 支持今日榜、7 天榜、总榜、我的贡献等
+2. **获取榜单数据** — 查询贡献排名与数量统计
+3. **格式化展示** — 输出简洁榜单摘要，避免原始 JSON
+
+**触发场景举例：**
+- 云端资源贡献榜
+- 洪荒封神榜
+- 荣耀数量榜
+- 今日榜 / 7 天榜 / 总榜
+- 我的贡献排名
+
+**安装：**
+
+::: tabs
+
+@tab npx
+
+```bash
+npx skills add fanxuankai/cli-anything-harnesses --skill ms-cloud-resource-rank
+```
+
+@tab OpenClaw 小龙虾
+
+在 OpenClaw 对话框中粘贴 GitHub 链接：
+
+```text
+请安装技能 https://github.com/fanxuankai/cli-anything-harnesses/tree/main/skills/ms-cloud-resource-rank
+```
+
+或使用命令行：
+
+```bash
+openclaw skills install fanxuankai/cli-anything-harnesses/skills/ms-cloud-resource-rank
+```
+
+@tab Hermes 爱马仕
+
+```bash
+hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-cloud-resource-rank --force
+```
+
+:::
+
+---
+
+### 🗂️ ms-media-server · 媒体服务器状态与同步
+
+> 用 `cli-anything-ms` 查看媒体服务器状态、同步信息、媒体库和播放数据
+
+**工作流程：**
+
+1. **识别查询范围** — 站点状态、媒体库、同步历史、播放列表等
+2. **调用对应接口** — 获取最新媒体服务器运行与同步数据
+3. **整理输出** — 以中文摘要返回关键状态与异常信息
+
+**触发场景举例：**
+- 媒体服务器状态
+- 媒体服务同步信息
+- 媒体库列表
+- 同步历史
+- 正在播放 / 最近添加 / 继续观看
+- 立即同步媒体库
+
+**安装：**
+
+::: tabs
+
+@tab npx
+
+```bash
+npx skills add fanxuankai/cli-anything-harnesses --skill ms-media-server
+```
+
+@tab OpenClaw 小龙虾
+
+在 OpenClaw 对话框中粘贴 GitHub 链接：
+
+```text
+请安装技能 https://github.com/fanxuankai/cli-anything-harnesses/tree/main/skills/ms-media-server
+```
+
+或使用命令行：
+
+```bash
+openclaw skills install fanxuankai/cli-anything-harnesses/skills/ms-media-server
+```
+
+@tab Hermes 爱马仕
+
+```bash
+hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-media-server --force
+```
+
+:::
+
+---
+
+### 📊 ms-site-state · 站点状态与统计
+
+> 用 `cli-anything-ms` 查看站点状态、上传下载量、魔力值、做种与签到状态
+
+**工作流程：**
+
+1. **识别统计维度** — 站点列表、总览、登录态、签到态、流量等
+2. **批量查询站点** — 拉取每个站点的关键状态数据
+3. **汇总输出** — 返回可读的状态与统计摘要
+
+**触发场景举例：**
+- 站点状态
+- 站点统计
+- 各站上传下载
+- 哪些站没登录
+- 今天站点数据
+
+**安装：**
+
+::: tabs
+
+@tab npx
+
+```bash
+npx skills add fanxuankai/cli-anything-harnesses --skill ms-site-state
+```
+
+@tab OpenClaw 小龙虾
+
+在 OpenClaw 对话框中粘贴 GitHub 链接：
+
+```text
+请安装技能 https://github.com/fanxuankai/cli-anything-harnesses/tree/main/skills/ms-site-state
+```
+
+或使用命令行：
+
+```bash
+openclaw skills install fanxuankai/cli-anything-harnesses/skills/ms-site-state
+```
+
+@tab Hermes 爱马仕
+
+```bash
+hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-site-state --force
+```
+
+:::
+
+---
+
+### ✅ ms-site-signin · 站点签到
+
+> 用 `cli-anything-ms` 查看站点签到记录，或执行指定站点/全部站点签到
+
+**工作流程：**
+
+1. **识别签到目标** — 查询记录、指定站点签到、全部签到
+2. **执行或查询** — 调用站点签到接口并记录结果
+3. **结果汇总** — 返回成功/失败站点与错误原因摘要
+
+**触发场景举例：**
+- 站点签到记录
+- 哪些站点签到失败
+- 给馒头签到
+- 执行站点签到
+- 全部站点签到
+
+**安装：**
+
+::: tabs
+
+@tab npx
+
+```bash
+npx skills add fanxuankai/cli-anything-harnesses --skill ms-site-signin
+```
+
+@tab OpenClaw 小龙虾
+
+在 OpenClaw 对话框中粘贴 GitHub 链接：
+
+```text
+请安装技能 https://github.com/fanxuankai/cli-anything-harnesses/tree/main/skills/ms-site-signin
+```
+
+或使用命令行：
+
+```bash
+openclaw skills install fanxuankai/cli-anything-harnesses/skills/ms-site-signin
+```
+
+@tab Hermes 爱马仕
+
+```bash
+hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-site-signin --force
+```
+
+:::
+
+---
+
+### ⬇️ ms-download · 下载任务管理
+
+> 用 `cli-anything-ms` 查看下载器、下载中任务与下载历史，并执行暂停/恢复/删除
+
+**工作流程：**
+
+1. **确定目标视图** — 下载器状态、下载中、下载历史
+2. **获取任务列表** — 拉取任务并按用户指定条件筛选
+3. **执行控制动作** — 支持暂停、恢复、删除指定下载任务
+4. **回传执行结果** — 输出操作结果与失败原因
+
+**触发场景举例：**
+- 下载任务
+- 下载器状态
+- 下载中
+- 下载历史
+- 暂停这个下载
+- 恢复下载
+- 删除下载任务
+
+**安装：**
+
+::: tabs
+
+@tab npx
+
+```bash
+npx skills add fanxuankai/cli-anything-harnesses --skill ms-download
+```
+
+@tab OpenClaw 小龙虾
+
+在 OpenClaw 对话框中粘贴 GitHub 链接：
+
+```text
+请安装技能 https://github.com/fanxuankai/cli-anything-harnesses/tree/main/skills/ms-download
+```
+
+或使用命令行：
+
+```bash
+openclaw skills install fanxuankai/cli-anything-harnesses/skills/ms-download
+```
+
+@tab Hermes 爱马仕
+
+```bash
+hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-download --force
+```
+
+:::
+
+---
+
 ### 🖥️ ms-zspace-state · 极空间系统状态
 
-> 用 `cli-anything-ms` 调用极空间插件并总结当前系统状态与硬件信息
+> 查极空间系统信息、硬件状态和运行状态时使用，调用 `cli-anything-ms` 获取最新状态并用中文总结
 
 **工作流程：**
 
@@ -600,7 +957,7 @@ pip install cli-anything-ms --user
 **Q：执行订阅时提示「还没有安装秘籍」或「插件未启用」？**
 
 **A：** 这是 Media Saber 后端返回的错误，说明对应插件未安装或未启用：
-- `ms-sub` / `ms-gap-filler` / `ms-recommend` / `ms-rank`：确认 Media Saber 已正常运行，且 `cli-anything-ms` 配置的连接地址和 API Key 正确
+- `ms-sub` / `ms-gap-filler` / `ms-recommend` / `ms-rank` / `ms-cloud-resource` / `ms-cloud-resource-rank` / `ms-media-server` / `ms-site-state` / `ms-site-signin` / `ms-download`：确认 Media Saber 已正常运行，且 `cli-anything-ms` 配置的连接地址和 API Key 正确
 - `ms-zspace-state`：需要在 Media Saber 中安装并启用「极空间服务助手」插件
 
 ---
@@ -624,9 +981,17 @@ pip install cli-anything-ms --user
 
 ::: tabs
 
-@tab npx
+@tab npx 首次安装
 
 ```bash
+# 首次安装或交互式添加：
+npx skills add fanxuankai/cli-anything-harnesses --skill <技能名>
+```
+
+@tab npx 强制覆盖 / 更新（建议用于已装技能）
+
+```bash
+# 强制覆盖已安装的同名技能（脚本或确保刷新时使用）：
 npx -y @openclaw/skills install fanxuankai/cli-anything-harnesses/skills/<技能名> --force
 ```
 

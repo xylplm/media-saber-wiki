@@ -25,12 +25,18 @@ date: 2025-01-01 12:16:17
 
 ### 🎯 官方 Skills 技能包（推荐）
 
-Media Saber 提供了 6 个官方 AI Agent 技能包，安装后可直接通过自然语言驱动 Media Saber 完成各类操作：
+Media Saber 提供了 12 个官方 AI Agent 技能包，安装后可直接通过自然语言驱动 Media Saber 完成各类操作：
 
 - 📺 **ms-sub**：影视订阅，自动搜索 TMDB、检查重复、一句话完成订阅
 - 🔍 **ms-gap-filler**：漏集补齐，检查电视剧漏集并批量补订阅
 - 🌟 **ms-recommend**：影视推荐，按平台、频道、筛选项逐步浏览推荐
 - 🏆 **ms-rank**：影视榜单，按平台、分类、主题逐步查看榜单
+- ☁️ **ms-cloud-resource**：云端资源查询与下载，搜索云端/网盘资源并创建下载/转存任务
+- 🏅 **ms-cloud-resource-rank**：云端资源贡献榜，查看 HASH 上报贡献排行
+- 🗂️ **ms-media-server**：媒体服务器状态与同步，查看媒体库、同步历史与播放信息
+- 📊 **ms-site-state**：站点状态与统计，查看站点上传/下载/做种/魔力等概况
+- ✅ **ms-site-signin**：站点签到，查看签到记录或执行站点签到
+- ⬇️ **ms-download**：下载任务管理，查看/暂停/恢复/删除下载任务
 - 🖥️ **ms-zspace-state**：极空间系统状态，查询 CPU、内存、磁盘、温度等硬件信息
 - 🔧 **cli-anything-cliproxyapi**：CLIProxyAPI 代理管理，完整的代理服务器 CLI 工具
 
@@ -125,6 +131,12 @@ Model Context Protocol (MCP) 让AI拥有更强大的能力：
   - 🔍 ms-gap-filler · 漏集补齐
   - 🌟 ms-recommend · 影视推荐
   - 🏆 ms-rank · 影视榜单
+  - ☁️ ms-cloud-resource · 云端资源查询与下载
+  - 🏅 ms-cloud-resource-rank · 云端资源贡献榜
+  - 🗂️ ms-media-server · 媒体服务器状态与同步
+  - 📊 ms-site-state · 站点状态与统计
+  - ✅ ms-site-signin · 站点签到
+  - ⬇️ ms-download · 下载任务管理
   - 🖥️ ms-zspace-state · 极空间系统状态
   - 🔧 cli-anything-cliproxyapi · CLIProxyAPI 代理管理
 
