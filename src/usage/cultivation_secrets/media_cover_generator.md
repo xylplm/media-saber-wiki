@@ -119,7 +119,7 @@ docker run -d \
   - 选填
   - 选择封面模板样式。不选择则由API服务根据媒体库名称自动选择最合适的模板
 
-![封面模板预览](images/media-saber-media-cover-generator_templates.png)
+![封面模板预览](./images/media-saber-media-cover-generator_templates.png)
 
   - 选项：
     - 单图样式1 - 简洁风格
