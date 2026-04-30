@@ -66,6 +66,13 @@ https://work.weixin.qq.com/
 
 ### 2. 填写URL
 
+::: info 一键生成接收消息 URL
+在微信渠道设置界面有“生成接收消息 URL”按钮，点击后会自动生成回调地址并复制到剪切板。
+这只是一个快捷操作，帮助用户更快、更准确地获取回调地址；回到企业微信的回调配置页面后直接粘贴填写即可。
+:::
+
+Media Saber 回调地址：
+
 URL格式如下：
 ```
 https://ip:port/api/v1/webhook/wechat/AgentId?apiKey=用户密钥
