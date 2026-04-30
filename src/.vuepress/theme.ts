@@ -113,7 +113,7 @@ export default hopeTheme({
       prefix: "fa6-solid:",
     },
 
-    search: {
+    slimsearch: {
       // ...
     },
 
