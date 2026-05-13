@@ -38,7 +38,7 @@ date: 2026-04-24 00:00:00
 | `ms-site-state` | 站点状态与统计 | `cli-anything-ms` |
 | `ms-site-signin` | 站点签到查询与执行 | `cli-anything-ms` |
 | `ms-download` | 下载器与下载任务管理 | `cli-anything-ms` |
-| `ms-zspace-state` | 极空间系统状态 | `cli-anything-ms` |
+| `ms-nas-state` | NAS 系统状态 | `cli-anything-ms` |
 | `cli-anything-cliproxyapi` | CLIProxyAPI 代理管理 | `cli-anything-cliproxyapi` |
 
 ::: tip 💡 前置依赖
@@ -71,7 +71,7 @@ npx skills add fanxuankai/cli-anything-harnesses --skill ms-media-server
 npx skills add fanxuankai/cli-anything-harnesses --skill ms-site-state
 npx skills add fanxuankai/cli-anything-harnesses --skill ms-site-signin
 npx skills add fanxuankai/cli-anything-harnesses --skill ms-download
-npx skills add fanxuankai/cli-anything-harnesses --skill ms-zspace-state
+npx skills add fanxuankai/cli-anything-harnesses --skill ms-nas-state
 npx skills add fanxuankai/cli-anything-harnesses --skill cli-anything-cliproxyapi
 ```
 
@@ -90,7 +90,7 @@ npx -y @openclaw/skills install fanxuankai/cli-anything-harnesses/skills/ms-medi
 npx -y @openclaw/skills install fanxuankai/cli-anything-harnesses/skills/ms-site-state --force
 npx -y @openclaw/skills install fanxuankai/cli-anything-harnesses/skills/ms-site-signin --force
 npx -y @openclaw/skills install fanxuankai/cli-anything-harnesses/skills/ms-download --force
-npx -y @openclaw/skills install fanxuankai/cli-anything-harnesses/skills/ms-zspace-state --force
+npx -y @openclaw/skills install fanxuankai/cli-anything-harnesses/skills/ms-nas-state --force
 npx -y @openclaw/skills install fanxuankai/cli-anything-harnesses/skills/cli-anything-cliproxyapi --force
 ```
 
@@ -111,7 +111,7 @@ npx -y @openclaw/skills install fanxuankai/cli-anything-harnesses/skills/cli-any
 请安装技能 https://github.com/fanxuankai/cli-anything-harnesses/tree/main/skills/ms-site-state
 请安装技能 https://github.com/fanxuankai/cli-anything-harnesses/tree/main/skills/ms-site-signin
 请安装技能 https://github.com/fanxuankai/cli-anything-harnesses/tree/main/skills/ms-download
-请安装技能 https://github.com/fanxuankai/cli-anything-harnesses/tree/main/skills/ms-zspace-state
+请安装技能 https://github.com/fanxuankai/cli-anything-harnesses/tree/main/skills/ms-nas-state
 请安装技能 https://github.com/fanxuankai/cli-anything-harnesses/tree/main/skills/cli-anything-cliproxyapi
 ```
 
@@ -128,7 +128,7 @@ hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-media-server -
 hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-site-state --force
 hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-site-signin --force
 hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-download --force
-hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-zspace-state --force
+hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-nas-state --force
 hermes skills install fanxuankai/cli-anything-harnesses/skills/cli-anything-cliproxyapi --force
 ```
 
@@ -144,27 +144,42 @@ hermes skills install fanxuankai/cli-anything-harnesses/skills/cli-anything-clip
 
 ### 📺 ms-sub · 搜索与影视订阅
 
-> 用 `cli-anything-ms` 搜索影视、订阅影视，并支持查看订阅列表
+> 用 `cli-anything-ms` 搜索影视、订阅影视、查看订阅列表
 
-**工作流程：**
+**功能一：搜索影视**
 
-1. **拆分意图** — 一句话里有多个订阅对象时，按顺序逐个处理
-2. **识别媒体类型** — 明确区分 `电影 (movie)` 或 `电视剧 (tv)`，类型不明确时会停下来询问
-3. **提取标题** — 去掉「订阅电影」「帮我订阅」等外壳词，保留用于 TMDB 搜索的标题
-4. **搜索 TMDB** — 唯一搜索源，不搜豆瓣
-5. **筛选候选** — 精确匹配优先；多个候选时展示最多 3 个让用户确认；无结果时明确告知
-6. **检查是否已订阅** — 通过 `rssId` 判断，已订阅直接回复 `ℹ️ 已订阅`，不重复操作
-7. **新增订阅** — 未订阅时调用 `subscribe add`，成功后回复 `✅ 订阅成功`
+适用于「搜索电影流浪地球」「搜一下电视剧西游记」「先搜一下」等场景。
 
-**触发场景举例：**
-- 订阅电影流浪地球
-- 订阅电视剧西游记第二季
-- 检查复仇者联盟有没有订阅，没有就订阅
+- 每次搜索前先确认用户要找电影还是电视剧，不明确时先询问
+- 去掉外壳词，只保留用于 TMDB 搜索的标题部分
+- 只搜索 TMDB，不搜豆瓣
+- 精确匹配优先；多个候选时展示最多 3 个让用户确认；无结果时明确告知
+- 只搜索时，展示候选后停止，不自动进入订阅流程
+
+**功能二：订阅影视**
+
+适用于「订阅电影流浪地球」「订阅电视剧西游记第二季」「检查复仇者联盟有没有订阅，没有就订阅」等场景。
+
+- 订阅流程必须建立在 TMDB 搜索结果之上，不跳过搜索直接订阅
+- 订阅前同时检查是否已订阅和是否已入库：
+  - 已订阅 → 回复 `ℹ️ 已订阅`
+  - 未订阅但已入库 → 默认不再新增订阅，明确告知用户
+  - 既没订阅也没入库 → 执行新增订阅，成功后回复 `✅ 订阅成功`
+- 电视剧未指定季数时，默认订阅第 1 季
+- 使用 TMDB 返回的规范标题和年份，不使用用户输入的原始文字
+
+**功能三：查看订阅**
+
+适用于「看看电影订阅」「查看电视剧订阅」「电视剧订阅前 20 个」等场景。
+
+- 直接查询订阅列表，不先做 TMDB 搜索
+- 支持分页：默认第 1 页、每页 20 条；用户说「前 N 个」取 N 个，说「第 N 页」取对应页
+- 输出用自然中文说明名称、年份、类型、季数、状态和 TMDB 信息
 
 ::: tip 💡 说明
-- 电视剧未指定季数时，默认订阅第 1 季
-- 一句话包含多个订阅意图时，逐条处理并逐条返回结果
-- 使用 TMDB 返回的规范标题和年份，不使用用户输入的原始文字
+- TMDB 是唯一搜索源，不搜豆瓣
+- 一句话包含多个搜索、查看订阅或订阅意图时，逐个处理并逐条返回结果
+- 订阅前不仅看是否已订阅，还要考虑是否已入库
 :::
 
 **效果演示：**
@@ -211,8 +226,8 @@ hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-sub --force
 
 **工作流程：**
 
-1. **检查漏集** — 无论说「查漏集」还是「补漏集」，都先调用 `media-server miss-episodes-check` 获取完整漏集列表
-2. **汇总展示** — 按剧为单位给出摘要（标题、年份、漏集季数、缺少哪些集），不直接倾倒 JSON
+1. **检查漏集** — 无论说「查漏集」还是「补漏集」，都先调用 `media-server miss-episodes-check` 获取完整漏集列表，按原始顺序处理
+2. **汇总展示** — 按剧为单位给出摘要（标题、年份、漏集季数、缺少哪些集），不直接倾倒 JSON；查完后追问用户是否要补漏集
 3. **确认补齐范围** — 支持两种方式：
    - 指定某一部剧名（按标题近似匹配）
    - 补前 N 个（默认前 3 个，最多 10 个，按原始顺序计数）
@@ -404,17 +419,25 @@ hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-rank --force
 
 **工作流程：**
 
-1. **解析查询意图** — 识别关键词、页码、前 N 个等筛选条件
-2. **查询云端资源** — 调用云端资源搜索接口，返回可读摘要列表
-3. **确认执行动作** — 用户可选择下载或转存某条资源
-4. **执行任务** — 按选中序号或资源 ID 创建下载/转存任务
-5. **结果回报** — 返回任务是否创建成功与关键提示
+1. **解析查询意图** — 识别关键词、TMDB ID、页码、贡献者 ID、季/集等筛选条件
+2. **查询云端资源** — 支持关键词搜索和 TMDB ID 搜索；TMDB 搜索时需明确电影或电视剧类型
+3. **展示结果** — 最多展示 5 条，说明标题、大小、网盘、贡献者、TMDB、链接类型、是否可下载
+4. **确认执行动作** — 只有用户明确说「下载」「转存」时才提交，基于本轮搜索结果中的 `download_request` 执行
+5. **结果回报** — 下载命令只表示任务已提交，不代表已完成
 
 **触发场景举例：**
 - 查庆余年云端资源
 - 搜网盘资源
 - 下载第 1 个云端资源
 - 转存这个资源
+- 找 TMDB 95842 第 1 季第 46 集
+- 看贡献者 931 的资源
+
+::: tip 💡 说明
+- 不手写 `download_request`，只使用搜索结果里已有的字段
+- 不自动批量下载全部结果，除非用户明确要求
+- 不删除、不移动、不重命名云端文件
+:::
 
 **安装：**
 
@@ -507,9 +530,10 @@ hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-cloud-resource
 
 **工作流程：**
 
-1. **识别查询范围** — 站点状态、媒体库、同步历史、播放列表等
-2. **调用对应接口** — 获取最新媒体服务器运行与同步数据
-3. **整理输出** — 以中文摘要返回关键状态与异常信息
+1. **默认查询** — 用户说「媒体服务器」「同步信息」时，列出服务器名称、类型、是否开启、电影数、电视剧数、同步耗时等
+2. **服务器选择** — 用户给了名称按名称匹配；有多个候选时让用户确认；未指定时先列出让用户选择
+3. **常用查询** — 支持媒体库列表、同步统计、同步明细（含漏集筛选）、正在播放、最近添加、继续观看
+4. **立即同步** — 只有用户明确说「同步」「立即同步」「刷新媒体库」时才执行，执行后只说明任务已发起
 
 **触发场景举例：**
 - 媒体服务器状态
@@ -518,6 +542,11 @@ hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-cloud-resource
 - 同步历史
 - 正在播放 / 最近添加 / 继续观看
 - 立即同步媒体库
+
+::: tip 💡 说明
+- 默认只读，不删除服务器、不编辑配置
+- 不直接调用后端接口，统一通过 `cli-anything-ms`
+:::
 
 **安装：**
 
@@ -559,9 +588,10 @@ hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-media-server -
 
 **工作流程：**
 
-1. **识别统计维度** — 站点列表、总览、登录态、签到态、流量等
-2. **批量查询站点** — 拉取每个站点的关键状态数据
-3. **汇总输出** — 返回可读的状态与统计摘要
+1. **默认查询** — 用户说「站点状态」「站点统计」时，先查总体上传量、下载量、做种数量、做种体积和魔力值，再列出重点站点状态
+2. **站点列表** — 支持按启用状态、类型（统计/签到/搜索）、站点名称筛选
+3. **单站查询** — 用户指定站点名称时，查询该站最新数据；多个候选时让用户确认
+4. **展示规则** — 最多展示前 10 个站点，重点说明站点名、是否登录、签到状态、分享率、上传/下载量、魔力值、做种数据
 
 **触发场景举例：**
 - 站点状态
@@ -569,6 +599,11 @@ hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-media-server -
 - 各站上传下载
 - 哪些站没登录
 - 今天站点数据
+
+::: tip 💡 说明
+- 此技能只读，不签到、不同步站点数据、不修改站点配置
+- 有未登录站点时会明确点名
+:::
 
 **安装：**
 
@@ -610,9 +645,9 @@ hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-site-state --f
 
 **工作流程：**
 
-1. **识别签到目标** — 查询记录、指定站点签到、全部签到
-2. **执行或查询** — 调用站点签到接口并记录结果
-3. **结果汇总** — 返回成功/失败站点与错误原因摘要
+1. **查看签到记录** — 用户问「签到记录」「哪些站签到失败」时查询签到历史，优先点名失败、未登录或异常站点
+2. **执行签到** — 只有用户明确说「签到」「执行签到」「给某站签到」时才执行；指定站点签到前先确认目标 ID
+3. **全部签到** — 用户明确要求全部已开启签到的站点签到时执行，执行后建议查看签到记录确认结果
 
 **触发场景举例：**
 - 站点签到记录
@@ -620,6 +655,12 @@ hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-site-state --f
 - 给馒头签到
 - 执行站点签到
 - 全部站点签到
+
+::: tip 💡 说明
+- 用户只是问「站点状态」「是否已签到」时，不执行签到
+- 站点名称匹配到多个候选时，先让用户确认
+- 不修改站点配置、Cookie 或开关
+:::
 
 **安装：**
 
@@ -661,10 +702,11 @@ hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-site-signin --
 
 **工作流程：**
 
-1. **确定目标视图** — 下载器状态、下载中、下载历史
-2. **获取任务列表** — 拉取任务并按用户指定条件筛选
-3. **执行控制动作** — 支持暂停、恢复、删除指定下载任务
-4. **回传执行结果** — 输出操作结果与失败原因
+1. **默认查询** — 用户说「下载任务」「下载中」时，展示下载中任务的标题、进度、速度、状态、是否暂停、站点和保存路径（最多 10 条）
+2. **下载器** — 用户问「下载器」「下载器状态」时，说明下载器名称、类型、是否开启、是否默认、地址等（不展示账号密码）
+3. **下载历史** — 用户问「下载历史」时查询历史记录，支持按标题、类型或站点筛选
+4. **任务选择** — 用户给了下载 ID 直接使用；只说「第几个」「这个下载」时基于当前结果选择；不能确定时先让用户确认
+5. **变更操作** — 只有用户明确要求时才执行暂停/恢复/删除；只有用户明确说「同时删除文件」时删除命令才附带删除文件
 
 **触发场景举例：**
 - 下载任务
@@ -674,6 +716,12 @@ hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-site-signin --
 - 暂停这个下载
 - 恢复下载
 - 删除下载任务
+
+::: tip 💡 说明
+- 默认只读，不新增种子/磁力/订阅下载
+- 不清空下载历史、不编辑下载器配置、不删除下载器
+- 执行后只说明操作已提交，不承诺任务已完成
+:::
 
 **安装：**
 
@@ -709,45 +757,47 @@ hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-download --for
 
 ---
 
-### 🖥️ ms-zspace-state · 极空间系统状态
+### 🖥️ ms-nas-state · NAS 系统状态
 
-> 查极空间系统信息、硬件状态和运行状态时使用，调用 `cli-anything-ms` 获取最新状态并用中文总结
+> 查 NAS 系统信息、系统状态、硬件状态、运行状态，或想查看 CPU、内存、存储、磁盘温度、网络、风扇、UPS 信息时使用，调用 `cli-anything-ms` 获取最新状态并用中文总结
 
 **工作流程：**
 
-1. **调用接口** — 固定执行 `plugin call --code zspace_service_assistant --body '{"action":"get_recent_state","body":{}}'`，不调用其他接口
-2. **解析数据** — 真实状态在插件返回对象的 `data` 列表中，取最新一条记录
-3. **提取重点信息** — 优先提取以下字段：
-   - 设备名称、型号、运行时长
-   - CPU 名称、占用率、温度
-   - 内存总量、使用率
-   - GPU 名称、占用率、温度（如有）
-   - 网络上下行速度
+1. **确认 CLI 可用** — 确保 `cli-anything-ms` 已安装，如果安装失败直接转述原因并停止
+2. **调用 NAS 信息接口** — 固定执行 `cli-anything-ms --json system nas-info`，不调用旧的 `zspace_service_assistant` 插件接口
+3. **理解返回结果** — 返回结果是 NAS 设备列表，默认总结全部设备；用户指定设备名或型号时只回答匹配设备。每个设备可能包含 `raw` 字符串，可尝试按 JSON 解析补充扩展信息
+4. **提取重点信息** — 优先提取以下字段：
+   - 设备名称、厂商、型号、在线状态、系统版本、运行时长
+   - CPU 占用、温度
+   - 内存总量、已用量、使用率
+   - 存储空间容量、已用空间、使用率
+   - 磁盘型号、容量、温度、状态、是否待机
+   - 网络 IP、上下行速度
    - 风扇转速
-   - HDD 和 SSD 的容量、已用空间、温度、状态
-4. **总结回复** — 先给一句整体状态概述，再补充关键指标摘要；只问某类指标时优先回答该部分
+   - UPS 厂商、型号、连接状态、电池或供电信息
+5. **总结回复** — 先给一句整体状态概述，多台 NAS 时逐台简洁总结，再补充关键指标摘要；只问某类指标时优先回答该部分
 
 **触发场景举例：**
-- 查极空间系统信息
+- 查 NAS 系统信息
 - 查 CPU 温度
 - 查内存使用率
 - 查磁盘状态
 - 查网络速度
-
-::: warning ⚠️ 注意
-此技能需要在 Media Saber 中已安装并启用「极空间服务助手」插件，否则接口调用会失败。
-:::
+- 查存储空间
+- 查 UPS 信息
 
 ::: tip 💡 异常提示规则
-- CPU、GPU、磁盘或 SSD 温度明显偏高时，会显式提示关注
-- 内存使用率较高时，会显式提示
-- 某块磁盘或 SSD 的 `state` 不正常时，会点名指出
+- NAS 状态不是在线时，会显式提示
+- CPU、磁盘或 SSD 温度明显偏高时，会显式提示关注
+- 内存或存储空间使用率较高时，会显式提示
+- 某块磁盘状态不正常时，会点名指出
+- 接口调用失败时直接转述失败原因，不编造系统状态
 - 不做历史对比和趋势分析，不主动给出修复建议（除非用户追问）
 :::
 
 **效果演示：**
 
-<img src="./images/skill/极空间nas系统状态.png" alt="极空间系统状态演示" style="max-width:100%;border-radius:8px;" />
+<img src="./images/skill/极空间nas系统状态.png" alt="NAS系统状态演示" style="max-width:100%;border-radius:8px;" />
 
 **安装：**
 
@@ -756,7 +806,7 @@ hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-download --for
 @tab npx
 
 ```bash
-npx -y @openclaw/skills install fanxuankai/cli-anything-harnesses/skills/ms-zspace-state --force
+npx -y @openclaw/skills install fanxuankai/cli-anything-harnesses/skills/ms-nas-state --force
 ```
 
 @tab OpenClaw 小龙虾
@@ -764,19 +814,19 @@ npx -y @openclaw/skills install fanxuankai/cli-anything-harnesses/skills/ms-zspa
 在 OpenClaw 对话框中粘贴 GitHub 链接：
 
 ```text
-请安装技能 https://github.com/fanxuankai/cli-anything-harnesses/tree/main/skills/ms-zspace-state
+请安装技能 https://github.com/fanxuankai/cli-anything-harnesses/tree/main/skills/ms-nas-state
 ```
 
 或使用命令行：
 
 ```bash
-openclaw skills install fanxuankai/cli-anything-harnesses/skills/ms-zspace-state
+openclaw skills install fanxuankai/cli-anything-harnesses/skills/ms-nas-state
 ```
 
 @tab Hermes 爱马仕
 
 ```bash
-hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-zspace-state --force
+hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-nas-state --force
 ```
 
 :::
@@ -958,18 +1008,18 @@ pip install cli-anything-ms --user
 
 **A：** 这是 Media Saber 后端返回的错误，说明对应插件未安装或未启用：
 - `ms-sub` / `ms-gap-filler` / `ms-recommend` / `ms-rank` / `ms-cloud-resource` / `ms-cloud-resource-rank` / `ms-media-server` / `ms-site-state` / `ms-site-signin` / `ms-download`：确认 Media Saber 已正常运行，且 `cli-anything-ms` 配置的连接地址和 API Key 正确
-- `ms-zspace-state`：需要在 Media Saber 中安装并启用「极空间服务助手」插件
+- `ms-nas-state`：需要在 Media Saber 中已配置 NAS 设备信息
 
 ---
 
-**Q：`ms-zspace-state` 返回空列表或「状态数据结构异常」？**
+**Q：`ms-nas-state` 返回空列表或「NAS 状态数据结构异常」？**
 
 **A：** 可能原因：
-1. 极空间服务助手插件未启用，或插件版本过旧
-2. 极空间设备当前离线或无法连接
-3. Media Saber 与极空间之间的通信异常
+1. Media Saber 中未配置 NAS 设备信息
+2. NAS 设备当前离线或无法连接
+3. Media Saber 与 NAS 之间的通信异常
 
-建议先在 Media Saber 插件页面确认插件状态，再重试。
+建议先在 Media Saber 系统设置中确认 NAS 设备配置，再重试。
 
 ---
 

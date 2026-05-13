@@ -37,7 +37,7 @@ Media Saber 提供了 12 个官方 AI Agent 技能包，安装后可直接通过
 - 📊 **ms-site-state**：站点状态与统计，查看站点上传/下载/做种/魔力等概况
 - ✅ **ms-site-signin**：站点签到，查看签到记录或执行站点签到
 - ⬇️ **ms-download**：下载任务管理，查看/暂停/恢复/删除下载任务
-- 🖥️ **ms-zspace-state**：极空间系统状态，查询 CPU、内存、磁盘、温度等硬件信息
+- 🖥️ **ms-nas-state**：NAS 系统状态，查询 CPU、内存、存储、磁盘温度、网络、风扇、UPS 等硬件信息
 - 🔧 **cli-anything-cliproxyapi**：CLIProxyAPI 代理管理，完整的代理服务器 CLI 工具
 
 支持 npx、OpenClaw 小龙虾、Hermes 爱马仕三种安装方式。
@@ -137,7 +137,7 @@ Model Context Protocol (MCP) 让AI拥有更强大的能力：
   - 📊 ms-site-state · 站点状态与统计
   - ✅ ms-site-signin · 站点签到
   - ⬇️ ms-download · 下载任务管理
-  - 🖥️ ms-zspace-state · 极空间系统状态
+  - 🖥️ ms-nas-state · NAS 系统状态
   - 🔧 cli-anything-cliproxyapi · CLIProxyAPI 代理管理
 
 ### 🔌 MCP 服务
