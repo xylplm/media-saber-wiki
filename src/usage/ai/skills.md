@@ -38,7 +38,7 @@ date: 2026-04-24 00:00:00
 | `ms-site-state` | 站点状态与统计 | `cli-anything-ms` |
 | `ms-site-signin` | 站点签到查询与执行 | `cli-anything-ms` |
 | `ms-download` | 下载器与下载任务管理 | `cli-anything-ms` |
-| `ms-nas-state` | NAS 系统状态 | `cli-anything-ms` |
+| `ms-nas-state` | NAS 系统状态（支持极空间、绿联、飞牛、PVE，支持多设备） | `cli-anything-ms` |
 | `cli-anything-cliproxyapi` | CLIProxyAPI 代理管理 | `cli-anything-cliproxyapi` |
 
 ::: tip 💡 前置依赖
@@ -761,6 +761,12 @@ hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-download --for
 
 > 查 NAS 系统信息、系统状态、硬件状态、运行状态，或想查看 CPU、内存、存储、磁盘温度、网络、风扇、UPS 信息时使用，调用 `cli-anything-ms` 获取最新状态并用中文总结
 
+::: tip 💡 支持设备
+目前已支持 **极空间、绿联、飞牛、PVE** 四种设备。其中极空间、绿联、飞牛支持系统消息推送。可在修仙秘籍安装对应设备的服务助手即可体验。
+
+**所有 NAS 信息都支持多设备！** 可同时管理和查看多台 NAS 的状态。
+:::
+
 **工作流程：**
 
 1. **确认 CLI 可用** — 确保 `cli-anything-ms` 已安装，如果安装失败直接转述原因并停止
@@ -1008,18 +1014,18 @@ pip install cli-anything-ms --user
 
 **A：** 这是 Media Saber 后端返回的错误，说明对应插件未安装或未启用：
 - `ms-sub` / `ms-gap-filler` / `ms-recommend` / `ms-rank` / `ms-cloud-resource` / `ms-cloud-resource-rank` / `ms-media-server` / `ms-site-state` / `ms-site-signin` / `ms-download`：确认 Media Saber 已正常运行，且 `cli-anything-ms` 配置的连接地址和 API Key 正确
-- `ms-nas-state`：需要在 Media Saber 中已配置 NAS 设备信息
+- `ms-nas-state`：需要在 Media Saber 修仙秘籍中安装对应设备的服务助手（极空间/绿联/飞牛/PVE）
 
 ---
 
 **Q：`ms-nas-state` 返回空列表或「NAS 状态数据结构异常」？**
 
 **A：** 可能原因：
-1. Media Saber 中未配置 NAS 设备信息
+1. Media Saber 中未安装对应设备的服务助手（需在修仙秘籍中安装极空间/绿联/飞牛/PVE 对应的服务助手）
 2. NAS 设备当前离线或无法连接
 3. Media Saber 与 NAS 之间的通信异常
 
-建议先在 Media Saber 系统设置中确认 NAS 设备配置，再重试。
+建议先在 Media Saber 修仙秘籍中确认已安装并启用对应设备的服务助手，再重试。
 
 ---
 
