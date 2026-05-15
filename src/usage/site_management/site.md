@@ -246,5 +246,5 @@ Media Saber 未内置任何站点支持！**在添加站点前必须先配置站
 - 🔌 [浏览器同步插件](/client/brower_tool.html) - Cookie 自动同步
 - ⚙️ [代理服务器设置](/usage/system_settings/basic_settings.html#代理服务器) - 代理配置
 - 📋 [Cron 规则文档](/usage/other/cron_rule) - 定时任务表达式
-- 🔍 [过滤规则](/usage/other/) - 种子过滤配置
+- 🔍 [过滤规则](/usage/system_settings/filter_rules.html) - 种子过滤配置
 - 🚨 [故障排查](/guide/problem.html#站点无法连通) - 常见问题解决

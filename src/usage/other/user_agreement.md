@@ -158,7 +158,7 @@ editor: markdown
 ### 6.3 生效规则
 - 变更自发布之日起30日后生效
 - 持续使用即视为接受新条款
-- 历史版本可在[此处](/usage/other/privacy_policy)查阅
+- 历史版本可在此处查阅
 
 ## 7. 附则
 
@@ -198,8 +198,8 @@ editor: markdown
 ### 7.7 术语说明
 
 - **[PWA](/usage/other/glossary#pwa)**：渐进式Web应用技术
-- **[刮削](/usage/media_services/metadata_scrape/)**：从互联网获取媒体元数据的过程
-- **[STRM](/usage/cloud_storage/strm_generate/)**：流媒体播放列表文件
+- **[刮削](/usage/other/glossary.html#刮削)**：从互联网获取媒体元数据的过程
+- **[STRM](/usage/cloud_storage/strm_generate.html)**：流媒体播放列表文件
 - **[Webhook](/usage/other/webhook)**：轻量级回调机制
 
 ## 📝 修订记录

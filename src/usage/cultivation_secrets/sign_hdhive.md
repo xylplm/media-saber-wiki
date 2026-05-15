@@ -46,4 +46,4 @@ HDHive 站点自动签到。
 
 ## 🔗 相关链接
 
-- [站点管理](/usage/site/)
+- [站点管理](/usage/site_management/)

@@ -58,4 +58,4 @@ ed2k://|file|文件名.mkv|文件大小|HASH值|/
 ## 🔗 相关链接
 
 - [修仙秘籍主页](/usage/cultivation_secrets/)
-- [云存储 HASH 上报](/usage/cultivation_secrets/cs_hash_reporter/)
+- [云存储 HASH 上报](/usage/cultivation_secrets/cs_hash_reporter.html)

@@ -204,5 +204,5 @@ TMDB 对免费 API 有请求限制：
 配置完 TMDB API Key 后，继续进行：
 1. [站点配置](/guide/init/sites) - 配置媒体站点
 2. [初始化设置](/guide/init/) - 完成系统初始化
-3. [开始使用](/usage/) - 搜索、订阅、下载媒体
+3. [开始使用](/usage/main_page/) - 搜索、订阅、下载媒体
 :::

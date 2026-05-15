@@ -457,10 +457,10 @@ nslookup github.com 8.8.8.8
 
 ## 🔗 相关链接
 
-- [修仙秘籍主页](/usage/cultivation_secrets/main/)
-- [网络诊断插件](/usage/cultivation_secrets/network_diagnosis/)
-- [网络 Ping 插件](/usage/cultivation_secrets/network_ping/)
-- [Cron表达式说明](/usage/other/cron_rule/)
+- [修仙秘籍主页](/usage/cultivation_secrets/)
+- [网络诊断插件](/usage/cultivation_secrets/network_diagnostics.html)
+- [网络 Ping 插件](/usage/cultivation_secrets/network_diagnostics.html)
+- [Cron表达式说明](/usage/other/cron_rule.html)
 
 ---
 

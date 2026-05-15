@@ -98,4 +98,4 @@ date: 2025-11-19 00:00:00
 ## 🔗 相关链接
 
 - [修仙秘籍主页](/usage/cultivation_secrets/)
-- [删种](/usage/cultivation_secrets/auto_delete_torrent/)
+- [删种](/usage/cultivation_secrets/auto_delete_torrent.html)

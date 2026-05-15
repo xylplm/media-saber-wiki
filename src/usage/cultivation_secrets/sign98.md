@@ -65,4 +65,4 @@ date: 2025-11-19 00:00:00
 
 ## 🔗 相关链接
 
-- [系统配置](/usage/settings/)
+- [系统配置](/usage/system_settings/)

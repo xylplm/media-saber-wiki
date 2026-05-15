@@ -50,4 +50,4 @@ date: 2025-11-19 00:00:00
 
 ## 🔗 相关链接
 
-- [消息通知配置](/usage/settings/)
+- [消息通知配置](/usage/system_settings/)

@@ -60,5 +60,5 @@ date: 2025-11-19 00:00:00
 ## 🔗 相关链接
 
 - [修仙秘籍主页](/usage/cultivation_secrets/)
-- [115 签到](/usage/cultivation_secrets/sign_115/)
-- [云存储增量整理](/usage/cultivation_secrets/cloud_storage_watcher/)
+- [115 签到](/usage/cultivation_secrets/sign_115.html)
+- [云存储增量整理](/usage/cultivation_secrets/cloud_storage_watcher.html)

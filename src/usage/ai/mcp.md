@@ -1,4 +1,4 @@
----
+﻿---
 title: MCP服务
 article: false
 tags: null
@@ -246,7 +246,7 @@ Cherry Studio 用于导入的 JSON 结构与通用 MCP 配置略有不同（如�
 API KEY 需要在Media Saber系统中获取：
 
 1. 🔐 登录Media Saber系统
-2. 👤 前往 [我的信息](/usage/main_page/my_info/) 页面
+2. 👤 前往 [我的信息](/usage/main_page/my_info.html) 页面
 3. 🔒 切换到 **"安全配置"** 标签页
 4. 🔑 在 **"API KEY 管理"** 区域新增或使用现有的API KEY
 5. 📋 复制API KEY值用于MCP客户端配置
@@ -274,7 +274,7 @@ API KEY 需要在Media Saber系统中获取：
 
 **A：** 请检查以下配置：
 
-1. ✅ 确认已在 [基础设置](/usage/system_settings/basic_settings/) 中配置了OpenAI API相关信息
+1. ✅ 确认已在 [基础设置](/usage/system_settings/basic_settings.html) 中配置了OpenAI API相关信息
 2. ✅ 确认MCP客户端连接地址正确（如 `http://IP:8888/message`）
 3. ✅ 确认MCP客户端中已正确配置Authorization请求头（格式为 `Bearer 您的API_KEY`）
 4. 🔄 如问题仍存在，可以尝试更换客户端或重新配置连接信息
@@ -285,7 +285,7 @@ API KEY 需要在Media Saber系统中获取：
 
 **Q：如何获取API KEY？**
 
-**A：** 在 [我的信息](/usage/main_page/my_info/) 页面的 **"安全配置"** 标签中，通过 **"API KEY 管理"** 功能新增或管理现有的API KEY。
+**A：** 在 [我的信息](/usage/main_page/my_info.html) 页面的 **"安全配置"** 标签中，通过 **"API KEY 管理"** 功能新增或管理现有的API KEY。
 
 **Q：API KEY配置错误会怎样？**
 
@@ -309,8 +309,8 @@ API KEY 需要在Media Saber系统中获取：
 ## 📚 相关文档
 
 - 🎯 [Skills 技能包](/usage/ai/skills.md) - Media Saber 官方技能包集合，包含28个MCP工具和完整使用指南
-- ⚙️ [基础设置](/usage/system_settings/basic_settings/) - 配置OpenAI API相关设置
-- 🔑 [我的信息 - API KEY管理](/usage/main_page/my_info/) - 获取和管理MCP服务所需的API KEY
+- ⚙️ [基础设置](/usage/system_settings/basic_settings.html) - 配置OpenAI API相关设置
+- 🔑 [我的信息 - API KEY管理](/usage/main_page/my_info.html) - 获取和管理MCP服务所需的API KEY
 
 ---
 

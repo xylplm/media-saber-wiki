@@ -48,4 +48,4 @@ date: 2025-11-19 00:00:00
 
 ## 🔗 相关链接
 
-- [站点管理](/usage/site/)
+- [站点管理](/usage/site_management/)

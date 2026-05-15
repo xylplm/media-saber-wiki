@@ -106,7 +106,7 @@ date: 2023-09-27 12:16:17
 3. 在浏览器中登录账号
 4. 系统将自动提取所需的认证信息并填入表单
 
-> ⚠️ 注意：使用浏览器插件获取认证信息需要先安装[Media Saber Tools](/client/brower_tool/)浏览器扩展
+> ⚠️ 注意：使用浏览器插件获取认证信息需要先安装[Media Saber Tools](/client/brower_tool.html)浏览器扩展
 
 ## 🔧 115扫码工具
 

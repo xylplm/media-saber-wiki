@@ -45,4 +45,4 @@ date: 2025-11-19 00:00:00
 
 ## 🔗 相关链接
 
-- [识别词管理](/usage/words/)
+- [识别词管理](/usage/media_organization/custom_identification_words.html)

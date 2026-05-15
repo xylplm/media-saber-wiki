@@ -40,5 +40,5 @@ date: 2025-11-19 00:00:00
 ## 🔗 相关链接
 
 - [修仙秘籍主页](/usage/cultivation_secrets/)
-- [云存储增量整理](/usage/cultivation_secrets/cloud_storage_watcher/)
-- [媒体服务刷新](/usage/cultivation_secrets/media_server_refresh/)
+- [云存储增量整理](/usage/cultivation_secrets/cloud_storage_watcher.html)
+- [媒体服务刷新](/usage/cultivation_secrets/media_server_refresh.html)

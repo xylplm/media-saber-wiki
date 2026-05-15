@@ -52,4 +52,4 @@ old-announce|new-announce
 
 ## 🔗 相关链接
 
-- [下载器配置](/usage/settings/)
+- [下载器配置](/usage/system_settings/)

@@ -48,5 +48,5 @@ date: 2025-11-19 00:00:00
 
 ## 🔗 相关链接
 
-- [订阅管理](/usage/subscribe/)
-- [系统配置](/usage/settings/)
+- [订阅管理](/usage/subscription_management/)
+- [系统配置](/usage/system_settings/)

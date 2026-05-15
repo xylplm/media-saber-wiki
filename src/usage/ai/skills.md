@@ -1,4 +1,4 @@
----
+﻿---
 title: MS 技能包
 article: false
 tags:
@@ -1065,8 +1065,8 @@ hermes skills install fanxuankai/cli-anything-harnesses/skills/<技能名> --for
 
 - 🤖 [智能体介绍](./README.md) - AI 功能模块总览
 - 🔌 [MCP 服务文档](./mcp.md) - MCP 集成和配置指南
-- ⚙️ [基础设置](/usage/system_settings/basic_settings/) - 配置 AI API 相关设置
-- 🔑 [我的信息](/usage/main_page/my_info/) - 获取和管理 API Key
+- ⚙️ [基础设置](/usage/system_settings/basic_settings.html) - 配置 AI API 相关设置
+- 🔑 [我的信息](/usage/main_page/my_info.html) - 获取和管理 API Key
 
 ---
 

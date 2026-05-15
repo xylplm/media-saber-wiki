@@ -60,7 +60,7 @@ MediaSaber 提供了多种搜索方式，帮助您快速找到所需的媒体资
 **特点**：
 - 在所有启用的种子站点中搜索
 - 搜索结果为种子文件
-- 会创建搜索任务，可在[搜索任务](/usage/search/search_tasks/)中查看进度
+- 会创建搜索任务，可在[搜索任务](/usage/search/search_tasks.html)中查看进度
 
 ### 🎭 演员搜索 (Performer Search)
 
@@ -150,7 +150,7 @@ graph TD
 
 对于某些搜索类型（如站点直搜），系统会创建搜索任务：
 
-- 搜索任务会在[搜索任务](/usage/search/search_tasks/)页面中显示
+- 搜索任务会在[搜索任务](/usage/search/search_tasks.html)页面中显示
 - 可以在任务页面查看搜索进度和结果
 - 搜索完成后可以查看和管理搜索结果
 

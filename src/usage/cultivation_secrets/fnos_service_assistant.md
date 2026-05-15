@@ -71,5 +71,5 @@ date: 2025-11-19 00:00:00
 ## 🔗 相关链接
 
 - [修仙秘籍主页](/usage/cultivation_secrets/)
-- [绿联服务助手](/usage/cultivation_secrets/ugreen_service_assistant/)
-- [PVE 服务助手](/usage/cultivation_secrets/pve_service_assistant/)
+- [绿联服务助手](/usage/cultivation_secrets/ugreen_service_assistant.html)
+- [PVE 服务助手](/usage/cultivation_secrets/pve_service_assistant.html)

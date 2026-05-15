@@ -53,4 +53,4 @@ true,jieqi,,0,0 9 * * *
 
 ## 🔗 相关链接
 
-- [消息通知配置](/usage/settings/)
+- [消息通知配置](/usage/system_settings/)

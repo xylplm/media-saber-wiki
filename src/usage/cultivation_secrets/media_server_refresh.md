@@ -47,4 +47,4 @@ date: 2025-11-19 00:00:00
 ## 🔗 相关链接
 
 - [修仙秘籍主页](/usage/cultivation_secrets/)
-- [CloudDrive2 刷新配置](/usage/cultivation_secrets/cloud_drive2_config/)
+- [CloudDrive2 刷新配置](/usage/cultivation_secrets/cloud_drive2_config.html)

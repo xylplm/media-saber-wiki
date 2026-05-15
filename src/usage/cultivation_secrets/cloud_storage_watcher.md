@@ -48,5 +48,5 @@ date: 2025-11-19 00:00:00
 ## 🔗 相关链接
 
 - [修仙秘籍主页](/usage/cultivation_secrets/)
-- [CloudDrive2 刷新配置](/usage/cultivation_secrets/cloud_drive2_config/)
-- [115 生活事件](/usage/cultivation_secrets/open115_life_event/)
+- [CloudDrive2 刷新配置](/usage/cultivation_secrets/cloud_drive2_config.html)
+- [115 生活事件](/usage/cultivation_secrets/open115_life_event.html)

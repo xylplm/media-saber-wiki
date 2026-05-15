@@ -21,28 +21,28 @@ date: 2023-09-27 12:16:17
 
 云端存储包含以下主要功能模块：
 
-### 🗃️ [存储管理](/usage/cloud_storage/storage/)
+### 🗃️ [存储管理](/usage/cloud_storage/storage.html)
 管理和配置云存储服务连接，包括各种云盘服务的认证和设置。
 
-### 📁 [云端文件](/usage/cloud_storage/home/)
+### 📁 [云端文件](/usage/cloud_storage/home.html)
 浏览和管理云存储中的文件和文件夹，支持基本的文件操作。
 
-### 🔄 [文件整理](/usage/cloud_storage/strm_transfer/)
+### 🔄 [文件整理](/usage/cloud_storage/strm_transfer.html)
 将云存储中的文件整理到本地媒体库，支持多种整理方式。
 
-### 🔗 [Strm生成](/usage/cloud_storage/strm_generate/)
+### 🔗 [Strm生成](/usage/cloud_storage/strm_generate.html)
 创建和管理STRM文件生成任务，用于流媒体播放。
 
 ### 🚀 [首次大批量Strm生成](/usage/cloud_storage/115_tree_gen_strm)
 通过 115 网盘目录树快速批量生成 STRM，特别适合首次大规模导入场景。
 
-### 🚧 [进行中任务](/usage/cloud_storage/task_undone/)
+### 🚧 [进行中任务](/usage/cloud_storage/task_undone.html)
 监控当前正在执行的云存储相关任务，包括上传、下载、复制、移动等。
 
-### ✅ [已完成任务](/usage/cloud_storage/task_done/)
+### ✅ [已完成任务](/usage/cloud_storage/task_done.html)
 查看历史完成的云存储任务记录。
 
-### 📦 [网盘配置指南](/usage/cloud_storage/storage_config/)
+### 📦 [网盘配置指南](/usage/cloud_storage/storage_config.html)
 各种网盘的详细配置说明和参数获取方法。
 
 ## ⚙️ 核心概念
@@ -54,16 +54,16 @@ STRM文件是一种流媒体播放列表文件，它不包含实际的媒体内�
 系统支持多种云存储协议，包括但不限于：
 
 **国内云盘**
-- [阿里云盘（Oauth2）](/usage/cloud_storage/storage_config/#阿里云盘-oauth2)
-- [百度网盘](/usage/cloud_storage/storage_config/#百度网盘)
-- [夸克网盘 Open](/usage/cloud_storage/storage_config/#夸克网盘-open)
-- [天翼云盘](/usage/cloud_storage/storage_config/#天翼云盘)
-- [中国移动云盘](/usage/cloud_storage/storage_config/#中国移动云盘)
-- [115 网盘开放平台](/usage/cloud_storage/storage_config/#115-网盘开放平台)
-- [123 云盘开放平台](/usage/cloud_storage/storage_config/#123-云盘开放平台)
+- [阿里云盘（Oauth2）](/usage/cloud_storage/storage_config.html#阿里云盘-oauth2)
+- [百度网盘](/usage/cloud_storage/storage_config.html#百度网盘)
+- [夸克网盘 Open](/usage/cloud_storage/storage_config.html#夸克网盘-open)
+- [天翼云盘](/usage/cloud_storage/storage_config.html#天翼云盘)
+- [中国移动云盘](/usage/cloud_storage/storage_config.html#中国移动云盘)
+- [115 网盘开放平台](/usage/cloud_storage/storage_config.html#115-网盘开放平台)
+- [123 云盘开放平台](/usage/cloud_storage/storage_config.html#123-云盘开放平台)
 
 **国际云盘**
-- [OneDrive](/usage/cloud_storage/storage_config/#onedrive)
+- [OneDrive](/usage/cloud_storage/storage_config.html#onedrive)
 
 ## 🔄 工作流程
 

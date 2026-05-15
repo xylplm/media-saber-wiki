@@ -53,4 +53,4 @@ date: 2025-11-19 00:00:00
 ## 🔗 相关链接
 
 - [修仙秘籍主页](/usage/cultivation_secrets/)
-- [媒体服务刷新](/usage/cultivation_secrets/media_server_refresh/)
+- [媒体服务刷新](/usage/cultivation_secrets/media_server_refresh.html)

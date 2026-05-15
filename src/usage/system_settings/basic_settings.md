@@ -1,4 +1,4 @@
----
+﻿---
 title: 基础设置
 article: false
 tags: null
@@ -164,14 +164,14 @@ date: 2023-09-27 12:16:17
 
 **默认值/示例：** 无
 
-**操作建议：** 与订阅搜索过滤规则独立配置。可在 [过滤规则](/usage/system_settings/filter_rules/) 页面创建过滤规则组。
+**操作建议：** 与订阅搜索过滤规则独立配置。可在 [过滤规则](/usage/system_settings/filter_rules.html) 页面创建过滤规则组。
 
 ### 手动搜索排序规则
 **说明：** 手动搜索的默认种子排序规则
 
 **默认值/示例：** 无
 
-**操作建议：** 可在 [种子排序](/usage/system_settings/torrent_sort/) 页面创建自定义排序规则。
+**操作建议：** 可在 [种子排序](/usage/system_settings/torrent_sort.html) 页面创建自定义排序规则。
 
 ### RSS 周期
 **说明：** RSS 订阅刷新的时间间隔，需要在订阅管理中设置订阅站点。为了减小站点压力，该功能最小周期建议大于 10 分钟。低于 10 分钟的频率会使用缓存数据。支持 Cron 表达式。
@@ -478,7 +478,7 @@ date: 2023-09-27 12:16:17
 
 **默认值/示例：** 空
 
-**操作建议：** 请参考 [OCR 服务配置指南](/usage/system_settings/ocr_service/)。
+**操作建议：** 请参考 [OCR 服务配置指南](/usage/system_settings/ocr_service.html)。
 
 ### 豆瓣 Cookie
 **说明：** 需要用到 Cookie 的时候填上
@@ -555,14 +555,14 @@ date: 2023-09-27 12:16:17
 ## 🔗 相关文档链接
 
 ### 系统管理
-- [过滤规则](/usage/system_settings/filter_rules/) - 创建和管理订阅搜索的过滤规则
-- [种子排序](/usage/system_settings/torrent_sort/) - 自定义种子排序规则
-- [用户管理](/usage/system_settings/user_management/) - 账户和权限配置
+- [过滤规则](/usage/system_settings/filter_rules.html) - 创建和管理订阅搜索的过滤规则
+- [种子排序](/usage/system_settings/torrent_sort.html) - 自定义种子排序规则
+- [用户管理](/usage/system_settings/user_management.html) - 账户和权限配置
 - [消息通知](/usage/system_settings/message/) - 通知渠道和规则
 
 ### AI 和第三方服务
-- [MCP 服务](/usage/ai/mcp/) - Media Control Protocol 配置
-- [OCR 服务配置](/usage/system_settings/ocr_service/) - 验证码识别设置
+- [MCP 服务](/usage/ai/mcp.html) - Media Control Protocol 配置
+- [OCR 服务配置](/usage/system_settings/ocr_service.html) - 验证码识别设置
 
 ### 其他模块
 - [站点管理](/usage/site_management/) - 下载站点配置

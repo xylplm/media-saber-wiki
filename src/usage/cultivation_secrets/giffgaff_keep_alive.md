@@ -49,4 +49,4 @@ Giffgaff 手机卡 180 天内保号提醒。
 
 ## 🔗 相关链接
 
-- [消息通知配置](/usage/settings/)
+- [消息通知配置](/usage/system_settings/)

@@ -1,4 +1,4 @@
----
+﻿---
 title: 种子排序
 article: false
 tags: null
@@ -373,8 +373,8 @@ date: 2025-01-01 12:16:17
 
 ## 相关文档
 
-- [种子匹配](/usage/system_settings/torrent_match/) - 了解如何创建匹配规则供排序使用
-- [过滤规则](/usage/system_settings/filter_rules/) - 配合排序规则实现精确控制
-- [基础设置](/usage/system_settings/basic_settings/) - 配置默认排序规则
+- [种子匹配](/usage/system_settings/torrent_match.html) - 了解如何创建匹配规则供排序使用
+- [过滤规则](/usage/system_settings/filter_rules.html) - 配合排序规则实现精确控制
+- [基础设置](/usage/system_settings/basic_settings.html) - 配置默认排序规则
 
 ---

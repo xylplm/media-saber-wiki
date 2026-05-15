@@ -10,7 +10,7 @@ dateCreated: 2023-05-12T04:46:17.364Z
 
 # 🍪 极空间获取Cookie
 
-在配置[媒体服务](/usage/media_services/zspace/)或[系统消息通知](/usage/cultivation_secrets/zspace_system_messages/)时，如果需要使用极空间相关功能，您需要获取极空间Cookie信息用于身份验证。
+在配置[媒体服务](/usage/media_services/zspace.html)或[系统消息通知](/usage/cultivation_secrets/zspace_service_assistant.html)时，如果需要使用极空间相关功能，您需要获取极空间Cookie信息用于身份验证。
 
 ## 📌 文档说明
 
@@ -64,8 +64,8 @@ document.cookie
 ## 📝 使用说明
 
 获取到的Cookie信息需要配置在Media Saber的以下位置：
-- [极影视媒体服务器配置](usage/media_services/zspace/)
-- [系统消息通知配置](/usage/cultivation_secrets/zspace_system_messages/)
+- [极影视媒体服务器配置](/usage/media_services/zspace.html)
+- [系统消息通知配置](/usage/cultivation_secrets/zspace_service_assistant.html)
 
 ## ⚠️ 注意事项
 
@@ -89,5 +89,5 @@ document.cookie
 
 ## 📚 相关文档
 
-- [极影视媒体服务器配置](/usage/media_services/zspace/)
-- [极空间系统消息](/usage/cultivation_secrets/zspace_system_messages/)
+- [极影视媒体服务器配置](/usage/media_services/zspace.html)
+- [极空间系统消息](/usage/cultivation_secrets/zspace_service_assistant.html)

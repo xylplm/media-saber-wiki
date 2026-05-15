@@ -64,4 +64,4 @@ date: 2025-11-19 00:00:00
 ## 🔗 相关链接
 
 - [修仙秘籍主页](/usage/cultivation_secrets/)
-- [豆瓣榜单订阅](/usage/cultivation_secrets/douban_subject_subscribe/)
+- [豆瓣榜单订阅](/usage/cultivation_secrets/douban_subject_subscribe.html)

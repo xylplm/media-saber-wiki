@@ -80,4 +80,4 @@ Movie:50
 ## 🔗 相关链接
 
 - [修仙秘籍主页](/usage/cultivation_secrets/)
-- [下载器站点标签](/usage/cultivation_secrets/downloader_site_tag/)
+- [下载器站点标签](/usage/cultivation_secrets/downloader_site_tag.html)

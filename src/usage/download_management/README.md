@@ -21,16 +21,16 @@ date: 2023-09-27 12:16:17
 
 下载管理包含以下主要功能模块：
 
-### 🚧 [正在下载](/usage/download_management/downloading/)
+### 🚧 [正在下载](/usage/download_management/current_downloads.html)
 监控当前正在进行的下载任务，查看下载进度和状态。
 
-### 📚 [近期下载](/usage/download_management/recent_downloads/)
+### 📚 [近期下载](/usage/download_management/recent_downloads.html)
 查看最近完成或失败的下载任务记录。
 
-### ⚙️ [下载参数](/usage/download_management/download_parameters/)
+### ⚙️ [下载参数](/usage/download_management/download_parameters.html)
 配置和管理下载任务的参数模板，用于统一设置下载选项。
 
-### 🖥️ [下载器管理](/usage/download_management/downloader_management/)
+### 🖥️ [下载器管理](/usage/download_management/downloader_management.html)
 配置和管理各种下载器，支持多种下载协议和客户端。
 
 ## 📘 核心概念

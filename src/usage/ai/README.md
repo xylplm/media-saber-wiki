@@ -67,7 +67,7 @@ Model Context Protocol (MCP) 让AI拥有更强大的能力：
 在使用智能体功能前，需要完成以下配置：
 
 1. **配置 AI API**
-   - 前往 [基础设置](/usage/system_settings/basic_settings/)
+   - 前往 [基础设置](/usage/system_settings/basic_settings.html)
    - 配置 OpenAI API URL 和 API Key
    - 选择默认使用的AI模型
 
@@ -165,9 +165,9 @@ Model Context Protocol (MCP) 让AI拥有更强大的能力：
 
 ## 🔗 相关链接
 
-- ⚙️ [基础设置](/usage/system_settings/basic_settings/) - 配置 AI API 和 MCP 功能
-- 👤 [我的信息](/usage/main_page/my_info/) - 管理 API KEY
-- 📖 [使用文档](/usage/) - 返回使用文档首页
+- ⚙️ [基础设置](/usage/system_settings/basic_settings.html) - 配置 AI API 和 MCP 功能
+- 👤 [我的信息](/usage/main_page/my_info.html) - 管理 API KEY
+- 📖 [使用文档](/usage/main_page/) - 返回使用文档首页
 - 🛠️ [系统设置](/usage/system_settings/) - 更多系统配置选项
 
 ---

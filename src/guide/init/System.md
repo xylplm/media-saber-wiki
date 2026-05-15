@@ -64,7 +64,7 @@ dateCreated: 2023-10-11T16:25:24.817Z
 
 - [常见问题解决](/guide/problem) - 遇到问题时查看
 - [TMDB 配置详解](/guide/tmdb) - 深入了解 TMDB 集成
-- [用户使用指南](/usage/) - 日常使用文档
+- [用户使用指南](/usage/main_page/) - 日常使用文档
 
 ---
 

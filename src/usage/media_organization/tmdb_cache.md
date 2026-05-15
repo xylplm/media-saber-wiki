@@ -44,7 +44,7 @@ TMDB缓存页面用于管理从TMDB获取的媒体信息缓存数据，通过缓
 ## ℹ️ 使用说明
 
 - 当种子标题名称、文件名称无法识别时，可以通过自定义识别词对原名称进行修改，以符合`搜索订阅`、`刮削`的识别要求。
-- 自定义识别词可以搭配 [名称识别测试](/usage/media_organization/name_recognition_test/) 一起使用。
+- 自定义识别词可以搭配 [名称识别测试](/usage/media_organization/name_recognition_test.html) 一起使用。
 
 这里记录了所有 TMDB 的缓存数据，在进行媒体识别时将优先使得缓存数据，以减少对 themoviedb 的访问，同时也加快识别过程。
 

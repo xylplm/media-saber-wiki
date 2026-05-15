@@ -51,4 +51,4 @@ date: 2025-11-19 00:00:00
 ## 🔗 相关链接
 
 - [修仙秘籍主页](/usage/cultivation_secrets/)
-- [ED2K 链接 HASH 上报](/usage/cultivation_secrets/ed2k_hash_reporter/)
+- [ED2K 链接 HASH 上报](/usage/cultivation_secrets/ed2k_hash_reporter.html)

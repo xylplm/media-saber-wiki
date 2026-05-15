@@ -1,4 +1,4 @@
----
+﻿---
 title: 过滤规则
 article: false
 tags: null
@@ -179,8 +179,8 @@ date: 2025-01-01 12:16:17
 
 ## 相关文档
 
-- [种子匹配](/usage/system_settings/torrent_match/) - 了解如何创建种子匹配规则
-- [种子排序](/usage/system_settings/torrent_sort/) - 配合过滤规则实现精确控制
-- [基础设置](/usage/system_settings/basic_settings/) - 配置默认过滤规则
+- [种子匹配](/usage/system_settings/torrent_match.html) - 了解如何创建种子匹配规则
+- [种子排序](/usage/system_settings/torrent_sort.html) - 配合过滤规则实现精确控制
+- [基础设置](/usage/system_settings/basic_settings.html) - 配置默认过滤规则
 
 ---
