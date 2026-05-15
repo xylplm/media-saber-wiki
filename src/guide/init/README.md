@@ -96,7 +96,7 @@ Media Saber 使用 TMDB 提供的电影和电视剧元数据服务，需先申�
 | ⬇️ 下载器配置 | 配置 BT 下载器和其他下载工具 | [下载器配置指南](/guide/init/download) |
 | 🎬 媒体服务 | 配置 Plex、Jellyfin 等媒体播放服务 | [媒体服务配置](/guide/init/media_server) |
 | 📺 Medium 配置 | 配置 Medium（PT 追番工具）相关参数 | [Medium 配置指南](/guide/init/medium) |
-| 🖧 系统设置 | 配置代理、端口等系统参数 | [系统设置指南](/guide/init/System) |
+| 🖧 系统设置 | 配置代理、端口等系统参数 | [系统设置指南](/guide/init/system_setting) |
 | 🌐 站点配置 | 配置 PT/BT 站点信息 | [站点配置指南](/guide/init/sites) |
 
 :::tip 💡 建议
