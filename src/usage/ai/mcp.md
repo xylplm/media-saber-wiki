@@ -1,4 +1,4 @@
----
+﻿---
 title: MCP服务
 article: false
 tags: null
@@ -34,35 +34,17 @@ Media Saber-MCP 把「我想看」变成「已订阅」—— 只需一句话，
 |------|------|------|
 | 🗣️ **自然语言订阅** | 解析影片名、年份、季数 | `订阅 复仇者联盟 2012` |
 | 🎬 **多类型支持** | 电影 / 电视剧 / 动漫 | `订阅 权力的游戏 S01` |
+| 🏆 **榜单浏览** | 按平台、分类、主题查看榜单 | `查看豆瓣电影榜单` |
+| 🖥️ **NAS 状态** | 多品牌 NAS 硬件信息查询 | `查看NAS系统状态` |
 | 🌐 **本地服务** | 零配置局域网访问 | 支持标准 streamable-http 协议连接 |
 
 ---
 
 ## 🚀 快速上手
 
-### 📋 前置条件
-
-在使用MCP服务前，需要先配置OpenAI API相关设置：
-
-1. 前往 [基础设置](/usage/system_settings/basic_settings/) 页面
-2. 在 **"智能体配置"** 部分配置以下项目：
-   - 🔗 **OpenAI API URL**：如 `https://api.openai.com/v1`
-   - 🔑 **OpenAI API Key**：您的API密钥
-   - 🤖 **默认模型**：如 `gpt-3.5-turbo` 或 `gpt-4`
-   - ✅ **启用 MCP**：开启此选项
-
-### ⚙️ 启动MCP服务
-
-MCP服务已内置于Media Saber后端服务中，无需额外配置环境变量即可使用。
-
-::: warning ⚠️ 注意
-旧版本中的环境变量 `MS_MCP_SERVER_HTTP_ADDR` 已废弃，无需再配置该变量。MCP服务现在直接集成在后端服务中。
+::: tip 💡 提示
+MCP服务已内置于Media Saber后端服务中，无需额外配置环境变量即可使用内置的 **MS MCP服务**（包含媒体、订阅、站点、媒体服务、云存储、系统等能力）。
 :::
-
-确认已在基础设置中启用MCP后，在 [智能体](/usage/ai/ai/) 页面的"新增MCP服务列表"中将会看到：
-
-- 🎬 **媒体服务**
-- 📦 **MS 媒体服务**：包含媒体、订阅、站点、媒体服务、云存储、系统等服务
 
 ---
 
@@ -90,7 +72,7 @@ Media Saber MCP服务内置了丰富的工具，涵盖媒体管理、订阅、�
 | 工具名称 | 说明 |
 |---------|------|
 | `subscribe_movie` | 订阅电影，订阅后自动搜索、下载 |
-| `subscribe_tv` | 订阅电视剧，支持指定季数、起始集数 |
+| `subscribe_tv` | 订阅电视剧，支持指定季数、起始集数、指定集数 |
 | `refresh_subscribe` | 刷新订阅列表，立即开始搜索下载 |
 
 #### 🌐 站点相关
@@ -118,6 +100,15 @@ Media Saber MCP服务内置了丰富的工具，涵盖媒体管理、订阅、�
 | `recommend_movies` | 推荐电影（支持按年代、地区、类型、排序筛选） |
 | `recommend_tvs` | 推荐电视剧（支持按年代、地区、类型、排序筛选） |
 
+#### 🏆 榜单相关
+
+| 工具名称 | 说明 |
+|---------|------|
+| `rank_media_sources` | 查询榜单平台列表 |
+| `rank_categories` | 按榜单平台查询分类列表 |
+| `rank_subjects` | 按榜单分类查询主题列表 |
+| `rank_items` | 按榜单分类和主题查询媒体列表（支持分页） |
+
 #### ☁️ 云存储 & 下载
 
 | 工具名称 | 说明 |
@@ -125,12 +116,19 @@ Media Saber MCP服务内置了丰富的工具，涵盖媒体管理、订阅、�
 | `add_offline_download` | 添加云下载任务（支持 ed2k、magnet 链接） |
 | `cloud_share_receive` | 云存储转存（支持 115 资源链接） |
 
-#### 🔧 系统相关
+#### 🔧 系统 & NAS 相关
 
 | 工具名称 | 说明 |
 |---------|------|
 | `test_network` | 网络连接测试 |
-| `get_zspace_system_state` | 获取极空间系统状态和硬件信息 |
+| `get_nas_info` | 获取所有已启用 NAS 实例的系统状态与硬件信息（CPU、内存、存储、网络、GPU、风扇、电源等，支持极空间、绿联、飞牛、PVE，支持多设备） |
+
+::: tip 💡 NAS 支持说明
+- **支持设备**：极空间、绿联、飞牛、PVE
+- **系统消息推送**：极空间、绿联、飞牛支持系统消息推送
+- **多设备支持**：所有 NAS 信息都支持多设备，可同时管理和查看多台 NAS 的状态
+- **使用方式**：在修仙秘籍中安装对应设备的服务助手即可体验
+:::
 
 ---
 
@@ -248,7 +246,7 @@ Cherry Studio 用于导入的 JSON 结构与通用 MCP 配置略有不同（如�
 API KEY 需要在Media Saber系统中获取：
 
 1. 🔐 登录Media Saber系统
-2. 👤 前往 [我的信息](/usage/main_page/my_info/) 页面
+2. 👤 前往 [我的信息](/usage/main_page/my_info.html) 页面
 3. 🔒 切换到 **"安全配置"** 标签页
 4. 🔑 在 **"API KEY 管理"** 区域新增或使用现有的API KEY
 5. 📋 复制API KEY值用于MCP客户端配置
@@ -276,11 +274,10 @@ API KEY 需要在Media Saber系统中获取：
 
 **A：** 请检查以下配置：
 
-1. ✅ 确认已在 [基础设置](/usage/system_settings/basic_settings/) 中配置了OpenAI API相关信息
-2. ✅ 确认已启用MCP功能
-3. ✅ 确认MCP客户端连接地址正确（如 `http://IP:8888/message`）
-4. ✅ 确认MCP客户端中已正确配置Authorization请求头（格式为 `Bearer 您的API_KEY`）
-5. 🔄 如问题仍存在，可以尝试更换客户端重新添加MCP服务
+1. ✅ 确认已在 [基础设置](/usage/system_settings/basic_settings.html) 中配置了OpenAI API相关信息
+2. ✅ 确认MCP客户端连接地址正确（如 `http://IP:8888/message`）
+3. ✅ 确认MCP客户端中已正确配置Authorization请求头（格式为 `Bearer 您的API_KEY`）
+4. 🔄 如问题仍存在，可以尝试更换客户端或重新配置连接信息
 
 ---
 
@@ -288,7 +285,7 @@ API KEY 需要在Media Saber系统中获取：
 
 **Q：如何获取API KEY？**
 
-**A：** 在 [我的信息](/usage/main_page/my_info/) 页面的 **"安全配置"** 标签中，通过 **"API KEY 管理"** 功能新增或管理现有的API KEY。
+**A：** 在 [我的信息](/usage/main_page/my_info.html) 页面的 **"安全配置"** 标签中，通过 **"API KEY 管理"** 功能新增或管理现有的API KEY。
 
 **Q：API KEY配置错误会怎样？**
 
@@ -308,20 +305,12 @@ API KEY 需要在Media Saber系统中获取：
 
 ---
 
-### 🤖 智能体使用
-
-**Q：如何在智能体中使用MCP服务？**
-
-**A：** 配置完成后，在 [智能体](/usage/ai/ai/) 页面即可看到可用的MCP服务，包括媒体服务和MS媒体服务等。
-
----
 
 ## 📚 相关文档
 
 - 🎯 [Skills 技能包](/usage/ai/skills.md) - Media Saber 官方技能包集合，包含28个MCP工具和完整使用指南
-- 🤖 [智能体使用指南](/usage/ai/ai/) - 了解如何使用智能体功能
-- ⚙️ [基础设置](/usage/system_settings/basic_settings/) - 配置OpenAI API和MCP相关设置
-- 🔑 [我的信息 - API KEY管理](/usage/main_page/my_info/) - 获取和管理MCP服务所需的API KEY
+- ⚙️ [基础设置](/usage/system_settings/basic_settings.html) - 配置OpenAI API相关设置
+- 🔑 [我的信息 - API KEY管理](/usage/main_page/my_info.html) - 获取和管理MCP服务所需的API KEY
 
 ---
 

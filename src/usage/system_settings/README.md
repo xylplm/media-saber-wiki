@@ -1,7 +1,8 @@
 ---
-title: 系统设置
+title: 介绍
 article: false
 dir:
+  text: 系统设置
   order: 130
 tags: 
   - 系统设置

@@ -1,4 +1,4 @@
----
+﻿---
 title: Webhook
 article: false
 tags:
@@ -32,7 +32,7 @@ Media Saber支持以下类型的Webhook集成：
 
 **请求头要求：**
 - Content-Type: application/json
-- apiKey: 您的API密钥（获取方法请参考[我的信息](/usage/main_page/my_info/)） 不一定需要添加请求头，使用此接口需要API密钥认证，请参考统一的[API鉴权文档](/usage/other/api_auth)了解详细信息。
+- apiKey: 您的API密钥（获取方法请参考[我的信息](/usage/main_page/my_info.html)） 不一定需要添加请求头，使用此接口需要API密钥认证，请参考统一的[API鉴权文档](/usage/other/api_auth)了解详细信息。
 
 **请求体格式：**
 ```json
@@ -184,7 +184,7 @@ export WEBHOOK_CONTENT_TYPE="application/json"
 - **URL**：`http[s]://your-domain.com[:port]/api/v1/webhook/emby?apiKey=your-api-key`
 - **请求内容类型**：选择`application/json`
 
-> 🔑 **API Key配置**：请参考[API鉴权文档](/usage/other/api_auth/)获取配置说明
+> 🔑 **API Key配置**：请参考[API鉴权文档](/usage/other/api_auth.html)获取配置说明
 
 配置完成后可以点击`发送测试Webhook`验证配置：
 
@@ -296,7 +296,7 @@ export WEBHOOK_CONTENT_TYPE="application/json"
 
 - **URL**：`http[s]://your-domain.com[:port]/api/v1/webhook/plex?apiKey=your-api-key`
 
-> 🔑 **API Key配置**：请参考[API鉴权文档](/usage/other/api_auth/)获取配置说明
+> 🔑 **API Key配置**：请参考[API鉴权文档](/usage/other/api_auth.html)获取配置说明
 
 **3. 完成配置**
 
@@ -309,7 +309,7 @@ export WEBHOOK_CONTENT_TYPE="application/json"
 ## ⚠️ 注意事项
 
 1. **网络连接**：确保Media Saber服务地址可以从媒体服务器访问
-2. **API Key配置**：正确配置API Key以确保身份验证通过，详细获取方法请参考 [我的信息 - API KEY管理](/usage/main_page/my_info/#-api-key-管理)
+2. **API Key配置**：正确配置API Key以确保身份验证通过，详细获取方法请参考 [我的信息 - API KEY管理](/usage/main_page/my_info.html#-api-key-管理)
 3. **事件选择**：根据实际需求选择合适的事件类型，避免过多不必要的通知
 4. **连接监控**：定期检查Webhook连接状态，确保通信正常
 5. **性能优化**：在生产环境中建议关闭调试日志以提升性能

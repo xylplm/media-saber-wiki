@@ -1,7 +1,8 @@
----
-title: 订阅管理
+﻿---
+title: 介绍
 article: false
 dir:
+  text: 订阅管理
   order: 70
 tags: 
   - 订阅管理
@@ -22,16 +23,16 @@ date: 2025-01-01 12:16:17
 
 订阅管理包含以下主要功能模块：
 
-### 🎬 [电影订阅](/usage/subscription_management/movie_subscription/)
+### 🎬 [电影订阅](/usage/subscription_management/movie_subscription.html)
 管理和配置电影订阅，通过RSS订阅和主动搜索自动获取感兴趣的电影。
 
-### 📺 [电视剧订阅](/usage/subscription_management/tv_subscription/)
+### 📺 [电视剧订阅](/usage/subscription_management/tv_subscription.html)
 管理和配置电视剧订阅，支持按季或按集订阅，自动跟踪更新。
 
-### 🛠️ [自定义订阅](/usage/subscription_management/custom_subscription/)
+### 🛠️ [自定义订阅](/usage/subscription_management/custom_subscription.html)
 创建和管理自定义订阅规则，满足特殊订阅需求。
 
-### 📅 [订阅日历](/usage/subscription_management/subscription_calendar/)
+### 📅 [订阅日历](/usage/subscription_management/subscription_calendar.html)
 以日历形式展示订阅内容的更新时间，方便用户了解订阅内容的更新计划。
 
 ## 🔑 核心概念
@@ -49,13 +50,13 @@ RSS订阅是通过站点提供的RSS订阅源自动获取资源信息的方式�
 - **已完成**：订阅的目标已达成（如电影已下载，或电视剧已完结）
 
 ### 过滤规则
-过滤规则用于筛选符合要求的资源，可以根据分辨率、制作组、文件大小等条件过滤资源。详细配置请参考 [过滤规则](/usage/system_settings/filter_rules/)。
+过滤规则用于筛选符合要求的资源，可以根据分辨率、制作组、文件大小等条件过滤资源。详细配置请参考 [过滤规则](/usage/system_settings/filter_rules.html)。
 
 ### 排序规则
-排序规则用于对搜索到的资源进行智能排序，通过配置不同维度的权重来确定资源的优先级。详细配置请参考 [种子排序](/usage/system_settings/torrent_sort/)。
+排序规则用于对搜索到的资源进行智能排序，通过配置不同维度的权重来确定资源的优先级。详细配置请参考 [种子排序](/usage/system_settings/torrent_sort.html)。
 
 ### 种子匹配
-种子匹配规则用于精确控制种子的筛选条件，可以被过滤规则和排序规则引用。详细配置请参考 [种子匹配](/usage/system_settings/torrent_match/)。
+种子匹配规则用于精确控制种子的筛选条件，可以被过滤规则和排序规则引用。详细配置请参考 [种子匹配](/usage/system_settings/torrent_match.html)。
 
 ## 🔄 工作流程
 
@@ -72,13 +73,13 @@ RSS订阅是通过站点提供的RSS订阅源自动获取资源信息的方式�
 
 订阅管理功能的相关设置可以在以下位置找到：
 
-- **[基础设置](/usage/system_settings/basic_settings/)**：配置订阅的基本参数，如搜索周期、默认过滤和排序规则等
-- **[过滤规则](/usage/system_settings/filter_rules/)**：配置种子过滤规则，支持导入导出和分享
-- **[种子匹配](/usage/system_settings/torrent_match/)**：配置种子匹配条件，可被过滤和排序规则引用
-- **[种子排序](/usage/system_settings/torrent_sort/)**：配置基于权重的智能排序规则
-- **[站点管理](/usage/site_management/site/)**：配置用于订阅和搜索的站点
+- **[基础设置](/usage/system_settings/basic_settings.html)**：配置订阅的基本参数，如搜索周期、默认过滤和排序规则等
+- **[过滤规则](/usage/system_settings/filter_rules.html)**：配置种子过滤规则，支持导入导出和分享
+- **[种子匹配](/usage/system_settings/torrent_match.html)**：配置种子匹配条件，可被过滤和排序规则引用
+- **[种子排序](/usage/system_settings/torrent_sort.html)**：配置基于权重的智能排序规则
+- **[站点管理](/usage/site_management/site.html)**：配置用于订阅和搜索的站点
 - **[下载管理](/usage/download_management/)**：配置下载器和下载参数
-- **[目录管理](/usage/directory_management/directory_management/)**：配置资源保存目录
+- **[目录管理](/usage/directory_management/directory_management.html)**：配置资源保存目录
 
 ## 📝 注意事项
 

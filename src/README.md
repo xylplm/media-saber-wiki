@@ -60,7 +60,7 @@ highlights:
       - title: 🤖 智能体
         icon: robot
         details: AI 智能识别和自动整理
-        link: /usage/ai/ai
+        link: /usage/ai/
 
       - title: 🎬 媒体服务
         icon: server

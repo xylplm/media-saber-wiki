@@ -113,9 +113,13 @@ export default hopeTheme({
       prefix: "fa6-solid:",
     },
 
-    search: {
+    docsearch: {
       // ...
+      appId: "ENM5A9KEY2",
+      apiKey: "754e87efda07fd7d02c30f611cb46b13",
+      indices:['Media Saber Wiki']
     },
+
 
     // 如果你需要 PWA。安装 @vuepress/plugin-pwa 并取消下方注释
     // pwa: {

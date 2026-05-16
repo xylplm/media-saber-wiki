@@ -211,8 +211,8 @@ date: 2026-03-25 12:16:17
 
 ## 📚 相关文档
 
-- 🌐 [115云盘配置](/usage/cloud_storage/storage_config/) - 了解如何配置 115 网盘接入
-- 📦 [云端存储](/usage/cloud_storage/home/) - 云端存储功能完整使用指南
-- 🔗 [STRM 生成详解](/usage/cloud_storage/strm_generate/) - 深入了解 STRM 生成的各项配置选项
+- 🌐 [115云盘配置](/usage/cloud_storage/storage_config.html) - 了解如何配置 115 网盘接入
+- 📦 [云端存储](/usage/cloud_storage/home.html) - 云端存储功能完整使用指南
+- 🔗 [STRM 生成详解](/usage/cloud_storage/strm_generate.html) - 深入了解 STRM 生成的各项配置选项
 
 ---

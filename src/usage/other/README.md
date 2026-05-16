@@ -1,7 +1,8 @@
 ---
-title: 其它功能
+title: 介绍
 article: false
 dir:
+  text: 其它功能
   order: 140
 tags: 
   - 其它
@@ -23,5 +24,5 @@ date: 2025-01-01 12:16:17
 
 ## 🔗 相关链接
 
-- [回到使用文档](/usage/)
+- [回到使用文档](/usage/main_page/)
 - [系统设置](/usage/system_settings/)

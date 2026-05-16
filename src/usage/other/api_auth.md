@@ -1,4 +1,4 @@
----
+﻿---
 title: API接口鉴权
 article: false
 date: 2023-05-13T08:44:48.027Z
@@ -15,7 +15,7 @@ Media Saber所有API接口均采用API Key进行身份验证。本指南介绍�
 ## 📌 获取API Key
 
 API Key可通过以下路径获取：
-1. 进入[我的信息](/usage/main_page/my_info/)页面
+1. 进入[我的信息](/usage/main_page/my_info.html)页面
 2. 切换到"安全配置"标签页
 3. 在"API KEY 管理"区域点击"新增"按钮生成新密钥
 
@@ -56,5 +56,5 @@ apiKey: sk-xxxxxxxxxxxxxxxx
 以下功能均使用相同鉴权方式：
 - Webhook接口（本指南）
 - 微信消息通知（详见[微信文档](/usage/system_settings/message/weixin)）
-- MCP服务接口（详见[MCP文档](/usage/ai/mcp/)）
+- MCP服务接口（详见[MCP文档](/usage/ai/mcp.html)）
 - 自定义API调用

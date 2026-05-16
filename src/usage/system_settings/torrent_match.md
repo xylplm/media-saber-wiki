@@ -1,4 +1,4 @@
----
+﻿---
 title: 种子匹配
 article: false
 tags: null
@@ -281,8 +281,8 @@ date: 2025-01-01 12:16:17
 
 ## 相关文档
 
-- [过滤规则](/usage/system_settings/filter_rules/) - 了解如何使用种子匹配规则进行过滤
-- [种子排序](/usage/system_settings/torrent_sort/) - 了解如何在排序中使用匹配规则
-- [基础设置](/usage/system_settings/basic_settings/) - 配置默认过滤和排序规则
+- [过滤规则](/usage/system_settings/filter_rules.html) - 了解如何使用种子匹配规则进行过滤
+- [种子排序](/usage/system_settings/torrent_sort.html) - 了解如何在排序中使用匹配规则
+- [基础设置](/usage/system_settings/basic_settings.html) - 配置默认过滤和排序规则
 
 ---

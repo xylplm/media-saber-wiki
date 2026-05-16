@@ -1,4 +1,4 @@
----
+﻿---
 title: 我的信息
 article: false
 tags: null
@@ -75,7 +75,7 @@ date: 2023-09-27 12:16:17
 
 ##### 使用方法：
 
-> 💡 **使用建议**：具体使用方式请参考 [API鉴权文档](/usage/other/api_auth/) 说明，包含请求头、查询参数等不同场景的使用规范
+> 💡 **使用建议**：具体使用方式请参考 [API鉴权文档](/usage/other/api_auth.html) 说明，包含请求头、查询参数等不同场景的使用规范
 
 > ⚠️ **安全提示**：请勿在日志或公共配置中明文存储API KEY
 
@@ -88,7 +88,7 @@ date: 2023-09-27 12:16:17
 
 ##### 使用场景：
 
-- **MCP服务认证**：用于第三方MCP客户端连接Media Saber的MCP服务，详见 [MCP服务文档](/usage/ai/mcp/)
+- **MCP服务认证**：用于第三方MCP客户端连接Media Saber的MCP服务，详见 [MCP服务文档](/usage/ai/mcp.html)
 - **Webhook集成**：媒体服务器（Emby/Jellyfin）通过Webhook与Media Saber通信时的身份验证，详见 [Webhook文档](/usage/other/webhook)
 - **微信消息通知**：企业微信接收Media Saber消息通知时的API认证，详见 [微信文档](/usage/system_settings/message/weixin)
 - **API调用**：外部工具调用Media Saber API时的身份验证

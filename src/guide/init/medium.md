@@ -98,5 +98,5 @@ https://raw.githubusercontent.com/Putarku/MoviePilot-Help/main/Words/anime.txt
 完成媒体整理设置后，您可以进行以下操作：
 - [返回初始化设置](/guide/init/)
 - [进行目录配置](/guide/init/directory)
-- [进行系统设置](/guide/init/System)
+- [进行系统设置](/guide/init/system_setting)
 - [进行站点配置](/guide/init/sites)

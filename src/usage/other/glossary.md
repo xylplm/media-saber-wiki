@@ -22,13 +22,13 @@ Media Saber 的 WEB 界面支持`PWA（Progressive Web App）`，手机上（Win
 
 ## 🔄 转移方式
 
-系统在[目录同步](/usage/directory_management/directory_sync/)和[文件整理](/usage/media_organization/manual_identification/)等场景中支持多种文件转移方式：
+系统在[目录同步](/usage/directory_management/directory_sync.html)和[文件整理](/usage/media_organization/manual_identification.html)等场景中支持多种文件转移方式：
 
 - **硬链接**：一份文件生成多个文件入口，但只占用一份存储空间，只有所有入口都删除后才能释放文件占用空间；可以修改硬链接后的文件名但不会影响原文件做种（不能修改文件内容）；要求在同一磁盘下才能硬链接。
 - **软链接**：类似于快捷方式，原文件删除后软链接即会失效；使用软链接时的原文件路径需要与生成软链接时的原文件路径保持一致，否则无法使用，也就是在 docker 环境下，映射前后的目录路径需要一致。
 - **复制**：复制一份副本，多占用一份空间。
 - **移动**：移动文件存储位置，会影响原文件做种。
-- **Strm**：创建 strm 流媒体文件指向原始文件，用于[云端存储](/usage/cloud_storage/strm_generate/)等场景。
+- **Strm**：创建 strm 流媒体文件指向原始文件，用于[云端存储](/usage/cloud_storage/strm_generate.html)等场景。
 - **Rclone 复制**：使用 Rclone 复制本地文件到网盘，需要自行映射 rclone 配置目录到容器中（`/ms/.config/rclone`）或在容器内使用`rclone config`完成 rclone 配置，网盘配置名称必须为：`MEDIA_SABER`，可自行通过 Docker 添加环境变量传递参数优化传输，参考：https://rclone.org/docs/#environment-variables 。
 - **Rclone 移动**：使用 Rclone 移动本地文件到网盘，其余与 Rclone 复制一致。
 - **Minio 复制**：Minio 复制本地文件到网络存储，针对 S3/云原生场景，需要自行在容器内使用`mc alias set MEDIA_SABER http://your_domain_name_or_ip:port ACCESS_KEY SECRET_KEY`完成 minio 配置(alias 的名称必须为`MEDIA_SABER`)，并在 minio 控制台增加一个名为 data 的 bucket(名称必须为`data`)。
@@ -36,7 +36,7 @@ Media Saber 的 WEB 界面支持`PWA（Progressive Web App）`，手机上（Win
 
 ## 📡 远程交互命令
 
-通过[微信消息通知](/usage/other/wechat_notifications/)等远程交互方式可以使用以下命令：
+通过[微信消息通知](/usage/system_settings/message/weixin.html)等远程交互方式可以使用以下命令：
 
 - **/s_u_conf**：更新配置
 - **/s_sign_in**：签到
@@ -48,7 +48,7 @@ Media Saber 的 WEB 界面支持`PWA（Progressive Web App）`，手机上（Win
 
 ## 🎬 电影占位符
 
-在[目录管理](/usage/directory_management/directory_management/)和[订阅管理](/usage/subscription_management/movie_subscription/)等模块中，可以使用占位符自定义电影文件命名格式：
+在[目录管理](/usage/directory_management/directory_management.html)和[订阅管理](/usage/subscription_management/movie_subscription.html)等模块中，可以使用占位符自定义电影文件命名格式：
 
 - **{title}**：标题
 - **{en_title}**：英文标题
@@ -65,13 +65,13 @@ Media Saber 的 WEB 界面支持`PWA（Progressive Web App）`，手机上（Win
 - **{imdbid}**：IMDB 的 ID
 - **{part}**：part1/disc1/dvd1
 - **{releaseGroup}**：制作组/字幕组
-- **{name}**：识别名称（文件名中识别出的名称，可用[识别词](/usage/media_organization/recog_words/)替换）
+- **{name}**：识别名称（文件名中识别出的名称，可用[识别词](/usage/media_organization/recog_words.html)替换）
 
 重命名使用 Python 的 `format` 格式化，可进行指定格式输出。
 
 ## 📺 电视剧占位符
 
-在[目录管理](/usage/directory_management/directory_management/)和[订阅管理](/usage/subscription_management/tv_subscription/)等模块中，可以使用占位符自定义电视剧文件命名格式：
+在[目录管理](/usage/directory_management/directory_management.html)和[订阅管理](/usage/subscription_management/tv_subscription.html)等模块中，可以使用占位符自定义电视剧文件命名格式：
 
 - **{title}**：标题
 - **{en_title}**：英文标题
@@ -92,7 +92,7 @@ Media Saber 的 WEB 界面支持`PWA（Progressive Web App）`，手机上（Win
 - **{season_episode}**：剧集 SxxExx
 - **{part}**：part1/disc1/dvd1
 - **{releaseGroup}**：制作组/字幕组
-- **{name}**：识别名称（文件名中识别出的名称，可用[识别词](/usage/media_organization/recog_words/)替换）
+- **{name}**：识别名称（文件名中识别出的名称，可用[识别词](/usage/media_organization/recog_words.html)替换）
 
 重命名使用 Python 的 `format` 格式化，可进行指定格式输出。
 

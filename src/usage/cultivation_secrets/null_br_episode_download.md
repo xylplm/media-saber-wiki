@@ -208,9 +208,9 @@ TMDB ID: 456789
 
 ## 🔗 相关链接
 
-- [修仙秘籍主页](/usage/cultivation_secrets/main/)
-- [追剧提醒插件](/usage/cultivation_secrets/drama_reminder/)
-- [豆瓣榜单订阅](/usage/cultivation_secrets/douban_subject_subscribe/)
+- [修仙秘籍主页](/usage/cultivation_secrets/)
+- [追剧提醒插件](/usage/cultivation_secrets/binge_watch.html)
+- [豆瓣榜单订阅](/usage/cultivation_secrets/douban_subject_subscribe.html)
 
 ---
 

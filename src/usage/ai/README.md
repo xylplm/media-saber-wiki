@@ -2,6 +2,7 @@
 title: 介绍
 article: false
 dir:
+  text: 智能体
   order: 20
 tags: 
   - 智能体
@@ -22,18 +23,27 @@ date: 2025-01-01 12:16:17
 
 ## ✨ 核心功能
 
-### 🗣️ AI 智能对话
+### 🎯 官方 Skills 技能包（推荐）
 
-通过自然语言与AI助手进行交互，轻松完成各种任务：
+Media Saber 提供了 12 个官方 AI Agent 技能包，安装后可直接通过自然语言驱动 Media Saber 完成各类操作：
 
-- 💬 **多模型支持**：支持多种主流AI模型（GPT、Claude等）
-- 🎤 **语音交互**：支持语音输入，解放双手
-- 📝 **会话管理**：智能组织和检索历史对话
-- 🎭 **角色定制**：自定义AI助手的角色和行为
+- 📺 **ms-sub**：影视订阅，自动搜索 TMDB、检查重复、一句话完成订阅
+- 🔍 **ms-gap-filler**：漏集补齐，检查电视剧漏集并批量补订阅
+- 🌟 **ms-recommend**：影视推荐，按平台、频道、筛选项逐步浏览推荐
+- 🏆 **ms-rank**：影视榜单，按平台、分类、主题逐步查看榜单
+- ☁️ **ms-cloud-resource**：云端资源查询与下载，搜索云端/网盘资源并创建下载/转存任务
+- 🏅 **ms-cloud-resource-rank**：云端资源贡献榜，查看 HASH 上报贡献排行
+- 🗂️ **ms-media-server**：媒体服务器状态与同步，查看媒体库、同步历史与播放信息
+- 📊 **ms-site-state**：站点状态与统计，查看站点上传/下载/做种/魔力等概况
+- ✅ **ms-site-signin**：站点签到，查看签到记录或执行站点签到
+- ⬇️ **ms-download**：下载任务管理，查看/暂停/恢复/删除下载任务
+- 🖥️ **ms-nas-state**：NAS 系统状态，支持极空间、绿联、飞牛、PVE，支持多设备
+- 🔧 **cli-anything-cliproxyapi**：CLIProxyAPI 代理管理，完整的代理服务器 CLI 工具
 
-👉 [了解更多 AI 对话功能](./ai.md)
+支持 npx、OpenClaw 小龙虾、Hermes 爱马仕三种安装方式。
 
----
+👉 [查看 Skills 技能包详细文档](./skills.md)
+
 
 ### 🔌 MCP 工具集成
 
@@ -41,20 +51,12 @@ Model Context Protocol (MCP) 让AI拥有更强大的能力：
 
 - 🛠️ **工具扩展**：集成外部工具和服务
 - 📺 **媒体管理**：通过对话管理媒体库和订阅
+- 🏆 **榜单浏览**：按平台、分类、主题逐步查看影视榜单
+- 🖥️ **NAS 状态**：查询多品牌 NAS（极空间、绿联、飞牛、PVE）的系统状态与硬件信息，支持多设备
 - 🌐 **第三方服务**：支持地图、天气、搜索等多种服务
 - 🔧 **灵活配置**：简单配置即可启用强大功能
 
 👉 [了解 MCP 服务配置](./mcp.md)
-
-### 🎯 官方 Skills 技能包
-
-Media Saber 提供了官方技能包集合，包含6个核心技能和28个MCP工具：
-
-- 📦 **完整工具集**：订阅、站点、推荐、云存储、系统等全方位支持
-- 🚀 **一键导入**：支持 OpenClaw 小龙虾 和兼容客户端
-- 🎭 **实战指导**：详细的配置步骤和使用示例
-
-👉 [探索 Skills 技能包](./skills.md)
 
 ---
 
@@ -65,7 +67,7 @@ Media Saber 提供了官方技能包集合，包含6个核心技能和28个MCP�
 在使用智能体功能前，需要完成以下配置：
 
 1. **配置 AI API**
-   - 前往 [基础设置](/usage/system_settings/basic_settings/)
+   - 前往 [基础设置](/usage/system_settings/basic_settings.html)
    - 配置 OpenAI API URL 和 API Key
    - 选择默认使用的AI模型
 
@@ -124,67 +126,48 @@ Media Saber 提供了官方技能包集合，包含6个核心技能和28个MCP�
 
 ## 📚 功能文档
 
-### 🤖 智能对话
+### 🎯 Skills 技能包
 
-- [智能体使用指南](./ai.md) - 完整的AI对话功能说明
-  - 🎚️ 界面功能介绍
-  - 🎭 角色配置方法
-  - 🎤 语音交互使用
-  - 💡 使用技巧和最佳实践
+- [Skills 技能包文档](./skills.md) - Media Saber 官方 AI Agent 技能包
+  - 📺 ms-sub · 影视订阅
+  - 🔍 ms-gap-filler · 漏集补齐
+  - 🌟 ms-recommend · 影视推荐
+  - 🏆 ms-rank · 影视榜单
+  - ☁️ ms-cloud-resource · 云端资源查询与下载
+  - 🏅 ms-cloud-resource-rank · 云端资源贡献榜
+  - 🗂️ ms-media-server · 媒体服务器状态与同步
+  - 📊 ms-site-state · 站点状态与统计
+  - ✅ ms-site-signin · 站点签到
+  - ⬇️ ms-download · 下载任务管理
+  - 🖥️ ms-nas-state · NAS 系统状态
+  - 🔧 cli-anything-cliproxyapi · CLIProxyAPI 代理管理
 
 ### 🔌 MCP 服务
 
 - [MCP 服务文档](./mcp.md) - MCP 集成和配置指南
   - 🚀 快速启动 MCP 服务
+  - 🏆 榜单浏览工具
+  - 🖥️ NAS 多品牌系统状态查询
   - 🔧 第三方服务配置
   - 🔑 API KEY 管理
   - ❓ 常见问题解答
 
-### 🎯 Skills 技能包
-
-- [Skills 技能包文档](./skills.md) - Media Saber 官方技能包集合
-  - 📦 6个核心技能介绍
-  - 🔧 28个 MCP 工具详解
-  - 🚀 快速导入和配置
-  - 💬 实际使用示例
-  - ⚠️ 安全和隐私说明
-
 ---
-
-## 🎯 核心优势
-
-| 特性 | 说明 | 价值 |
-|------|------|------|
-| 🧠 **智能理解** | 自然语言处理，理解用户意图 | 降低使用门槛 |
-| 🔌 **工具集成** | MCP协议支持，扩展AI能力 | 功能无限扩展 |
-| 🎤 **多模态交互** | 支持文字和语音输入 | 使用更便捷 |
-| 🎭 **灵活定制** | 自定义角色和系统提示词 | 满足个性需求 |
-| 💬 **会话管理** | 智能组织历史对话 | 高效信息检索 |
-| 🌐 **本地优先** | 支持本地部署和隐私保护 | 数据安全可控 |
 
 ---
 
 ## ⚠️ 注意事项
 
-### 🔑 API 配置要求
-
-- ✅ 需要有效的 OpenAI API Key 或兼容的 API 服务
 - 🌐 确保网络连接稳定，能够访问 API 服务
-- 💰 注意 API 使用额度和费用控制
-
-### 🔧 MCP 服务要求
-
-- 🐳 内置服务需要配置 Docker 环境变量
-- 🌐 第三方服务需要从提供商获取配置信息
 - 🔒 妥善保管 API KEY 等敏感信息
 
 ---
 
 ## 🔗 相关链接
 
-- ⚙️ [基础设置](/usage/system_settings/basic_settings/) - 配置 AI API 和 MCP 功能
-- 👤 [我的信息](/usage/main_page/my_info/) - 管理 API KEY
-- 📖 [使用文档](/usage/) - 返回使用文档首页
+- ⚙️ [基础设置](/usage/system_settings/basic_settings.html) - 配置 AI API 和 MCP 功能
+- 👤 [我的信息](/usage/main_page/my_info.html) - 管理 API KEY
+- 📖 [使用文档](/usage/main_page/) - 返回使用文档首页
 - 🛠️ [系统设置](/usage/system_settings/) - 更多系统配置选项
 
 ---

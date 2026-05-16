@@ -141,7 +141,7 @@ flowchart LR
 | ✏️ 编辑词组 | 修改词组的元数据 |
 | 📂 词组内更多 | 删除当前词组 / 推送到云端 |
 | 📂 顶部更多 | 全部展开 / 全部折叠 / 清空 |
-| 🧪 测试 | 名称识别测试（[详细说明](/usage/media_organization/name_recognition_test/)）|
+| 🧪 测试 | 名称识别测试（[详细说明](/usage/media_organization/name_recognition_test.html)）|
 | 🛟 浮动条 | 勾选词条后出现，承载所有"批量类"操作（删除 / 启用 / 停用）|
 
 ### 新增流程
@@ -367,7 +367,7 @@ flowchart LR
 
 ::: tip 🌟 五条心法
 1. **每条都写备注** — 三个月后回来看自己写的正则会感谢现在的你
-2. **先测试再正式用** — [名称识别测试](/usage/media_organization/name_recognition_test/) 是你最好的朋友
+2. **先测试再正式用** — [名称识别测试](/usage/media_organization/name_recognition_test.html) 是你最好的朋友
 3. **优先用云端共享词组** — 别人验证过、覆盖面广、有人在维护
 4. **本地写好的考虑推送** — 让社区一起受益，自己也省得多设备同步
 5. **正则保守一点** — 范围缩到刚好够用，避免误伤其它无关文件
@@ -384,7 +384,7 @@ flowchart LR
 
 ## 🔗 相关文档
 
-- 🧪 [名称识别测试](/usage/media_organization/name_recognition_test/)
-- 📂 [手动识别](/usage/media_organization/manual_identification/)
-- 🗂️ [整理历史](/usage/media_organization/history/)
-- 💾 [TMDB 缓存](/usage/media_organization/tmdb_cache/)
+- 🧪 [名称识别测试](/usage/media_organization/name_recognition_test.html)
+- 📂 [手动识别](/usage/media_organization/manual_identification.html)
+- 🗂️ [整理历史](/usage/media_organization/history.html)
+- 💾 [TMDB 缓存](/usage/media_organization/tmdb_cache.html)

@@ -1,4 +1,4 @@
----
+﻿---
 title: 电视剧订阅
 article: false
 tags: 
@@ -172,7 +172,7 @@ date: 2025-01-01 12:16:17
 
 **默认行为：** 不选择则使用系统默认过滤规则
 
-**操作建议：** 可在 [过滤规则](/usage/system_settings/filter_rules/) 页面创建专用规则组
+**操作建议：** 可在 [过滤规则](/usage/system_settings/filter_rules.html) 页面创建专用规则组
 
 #### 排序规则
 **说明：** 指定搜索资源时使用的排序规则
@@ -183,7 +183,7 @@ date: 2025-01-01 12:16:17
 
 **特殊优化：** 电视剧排序通常会考虑季集顺序权重，确保按集数顺序下载
 
-**操作建议：** 可在 [种子排序](/usage/system_settings/torrent_sort/) 页面创建电视剧专用排序规则
+**操作建议：** 可在 [种子排序](/usage/system_settings/torrent_sort.html) 页面创建电视剧专用排序规则
 
 ### 📥 下载配置
 
@@ -383,11 +383,11 @@ date: 2025-01-01 12:16:17
 
 ## 相关文档
 
-- [过滤规则](/usage/system_settings/filter_rules/) - 配置资源过滤条件
-- [种子排序](/usage/system_settings/torrent_sort/) - 配置资源排序规则，注意季集顺序权重
-- [种子匹配](/usage/system_settings/torrent_match/) - 配置精确匹配条件
-- [基础设置](/usage/system_settings/basic_settings/) - 配置订阅基础参数
-- [站点管理](/usage/site_management/site/) - 管理订阅和搜索站点
+- [过滤规则](/usage/system_settings/filter_rules.html) - 配置资源过滤条件
+- [种子排序](/usage/system_settings/torrent_sort.html) - 配置资源排序规则，注意季集顺序权重
+- [种子匹配](/usage/system_settings/torrent_match.html) - 配置精确匹配条件
+- [基础设置](/usage/system_settings/basic_settings.html) - 配置订阅基础参数
+- [站点管理](/usage/site_management/site.html) - 管理订阅和搜索站点
 - [下载管理](/usage/download_management/) - 配置下载器和参数
 
 ---
@@ -448,11 +448,11 @@ date: 2025-01-01 12:16:17
 
 ### ⚙️ 下载设置字段
 
-- **过滤规则**：指定搜索站点资源时使用的[过滤规则组](/usage/system_settings/filter_rules/)，规则组内的所有规则将用于对搜索出的每一个资源的标题和副标题进行匹配，匹配命中的`过滤规则优先级`将做为当前资源的优先级，并在下载时进行排序择优；如过滤规则组内的所有规则都不匹配，则该资源会被过滤。
-- **下载器**：指定该订阅的资源下载时使用的[下载器](/usage/download_management/downloader_management/)
-- **下载参数**：指定该订阅的资源下载时使用的[下载参数](/usage/download_management/download_parameters/)
+- **过滤规则**：指定搜索站点资源时使用的[过滤规则组](/usage/system_settings/filter_rules.html)，规则组内的所有规则将用于对搜索出的每一个资源的标题和副标题进行匹配，匹配命中的`过滤规则优先级`将做为当前资源的优先级，并在下载时进行排序择优；如过滤规则组内的所有规则都不匹配，则该资源会被过滤。
+- **下载器**：指定该订阅的资源下载时使用的[下载器](/usage/download_management/downloader_management.html)
+- **下载参数**：指定该订阅的资源下载时使用的[下载参数](/usage/download_management/download_parameters.html)
 - **做种人数**：设置资源所需的最小做种人数
-- **保存路径**：如为`自动`则会根据资源的类型、二级分类匹配[目录管理](/usage/directory_management/directory_management/)中设置的下载目录；可手工输入保存路径，此时如为 QB 下载器会自关闭种子自动管理。
+- **保存路径**：如为`自动`则会根据资源的类型、二级分类匹配[目录管理](/usage/directory_management/directory_management.html)中设置的下载目录；可手工输入保存路径，此时如为 QB 下载器会自关闭种子自动管理。
 
 ### 🔤 关键字过滤字段
 
@@ -461,8 +461,8 @@ date: 2025-01-01 12:16:17
 
 ### 🌐 站点设置字段
 
-- **订阅站点**：在[站点维护](/usage/site_management/site/)中选中了`订阅`用途的站点将在此处显示，选中则代表当前订阅会使用该站点的 RSS 进行匹配；**不选默认全选**。
-- **搜索站点**：在[站点维护](/usage/site_management/site/)中选中的`搜索`用途的站点会在此处显示，选中则代表当前订阅会使用这些站点进行资源搜索，资源搜索有三种触发方式：1. 订阅详情中的刷新按钮、2. [基础设置](/usage/system_settings/basic_settings.html#订阅搜索周期)中维护的`订阅搜索周期`时间到达时自动搜索、3. 订阅添加后自动执行一次搜索。**不选默认全选**。
+- **订阅站点**：在[站点维护](/usage/site_management/site.html)中选中了`订阅`用途的站点将在此处显示，选中则代表当前订阅会使用该站点的 RSS 进行匹配；**不选默认全选**。
+- **搜索站点**：在[站点维护](/usage/site_management/site.html)中选中的`搜索`用途的站点会在此处显示，选中则代表当前订阅会使用这些站点进行资源搜索，资源搜索有三种触发方式：1. 订阅详情中的刷新按钮、2. [基础设置](/usage/system_settings/basic_settings.html#订阅搜索周期)中维护的`订阅搜索周期`时间到达时自动搜索、3. 订阅添加后自动执行一次搜索。**不选默认全选**。
 
 ---
 

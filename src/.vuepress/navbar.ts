@@ -24,7 +24,7 @@ export default navbar([
     prefix: "/usage/",
     children: [
       { text: "首页", icon: "house", link: "main_page/" },
-      { text: "智能体", icon: "robot", link: "ai/ai" },
+      { text: "智能体", icon: "robot", link: "ai/" },
       { text: "媒体服务", icon: "server", link: "media_services/" },
       { text: "寻影探剧", icon: "magnifying-glass", link: "explore_series/" },
       { text: "搜索任务", icon: "list-check", link: "search/" },

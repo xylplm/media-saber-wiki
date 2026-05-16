@@ -1,7 +1,8 @@
 ---
-title: 寻影探剧
+title: 介绍
 article: false
 dir:
+  text: 寻影探剧
   order: 40
 tags: 
   - 寻影探剧
@@ -20,17 +21,17 @@ date: 2023-09-27 12:16:17
 
 建议按以下顺序使用：
 
-1. 先看 [剧榜风云](/usage/explore_series/drama_rankings/) 获取热门榜单与高分内容
-2. 再用 [影踪寻宝](/usage/explore_series/movie_treasure_hunt/) 组合筛选，精确找片
-3. 最后通过 [开播日历](/usage/explore_series/premiere_calendar/) 规划观影时间
+1. 先看 [剧榜风云](/usage/explore_series/drama_rankings.html) 获取热门榜单与高分内容
+2. 再用 [影踪寻宝](/usage/explore_series/movie_treasure_hunt.html) 组合筛选，精确找片
+3. 最后通过 [开播日历](/usage/explore_series/premiere_calendar.html) 规划观影时间
 
 ---
 
 ## 🧭 功能导航
 
-- 🏆 [剧榜风云](/usage/explore_series/drama_rankings/)：查看热门榜单、主题分类与平台趋势
-- 🎥 [影踪寻宝](/usage/explore_series/movie_treasure_hunt/)：通过平台、频道和高级条件精准筛选
-- 📅 [开播日历](/usage/explore_series/premiere_calendar/)：按日历查看近期开播/上映安排
+- 🏆 [剧榜风云](/usage/explore_series/drama_rankings.html)：查看热门榜单、主题分类与平台趋势
+- 🎥 [影踪寻宝](/usage/explore_series/movie_treasure_hunt.html)：通过平台、频道和高级条件精准筛选
+- 📅 [开播日历](/usage/explore_series/premiere_calendar.html)：按日历查看近期开播/上映安排
 
 ## 🔑 核心概念
 
@@ -51,7 +52,7 @@ date: 2023-09-27 12:16:17
 寻影探剧与其他功能模块的关联：
 
 - **[订阅管理](/usage/subscription_management/)**：可以将感兴趣的影视作品添加到订阅列表
-- **[搜索任务](/usage/search_tasks/)**：可以为感兴趣的影视作品创建搜索任务
+- **[搜索任务](/usage/search/search_tasks.html)**：可以为感兴趣的影视作品创建搜索任务
 - **[媒体服务](/usage/media_services/)**：查看已收藏或观看过的影视作品信息
 
 ## 📝 使用建议

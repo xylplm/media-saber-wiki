@@ -1,7 +1,8 @@
 ---
-title: 目录管理
+title: 介绍
 article: false
 dir:
+  text: 目录管理
   order: 90
 tags: 
   - 目录管理
@@ -20,16 +21,16 @@ date: 2023-09-27 12:16:17
 
 目录管理包含以下主要功能模块：
 
-### 📂 [文件管理](/usage/directory_management/file_management/)
+### 📂 [文件管理](/usage/directory_management/file_management.html)
 浏览和管理本地文件系统中的媒体文件，支持文件转移、硬链接查询和刮削等操作。
 
-### 🏷️ [目录分类](/usage/directory_management/directory_classification/)
+### 🏷️ [目录分类](/usage/directory_management/directory_classification.html)
 配置和管理目录分类规则，用于自动将媒体文件归类到相应的目录中。
 
-### 🗃️ [目录管理](/usage/directory_management/directory_management/)
+### 🗃️ [目录管理](/usage/directory_management/directory_management.html)
 管理和配置媒体文件的源目录和目标目录，设置目录标签和转移规则。
 
-### 🔄 [目录同步](/usage/directory_management/directory_sync/)
+### 🔄 [目录同步](/usage/directory_management/directory_sync.html)
 配置和执行目录间的文件同步任务，支持多种同步方式和过滤规则。
 
 ## 🔑 核心概念
@@ -64,7 +65,7 @@ date: 2023-09-27 12:16:17
 
 目录管理功能的相关设置可以在以下位置找到：
 
-- **[基础设置](/usage/system_settings/basic_settings/)**：配置目录管理的基本参数
+- **[基础设置](/usage/system_settings/basic_settings.html)**：配置目录管理的基本参数
 - **[订阅管理](/usage/subscription_management/)**：订阅中可指定目录标签作为保存路径
 - **[媒体整理](/usage/media_organization/)**：媒体整理过程中使用目录配置
 

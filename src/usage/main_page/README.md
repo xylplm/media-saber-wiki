@@ -1,7 +1,8 @@
 ---
-title: 首页
+title: 介绍
 article: false
 dir:
+  text: 首页
   order: 10
 tags: null
 categories: null

@@ -1,4 +1,4 @@
----
+﻿---
 title: OCR服务
 article: false
 tags: null
@@ -15,7 +15,7 @@ date: 2023-09-27 12:16:17
 
 ## 📋 配置概览
 
-在 [基础设置](/usage/system_settings/basic_settings/#_7%EF%B8%8F%E2%83%A3-%E6%9C%8D%E5%8A%A1%E9%85%8D%E7%BD%AE) 的"服务配置"部分，找到"OCR服务地址"进行配置：
+在 [基础设置](/usage/system_settings/basic_settings.html#_7%EF%B8%8F%E2%83%A3-%E6%9C%8D%E5%8A%A1%E9%85%8D%E7%BD%AE) 的"服务配置"部分，找到"OCR服务地址"进行配置：
 
 ### 支持的服务类型
 - 🌐 **第三方服务**：免费，依赖外部稳定性
@@ -424,7 +424,7 @@ docker-compose up -d
 
 ### 配置 Media Saber
 
-在 [基础设置](/usage/system_settings/basic_settings/#ocr%E6%9C%8D%E5%8A%A1%E5%9C%B0%E5%9D%80) 的OCR服务地址中填写：
+在 [基础设置](/usage/system_settings/basic_settings.html#ocr%E6%9C%8D%E5%8A%A1%E5%9C%B0%E5%9D%80) 的OCR服务地址中填写：
 
 **Baidu OCR 服务：**
 ```
@@ -498,7 +498,7 @@ http://127.0.0.1:9899/captcha/base64
 
 ## 📖 相关文档
 
-- [基础设置](/usage/system_settings/basic_settings/) - 系统基础配置
+- [基础设置](/usage/system_settings/basic_settings.html) - 系统基础配置
 - [站点管理](/usage/site_management/) - 站点维护和管理  
 - [系统设置](/usage/system_settings/) - 更多系统配置选项
 

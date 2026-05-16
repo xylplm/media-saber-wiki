@@ -1,7 +1,8 @@
 ---
-title: 搜索功能
+title: 介绍
 article: false
 dir:
+  text: 搜索功能
   order: 50
 tags: 
   - 搜索
@@ -23,6 +24,6 @@ date: 2025-01-01 12:16:17
 
 ## 🔗 相关链接
 
-- [回到使用文档](/usage/)
+- [回到使用文档](/usage/main_page/)
 - [搜索任务](/usage/search/search_tasks)
 - [搜索](/usage/search/search)
