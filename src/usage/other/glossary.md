@@ -65,7 +65,7 @@ Media Saber 的 WEB 界面支持`PWA（Progressive Web App）`，手机上（Win
 - **{imdbid}**：IMDB 的 ID
 - **{part}**：part1/disc1/dvd1
 - **{releaseGroup}**：制作组/字幕组
-- **{name}**：识别名称（文件名中识别出的名称，可用[自定义识别词](/usage/media_organization/custom_identification_words/)替换）
+- **{name}**：识别名称（文件名中识别出的名称，可用[识别词](/usage/media_organization/recog_words/)替换）
 
 重命名使用 Python 的 `format` 格式化，可进行指定格式输出。
 
@@ -92,7 +92,7 @@ Media Saber 的 WEB 界面支持`PWA（Progressive Web App）`，手机上（Win
 - **{season_episode}**：剧集 SxxExx
 - **{part}**：part1/disc1/dvd1
 - **{releaseGroup}**：制作组/字幕组
-- **{name}**：识别名称（文件名中识别出的名称，可用[自定义识别词](/usage/media_organization/custom_identification_words/)替换）
+- **{name}**：识别名称（文件名中识别出的名称，可用[识别词](/usage/media_organization/recog_words/)替换）
 
 重命名使用 Python 的 `format` 格式化，可进行指定格式输出。
 

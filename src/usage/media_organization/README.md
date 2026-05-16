@@ -30,8 +30,8 @@ date: 2023-09-27 12:16:17
 ### 🎬 [TMDB 缓存](/usage/media_organization/tmdb_cache/)
 管理从TMDB获取的媒体信息缓存数据，通过缓存机制减少对TMDB的访问频率，提高识别速度。
 
-### 🔤 [自定义识别词](/usage/media_organization/custom_identification_words/)
-当种子标题名称、文件名称无法识别时，可以通过自定义识别词对原名称进行修改，以符合识别要求。
+### 🔤 [识别词](/usage/media_organization/recog_words/)
+本地自定义 + 云端协作共享，让无法识别的文件名变得规范、可识别。
 
 ### 🧪 [名称识别测试](/usage/media_organization/name_recognition_test/)
 测试文件名是否能被正确识别，验证自定义识别词的效果。
