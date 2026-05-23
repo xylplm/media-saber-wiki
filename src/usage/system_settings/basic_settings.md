@@ -117,6 +117,68 @@ date: 2023-09-27 12:16:17
 **默认值/示例：** 空（留空使用官方地址）
 - `https://api.themoviedb.org/3` (官方地址)
 - `https://api.tmdb.org/3` (官方地址)
+- 自建代理服务参考：[GateCross/ms_tmdb](https://github.com/GateCross/ms_tmdb)
+
+**自建方式：**
+1. 准备 PostgreSQL 数据库，获取 `ms_tmdb` 项目 `docker` 目录下的 `docker-compose.yml` 和 `tmdb.yaml`。
+2. 修改 `tmdb.yaml` 中的 `Postgres.*` 数据库连接信息和 `Tmdb.ApiKey`，如需代理访问官方 TMDB，可继续配置 `Tmdb.ProxyURL`。
+3. 在配置文件所在目录执行 `docker compose up -d` 启动服务，Docker 部署默认访问地址为 `http://服务器IP:8080`。
+4. 本项填写 `http://服务器IP:8080/api/v3`；如仅启动后端服务，则填写 `http://服务器IP:8888/api/v3`。
+
+`docker-compose.yml` 示例：
+
+```yaml
+version: "3.8"
+
+services:
+  app:
+    image: sereindusk/ms_tmdb:latest
+    container_name: ms_tmdb_app
+    environment:
+      TMDB_CONFIG_FILE: /app/etc/tmdb.yaml
+    ports:
+      - "8080:80"
+    volumes:
+      - ./tmdb.yaml:/app/etc/tmdb.yaml
+      # 需要上传封面时可打开下面一行
+      # - ./uploads:/app/uploads:rw
+    restart: unless-stopped
+```
+
+`tmdb.yaml` 示例：
+
+```yaml
+Name: ms-tmdb-api
+Host: 0.0.0.0
+Port: 8888
+# 请求处理超时时间（毫秒），默认 30 秒
+Timeout: 30000
+
+# PostgreSQL 配置，请改成自己的数据库地址
+Postgres:
+  Host: "host.docker.internal"
+  Port: 5432
+  User: "postgres"
+  Password: "postgres"
+  DBName: "ms_tmdb"
+  SSLMode: "disable"
+
+# TMDB 配置，请替换为自己的密钥
+Tmdb:
+  ApiKey: ""
+  BaseURL: "https://api.tmdb.org/3"
+  DefaultLanguage: "zh-CN"
+  RateLimit: 40
+  # 需要代理访问官方 TMDB 时填写，例如 http://127.0.0.1:7890
+  ProxyURL: ""
+  LocalWriteEnabled: true
+  AutoSync:
+    Enabled: true
+    CronExpr: "*/30 * * * *"
+    Mode: "update_unmodified"
+    BatchSize: 50
+    StartDelaySecond: 15
+```
 
 **操作建议：** 官方无法访问时可填写代理地址。
 
