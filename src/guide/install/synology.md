@@ -192,20 +192,8 @@ services:
 - 或使用容器所在群晖的 IP 地址和对应端口
 - 所有密码必须与前两步设置的密码一致
 :::
-<div align="center"><img src="./synology_images/06.png" width="800"/></div>
-
-:::warning ⚙️ 请修改以下参数为你的实际参数：
-
-- REDIS_HOST 地址
-- REDIS_PASS 密码
-- MS_PGSQL_PATH pgsql数据库地址
-- MS_PGSQL_PORT pgsql数据库端口
-- MS_PGSQL_DBNAME pgsql数据库名
-- MS_PGSQL_PASSWORD pgsql数据库密码
-- MS_AUTH_EMAIL 访问邮箱认证
-- MS_AUTH_SLOGAN 认证口令
-
-其余参数保持默认即可
+:::tip
+表格中列出的参数务必按实际情况修改，其余参数保持默认即可。
 :::
 
 <div align="center"><img src="./synology_images/06.png" width="800"/></div>
@@ -330,6 +318,11 @@ networks:
 
 ### 相关文档
 
+- [绿联 NAS 安装](/guide/install/ugreen.md)
+- [UGOS PRO 安装](/guide/install/ugos.md)
+- [Unraid 安装](/guide/install/unraid.md)
+- [极空间 NAS 安装](/guide/install/zspace.md)
+- [懒猫微服安装](/guide/install/lazycat.md)
 - [Docker Compose 完整配置](/guide/install/compose_all.md)
 - [独立服务部署](/guide/install/compose_standalone.md)
 - [系统故障排查](/guide/problem.md)
