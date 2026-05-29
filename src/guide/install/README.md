@@ -31,6 +31,7 @@ dateCreated: 2023-05-12T04:25:24.817Z
 | 🔷 群晖 | [群晖 NAS 安装指南](/guide/install/synology.md) |
 | 🟠 UNRAID | [UNRAID 安装指南](/guide/install/unraid.md) |
 | 📱 UGOS Pro | [UGOS Pro 安装指南](/guide/install/ugos.md) |
+| 🐱 懒猫微服 | [懒猫微服安装指南](/guide/install/lazycat.md) |
 
 ---
 

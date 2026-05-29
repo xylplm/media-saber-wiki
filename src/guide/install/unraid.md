@@ -241,4 +241,5 @@ PostgreSQL 首次启动会初始化数据库，请耐心等待 1-2 分钟。
 - [UGOS PRO 安装](/guide/install/ugos.md)
 - [绿联 NAS 安装](/guide/install/ugreen.md)
 - [极空间 NAS 安装](/guide/install/zspace.md)
+- [懒猫微服安装](/guide/install/lazycat.md)
 - [故障排查](/guide/problem.md)

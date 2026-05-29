@@ -212,4 +212,5 @@ networks:
 - [UGOS PRO 安装](/guide/install/ugos.md)
 - [Unraid 安装](/guide/install/unraid.md)
 - [极空间 NAS 安装](/guide/install/zspace.md)
+- [懒猫微服安装](/guide/install/lazycat.md)
 - [故障排查](/guide/problem.md)
