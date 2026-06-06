@@ -36,6 +36,7 @@ export default navbar([
       { text: "云端存储", icon: "cloud", link: "cloud_storage/" },
       { text: "修仙秘籍", icon: "book-open", link: "cultivation_secrets/" },
       { text: "系统设置", icon: "sliders", link: "system_settings/" },
+      { text: "周边服务", icon: "puzzle-piece", link: "peripheral_services/" },
       { text: "其它", icon: "ellipsis", link: "other/" },
     ],
   },

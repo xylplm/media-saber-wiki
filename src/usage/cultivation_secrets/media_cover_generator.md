@@ -22,6 +22,12 @@ date: 2025-11-19 00:00:00
 
 ## 🚀 配置指南
 
+::: warning 前置条件
+本秘籍需要调用独立的「媒体封面生成 API 服务」才能工作，**使用前请先部署该 Docker 服务**。
+部署方式见 👉 [媒体封面生成 API 服务](/usage/peripheral_services/media_cover_generator.html)。
+部署完成后，将服务地址（默认 `http://127.0.0.1:9897`）填入下方的「API服务地址」即可。
+:::
+
 | 参数 | 必填 | 说明 |
 |------|------|------|
 | 执行周期 | 否 | 定时执行周期（cron 表达式） |
@@ -40,17 +46,18 @@ date: 2025-11-19 00:00:00
 
 ## 📖 使用说明
 
-1. 部署独立的媒体封面生成 API 服务
-2. 选择媒体服务器并填写 API 服务地址
+1. **先部署** [媒体封面生成 API 服务](/usage/peripheral_services/media_cover_generator.html)（Docker），这是本秘籍的前提
+2. 选择媒体服务器并填写 API 服务地址（默认 `http://127.0.0.1:9897`）
 3. 选择封面模板样式
 4. 设置定时周期或手动运行
 
 ## ⚠️ 注意事项
 
-- 需要先部署独立的媒体封面生成 API 服务
+- **必须先部署独立的** [媒体封面生成 API 服务](/usage/peripheral_services/media_cover_generator.html)，否则本秘籍无法工作
 - 支持多实例，可为不同媒体库配置不同样式
 - 低性能模式会降低生成速度但减少资源占用
 
 ## 🔗 相关链接
 
+- [媒体封面生成 API 服务](/usage/peripheral_services/media_cover_generator.html) - 本秘籍依赖的服务，需先部署
 - [媒体服务器配置](/usage/system_settings/)

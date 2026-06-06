@@ -540,7 +540,7 @@ Tmdb:
 
 **默认值/示例：** 空
 
-**操作建议：** 请参考 [OCR 服务配置指南](/usage/system_settings/ocr_service.html)。
+**操作建议：** 请参考 [OCR 服务配置指南](/usage/peripheral_services/ocr_service.html)。
 
 ### 豆瓣 Cookie
 **说明：** 需要用到 Cookie 的时候填上
@@ -624,7 +624,7 @@ Tmdb:
 
 ### AI 和第三方服务
 - [MCP 服务](/usage/ai/mcp.html) - Media Control Protocol 配置
-- [OCR 服务配置](/usage/system_settings/ocr_service.html) - 验证码识别设置
+- [OCR 服务配置](/usage/peripheral_services/ocr_service.html) - 验证码识别设置
 
 ### 其他模块
 - [站点管理](/usage/site_management/) - 下载站点配置
