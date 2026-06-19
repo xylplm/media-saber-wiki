@@ -49,6 +49,7 @@ export default navbar([
       { text: "iOS 客户端", icon: "fa6-brands:apple", link: "ios/" },
       { text: "Android 客户端", icon: "fa6-brands:android", link: "android/" },
       { text: "小米手表客户端", icon: "clock", link: "xiaomi_watch" },
+      { text: "ESP32 桌面小助手", icon: "microchip", link: "esp32/" },
       { text: "浏览器扩展", icon: "puzzle-piece", link: "brower_tool" },
       { text: "DC Android 客户端", icon: "fa6-brands:android", link: "docker_copilot/" },
     ],
