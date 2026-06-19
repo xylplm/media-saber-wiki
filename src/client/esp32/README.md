@@ -248,6 +248,8 @@ flowchart TD
 
 ## 🚀 ESP32-S3 小智固件烧录教程
 
+可以参考[小智官方烧录教程](https://my.feishu.cn/wiki/Zpz4wXBtdimBrLk25WdcXzxcnNS)，也可以看看下面的步骤！
+
 ### 1. 准备工具
 
 | 工具 | 用途 | 下载 / 说明 |
