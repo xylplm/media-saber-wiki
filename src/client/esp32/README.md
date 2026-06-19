@@ -486,29 +486,3 @@ A：
 检查屏幕接线是否正确且接触良好
 面包板质量有好坏，有问题时可以使用万用表测试通联情况
 如确定接线正确仍无法解决，可更换备用屏幕测试
-
-## 🖼️ 截图占位清单
-
-下列图片文件已在 `images/` 目录下占位，后续可直接替换为真实截图：
-
-| 文件名 | 建议内容 |
-|---|---|
-| `esp32-ms-helper-hero.png` | 桌面小助手整机效果图 |
-| `hardware-assembly.png` | 硬件装配图 |
-| `screen-xiaozhi.png` | 第 1 屏 小智 AI |
-| `screen-nas-overview.png` | 第 2 屏 NAS 监控页 |
-| `screen-twofactor.png` | 第 3 屏 两步验证码页 |
-| `screen-site-overview.png` | 第 4 屏 站点总览页 |
-| `screen-app-grid.png` | 第 5 屏 应用入口页 |
-| `screen-ranking.png` | 排行推荐页 |
-| `screen-message-center.png` | 消息中心页 |
-| `wiring-screen.png` | 屏幕接线图 |
-| `wiring-audio.png` | 音频接线图 |
-| `firmware-release.png` | GitHub Releases 固件下载页 |
-| `serial-driver.png` | 串口识别示意图 |
-| `flash-download-tool.png` | 烧录工具配置截图 |
-| `web-config-page.png` | 局域网配置页面 |
-
----
-
-> 💡 **提示**：本文面向最终用户，尽量按“买齐物料 → 接线 → 烧录 → 配网 → 连接 Media Saber”的顺序操作。固件与截图会随发布版本继续完善。
