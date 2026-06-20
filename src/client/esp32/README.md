@@ -4,7 +4,7 @@ article: false
 dir:
   text: ESP32 桌面小助手
   order: 12
-date: 2026-06-18T00:00:00.000Z
+date: 2026-06-20T00:00:00.000Z
 tags:
   - ESP32-S3
   - 小智
@@ -269,6 +269,11 @@ flowchart TD
 
 请下载与你的硬件版本一致的 ESP32-S3 固件包。   如果你看到是ZIP压缩包 请下载后解压！
 
+每个版本会同时提供两种固件包，按你的情况二选一即可：
+
+- **合并固件包**（`media-saber-esp32s3-ms-helper-merged.zip`）：解压后只有一个 `media-saber-esp32s3-ms-helper.bin`，烧录到地址 `0x0` 即可，最省事，推荐新手使用。
+- **分散固件包**（`media-saber-esp32s3-ms-helper-split.zip`）：解压后是 5 个分区固件 + `flash_args`，需要按地址分别烧录，适合只刷新某个分区、或排查问题的进阶用户。
+
 :::
 
 ### 2. 进入下载模式
@@ -292,12 +297,13 @@ flowchart TD
 
 5. 如果固件包里是 **分散固件**，通常按以下地址填写：
 
-| 地址 | 文件 |
-|---:|---|
-| `0x0` | `bootloader.bin` |
-| `0x8000` | `partition-table.bin` |
-| `0xd000` | `ota_data_initial.bin` |
-| `0x10000` | 应用固件，例如 `xiaozhi.bin` 或 `media-saber-esp32s3.bin` |
+| 地址 | 文件 | 说明 |
+|---:|---|---|
+| `0x0` | `bootloader.bin` | 引导程序 |
+| `0x8000` | `partition-table.bin` | 分区表 |
+| `0xd000` | `ota_data_initial.bin` | OTA 初始数据 |
+| `0x20000` | `xiaozhi.bin` | 应用固件 |
+| `0x800000` | `generated_assets.bin` | 资源分区（字体 / 形象 / 音效），缺失会丢 UI 资源 |
 
 6. 点击开始烧录，等待进度完成后重启开发板。
 
@@ -329,7 +335,14 @@ esptool.py --chip esp32s3 --port COM3 --baud 921600 write_flash -z \
   0x0 bootloader.bin \
   0x8000 partition-table.bin \
   0xd000 ota_data_initial.bin \
-  0x10000 media-saber-esp32s3.bin
+  0x20000 xiaozhi.bin \
+  0x800000 generated_assets.bin
+```
+
+分散固件包内还附带了 `flash_args` 文件，可以用一行命令一次烧录全部分区（在解压后的目录里执行）：
+
+```bash
+esptool.py --chip esp32s3 --port COM3 --baud 921600 write_flash -z @flash_args
 ```
 
 ::: warning 路径与串口请替换
