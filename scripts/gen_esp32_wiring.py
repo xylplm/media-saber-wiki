@@ -220,7 +220,7 @@ def gen_screen_wiring():
 
     # NC 说明框
     ax.text(14, 2.6,
-            "⚠ LCD RST / LCD BL / TP RST / TP INT 当前硬件未引出：\n"
+            "[注意] LCD RST / LCD BL / TP RST / TP INT 当前硬件未引出：\n"
             "  • LCD 走软件复位，BL 背光直连 3V3 常亮\n"
             "  • TP 用轮询模式读坐标，不需要 INT 中断脚",
             ha="center", va="center", fontsize=10.5, color="#BF360C",
@@ -298,12 +298,12 @@ def gen_audio_wiring():
                   label=txt, lw=2.4)
 
     # 方向分组说明
-    ax.text(14, 6.2, "🔊 扬声器输出（NS4168 · I2S 标准模式）",
+    ax.text(14, 6.2, "【扬声器输出】NS4168 · I2S 标准模式",
             ha="center", fontsize=11.5, fontweight="bold", color=COL_SIG)
     ax.text(14, 5.5, "LRCLK / BCLK / SDA 三根线，ESP32 → 扬声器",
             ha="center", fontsize=10.5, color="#37474F")
 
-    ax.text(14, 4.4, "🎙 麦克风输入（LMD2718 · PDM RX）",
+    ax.text(14, 4.4, "【麦克风输入】LMD2718 · PDM RX",
             ha="center", fontsize=11.5, fontweight="bold", color=COL_SIG2)
     ax.text(14, 3.7,
             "CLK 由 ESP32 输出到麦克风时钟脚，DATA 从麦克风回到 ESP32\n"
@@ -311,7 +311,7 @@ def gen_audio_wiring():
             ha="center", fontsize=10.5, color="#37474F")
 
     ax.text(14, 2.0,
-            "⚠ 全部按 3.3V 逻辑连接，禁止接到 5V；当前固件不走 ES8311 + I2C codec 路径",
+            "[注意] 全部按 3.3V 逻辑连接，禁止接到 5V；当前固件不走 ES8311 + I2C codec 路径",
             ha="center", va="center", fontsize=10.5, color="#BF360C",
             bbox=dict(boxstyle="round,pad=0.5", fc="#FFF3E0", ec="#FFB74D"))
 
