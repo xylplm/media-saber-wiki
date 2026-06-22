@@ -110,7 +110,7 @@ date: 2023-05-22T08:51:16.561Z
 - [ESP32 桌面小助手](/client/esp32/)
 - [硬件 DIY](/client/esp32/hardware.md) / [接线与装配](/client/esp32/wiring.md)
 - [固件烧录](/client/esp32/flashing.md) / [首次配置](/client/esp32/configuration.md)
-- [MCP 网关部署](/client/esp32/mcp-gateway-compose.md) / [小智 MCP 对接](/client/esp32/xiaozhi-mcp.md)
+- [MCP 网关部署](/client/esp32/mcp-gateway-compose.md) / [接入 MS 服务](/client/esp32/mcp-gateway-ms-upstream.md) / [小智 MCP 对接](/client/esp32/xiaozhi-mcp.md)
 - 支持桌面状态屏、消息中心与小智语音能力，[常见问题](/client/esp32/faq.md) 可辅助排查
 
 ### 🌐 浏览器插件

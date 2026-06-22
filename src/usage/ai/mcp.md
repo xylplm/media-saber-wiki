@@ -241,6 +241,16 @@ Cherry Studio 用于导入的 JSON 结构与通用 MCP 配置略有不同（如�
 将上述JSON中的 `IP:端口` 替换为您的Media Saber实际访问地址，`您的API_KEY` 替换为实际的API KEY即可。如果使用HTTPS，请将 `http` 替换为 `https`。
 :::
 
+#### 🤖 接入小智 AI
+
+如果你希望把 Media Saber MCP 能力接入小智 AI，推荐先通过 [MCP Proxy Gateway](https://github.com/xylplm/mcp-proxy-gateway/blob/main/README.zh.md) 聚合，再由网关连接小智 MCP 接入点。
+
+操作路径：
+
+1. [部署 MCP 网关](/client/esp32/mcp-gateway-compose.md)
+2. [在 MCP 网关中添加 Media Saber MCP 上游](/client/esp32/mcp-gateway-ms-upstream.md)
+3. [将 MCP 网关接入小智 AI](/client/esp32/xiaozhi-mcp.md)
+
 #### 🔑 API KEY 获取
 
 API KEY 需要在Media Saber系统中获取：

@@ -32,7 +32,7 @@ flowchart LR
 整体步骤：
 
 1. 部署并登录 MCP Proxy Gateway。
-2. 在网关中接入 Media Saber 相关 MCP 服务。
+2. 在网关中接入 Media Saber 相关 MCP 服务，具体见：[MCP 网关接入 MS 服务](./mcp-gateway-ms-upstream.md)。
 3. 到小智 AI 控制台获取智能体的 MCP 接入点地址。
 4. 回到网关「API 服务 → 小智接入」填写接入点地址并保存。
 5. 回到小智控制台查看接入点状态，确认是否在线。
@@ -87,7 +87,20 @@ http://你的NAS地址:8088
 
 :::
 
-## 2. 在小智控制台获取 MCP 接入点
+## 2. 在网关中接入 Media Saber MCP
+
+部署完成后，需要把 Media Saber 自带的 MCP 服务添加为上游 MCP。请按 [MCP 网关接入 MS 服务](./mcp-gateway-ms-upstream.md) 完成以下配置：
+
+| 配置项 | 推荐值 |
+|---|---|
+| 传输方式 | 远程 HTTP |
+| 服务地址 | `http://你的MS地址:端口/message` |
+| 认证方式 | Bearer Token |
+| 凭证 | Media Saber API KEY |
+
+确认网关能同步出 Media Saber 工具后，再继续配置小智接入。
+
+## 3. 在小智控制台获取 MCP 接入点
 
 打开小智 AI 控制台：
 
@@ -109,7 +122,7 @@ MCP 接入点地址用于让网关连接到你的小智智能体，请不要公�
 
 :::
 
-## 3. 在 MCP Proxy Gateway 填写小智接入
+## 4. 在 MCP Proxy Gateway 填写小智接入
 
 登录 MCP Proxy Gateway 管理界面，进入：
 
@@ -133,7 +146,7 @@ API 服务 → 第三方对接 → 小智接入
 
 :::
 
-## 4. 确认接入状态
+## 5. 确认接入状态
 
 保存后可以从两个地方确认状态：
 
@@ -142,7 +155,7 @@ API 服务 → 第三方对接 → 小智接入
 
 如果显示在线，就说明小智智能体已经能通过 MCP Proxy Gateway 调用你聚合的 MCP 能力。
 
-## 5. 常见问题
+## 6. 常见问题
 
 ### 接入点一直不在线
 
