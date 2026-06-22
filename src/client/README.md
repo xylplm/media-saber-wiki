@@ -107,9 +107,10 @@ date: 2023-05-22T08:51:16.561Z
 - 随时随地查看媒体和数据
 
 ### 🧩 ESP32 桌面小助手
-- [完整 ESP32 文档](/client/esp32/)
+- [ESP32 桌面小助手](/client/esp32/)
+- [硬件 DIY](/client/esp32/hardware.md) / [接线与装配](/client/esp32/wiring.md)
+- [固件烧录](/client/esp32/flashing.md) / [首次配置](/client/esp32/configuration.md) / [常见问题](/client/esp32/faq.md)
 - 支持桌面状态屏、消息中心与小智语音能力
-- 可通过固件烧录体验 DIY 小助手
 
 ### 🌐 浏览器插件
 - [完整插件文档](/client/brower_tool.md)
