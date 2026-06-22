@@ -64,7 +64,9 @@ flowchart LR
 3. [接线与装配](./wiring.md)：按图连接屏幕、触摸和音频模块。
 4. [固件烧录](./flashing.md)：下载固件并写入 ESP32-S3。
 5. [首次配置](./configuration.md)：联网并连接到你的 Media Saber 服务端。
-6. [常见问题](./faq.md)：遇到串口、屏幕、声音、数据加载问题时排查。
+6. [MCP 网关 Compose 部署](./mcp-gateway-compose.md)：准备 MCP Proxy Gateway 运行环境。
+7. [小智 MCP 对接 MS](./xiaozhi-mcp.md)：把 MS 能力通过 MCP Proxy Gateway 接入小智智能体。
+8. [常见问题](./faq.md)：遇到串口、屏幕、声音、数据加载问题时排查。
 
 ## 📚 文档导航
 
@@ -75,6 +77,8 @@ flowchart LR
 | [接线与装配](./wiring.md) | 已经拿到硬件，需要按 GPIO 接线并上电检查 |
 | [固件烧录](./flashing.md) | 需要下载固件、进入下载模式、使用工具烧录 |
 | [首次配置](./configuration.md) | 烧录完成后，需要连接 Wi-Fi 和 Media Saber 后端 |
+| [MCP 网关 Compose 部署](./mcp-gateway-compose.md) | 需要部署 MCP Proxy Gateway，并复用 MS 的 PostgreSQL / Redis |
+| [小智 MCP 对接 MS](./xiaozhi-mcp.md) | 需要把 MS 能力通过 MCP Proxy Gateway 接入小智智能体 |
 | [常见问题](./faq.md) | 串口找不到、烧录失败、白屏、无声、数据为空等问题 |
 
 ## 🧩 最小硬件要求
