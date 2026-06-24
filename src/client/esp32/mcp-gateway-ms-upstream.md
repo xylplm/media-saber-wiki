@@ -11,7 +11,7 @@ tags:
 
 # MCP 网关接入 MS 服务
 
-部署好 MCP Proxy Gateway 后，还需要把 Media Saber 自带的 MCP 服务添加为“上游 MCP”。这样小智通过网关连接后，才能调用 MS 的订阅、站点、媒体库等能力。
+部署好 MCP Proxy Gateway 后，还需要把 Media Saber 自带的 MCP 服务添加为“上游 MCP”。这样小智通过网关连接后，才能调用 MS 的订阅、站点、媒体库、媒体健康中心等能力。
 
 ::: tip 先准备好这些信息
 
