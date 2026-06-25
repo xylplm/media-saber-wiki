@@ -31,7 +31,7 @@ date: 2023-09-27 12:16:17
 ### 核心页面
 
 - 📚 [我的媒体库](/usage/media_services/library.html)：查看电影、电视剧等媒体数据总览
-- 🩺 [媒体健康中心](/usage/media_services/media_health.html)：发现缺集、未归宗、可升级等媒体库问题
+- 🩺 [媒体健康中心](/usage/media_services/media_health.html)：发现缺集、未匹配、可升级等媒体库问题
 - 🖥️ [媒体服务器](/usage/media_services/server.html)：管理服务器新增、编辑、同步、定时任务
 - 🚀 [媒体代理](/usage/media_services/media_proxy.html)：配置播放分发策略、直链探测和回退机制
 

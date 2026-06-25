@@ -65,12 +65,12 @@ Media Saber MCP服务内置了丰富的工具，涵盖媒体管理、订阅、�
 | `get_media_status` | 查询媒体状态（已发布站点、是否已入库等） |
 | `get_miss_episodes` | 查询媒体库中有漏集的电视剧 |
 | `get_media_servers` | 查询媒体服务列表 |
-| `get_media_health` | 查询媒体健康中心，查看缺集、未归宗、可升级等问题 |
+| `get_media_health` | 查询媒体健康中心，查看缺集、媒体信息未匹配、可升级等问题 |
 | `get_media_health_detail` | 查询单个媒体健康问题详情 |
 | `sync_libraries` | 同步媒体库 |
 
 ::: tip 💡 媒体健康中心
-`get_media_health` 默认只返回仍需处理的问题，可按问题类型筛选缺集、未归宗、可升级，也可以按标题或媒体服务器筛选。需要查看某条问题的缺失集数、路径、风险提示或当前质量时，再使用 `get_media_health_detail` 查询详情。
+`get_media_health` 默认只返回仍需处理的问题，可按问题类型筛选缺集、未匹配、可升级，也可以按标题或媒体服务器筛选。需要查看某条问题的缺失集数、路径、风险提示或当前质量时，再使用 `get_media_health_detail` 查询详情。
 :::
 
 #### 📺 订阅相关
