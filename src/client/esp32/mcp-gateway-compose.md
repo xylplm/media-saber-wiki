@@ -11,7 +11,7 @@ tags:
 
 # MCP 网关 Compose 部署
 
-本页演示如何用 Docker Compose 部署 [MCP Proxy Gateway](https://github.com/xylplm/mcp-proxy-gateway/blob/main/README.zh.md)，并复用 Media Saber 已有的 PostgreSQL 与 Redis。
+本页演示如何用 Docker Compose 部署 [MCP Proxy Gateway](https://github.com/xylplm/mcp-proxy-gateway)，并复用 Media Saber 已有的 PostgreSQL 与 Redis。
 
 ::: tip 适合谁？
 

@@ -249,7 +249,7 @@ Cherry Studio 用于导入的 JSON 结构与通用 MCP 配置略有不同（如�
 
 #### 🤖 接入小智 AI
 
-如果你希望把 Media Saber MCP 能力接入小智 AI，推荐先通过 [MCP Proxy Gateway](https://github.com/xylplm/mcp-proxy-gateway/blob/main/README.zh.md) 聚合，再由网关连接小智 MCP 接入点。
+如果你希望把 Media Saber MCP 能力接入小智 AI，推荐先通过 [MCP Proxy Gateway](https://github.com/xylplm/mcp-proxy-gateway) 聚合，再由网关连接小智 MCP 接入点。
 
 操作路径：
 
