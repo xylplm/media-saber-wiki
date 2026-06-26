@@ -11,7 +11,7 @@ tags:
 
 # 小智 MCP 对接 MS
 
-小智 AI 支持通过 MCP 扩展智能体能力。推荐使用 [MCP Proxy Gateway](https://github.com/xylplm/mcp-proxy-gateway/blob/main/README.zh.md) 作为中间网关，把 Media Saber 相关 MCP 能力统一接入小智。
+小智 AI 支持通过 MCP 扩展智能体能力。推荐使用 [MCP Proxy Gateway](https://github.com/xylplm/mcp-proxy-gateway) 作为中间网关，把 Media Saber 相关 MCP 能力统一接入小智。
 
 ::: tip 推荐方案
 
@@ -43,7 +43,7 @@ MCP Proxy Gateway 是通用 MCP 聚合与代理网关，支持 Docker 部署。
 
 文档地址：
 
-<https://github.com/xylplm/mcp-proxy-gateway/blob/main/README.zh.md>
+<https://github.com/xylplm/mcp-proxy-gateway>
 
 ::: info 它能做什么？
 
@@ -178,6 +178,6 @@ API 服务 → 第三方对接 → 小智接入
 
 ## 🔗 相关链接
 
-- [MCP Proxy Gateway 中文文档](https://github.com/xylplm/mcp-proxy-gateway/blob/main/README.zh.md)
+- [MCP Proxy Gateway 项目主页](https://github.com/xylplm/mcp-proxy-gateway)
 - [小智 AI 智能体控制台](https://xiaozhi.me/console/agents)
 - [ESP32 桌面小助手功能与界面](./features.md)
