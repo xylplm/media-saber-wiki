@@ -52,8 +52,10 @@ flowchart LR
 | 站点总览 | 查看站点今日上传、下载、做种增量、签到等数据 |
 | 应用入口 | 进入媒体库、排行推荐、消息中心、用户中心等二级页面 |
 | 快捷指令 | 在消息中心一键触发签到、同步数据、订阅刷新等后端命令 |
+| 4G 短信中转（可选） | 外挂 ML307R 4G 模组时可收发短信、保号提醒、设备状态上报；**不装模组也可正常使用**其余功能 |
 
 完整界面说明请看：[功能与界面](./features.md)。
+短信与设备状态说明请看：[4G 短信与设备状态](./sms.md)。
 
 ## 🚀 新手阅读路径
 
@@ -81,6 +83,7 @@ flowchart LR
 | [MCP 网关 Compose 部署](./mcp-gateway-compose.md) | 需要部署 MCP Proxy Gateway，并复用 MS 的 PostgreSQL / Redis |
 | [MCP 网关接入 MS 服务](./mcp-gateway-ms-upstream.md) | 需要把 Media Saber MCP 添加为网关上游 |
 | [小智 MCP 对接 MS](./xiaozhi-mcp.md) | 需要把 MS 能力通过 MCP Proxy Gateway 接入小智智能体 |
+| [4G 短信与设备状态](./sms.md) | 想外挂 ML307R 4G 模组收发短信、保号提醒，或在用户中心看设备状态 |
 | [常见问题](./faq.md) | 串口找不到、烧录失败、白屏、无声、数据为空等问题 |
 
 ## 🧩 最小硬件要求

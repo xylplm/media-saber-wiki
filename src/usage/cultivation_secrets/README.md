@@ -176,6 +176,7 @@ date: 2023-09-27 12:16:17
 | [自动备份](/usage/cultivation_secrets/auto_backup.html) | 自动备份系统配置文件和数据库 |
 | [CookieCloud 同步](/usage/cultivation_secrets/cookiecloud_sync.html) | 从 CookieCloud 同步站点 Cookie |
 | [Giffgaff 保号提醒](/usage/cultivation_secrets/giffgaff_keep_alive.html) | Giffgaff 手机卡 180 天保号提醒 |
+| [ESP32 桌面小助手服务](/usage/cultivation_secrets/esp32_desktop_assistant.html) | 可选 4G 短信与小助手指令（需定制固件） |
 | [时刻](/usage/cultivation_secrets/moment.html) | 时刻提醒你，值得记住的瞬间 |
 | [目录定时清理](/usage/cultivation_secrets/directory_cleaner.html) | 定时清理指定目录，支持黑白名单和体积过滤 |
 | [发群聊消息](/usage/cultivation_secrets/shoutbox.html) | 自动发送站点群聊区消息 |
