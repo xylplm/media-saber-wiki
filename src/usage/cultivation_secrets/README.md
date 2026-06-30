@@ -130,6 +130,7 @@ date: 2023-09-27 12:16:17
 | [媒体库封面生成](/usage/cultivation_secrets/media_cover_generator.html) | 自动为媒体库生成美观的封面图片 |
 | [媒体库文件夹合并](/usage/cultivation_secrets/media_library_folder_merge.html) | 合并旧目录到带 TMDB ID 的新目录 |
 | [Plex 拼音本地化](/usage/cultivation_secrets/plex_localization_zh.html) | Plex 标题拼音排序与标签中文化 |
+| [自定义制作组/字幕组](/usage/cultivation_secrets/custom_release_group.html) | 补充内置无法识别的制作组/字幕组 |
 
 ### 📥 下载管理
 
