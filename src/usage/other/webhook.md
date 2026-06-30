@@ -22,6 +22,8 @@ Media Saber支持以下类型的Webhook集成：
 - Plex Webhook
 - 开放消息渠道Webhook
 
+> 💡 配置好 Emby / Jellyfin / Plex 的播放 Webhook 后，播放事件除了用于消息通知，还会自动汇入 [观影报告](/usage/media_services/play_stats.html)，作为最精准的「实时」观看统计来源。
+
 ## 📨 开放消息渠道 Webhook
 
 系统提供了一个开放的 Webhook 接口，允许外部系统通过配置的消息渠道发送通知。
