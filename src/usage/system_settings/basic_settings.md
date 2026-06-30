@@ -298,7 +298,7 @@ Tmdb:
 ### 电影重命名格式
 **说明：** 定义电影文件/目录命名格式，支持占位符。点击输入框后的问号按钮可查看详细说明。
 
-支持的占位符：`{title}`标题、`{en_title}`英文标题、`{original_title}`原语种标题、`{original_name}`原文件名、`{rev_name}`识别词处理后的原文件名、`{year}`年份、`{edition}`版本、`{videoFormat}`分辨率、`{videoCodec}`视频编码、`{audioCodec}`音频编码及声道、`{tmdbid}`、`{imdbid}`、`{part}`、`{releaseGroup}`制作组、`{name}`识别名称
+支持的占位符：`{title}`标题、`{en_title}`英文标题、`{original_title}`原语种标题、`{original_name}`原文件名、`{rev_name}`识别词处理后的原文件名、`{year}`年份、`{edition}`版本、`{videoFormat}`分辨率、`{videoCodec}`视频编码、`{audioCodec}`音频编码及声道、`{tmdbid}`、`{imdbid}`、`{part}`、`{releaseGroup}`制作组、`{customization}`自定义占位符、`{name}`识别名称
 
 **默认值/示例：** 空
 
@@ -307,7 +307,7 @@ Tmdb:
 ### 电视剧重命名格式
 **说明：** 定义电视剧文件/目录命名格式，支持占位符。点击输入框后的问号按钮可查看详细说明。
 
-支持的占位符：`{title}`标题、`{en_title}`英文标题、`{original_title}`原语种标题、`{original_name}`原文件名、`{rev_name}`识别词处理后的原文件名、`{year}`年份、`{edition}`版本、`{videoFormat}`分辨率、`{videoCodec}`视频编码、`{audioCodec}`音频编码及声道、`{tmdbid}`、`{imdbid}`、`{season}`季数、`{episode}`集数、`{episode_title}`集标题、`{season_episode}`剧集SxxExx、`{part}`、`{releaseGroup}`制作组、`{name}`识别名称
+支持的占位符：`{title}`标题、`{en_title}`英文标题、`{original_title}`原语种标题、`{original_name}`原文件名、`{rev_name}`识别词处理后的原文件名、`{year}`年份、`{edition}`版本、`{videoFormat}`分辨率、`{videoCodec}`视频编码、`{audioCodec}`音频编码及声道、`{tmdbid}`、`{imdbid}`、`{season}`季数、`{episode}`集数、`{episode_title}`集标题、`{season_episode}`剧集SxxExx、`{part}`、`{releaseGroup}`制作组、`{customization}`自定义占位符、`{name}`识别名称
 
 **默认值/示例：** 空
 
