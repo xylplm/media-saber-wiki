@@ -54,6 +54,23 @@ Jellyfin是一个免费、开源的媒体服务器软件，可以管理和播放
 - 若未配置媒体代理，通常无法完成 `302` 跳转播放
 - 详细配置请查看：[[媒体代理能力详解]](/usage/media_services/media_proxy)
 
+## 🔔 Webhook 配置（播放事件通知 + 观影报告）
+
+Jellyfin 需要先安装官方 [Webhook 插件](https://github.com/jellyfin/jellyfin-plugin-webhook)，配置好后 Media Saber 可以实时接收播放、入库等事件：
+
+- 用于**消息通知**（如"XX开始播放XX""新增入库"等推送）
+- 用于 [观影报告](/usage/media_services/play_stats.html) 的「实时」播放统计来源（相比定时估算更精准）
+
+**快捷 Webhook 地址（与 Emby 共用同一接口，后端会自动识别 Jellyfin 格式）：**
+
+```
+http[s]://your-domain.com[:port]/api/v1/webhook/emby?apiKey=your-api-key
+```
+
+> 🔑 `your-api-key` 请参考 [我的信息 - API KEY 管理](/usage/main_page/my_info.html) 获取；也可在设置里去掉 `apiKey` 参数，改用请求头鉴权，详见 [API 鉴权文档](/usage/other/api_auth.html)。
+
+在 Jellyfin 插件的 Webhook 目标（Generic Destination）中填入上方地址，`Content-Type` 请求头设为 `application/json`。完整的分步图文教程（含插件安装、参数勾选、调试日志）请查看：👉 [Webhook 配置文档 - Jellyfin 章节](/usage/other/webhook.html#🐙-jellyfin-webhook配置)
+
 ### 🔌 关于"代理端口"的补充说明
 
 "代理端口"配置是为有 **strm302 播放需求** 的用户准备的。

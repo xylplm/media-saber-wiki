@@ -53,6 +53,23 @@ Plex是一个流行的媒体服务器软件，可以组织、管理和播放个�
 - 若未配置媒体代理，通常无法完成 `302` 跳转播放
 - 详细配置请查看：[[媒体代理能力详解]](/usage/media_services/media_proxy)
 
+## 🔔 Webhook 配置（播放事件通知 + 观影报告）
+
+配置 Plex 的 Webhook 后（需要 Plex Pass），Media Saber 可以实时接收播放等事件：
+
+- 用于**消息通知**（如"XX开始播放XX"等推送）
+- 用于 [观影报告](/usage/media_services/play_stats.html) 的「实时」播放统计来源（相比定时估算更精准）
+
+**快捷 Webhook 地址：**
+
+```
+http[s]://your-domain.com[:port]/api/v1/webhook/plex?apiKey=your-api-key
+```
+
+> 🔑 `your-api-key` 请参考 [我的信息 - API KEY 管理](/usage/main_page/my_info.html) 获取；也可在设置里去掉 `apiKey` 参数，改用请求头鉴权，详见 [API 鉴权文档](/usage/other/api_auth.html)。
+
+在 Plex 控制台 `设置` → `Webhook` 中添加上方地址即可，完整的分步图文教程请查看：👉 [Webhook 配置文档 - Plex 章节](/usage/other/webhook.html#🎬-plex-webhook配置)
+
 ## 🆕 新增代理字段说明
 
 ### 🔔 代理通知

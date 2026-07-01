@@ -54,6 +54,23 @@ Emby是一个功能强大的媒体服务器软件，可以管理和播放存储�
 - 若未配置媒体代理，通常无法完成 `302` 跳转播放
 - 详细配置请查看：[[媒体代理能力详解]](/usage/media_services/media_proxy)
 
+## 🔔 Webhook 配置（播放事件通知 + 观影报告）
+
+配置 Emby 的 Webhook 后，Media Saber 可以实时接收播放、入库等事件：
+
+- 用于**消息通知**（如"XX开始播放XX""新增入库"等推送）
+- 用于 [观影报告](/usage/media_services/play_stats.html) 的「实时」播放统计来源（相比定时估算更精准）
+
+**快捷 Webhook 地址：**
+
+```
+http[s]://your-domain.com[:port]/api/v1/webhook/emby?apiKey=your-api-key
+```
+
+> 🔑 `your-api-key` 请参考 [我的信息 - API KEY 管理](/usage/main_page/my_info.html) 获取；也可在设置里去掉 `apiKey` 参数，改用请求头鉴权，详见 [API 鉴权文档](/usage/other/api_auth.html)。
+
+在 Emby 控制台 `设置` → `服务器` → `Webhook` 中添加上方地址即可，完整的分步图文教程（含测试验证）请查看：👉 [Webhook 配置文档 - Emby 章节](/usage/other/webhook.html#🎬-emby-webhook配置)
+
 ## 🔌 strm302代理播放配置
 
 Emby支持通过strm302代理播放功能，特别适用于网盘资源的远程播放。
