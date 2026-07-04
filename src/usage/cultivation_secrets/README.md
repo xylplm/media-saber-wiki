@@ -127,6 +127,7 @@ date: 2023-09-27 12:16:17
 | [短剧刮削](/usage/cultivation_secrets/short_play_monitor.html) | 监控短剧目录，自动刮削和整理 |
 | [媒体服务刷新](/usage/cultivation_secrets/media_server_refresh.html) | 定时刷新媒体服务器媒体库 |
 | [媒体服务清理](/usage/cultivation_secrets/media_server_clean.html) | 定时清理媒体服务中的大文件和无效内容 |
+| [媒体库报告](/usage/cultivation_secrets/media_library_report.html) | 定时推送新增入库、热门观看和播放概览 |
 | [媒体库封面生成](/usage/cultivation_secrets/media_cover_generator.html) | 自动为媒体库生成美观的封面图片 |
 | [媒体库文件夹合并](/usage/cultivation_secrets/media_library_folder_merge.html) | 合并旧目录到带 TMDB ID 的新目录 |
 | [Plex 拼音本地化](/usage/cultivation_secrets/plex_localization_zh.html) | Plex 标题拼音排序与标签中文化 |
