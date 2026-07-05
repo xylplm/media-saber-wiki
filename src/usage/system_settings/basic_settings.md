@@ -535,6 +535,18 @@ Tmdb:
 
 **操作建议：** 需配合 Google CSE API 使用。
 
+### 过盾增强服务
+**说明：** 用于站点访问遇到 Cloudflare 防护时自动尝试处理。开启后，还需要在对应站点的站点维护中开启"过盾增强"，系统才会在命中防护页时调用服务并自动重试一次。
+
+**默认值/示例：** 关闭
+- 服务类型：`FlareSolverr`
+- 可选服务：`FlareSolverr`、`CloudflareBypassForScraping`
+- 服务地址：填写所选服务的根地址，例如 `http://127.0.0.1:8191`
+- 过盾超时秒数：`45`
+- 凭证缓存分钟数：`30`
+
+**操作建议：** 仅对确实经常触发 Cloudflare 防护的站点开启。FlareSolverr 适合已有 `/v1` 服务的部署；CloudflareBypassForScraping 适合提供 `/cookies` 接口的部署。过盾服务的代理出口请在服务自身配置，系统不会把站点代理转交给过盾服务。自动处理失败时，可在浏览器手动通过验证后同步 Cookie，并更新站点 Cookie。配置完成后可在 [系统体检](/usage/system_settings/system_health.html) 中检查所选服务是否可用。
+
 ### OCR 服务地址
 **说明：** OCR 服务地址，用于网站登录更新 Cookie 以及特殊站点签到等识别验证码场景。可根据需要自行修改。配置完成后请点击"测试"按钮验证服务有效性。
 
