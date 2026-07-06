@@ -201,7 +201,6 @@ date: 2023-09-27 12:16:17
 |------|------|
 | [115 签到](/usage/cultivation_secrets/sign_115.html) | 定时自动签到 115 网盘 |
 | [98 签到](/usage/cultivation_secrets/sign98.html) | 定时自动签到 98 论坛 |
-| [HDHive 签到](/usage/cultivation_secrets/sign_hdhive.html) | 定时自动签到 HDHive 站点 |
 | [朱雀签到](/usage/cultivation_secrets/sign_zhuque.html) | 朱雀站点修仙系统自动签到 |
 | [绿联社区助手](/usage/cultivation_secrets/sign_ugreen.html) | 绿联社区自动登录活跃 |
 | [音乐磁场签到](/usage/cultivation_secrets/hifini_sign.html) | 定时自动签到音乐磁场 |
