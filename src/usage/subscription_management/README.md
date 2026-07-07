@@ -96,7 +96,7 @@ RSS订阅是通过站点提供的RSS订阅源自动获取资源信息的方式�
 订阅管理功能的相关设置可以在以下位置找到：
 
 - **[基础设置](/usage/system_settings/basic_settings.html)**：配置订阅的基本参数，如搜索周期、默认过滤和排序规则等
-- **[过滤规则](/usage/system_settings/filter_rules.html)**：配置种子过滤规则，支持导入导出和分享
+- **[过滤规则](/usage/system_settings/filter_rules.html)**：配置种子过滤规则，支持规则组文件导入导出
 - **[种子匹配](/usage/system_settings/torrent_match.html)**：配置种子匹配条件，可被过滤和排序规则引用
 - **[种子排序](/usage/system_settings/torrent_sort.html)**：配置基于权重的智能排序规则
 - **[站点管理](/usage/site_management/site.html)**：配置用于订阅和搜索的站点
