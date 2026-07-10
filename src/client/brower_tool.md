@@ -22,30 +22,50 @@ dateCreated: 2023-05-12T04:26:30.172Z
 
 #### 方式一：应用商店安装（推荐）
 
+Chrome 和 Edge 版本已经发布到官方扩展商店，商店版本由平台负责安全校验和自动更新。除非无法访问商店、需要测试临时版本或有其他特殊需求，否则建议优先使用应用商店版本。
+
 <div style="display: flex; gap: 20px; margin: 20px 0;">
   <div style="flex: 1; text-align: center; padding: 20px; border: 2px solid #e1e5e9; border-radius: 12px;">
     <h4>🔵 Microsoft Edge</h4>
     <p>访问 <a href="https://microsoftedge.microsoft.com/addons/detail/hlpcdobmkgdflggmhpmgoejbfjndpadb" target="_blank">Edge 扩展商店</a></p>
-    <p>点击"获取"按钮安装</p>
+    <p>点击“获取”按钮安装</p>
   </div>
   <div style="flex: 1; text-align: center; padding: 20px; border: 2px solid #e1e5e9; border-radius: 12px;">
     <h4>🟢 Google Chrome</h4>
     <p>访问 <a href="https://chromewebstore.google.com/detail/media-saber-tools/ibflljhbofedginadhkfehbpbefijfid" target="_blank">Chrome 网上应用店</a></p>
-    <p>点击"添加至 Chrome"安装</p>
+    <p>点击“添加至 Chrome”安装</p>
   </div>
 </div>
 
-#### 方式二：手动安装
+#### 方式二：发布包手动安装
 
-如果无法访问应用商店：
+如果无法访问应用商店，或需要安装指定的测试版本，可以从 [浏览器扩展固定最新版 Release](https://github.com/xylplm/media-saber-public/releases/tag/browser-extension) 下载对应浏览器的安装包。
 
-1. **获取安装包** - 从群消息，开发组不定期发布 获取最新版本的 `.zip` 文件
-2. **解压文件** - 将 `.zip` 文件解压到任意文件夹
-3. **加载扩展**：
-   - 打开浏览器，输入 `chrome://extensions/` 或 `edge://extensions/`
-   - 开启"开发者模式"
-   - 点击"加载已解压的扩展程序"
-   - 选择解压后的文件夹
+Chrome 和 Edge 每个版本提供三种格式：
+
+| 文件格式 | 用途 | 安装方式 |
+|---|---|---|
+| `.zip` | 解压加载包，兼容性最好 | 解压后通过“加载已解压的扩展程序”安装 |
+| `.crx` | Chromium 打包扩展 | 部分浏览器可拖入扩展管理页安装 |
+| `.crx.zip` | 内含 `.crx` 的压缩包 | 适合浏览器拦截 `.crx` 直链下载时使用，先解压得到 `.crx` |
+
+Firefox 提供 MV2 和 MV3 两个 `.zip` 包，Safari 提供 `.zip` 包；Firefox 和 Safari 的安装限制请参阅下方对应章节。
+
+##### Chrome / Edge 安装 `.zip`
+
+1. 下载对应浏览器的 `.zip` 文件并解压到一个固定目录。
+2. 打开 `chrome://extensions/` 或 `edge://extensions/`。
+3. 开启右上角“开发者模式”。
+4. 点击“加载已解压的扩展程序”，选择包含 `manifest.json` 的解压目录。
+5. 安装完成后点击浏览器工具栏中的扩展图标。
+
+##### Chrome / Edge 安装 `.crx`
+
+1. 打开 `chrome://extensions/` 或 `edge://extensions/`，开启“开发者模式”。
+2. 尝试将 `.crx` 文件拖入扩展管理页。
+3. 如果浏览器拒绝安装，请改用 `.zip` 解压加载，或直接使用应用商店版本。
+
+> Chrome、Edge 及其他 Chromium 内核浏览器对 CRX 直装的安全策略可能不同。CRX 文件不是损坏，浏览器拒绝安装通常是策略限制；`.crx.zip` 只是把同一个 CRX 文件放进压缩包，下载后仍需解压。
 
 ### � 首次配置
 
