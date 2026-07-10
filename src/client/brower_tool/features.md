@@ -36,19 +36,19 @@ Media Saber Tools 将 Media Saber 的常用操作带到浏览器中，适合在�
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 20px 0;">
   <div style="text-align: center;">
-    <img src="../images/0501.png" alt="站点管理界面" style="width: 100%; max-width: 300px; border: 2px solid #e1e5e9; border-radius: 12px;"/>
+    <img src="./images/0501.png" alt="站点管理界面" style="width: 100%; max-width: 300px; border: 2px solid #e1e5e9; border-radius: 12px;"/>
     <p>🌐 站点管理</p>
   </div>
   <div style="text-align: center;">
-    <img src="../images/0502.png" alt="云存储管理界面" style="width: 100%; max-width: 300px; border: 2px solid #e1e5e9; border-radius: 12px;"/>
+    <img src="./images/0502.png" alt="云存储管理界面" style="width: 100%; max-width: 300px; border: 2px solid #e1e5e9; border-radius: 12px;"/>
     <p>☁️ 云存储管理</p>
   </div>
   <div style="text-align: center;">
-    <img src="../images/0503.png" alt="下载管理界面" style="width: 100%; max-width: 300px; border: 2px solid #e1e5e9; border-radius: 12px;"/>
+    <img src="./images/0503.png" alt="下载管理界面" style="width: 100%; max-width: 300px; border: 2px solid #e1e5e9; border-radius: 12px;"/>
     <p>📥 下载管理</p>
   </div>
   <div style="text-align: center;">
-    <img src="../images/0504.png" alt="数据统计界面" style="width: 100%; max-width: 300px; border: 2px solid #e1e5e9; border-radius: 12px;"/>
+    <img src="./images/0504.png" alt="数据统计界面" style="width: 100%; max-width: 300px; border: 2px solid #e1e5e9; border-radius: 12px;"/>
     <p>📊 数据统计</p>
   </div>
 </div>
