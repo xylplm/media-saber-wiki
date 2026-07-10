@@ -94,7 +94,7 @@ Media Saber 未内置任何站点支持！**在添加站点前必须先配置站
 
 | 字段 | 说明 |
 |------|------|
-| 🍪 **Cookie** | 在浏览器 F12 → 网络选项卡获取，或使用 [Cookie 插件](/client/brower_tool.html) 快速获取 |
+| 🍪 **Cookie** | 在浏览器 F12 → 网络选项卡获取，或使用 [Cookie 插件](/client/brower_tool/) 快速获取 |
 | 📥 **自定义请求头** | 格式：`key:value`，多个换行分隔。某些站点（馒头、飞天拉面等）需要配置才能使用 |
 | 🌐 **User-Agent** | 站点签到/搜索/数据获取时的标识信息，为空则使用系统默认设置 |
 | 🔐 **两步验证 Key** | 部分站点需要配置 2FA 认证，可通过二维码扫描或选择获取 |
@@ -202,7 +202,7 @@ Media Saber 未内置任何站点支持！**在添加站点前必须先配置站
 
 ### 方式二：插件同步
 
-使用浏览器同步插件自动获取和更新 Cookie。详见 [浏览器同步插件](/client/brower_tool.html)。
+使用浏览器同步插件自动获取和更新 Cookie。详见 [浏览器同步插件](/client/brower_tool/)。
 
 ## 🌐 站点连通性测试
 
@@ -249,7 +249,7 @@ Media Saber 未内置任何站点支持！**在添加站点前必须先配置站
 ## 📚 相关文档
 
 - 📖 [站点管理配置指南](/guide/init/sites) - 初始化站点配置
-- 🔌 [浏览器同步插件](/client/brower_tool.html) - Cookie 自动同步
+- 🔌 [浏览器同步插件](/client/brower_tool/) - Cookie 自动同步
 - ⚙️ [代理服务器设置](/usage/system_settings/basic_settings.html#代理服务器) - 代理配置
 - 📋 [Cron 规则文档](/usage/other/cron_rule) - 定时任务表达式
 - 🔍 [过滤规则](/usage/system_settings/filter_rules.html) - 种子过滤配置

@@ -200,7 +200,7 @@ docker exec media-saber ls /app/config/data/site_config/sites/
 1. **重新获取 Cookie**
    - 在浏览器中登出站点，然后重新登录
    - 打开浏览器 F12 → 应用/存储 → Cookie → 复制所有值
-   - 或使用 [浏览器同步插件](/client/brower_tool.html)
+   - 或使用 [浏览器同步插件](/client/brower_tool/)
 
 2. **更新站点 Cookie**
    - 进入站点列表 → 点击编辑

@@ -106,7 +106,7 @@ highlights:
       - title: 🧩 浏览器扩展
         icon: puzzle-piece
         details: 浏览器中快速添加媒体
-        link: /client/brower_tool
+        link: /client/brower_tool/
 
 footer: MIT License | Copyright © 2023-present xylplm
 ---

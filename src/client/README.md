@@ -30,7 +30,7 @@ date: 2023-05-22T08:51:16.561Z
 
 ### 🌐 浏览器工具
 
-- [浏览器插件](/client/brower_tool.md) - Chrome 和 Edge 浏览器扩展
+- [浏览器插件](/client/brower_tool/) - Chrome、Edge 及其他 Chromium 浏览器扩展
 
 ---
 
@@ -70,7 +70,7 @@ date: 2023-05-22T08:51:16.561Z
 | 日常管理媒体库 | 安卓/iOS 应用 | [安卓](/client/android/) \| [iOS](/client/ios/) |
 | 手腕查看动态 | 小米手表客户端 | [小米手表](/client/xiaomi_watch.md) |
 | 桌面常亮状态屏 | ESP32 桌面小助手 | [ESP32 桌面小助手](/client/esp32/) |
-| 浏览器同步站点 | 浏览器插件 | [浏览器插件](/client/brower_tool.md) |
+| 浏览器同步站点 | 浏览器插件 | [浏览器插件](/client/brower_tool/) |
 
 ### 第二步：按平台指南安装
 
@@ -114,8 +114,8 @@ date: 2023-05-22T08:51:16.561Z
 - 支持桌面状态屏、消息中心与小智语音能力，[常见问题](/client/esp32/faq.md) 可辅助排查
 
 ### 🌐 浏览器插件
-- [完整插件文档](/client/brower_tool.md)
-- 支持 Chrome 和 Edge 浏览器
+- [完整插件文档](/client/brower_tool/)
+- 支持 Chrome、Edge 及其他 Chromium 浏览器
 - 一键同步 PT 站点信息
 
 ---
@@ -129,7 +129,7 @@ date: 2023-05-22T08:51:16.561Z
 👉 选择 [小米手表客户端](/client/xiaomi_watch.md)
 
 ### 我想同步浏览器中的 PT 站点信息
-👉 选择 [浏览器插件](/client/brower_tool.md)
+👉 选择 [浏览器插件](/client/brower_tool/)
 
 ### 我想拥有完整的控制体验
 👉 组合使用：移动应用 + 浏览器插件
