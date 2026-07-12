@@ -76,4 +76,4 @@ date: 2025-11-19 00:00:00
 ## 🔗 相关链接
 
 - [修仙秘籍主页](/usage/cultivation_secrets/)
-- [自动备份](/usage/cultivation_secrets/auto_backup.html)
+- [系统备份](/usage/cultivation_secrets/system_backup.html)

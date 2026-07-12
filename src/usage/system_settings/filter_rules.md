@@ -1,11 +1,15 @@
 ﻿---
+---
 title: 过滤规则
 article: false
-tags: null
-categories: null
+tags:
+  - 系统设置
+  - 过滤规则
+categories:
 editor: markdown
-date: 2025-01-01 12:16:17
+date: 2026-07-12 12:16:17
 ---
+
 
 # 🔍 过滤规则
 
@@ -168,6 +172,20 @@ date: 2025-01-01 12:16:17
 
 ---
 
+## 📱 APP 使用说明
+
+移动端与 Web 共用同一套过滤规则数据，交互更偏卡片工作台：
+
+1. 进入 **设置 → 过滤规则**，查看规则组卡片列表
+2. 右上角可 **导入规则组**（`.msfr.zip`），右下角可 **新增规则组**
+3. 卡片上可直接 **导出规则包**、**删除规则组**
+4. 点进规则组详情后，可新增 / 编辑子规则
+5. 子规则列表支持 **长按拖拽排序**；排序成功会自动保存，失败会回滚并提示
+
+> APP 端规则组页以卡片展示选中 / 丢弃数量和规则预览；组内排序与 Web 一样按从上到下依次匹配。
+
+---
+
 ## 使用说明
 
 1. **规则执行顺序**：过滤规则按列表从上到下依次执行，可通过拖拽手柄调整
@@ -183,5 +201,7 @@ date: 2025-01-01 12:16:17
 - [种子匹配](/usage/system_settings/torrent_match.html) - 了解如何创建种子匹配规则
 - [种子排序](/usage/system_settings/torrent_sort.html) - 配合过滤规则实现精确控制
 - [基础设置](/usage/system_settings/basic_settings.html) - 配置默认过滤规则
+- [系统备份](/usage/cultivation_secrets/system_backup.html) - 系统级配置与数据库备份还原
 
 ---
+

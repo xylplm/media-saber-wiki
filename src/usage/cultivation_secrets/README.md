@@ -112,7 +112,7 @@ date: 2023-09-27 12:16:17
 
 插件分为两种模式：
 
-- **无天赋**（单例）：只能启灵一个实例，如「自动备份」「系统进程」
+- **无天赋**（单例）：只能启灵一个实例，如「系统备份」「系统进程」
 - **领悟分神术**（多实例）：可创建多个独立实例，如「刷流」「签到」「转种」
 
 多实例插件在秘术鉴中会显示「已有秘籍」列表和「分神」按钮，每个分神实例独立配置、独立运行。
@@ -176,7 +176,7 @@ date: 2023-09-27 12:16:17
 | 插件 | 说明 |
 |------|------|
 | [系统进程](/usage/cultivation_secrets/system_process.html) | 查看 Docker 容器系统进程 |
-| [自动备份](/usage/cultivation_secrets/auto_backup.html) | 自动备份系统配置文件和数据库 |
+| [系统备份](/usage/cultivation_secrets/system_backup.html) | 系统配置与数据库备份、加密、云端同步与一键还原 |
 | [CookieCloud 同步](/usage/cultivation_secrets/cookiecloud_sync.html) | 从 CookieCloud 同步站点 Cookie |
 | [Giffgaff 保号提醒](/usage/cultivation_secrets/giffgaff_keep_alive.html) | Giffgaff 手机卡 180 天保号提醒 |
 | [时刻](/usage/cultivation_secrets/moment.html) | 时刻提醒你，值得记住的瞬间 |
