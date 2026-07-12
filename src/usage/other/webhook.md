@@ -40,6 +40,14 @@ Media Saber 支持以下类型的 Webhook 集成：
 3. 保存后点击 **Webhook 地址**
 4. 按场景复制 **内网地址** 或 **外网地址**
 
+新地址统一为：
+
+```
+http[s]://your-domain.com[:port]/api/v1/webhook/mediaServer/{媒体服务ID}?apiKey=your-api-key
+```
+
+> 旧地址 `/api/v1/webhook/emby`、`/api/v1/webhook/plex` 已废弃，请改用按媒体服务 ID 生成的新地址。
+
 同内网优先使用内网地址，延迟更低也更稳定；媒体服务只能从外网访问 Media Saber 时，使用外网地址。
 
 ### 2. 控制消息推送
@@ -228,10 +236,12 @@ export WEBHOOK_CONTENT_TYPE="application/json"
 填写以下信息：
 
 - **名称**：自定义Webhook名称
-- **URL**：`http[s]://your-domain.com[:port]/api/v1/webhook/emby?apiKey=your-api-key`
+- **URL**：优先使用 Media Saber「媒体服务器」页复制的地址；格式为  
+  `http[s]://your-domain.com[:port]/api/v1/webhook/mediaServer/{媒体服务ID}?apiKey=your-api-key`
 - **请求内容类型**：选择`application/json`
 
-> 🔑 **API Key配置**：请参考[API鉴权文档](/usage/other/api_auth.html)获取配置说明
+> 🔑 **推荐**：在 Media Saber 的媒体服务器卡片/编辑页点 **Webhook 地址**，直接复制内网或外网完整地址。  
+> 也可参考 [API鉴权文档](/usage/other/api_auth.html) 手动拼接。
 
 配置完成后可以点击`发送测试Webhook`验证配置：
 
@@ -291,7 +301,8 @@ export WEBHOOK_CONTENT_TYPE="application/json"
 配置以下参数：
 
 - **Webhook Name**：自定义Webhook名称
-- **Webhook Url**：`http[s]://your-domain.com[:port]/api/v1/webhook/emby?apiKey=your-api-key`
+- **Webhook Url**：优先使用 Media Saber「媒体服务器」页复制的地址；格式为  
+  `http[s]://your-domain.com[:port]/api/v1/webhook/mediaServer/{媒体服务ID}?apiKey=your-api-key`
 - **Notification Type**：勾选你想触发通知的通知类型
 - **User Filter**：勾选你想触发通知的用户
 - **Item Type**：勾选你想监控的媒体类型
@@ -341,9 +352,11 @@ export WEBHOOK_CONTENT_TYPE="application/json"
 
 点击`添加Webhook`按钮，输入以下信息：
 
-- **URL**：`http[s]://your-domain.com[:port]/api/v1/webhook/plex?apiKey=your-api-key`
+- **URL**：优先使用 Media Saber「媒体服务器」页复制的地址；格式为  
+  `http[s]://your-domain.com[:port]/api/v1/webhook/mediaServer/{媒体服务ID}?apiKey=your-api-key`
 
-> 🔑 **API Key配置**：请参考[API鉴权文档](/usage/other/api_auth.html)获取配置说明
+> 🔑 **推荐**：在 Media Saber 的媒体服务器卡片/编辑页点 **Webhook 地址**，直接复制内网或外网完整地址。  
+> 也可参考 [API鉴权文档](/usage/other/api_auth.html) 手动拼接。
 
 **3. 完成配置**
 

@@ -61,15 +61,21 @@ Jellyfin 需要先安装官方 [Webhook 插件](https://github.com/jellyfin/jell
 - 用于**消息通知**（如"XX开始播放XX""新增入库"等推送）
 - 用于 [观影报告](/usage/media_services/play_stats.html) 的「实时」播放统计来源（相比定时估算更精准）
 
-**快捷 Webhook 地址（与 Emby 共用同一接口，后端会自动识别 Jellyfin 格式）：**
+**推荐做法：**
+
+1. 在 Media Saber 保存该 Jellyfin 媒体服务器
+2. 打开列表/编辑页中的 **Webhook 地址**
+3. 复制内网或外网完整地址（按媒体服务 ID 生成）
+
+**地址格式：**
 
 ```
-http[s]://your-domain.com[:port]/api/v1/webhook/emby?apiKey=your-api-key
+http[s]://your-domain.com[:port]/api/v1/webhook/mediaServer/{媒体服务ID}?apiKey=your-api-key
 ```
 
-> 🔑 `your-api-key` 请参考 [我的信息 - API KEY 管理](/usage/main_page/my_info.html) 获取；也可在设置里去掉 `apiKey` 参数，改用请求头鉴权，详见 [API 鉴权文档](/usage/other/api_auth.html)。
+> 🔑 优先用页面一键复制。Emby / Jellyfin / Plex 统一使用 `mediaServer/{id}` 地址，后端按对应媒体服务识别事件。手动配置时，`{媒体服务ID}` 是保存后显示的服务 ID；`your-api-key` 见 [我的信息 - API KEY 管理](/usage/main_page/my_info.html)。也可去掉 `apiKey` 参数改用请求头鉴权，详见 [API 鉴权文档](/usage/other/api_auth.html)。
 
-在 Jellyfin 插件的 Webhook 目标（Generic Destination）中填入上方地址，`Content-Type` 请求头设为 `application/json`。完整的分步图文教程（含插件安装、参数勾选、调试日志）请查看：👉 [Webhook 配置文档 - Jellyfin 章节](/usage/other/webhook.html#🐙-jellyfin-webhook配置)
+在 Jellyfin 插件的 Webhook 目标（Generic Destination）中填入该地址，`Content-Type` 请求头设为 `application/json`。完整的分步图文教程（含插件安装、参数勾选、调试日志）请查看：👉 [Webhook 配置文档 - Jellyfin 章节](/usage/other/webhook.html#🐙-jellyfin-webhook配置)
 
 ### 🔌 关于"代理端口"的补充说明
 

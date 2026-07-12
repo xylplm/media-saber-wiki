@@ -61,15 +61,21 @@ Emby是一个功能强大的媒体服务器软件，可以管理和播放存储�
 - 用于**消息通知**（如"XX开始播放XX""新增入库"等推送）
 - 用于 [观影报告](/usage/media_services/play_stats.html) 的「实时」播放统计来源（相比定时估算更精准）
 
-**快捷 Webhook 地址：**
+**推荐做法：**
+
+1. 在 Media Saber 保存该 Emby 媒体服务器
+2. 打开列表/编辑页中的 **Webhook 地址**
+3. 复制内网或外网完整地址（按媒体服务 ID 生成）
+
+**地址格式：**
 
 ```
-http[s]://your-domain.com[:port]/api/v1/webhook/emby?apiKey=your-api-key
+http[s]://your-domain.com[:port]/api/v1/webhook/mediaServer/{媒体服务ID}?apiKey=your-api-key
 ```
 
-> 🔑 `your-api-key` 请参考 [我的信息 - API KEY 管理](/usage/main_page/my_info.html) 获取；也可在设置里去掉 `apiKey` 参数，改用请求头鉴权，详见 [API 鉴权文档](/usage/other/api_auth.html)。
+> 🔑 优先用页面一键复制。手动配置时，`{媒体服务ID}` 是保存后显示的服务 ID；`your-api-key` 见 [我的信息 - API KEY 管理](/usage/main_page/my_info.html)。也可去掉 `apiKey` 参数改用请求头鉴权，详见 [API 鉴权文档](/usage/other/api_auth.html)。
 
-在 Emby 控制台 `设置` → `服务器` → `Webhook` 中添加上方地址即可，完整的分步图文教程（含测试验证）请查看：👉 [Webhook 配置文档 - Emby 章节](/usage/other/webhook.html#🎬-emby-webhook配置)
+在 Emby 控制台 `设置` → `服务器` → `Webhook` 中添加该地址即可，完整的分步图文教程（含测试验证）请查看：👉 [Webhook 配置文档 - Emby 章节](/usage/other/webhook.html#🎬-emby-webhook配置)
 
 ## 🔌 strm302代理播放配置
 
