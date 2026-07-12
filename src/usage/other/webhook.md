@@ -2,27 +2,72 @@
 title: Webhook
 article: false
 tags:
-categories: 
+  - Webhook
+  - 媒体服务器
+categories:
   - 使用文档
   - 其它
 editor: markdown
 dateCreated: 2023-05-12T04:26:30.172Z
+date: 2026-07-12 12:16:17
 ---
 
 # 🪝 Webhook
 
-Webhook是一种轻量级的回调机制，允许外部服务在特定事件发生时通知Media Saber。通过配置Webhook，您可以实现第三方服务与Media Saber的实时通信，自动触发相关操作。媒体服务器集成只是其中一种应用场景。
+Webhook 是一种轻量级的回调机制，允许外部服务在特定事件发生时通知 Media Saber。通过配置 Webhook，你可以实现第三方服务与 Media Saber 的实时通信，并自动触发相关操作。媒体服务器集成只是其中一种应用场景。
 
-## 🎯 支持的Webhook类型
+## 🎯 支持的 Webhook 类型
 
-Media Saber支持以下类型的Webhook集成：
+Media Saber 支持以下类型的 Webhook 集成：
 
 - Emby Webhook
 - Jellyfin Webhook
 - Plex Webhook
-- 开放消息渠道Webhook
+- 开放消息渠道 Webhook
 
-> 💡 配置好 Emby / Jellyfin / Plex 的播放 Webhook 后，播放事件除了用于消息通知，还会自动汇入 [观影报告](/usage/media_services/play_stats.html)，作为最精准的「实时」观看统计来源。
+> 💡 配置好 Emby / Jellyfin / Plex 的 Webhook 后：  
+> 1. 可在 [媒体服务器](/usage/media_services/server.html#webhook-消息推送) 中控制是否通过消息渠道推送，以及推送哪些事件  
+> 2. 播放事件还会自动汇入 [观影报告](/usage/media_services/play_stats.html)，作为最精准的「实时」观看统计来源
+
+## 🖥️ 在 Media Saber 中配置媒体服务 Webhook
+
+推荐先在 Media Saber 完成媒体服务侧配置，再去媒体服务器后台粘贴地址。
+
+### 1. 获取 Webhook 地址
+
+1. 进入 **媒体服务 → 媒体服务器**
+2. 新增或编辑 Emby / Jellyfin / Plex
+3. 保存后点击 **Webhook 地址**
+4. 按场景复制 **内网地址** 或 **外网地址**
+
+同内网优先使用内网地址，延迟更低也更稳定；媒体服务只能从外网访问 Media Saber 时，使用外网地址。
+
+### 2. 控制消息推送
+
+在媒体服务器编辑页可配置：
+
+| 配置项 | 说明 |
+|------|------|
+| 启用消息推送 | 总开关。关闭后不发消息，但 Webhook 仍会接收并处理业务 |
+| 推送事件类型 | 可多选。不选或全选表示推送全部事件 |
+
+也就是说：
+
+- **接收 Webhook**：始终生效，用于观影报告实时采集等业务
+- **消息推送**：可按服务器、按事件类型单独控制
+
+### 3. 前置条件
+
+若地址弹窗提示无法生成，请先处理：
+
+| 提示 | 处理方式 |
+|------|----------|
+| 尚未配置访问地址 | 系统设置中填写内网主机地址 / 外网访问地址 |
+| 尚未启用 API Key | 账户安全设置中创建并启用 API Key |
+| 当前类型不支持 | 仅 Emby / Jellyfin / Plex 支持媒体服务级 Webhook |
+
+> 地址中包含 API Key，请勿分享。停用或删除对应 Key 后，地址会立即失效。
+
 
 ## 📨 开放消息渠道 Webhook
 
@@ -310,8 +355,16 @@ export WEBHOOK_CONTENT_TYPE="application/json"
 
 ## ⚠️ 注意事项
 
-1. **网络连接**：确保Media Saber服务地址可以从媒体服务器访问
-2. **API Key配置**：正确配置API Key以确保身份验证通过，详细获取方法请参考 [我的信息 - API KEY管理](/usage/main_page/my_info.html#-api-key-管理)
-3. **事件选择**：根据实际需求选择合适的事件类型，避免过多不必要的通知
-4. **连接监控**：定期检查Webhook连接状态，确保通信正常
-5. **性能优化**：在生产环境中建议关闭调试日志以提升性能
+1. **网络连接**：确保 Media Saber 服务地址可以从媒体服务器访问；同内网优先用内网地址
+2. **API Key 配置**：正确配置 API Key 以确保身份验证通过，详细获取方法请参考 [我的信息 - API KEY管理](/usage/main_page/my_info.html#-api-key-管理)
+3. **地址获取**：优先使用媒体服务器页的「Webhook 地址」一键复制，避免手写拼错
+4. **消息与接收分离**：在 Media Saber 关闭「启用消息推送」后，仍会接收 Webhook 并处理观影报告等业务
+5. **事件选择**：根据实际需求选择合适的事件类型，避免过多不必要的通知
+6. **连接监控**：定期检查 Webhook 连接状态，确保通信正常
+7. **性能优化**：在生产环境中建议关闭调试日志以提升性能
+
+## 🔗 相关文档
+
+- [媒体服务器](/usage/media_services/server.html)
+- [观影报告](/usage/media_services/play_stats.html)
+- [API 鉴权](/usage/other/api_auth.html)

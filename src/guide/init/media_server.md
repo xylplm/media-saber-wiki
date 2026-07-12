@@ -80,9 +80,25 @@ dateCreated: 2023-10-11T16:25:24.817Z
 
 ---
 
+## 🔔 可选：配置 Webhook
+
+若你添加的是 Emby / Jellyfin / Plex，建议继续配置 Webhook：
+
+1. 回到媒体服务器列表，打开对应服务器的 **Webhook 地址**
+2. 复制内网或外网地址，粘贴到媒体服务器后台
+3. 在 Media Saber 编辑页按需开启消息推送、选择事件类型
+
+详细说明见：
+
+- [媒体服务器 - Webhook 消息推送](/usage/media_services/server.html#webhook-消息推送)
+- [Webhook 配置教程](/usage/other/webhook.html)
+
+---
+
 ## 📌 下一步
 
 完成媒体服务设置后，您可以进行以下操作：
 - [返回初始化设置](/guide/init/)
 - [进行系统设置](/guide/init/system_setting)
 - [进行站点配置](/guide/init/sites)
+

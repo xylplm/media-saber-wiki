@@ -24,7 +24,10 @@ date: 2023-09-27 12:16:17
 
 1. 先进入 [媒体服务器](/usage/media_services/server.html) 添加并测试服务器连接
 2. 再按你的服务器类型查看对应教程（Emby / Jellyfin / Plex / UGoS / FNOS / 极影视）
-3. 若使用网盘 `.strm` 播放，务必配置 [媒体代理](/usage/media_services/media_proxy.html)
+3. Emby / Jellyfin / Plex 建议配置 [Webhook 消息推送](/usage/media_services/server.html#webhook-消息推送)，并到对应媒体服务后台填写地址
+4. 若使用网盘 `.strm` 播放，务必配置 [媒体代理](/usage/media_services/media_proxy.html)
+5. 需要排查缺集 / 未匹配 / 可升级时，进入 [媒体健康中心](/usage/media_services/media_health.html)
+6. 需要看观看数据时，进入 [观影报告](/usage/media_services/play_stats.html)
 
 ## 🧭 功能导航
 
@@ -33,8 +36,9 @@ date: 2023-09-27 12:16:17
 - 📚 [我的媒体库](/usage/media_services/library.html)：查看电影、电视剧等媒体数据总览
 - 🩺 [媒体健康中心](/usage/media_services/media_health.html)：发现缺集、未匹配、可升级等媒体库问题
 - 📊 [观影报告](/usage/media_services/play_stats.html)：观看时长趋势、热门内容、用户活跃、设备与来源分布
-- 🖥️ [媒体服务器](/usage/media_services/server.html)：管理服务器新增、编辑、同步、定时任务
+- 🖥️ [媒体服务器](/usage/media_services/server.html)：管理服务器新增、编辑、同步、定时任务、Webhook 地址与消息推送
 - 🚀 [媒体代理](/usage/media_services/media_proxy.html)：配置播放分发策略、直链探测和回退机制
+- 🪝 [Webhook](/usage/other/webhook.html)：媒体服务器后台回调配置与开放消息接口
 
 ### 服务器配置教程
 
@@ -80,6 +84,7 @@ date: 2023-09-27 12:16:17
 
 - 选择服务器时优先考虑设备兼容性、远程访问场景与维护成本
 - 确保媒体服务器可访问媒体文件目录，且 API 权限配置正确
-- Emby、Jellyfin、Plex 在网盘 `.strm` 场景建议先配置媒体代理（[[查看媒体代理配置说明]](/usage/media_services/media_proxy)），否则通常无法完成 `302` 跳转播放
+- Emby、Jellyfin、Plex 建议开启 Webhook：既可做消息推送，也可为观影报告提供实时数据
+- Emby、Jellyfin、Plex 在网盘 `.strm` 场景建议先配置媒体代理（[查看媒体代理配置说明](/usage/media_services/media_proxy.html)），否则通常无法完成 `302` 跳转播放
 - 定期更新服务器版本，并关注版本兼容与变更说明
 - 合理设置刮削与路径映射，减少识别错误
