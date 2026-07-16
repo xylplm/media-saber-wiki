@@ -22,7 +22,7 @@ date: 2023-09-27 12:16:17
 目录管理包含以下主要功能模块：
 
 ### 📂 [文件管理](/usage/directory_management/file_management.html)
-浏览和管理本地文件系统中的媒体文件，支持文件转移、硬链接查询和刮削等操作。
+浏览和管理本地文件系统中的媒体文件，支持文件转移、硬链接查询、刮削，以及单文件字幕检查 / 目录字幕巡检。
 
 ### 🏷️ [目录分类](/usage/directory_management/directory_classification.html)
 配置和管理目录分类规则，用于自动将媒体文件归类到相应的目录中。

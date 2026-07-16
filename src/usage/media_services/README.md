@@ -26,9 +26,11 @@ date: 2023-09-27 12:16:17
 2. 再按你的服务器类型查看对应教程（Emby / Jellyfin / Plex / UGoS / FNOS / 极影视）
 3. Emby / Jellyfin / Plex 建议配置 [Webhook 消息推送](/usage/media_services/server.html#webhook-消息推送)，并到对应媒体服务后台填写地址
 4. 若使用网盘 `.strm` 播放，务必配置 [媒体代理](/usage/media_services/media_proxy.html)
-5. 需要排查缺集 / 未匹配 / 可升级 / 缺字幕时，进入 [媒体健康中心](/usage/media_services/media_health.html)
-6. 需要自动或手动补字幕时，进入 [字幕中心](/usage/media_services/subtitle_center.html)，并参考 [字幕来源配置教程](/usage/media_services/subtitle_providers.html)
-7. 需要看观看数据时，进入 [观影报告](/usage/media_services/play_stats.html)
+5. 在 [媒体服务器](/usage/media_services/server.html) 完成至少一次媒体库同步
+6. 需要排查缺集 / 未匹配 / 可升级 / 缺字幕时，进入 [媒体健康中心](/usage/media_services/media_health.html)
+7. 需要自动或手动补字幕时，进入 [字幕中心](/usage/media_services/subtitle_center.html)，并参考 [字幕来源配置教程](/usage/media_services/subtitle_providers.html)
+8. 也可在 [文件管理](/usage/directory_management/file_management.html) 对单文件检查字幕、对目录发起字幕巡检
+9. 需要看观看数据时，进入 [观影报告](/usage/media_services/play_stats.html)
 
 ## 🧭 功能导航
 
