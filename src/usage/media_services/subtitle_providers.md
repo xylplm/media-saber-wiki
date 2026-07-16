@@ -31,7 +31,7 @@ date: 2026-07-16 00:00:00
 
 | 来源 | 类型 | 需要配置 | 自动采用建议 | 备注 |
 | --- | --- | --- | --- | --- |
-| OpenSubtitles | 官方 API | API Key + 用户名 + 密码 | 可开启 | 国际源，TMDB/IMDb 召回稳 |
+| OpenSubtitles | 官方 API | 用户名 + 密码 | 可开启 | 国际源；API Key/UA 内置 |
 | Assrt | 官方 API | 访问令牌 | 可开启 | 中文剧集召回好 |
 | SubDL | 官方 API | API Key | 可开启 | IMDb/TMDB 精确搜索 |
 | 射手影音 | 哈希匹配 | 无需凭据 | 可开启 | 仅本地可读媒体 |
@@ -45,36 +45,35 @@ date: 2026-07-16 00:00:00
 
 ### 需要什么
 
-- **API Key**
 - **用户名**
 - **密码**
 
-> ⚠️ 用户名请使用 OpenSubtitles 站内用户名。部分账号邮箱登录可以，但用户名更稳妥；配置页不要把邮箱当唯一凭据习惯。
+> 💡 **API Key / User-Agent 已内置**，普通用户不需要去 Consumers 申请应用（与 Bazarr 同类做法）。你只要有可登录的 OpenSubtitles 账号即可。
+>
+> ⚠️ 用户名请使用 OpenSubtitles 站内用户名。部分账号邮箱登录可以，但用户名更稳妥。
 
 ### 申请步骤
 
 1. 打开 [OpenSubtitles 注册/登录](https://www.opensubtitles.com/zh/users/sign_up)
-2. 登录后进入 [Consumers / API 申请页](https://www.opensubtitles.com/zh/consumers)
-3. 创建一个应用，拿到 **API Key**
-4. 应用名称建议与请求 UA 保持一致，当前系统 UA 为：`MediaSaber/1.0 subtitle integration`
-5. 回到字幕中心填写：
-   - API 密钥
+2. 完成注册并确认能正常登录官网
+3. 回到字幕中心填写：
    - 账号
    - 密码
-6. 如在国内网络不稳定，可开启 **使用系统代理**
-7. 保存后点测试
+4. 如在国内网络不稳定，可开启 **使用系统代理**
+5. 保存后点测试
 
 ### 使用说明
 
 - 搜索：`TMDB ID → 标题 → IMDb ID`
 - 剧集会走 `parent_tmdb_id / parent_imdb_id + season/episode`
 - 下载需要登录 token；连通性测试会真正调用登录接口
+- 系统会自动携带内置 `Api-Key` 与 `User-Agent`
 
 ### 常见问题
 
 | 现象 | 处理 |
 | --- | --- |
-| 认证失败 | 检查 API Key、用户名、密码；确认可访问 `api.opensubtitles.com` |
+| 认证失败 | 检查用户名、密码；确认可访问 `api.opensubtitles.com` |
 | 超时 | 开启系统代理，或检查本机出口网络 |
 | 搜索有结果但下载失败 | 账号下载配额不足，或网络中断 |
 
