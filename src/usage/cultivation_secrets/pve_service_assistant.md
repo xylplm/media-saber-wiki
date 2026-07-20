@@ -10,7 +10,7 @@ date: 2025-11-19 00:00:00
 
 # 🖥️ PVE 服务助手
 
-集成 Proxmox VE（PVE）节点状态查询、磁盘 SMART 信息、虚拟机列表和状态告警通知功能。通过 PVE REST API 采集数据，作为 nasInfo provider 接入系统统一面板。
+集成 Proxmox VE（PVE）节点状态查询、磁盘 SMART 信息、虚拟机列表和状态告警通知功能。通过 PVE REST API 采集数据，作为 nasInfo provider 接入首页 **天序工作台 · 系统机体**。
 
 ## ⚙️ 功能特点
 
