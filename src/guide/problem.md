@@ -229,6 +229,7 @@ docker exec media-saber ls /app/config/data/site_config/sites/
   - 馒头：需要 `x-api-key` 请求头
   - 飞天拉面：需要 `APITOKEN` 请求头
   - 朱雀：需要 `x-csrf-token` 请求头
+  - Sunny：需要 `Authorization` 请求头
 
 - ❌ **Token 过期或错误**
   - 确保从站点获取的 Token 仍然有效
