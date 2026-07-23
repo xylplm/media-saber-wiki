@@ -27,7 +27,7 @@ Media Saber 的 WEB 界面支持`PWA（Progressive Web App）`，手机上（Win
 - **硬链接**：一份文件生成多个文件入口，但只占用一份存储空间，只有所有入口都删除后才能释放文件占用空间；可以修改硬链接后的文件名但不会影响原文件做种（不能修改文件内容）；要求在同一磁盘下才能硬链接。
 - **软链接**：类似于快捷方式，原文件删除后软链接即会失效；使用软链接时的原文件路径需要与生成软链接时的原文件路径保持一致，否则无法使用，也就是在 docker 环境下，映射前后的目录路径需要一致。
 - **复制**：复制一份副本，多占用一份空间。
-- **移动**：移动文件存储位置，会影响原文件做种。
+- **移动**：移动文件存储位置，会影响原文件做种。在[目录同步](/usage/directory_management/directory_sync.html)中若同时开启「仅媒体文件」，媒体搬走后源目录残留的海报、NFO、说明等非媒体文件会作为下载目录垃圾一并清理。
 - **Strm**：创建 strm 流媒体文件指向原始文件，用于[云端存储](/usage/cloud_storage/strm_generate.html)等场景。
 - **Rclone 复制**：使用 Rclone 复制本地文件到网盘，需要自行映射 rclone 配置目录到容器中（`/ms/.config/rclone`）或在容器内使用`rclone config`完成 rclone 配置，网盘配置名称必须为：`MEDIA_SABER`，可自行通过 Docker 添加环境变量传递参数优化传输，参考：https://rclone.org/docs/#environment-variables 。
 - **Rclone 移动**：使用 Rclone 移动本地文件到网盘，其余与 Rclone 复制一致。
