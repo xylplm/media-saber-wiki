@@ -29,7 +29,7 @@ Media Saber 的智能能力分为两条清晰的使用路径：应用内的 **�
 
 ### 开始前准备
 
-1. 前往 [基础设置](/usage/system_settings/basic_settings.html)，选择接口格式并填写 AI 服务地址、密钥和常规任务模型；需要时可另设智能体专用模型。
+1. 前往 [基础设置](/usage/system_settings/basic_settings.html)，选择接口格式并填写 AI 服务地址、密钥和常规任务模型；需要时可在“灵犀伴影”卡片中另设专用模型。
 2. 如需下载种子，先在 [下载管理](/usage/download_management/) 配置至少一个可用下载器。
 3. 如需云下载或保存到网盘，先在 [云端存储](/usage/cloud_storage/) 启用并检查目标网盘。
 
