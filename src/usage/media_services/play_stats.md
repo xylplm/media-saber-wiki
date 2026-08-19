@@ -74,6 +74,7 @@ date: 2026-06-30 00:00:00
 - 支持 Webhook 的服务器（如配置好回调的 Emby / Jellyfin / Plex）走「实时」采集，数据最准。
 - 不支持或未配置 Webhook 的服务器（如部分 NAS 媒体服务、免费版本），由定时采集兜底补全，标记为「估算」。
 - 两种方式互斥：某服务器一旦收到过 Webhook 事件，定时采集会自动跳过它，避免重复计数。
+- 只采集 [媒体库启用范围](/usage/media_services/server.html#媒体库启用范围) 内的媒体库：未启用库的播放不会进入统计，Webhook 也不会推送其消息。
 
 > 配置 Webhook 的方法见 [Webhook](/usage/other/webhook.html)。
 
