@@ -55,7 +55,7 @@ Chrome、Edge 和其他 Chromium 浏览器可能限制直接安装 CRX。这通�
 
 ## ❌ Firefox 关闭后扩展消失
 
-Firefox 使用“临时载入附加组件”时，扩展会在浏览器关闭后失效。这是 Firefox 的工作方式。需要长期使用时，请使用 Mozilla Add-ons 商店版本，或使用开发版 / ESR 并按其签名策略安装。
+Firefox 使用“临时载入附加组件”时，扩展会在浏览器关闭后失效。这是 Firefox 的工作方式。需要长期使用时，请从 [Firefox 附加组件](https://addons.mozilla.org/zh-CN/firefox/addon/media-saber-tools/) 安装商店版本；开发版 / ESR 请按对应浏览器的签名策略安装。
 
 ## ❌ Safari 无法直接安装
 

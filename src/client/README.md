@@ -30,7 +30,7 @@ date: 2023-05-22T08:51:16.561Z
 
 ### 🌐 浏览器工具
 
-- [浏览器插件](/client/brower_tool/) - Chrome、Edge 及其他 Chromium 浏览器扩展
+- [浏览器插件](/client/brower_tool/) - 支持 Chrome、Edge、Firefox 及其他 Chromium 浏览器扩展
 
 ---
 
@@ -115,7 +115,7 @@ date: 2023-05-22T08:51:16.561Z
 
 ### 🌐 浏览器插件
 - [完整插件文档](/client/brower_tool/)
-- 支持 Chrome、Edge 及其他 Chromium 浏览器
+- 支持 Chrome、Edge、Firefox 及其他 Chromium 浏览器
 - 一键同步 PT 站点信息
 
 ---

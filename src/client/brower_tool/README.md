@@ -16,14 +16,15 @@ categories:
 
 Media Saber Tools 是面向 Media Saber 用户的浏览器扩展，提供站点同步、Cookie 获取、云存储管理、下载管理、网页链接识别和右键快捷操作等功能。
 
-普通用户建议优先从 Chrome 或 Edge 官方扩展商店安装。只有无法访问商店、需要测试指定版本或有特殊需求时，再使用 GitHub Release 中的手动安装包。
+普通用户建议优先从 Chrome、Edge 或 Firefox 官方扩展商店安装。只有无法访问商店、需要测试指定版本或有特殊需求时，再使用 GitHub Release 中的手动安装包。
 
 ## 🏪 官方商店
 
 - [Chrome 网上应用店](https://chromewebstore.google.com/detail/media-saber-tools/ibflljhbofedginadhkfehbpbefijfid)
 - [Microsoft Edge 加载项](https://microsoftedge.microsoft.com/addons/detail/hlpcdobmkgdflggmhpmgoejbfjndpadb)
+- [Firefox 附加组件](https://addons.mozilla.org/zh-CN/firefox/addon/media-saber-tools/)
 
-商店版本由平台负责安全校验和自动更新，是 Chrome、Edge 用户的首选安装方式。
+商店版本由平台负责安全校验和自动更新，是 Chrome、Edge 和 Firefox 用户的首选安装方式。
 
 ## 📚 新手阅读路径
 
@@ -47,7 +48,7 @@ Media Saber Tools 是面向 Media Saber 用户的浏览器扩展，提供站点�
 | Opera / Opera GX | Chrome `.zip` 手动加载 | 通常兼容 Chromium 扩展 |
 | Arc / Yandex / Chromium | Chrome 安装包 | 使用 Chromium 扩展机制 |
 | 360 / QQ 等浏览器 | Chrome `.zip` | 不同版本扩展策略可能不同，建议先测试 |
-| Firefox | Firefox MV2 或 MV3 包 | 按浏览器版本选择 |
+| Firefox | 官方商店 | 普通用户首选；手动安装包仅用于测试或特殊场景 |
 | Safari | Safari 包 | 需要通过 Xcode 封装 |
 
 当前没有为每个 Chromium 浏览器重复制作内容相同的品牌包。遇到兼容性问题时，请记录浏览器名称和版本，并优先使用 Chrome `.zip` 包测试。

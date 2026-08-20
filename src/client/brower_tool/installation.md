@@ -9,7 +9,7 @@ tags:
 
 # 安装扩展
 
-Chrome 和 Edge 用户建议优先使用官方扩展商店。Release 手动包适合无法访问商店、需要指定测试版本或使用其他 Chromium 浏览器的场景。
+Chrome、Edge 和 Firefox 用户建议优先使用官方扩展商店。Release 手动包适合无法访问商店、需要指定测试版本或使用其他 Chromium 浏览器的场景。
 
 ## 🏪 官方商店安装
 
@@ -20,6 +20,10 @@ Chrome 和 Edge 用户建议优先使用官方扩展商店。Release 手动包�
 ### Edge
 
 打开 [Microsoft Edge 加载项](https://microsoftedge.microsoft.com/addons/detail/hlpcdobmkgdflggmhpmgoejbfjndpadb)，点击“获取”。
+
+### Firefox
+
+打开 [Firefox 附加组件](https://addons.mozilla.org/zh-CN/firefox/addon/media-saber-tools/)，点击“添加到 Firefox”。
 
 商店版本由平台负责安全校验和自动更新，普通用户不需要手动下载 Release 包。
 
@@ -59,14 +63,14 @@ Chrome、Edge、Brave、Vivaldi、Opera、Opera GX、Arc、Yandex、Chromium 等
 
 ## 🦊 Firefox
 
-Release 提供 Firefox MV2 和 Firefox MV3 两个 `.zip` 包：
+Release 提供 Firefox MV2 和 Firefox MV3 两个 `.zip` 包，适合测试指定版本或有特殊需求时使用：
 
 1. 下载对应版本并解压。
 2. 打开 `about:debugging#/runtime/this-firefox`。
 3. 点击“临时载入附加组件…”。
 4. 选择解压目录中的 `manifest.json`。
 
-临时载入的扩展会在浏览器关闭后失效。长期使用建议等待 Mozilla Add-ons 商店版本，或使用 Firefox 开发版 / ESR 并按照其签名策略安装。
+临时载入的扩展会在浏览器关闭后失效。长期使用请从 [Firefox 附加组件](https://addons.mozilla.org/zh-CN/firefox/addon/media-saber-tools/) 安装商店版本；Firefox 开发版 / ESR 请按对应浏览器的签名策略安装。
 
 ## 🧭 Safari
 
@@ -80,7 +84,7 @@ Safari 的安装流程与 Chrome、Edge 不同，普通用户建议优先选择�
 
 ## 🔄 升级
 
-- 商店安装：由商店自动更新。
+- 商店安装（Chrome、Edge、Firefox）：由商店自动更新。
 - `.zip` 手动安装：下载新包，覆盖原目录后点击“重新加载”。
 - `.crx` 手动安装：删除旧手动版本后重新加载；如果被拒绝则改用 `.zip`。
 - Firefox 临时载入：浏览器重启后需要重新载入。
