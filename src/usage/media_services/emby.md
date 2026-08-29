@@ -28,6 +28,23 @@ Emby是一个功能强大的媒体服务器软件，可以管理和播放存储�
 - 🔔 **代理通知**：开启后发送媒体代理相关通知（可选）
 - 🔀 **媒体路径映射**：把媒体服路径映射为 Media Saber 可访问路径；同步/巡检/代理共用（可选）
 - ☁️ **网盘挂载路径**：用于声明网盘挂载前缀，帮助代理正确识别并解析直链（可选）
+- ⚡ **Emby data 目录**：可选的 SQLite 直连同步目录，填写 Media Saber 容器内已只读挂载的 Emby `config/data` 路径
+
+### ⚡ Emby data 目录（SQLite 直连同步）
+
+这是可选的同步加速能力。配置后，Media Saber 会直接以**只读方式**读取 Emby 的媒体库数据，加快媒体库、季集和搜索同步；留空时仍使用 Emby HTTP 接口，功能不受影响。
+
+1. 将 Emby 的 `config/data` 目录只读挂载到 Media Saber 容器。例如 Emby 使用 `./emby/config:/config`，可在 Media Saber 服务中添加：
+
+   ```yaml
+   volumes:
+     - ./emby/config/data:/emby-data:ro
+   ```
+
+2. 在新增或编辑 Emby 媒体服务器时，将 **Emby data 目录** 填为容器内路径 `/emby-data`。
+3. 保持 `:ro` 只读挂载。Media Saber 不会写入 Emby 数据，避免与正在运行的 Emby 竞争数据库文件。
+
+> 只挂载 `config/data`，不要将整个媒体目录或 Emby 配置目录以读写方式提供给 Media Saber。
 
 ### 🌐 获取API密钥
 

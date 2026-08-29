@@ -185,6 +185,7 @@ services:
       - "${MS_PORT}:${MS_PORT}"
     volumes:
       - ${DOCKER_PATH}/msgo/common/hosts:/etc/hosts:rw
+      - ${DOCKER_PATH}/msgo/emby/config/data:/emby-data:ro  # 可选：Emby SQLite 直连同步
       - ${DOCKER_PATH}/msgo/ms/config:/app/config
       - ${DOCKER_PATH}/msgo/qb/config/qBittorrent/BT_backup:/BT_backup  # 挂载 qb 目录
       - ${MEDIA_PATH}:/media

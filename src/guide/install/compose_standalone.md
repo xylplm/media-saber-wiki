@@ -117,6 +117,7 @@ services:
     container_name: media-saber-go
     volumes:
       - /volume1/docker/media-saber/config:/app/config
+      - /volume1/docker/emby/config/data:/emby-data:ro  # 可选：Emby SQLite 直连同步
       - /volume2/Medium:/Medium  # 修改为实际媒体路径
     environment:
       - PUID=0

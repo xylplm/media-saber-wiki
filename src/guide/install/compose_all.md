@@ -133,6 +133,8 @@ services:
       MS_PATH_WATCH_TIME: 30
     volumes:
       - ./ms/config:/app/config
+      # 可选：为 Emby SQLite 直连同步提供只读 data 目录
+      - ./emby/config/data:/emby-data:ro
     ports:
       - "8888:8888"
 
