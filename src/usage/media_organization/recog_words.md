@@ -205,6 +205,10 @@ flowchart LR
 - **回滚**：只**改你本地**——把本地副本停留在某个旧版本，不影响云端。云端继续往前走。
 :::
 
+::: tip 💪 维护即修为
+为云识别词 **提交新版本** 可获得仙石奖励（计入修为境界成长）；订阅他人词组不计分。详见 [修为境界](/usage/user_level/)。
+:::
+
 ### 三种筛选器
 
 主列表搜索框旁边有三个筛选条件，可以叠加：
@@ -410,3 +414,4 @@ flowchart LR
 - 📂 [手动识别](/usage/media_organization/manual_identification.html)
 - 🗂️ [整理历史](/usage/media_organization/history.html)
 - 💾 [TMDB 缓存](/usage/media_organization/tmdb_cache.html)
+- 🏔️ [修为境界](/usage/user_level/)——提交新版本可赚取仙石

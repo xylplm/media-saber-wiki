@@ -27,6 +27,9 @@ date: 2023-09-27 12:16:17
 ### 📁 [云端文件](/usage/cloud_storage/home.html)
 浏览和管理云存储中的文件和文件夹，支持基本的文件操作。
 
+### ☁️ [云端资源](/usage/cloud_storage/resource.html)
+检索全体用户贡献的网盘资源库，转存 / 离线下载到自己的网盘，按境界单价计费。
+
 ### 🔄 [文件整理](/usage/cloud_storage/strm_transfer.html)
 将云存储中的文件整理到本地媒体库，支持多种整理方式。
 
