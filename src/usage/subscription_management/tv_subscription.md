@@ -165,9 +165,9 @@ date: 2025-01-01 12:16:17
 
 **选项：** 系统中已创建的过滤规则组列表
 
-**默认行为：** 不选择则使用系统默认过滤规则
+**默认行为：** 不选则按二级 / 一级分类自动匹配，未命中走默认设置的兜底规则
 
-**操作建议：** 可在 [过滤规则](/usage/system_settings/filter_rules.html) 页面创建专用规则组
+**操作建议：** 常追的类型（日番、国漫、国产剧、欧美剧等）可把规则组绑定到 [目录分类](/usage/directory_management/directory_classification.html)，之后新增订阅无需手动选择，详见 [过滤规则 - 分类自动匹配](/usage/system_settings/filter_rules.html)
 
 #### 排序规则
 **说明：** 指定搜索资源时使用的排序规则
