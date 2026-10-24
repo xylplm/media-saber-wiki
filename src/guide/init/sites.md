@@ -42,6 +42,8 @@ https://github.com/mantou568/pre-dessert-sites/archive/main.zip
 - 订阅配置会在容器/环境启动时自动读取
 - 配置文件更新后，需要重启容器/环境使其生效
 - 或点击 **拉取** 按钮快速重新加载配置（无需重启）
+- 拉取会从 GitHub 仓库下载配置文件，境外访问可能需要代理（系统设置 · 网络与代理）
+- 拉取使用 GitHub API，未配置 Token 时接口有限流，遇限流请在系统设置 · 基础配置中填写 GitHub Token
 :::
 
 :::danger 🔒 安全提醒
