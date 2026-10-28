@@ -146,10 +146,10 @@ MCP服务现在直接通过Media Saber后端服务提供，有两种连接方式
 
 **方式一：使用容器默认端口（推荐）**
 
-直接使用容器对外暴露的端口（如8888），加上 `/message` 路径即可：
+直接使用容器对外暴露的端口（如8888），加上 `/mcp/http` 路径即可：
 
 ```text
-http://IP:8888/message
+http://IP:8888/mcp/http
 ```
 
 **方式二：使用后端内部端口**
@@ -164,11 +164,15 @@ http://IP:8888/message
 映射后连接地址为：
 
 ```text
-http://IP:22698/message
+http://IP:22698/mcp/http
 ```
 
 ::: tip 💡 提示
 推荐使用方式一，无需额外映射端口，直接复用已有的服务端口即可。
+:::
+
+::: warning 📌 旧版本升级提示
+新版本已将 MCP 连接路径由 `/message` 调整为 `/mcp/http`。如果升级后原有 MCP 客户端连接失败，请把连接地址末尾的 `/message` 改为 `/mcp/http`。
 :::
 
 #### ⚙️ 客户端手动配置
@@ -176,7 +180,7 @@ http://IP:22698/message
 在可以使用的MCP客户端中添加服务：
 
 1. ➕ **选择手动添加**
-2. 📝 **填入连接地址**：如 `http://192.168.1.100:8888/message`
+2. 📝 **填入连接地址**：如 `http://192.168.1.100:8888/mcp/http`
 3. 🔧 **配置请求头**：
    - 字段名：`Authorization`
    - 字段值：`Bearer 您的API_KEY`
@@ -192,7 +196,7 @@ http://IP:22698/message
   "mcpServers": {
     "MediaSaber": {
       "transport": "streamable-http",
-      "url": "http://IP:端口/message",
+      "url": "http://IP:端口/mcp/http",
       "headers": {
         "Authorization": "Bearer 您的API_KEY"
       }
@@ -208,7 +212,7 @@ http://IP:22698/message
   "mcpServers": {
     "MediaSaber": {
       "transport": "streamable-http",
-      "url": "http://192.168.1.100:8888/message",
+      "url": "http://192.168.1.100:8888/mcp/http",
       "headers": {
         "Authorization": "Bearer sk-xxxx"
       }
@@ -227,7 +231,7 @@ Cherry Studio 用于导入的 JSON 结构与通用 MCP 配置略有不同（如�
     "MvZt2NGC-JQRWGi-4t6dT": {
       "name": "MediaSaber",
       "description": "",
-      "baseUrl": "http://IP:端口/message",
+      "baseUrl": "http://IP:端口/mcp/http",
       "command": "",
       "args": [],
       "env": {},
@@ -291,7 +295,7 @@ API KEY 需要在Media Saber系统中获取：
 **A：** 请检查以下配置：
 
 1. ✅ 确认已在 [基础设置](/usage/system_settings/basic_settings.html) 中配置了OpenAI API相关信息
-2. ✅ 确认MCP客户端连接地址正确（如 `http://IP:8888/message`）
+2. ✅ 确认MCP客户端连接地址正确（如 `http://IP:8888/mcp/http`）
 3. ✅ 确认MCP客户端中已正确配置Authorization请求头（格式为 `Bearer 您的API_KEY`）
 4. 🔄 如问题仍存在，可以尝试更换客户端或重新配置连接信息
 

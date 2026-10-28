@@ -25,20 +25,20 @@ tags:
 
 ```mermaid
 flowchart LR
-  MS[Media Saber<br/>/message] --> Gateway[MCP Proxy Gateway<br/>上游 MCP]
+  MS[Media Saber<br/>/mcp/http] --> Gateway[MCP Proxy Gateway<br/>上游 MCP]
   Gateway --> XiaoZhi[小智 MCP 接入点]
 ```
 
 Media Saber MCP 连接地址通常是：
 
 ```text
-http://你的MS地址:端口/message
+http://你的MS地址:端口/mcp/http
 ```
 
 示例：
 
 ```text
-http://192.168.1.100:8888/message
+http://192.168.1.100:8888/mcp/http
 ```
 
 认证请求头为：
@@ -75,7 +75,7 @@ Media Saber MCP 使用 `Authorization` 请求头，值需要写成 `Bearer sk-xx
 |---|---|
 | 名称 | `Media Saber` 或 `MS MCP` |
 | 传输方式 | `远程 HTTP` |
-| 服务地址 | `http://你的MS地址:端口/message` |
+| 服务地址 | `http://你的MS地址:端口/mcp/http` |
 | 认证方式 | `Bearer Token` |
 | 凭证 | Media Saber API KEY，例如 `sk-xxxx` |
 | 启用 | 开启 |
@@ -92,13 +92,13 @@ http://192.168.1.100:8888
 那么 MCP 服务地址就是：
 
 ```text
-http://192.168.1.100:8888/message
+http://192.168.1.100:8888/mcp/http
 ```
 
 如果你通过 HTTPS 反向代理访问 Media Saber，也可以使用：
 
 ```text
-https://你的域名/message
+https://你的域名/mcp/http
 ```
 
 :::
@@ -116,7 +116,7 @@ https://你的域名/message
 
 - Media Saber 地址是否可以从 MCP Proxy Gateway 容器访问。
 - API KEY 是否正确且仍处于启用状态。
-- 服务地址末尾是否带了 `/message`。
+- 服务地址末尾是否带了 `/mcp/http`。
 - 认证方式是否选择了 `Bearer Token`。
 
 ## 4. 推荐配置
@@ -137,9 +137,9 @@ https://你的域名/message
 
 ### 保存后同步失败
 
-- 检查 `http://你的MS地址:端口/message` 是否能被网关容器访问。
+- 检查 `http://你的MS地址:端口/mcp/http` 是否能被网关容器访问。
 - 如果网关和 MS 在不同 Docker 网络，优先使用 NAS IP + MS 端口。
-- 如果 MS 走 HTTPS 反向代理，确认反向代理允许访问 `/message`。
+- 如果 MS 走 HTTPS 反向代理，确认反向代理允许访问 `/mcp/http`。
 
 ### 返回认证失败
 

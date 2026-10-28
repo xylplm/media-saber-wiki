@@ -94,7 +94,7 @@ http://你的NAS地址:8088
 | 配置项 | 推荐值 |
 |---|---|
 | 传输方式 | 远程 HTTP |
-| 服务地址 | `http://你的MS地址:端口/message` |
+| 服务地址 | `http://你的MS地址:端口/mcp/http` |
 | 认证方式 | Bearer Token |
 | 凭证 | Media Saber API KEY |
 
