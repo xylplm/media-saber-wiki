@@ -37,6 +37,7 @@ Media Saber Tools 是面向 Media Saber 用户的浏览器扩展，提供站点�
 7. [网页增强](./web-enhancement.md)：使用网页按钮和右键菜单快速操作。
 8. [设置与权限](./settings.md)：配置自动同步、通知并了解权限用途。
 9. [常见问题](./faq.md)：按症状排查连接、Cookie、注入和下载问题。
+10. [Safari 扩展](./safari-extension.md)：iOS 版 App 内置的 Safari 扩展启用与账号同步。
 
 ## 🌐 浏览器兼容性
 
@@ -49,7 +50,7 @@ Media Saber Tools 是面向 Media Saber 用户的浏览器扩展，提供站点�
 | Arc / Yandex / Chromium | Chrome 安装包 | 使用 Chromium 扩展机制 |
 | 360 / QQ 等浏览器 | Chrome `.zip` | 不同版本扩展策略可能不同，建议先测试 |
 | Firefox | 官方商店 | 普通用户首选；手动安装包仅用于测试或特殊场景 |
-| Safari | Safari 包 | 需要通过 Xcode 封装 |
+| Safari | 内置于 iOS 版 App | 通过 iOS 版 App 启用，无需单独安装，见 [Safari 扩展](./safari-extension.md) |
 
 当前没有为每个 Chromium 浏览器重复制作内容相同的品牌包。遇到兼容性问题时，请记录浏览器名称和版本，并优先使用 Chrome `.zip` 包测试。
 

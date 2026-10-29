@@ -31,6 +31,7 @@ date: 2023-05-22T08:51:16.561Z
 ### 🌐 浏览器工具
 
 - [浏览器插件](/client/brower_tool/) - 支持 Chrome、Edge、Firefox 及其他 Chromium 浏览器扩展
+- [Safari 扩展](/client/brower_tool/safari-extension.md) - iOS 版 App 内置，iPhone / iPad 的 Safari 里直接使用
 
 ---
 
