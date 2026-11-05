@@ -124,6 +124,7 @@ date: 2023-09-27 12:16:17
 |------|------|
 | [追剧提醒](/usage/cultivation_secrets/binge_watch.html) | 订阅的电视剧更新时通知提醒 |
 | [短剧刮削](/usage/cultivation_secrets/short_play_monitor.html) | 监控短剧目录，自动刮削和整理 |
+| [strm 媒体信息探测](/usage/cultivation_secrets/strm_media_probe.html) | 探测 strm 网盘媒体真实流信息，供媒体代理播放注入 |
 | [媒体服务刷新](/usage/cultivation_secrets/media_server_refresh.html) | 定时刷新媒体服务器媒体库 |
 | [媒体服务清理](/usage/cultivation_secrets/media_server_clean.html) | 定时清理媒体服务中的大文件和无效内容 |
 | [媒体库报告](/usage/cultivation_secrets/media_library_report.html) | 定时推送新增入库、热门观看和播放概览 |
