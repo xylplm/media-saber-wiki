@@ -16,7 +16,7 @@ date: 2026-04-24 00:00:00
 
 # 🎯 MS 技能包
 
-> 💡 MS 技能包是一组专为 Media Saber 设计的 AI Agent 技能，安装后可直接在 OpenClaw 小龙虾、Hermes 爱马仕等客户端中通过自然语言完成影视订阅、漏集补齐、推荐与榜单浏览、云端资源查询、站点与下载管理、系统状态查询等操作。
+> 💡 MS 技能包是一组专为 Media Saber 设计的 AI Agent 技能，安装后可直接在 OpenClaw 小龙虾、Hermes 爱马仕等客户端中通过自然语言完成影视订阅与管理、追剧日历、漏集补齐、推荐与榜单浏览、云端资源与站点种子下载、站点与下载管理、系统体检与状态查询等操作。
 
 📦 技能包仓库：<https://github.com/fanxuankai/cli-anything-harnesses>
 
@@ -24,29 +24,34 @@ date: 2026-04-24 00:00:00
 
 ## 📋 技能包列表
 
-仓库 `skills/` 目录下目前共有 **12 个技能包**：
+仓库 `skills/` 目录下目前共有 **14 个技能包**：
 
 | 技能包 | 功能简介 | 依赖 CLI |
 |---|---|---|
-| `ms-sub` | 影视订阅 | `cli-anything-ms` |
-| `ms-gap-filler` | 漏集补齐 | `cli-anything-ms` |
+| `ms-sub` | 搜索影视、订阅影视、管理订阅、查季集和演员 | `cli-anything-ms` |
+| `ms-gap-filler` | 检查电视剧漏集，按后端决策补齐订阅 | `cli-anything-ms` |
+| `ms-calendar` | 追剧日历、全平台播出日历和 iCal 订阅地址 | `cli-anything-ms` |
 | `ms-recommend` | 影视推荐 | `cli-anything-ms` |
 | `ms-rank` | 影视榜单 | `cli-anything-ms` |
-| `ms-cloud-resource` | 云端资源查询与下载/转存 | `cli-anything-ms` |
+| `ms-cloud-resource` | 云端资源与站点种子查询、下载提交与任务跟踪 | `cli-anything-ms` |
 | `ms-cloud-resource-rank` | 云端资源贡献榜 | `cli-anything-ms` |
-| `ms-media-server` | 媒体服务器状态与同步 | `cli-anything-ms` |
+| `ms-media-server` | 媒体服务器状态、同步、媒体库与库内检索 | `cli-anything-ms` |
 | `ms-site-state` | 站点状态与统计 | `cli-anything-ms` |
 | `ms-site-signin` | 站点签到查询与执行 | `cli-anything-ms` |
 | `ms-download` | 下载器与下载任务管理 | `cli-anything-ms` |
+| `ms-status` | 系统总览、系统体检和版本更新 | `cli-anything-ms` |
 | `ms-nas-state` | NAS 系统状态（支持极空间、绿联、飞牛、PVE，支持多设备） | `cli-anything-ms` |
 | `cli-anything-cliproxyapi` | CLIProxyAPI 代理管理 | `cli-anything-cliproxyapi` |
 
 ::: tip 💡 前置依赖
-除 `cli-anything-cliproxyapi` 外，其余 11 个技能均依赖 `cli-anything-ms`，技能安装完成后需确保该 CLI 可用：
+除 `cli-anything-cliproxyapi` 外，其余 13 个技能均依赖 `cli-anything-ms`，技能安装完成后需确保该 CLI 可用：
 
 ```bash
 pip install cli-anything-ms
 ```
+
+::: warning ⚠️ 版本要求
+`cli-anything-ms` **0.12.0** 及以上的接口需要 Media Saber 后端为 **2026-11 及以后**的版本；旧版后端请搭配 `cli-anything-ms` 0.11.x 使用。升级后建议把已安装的技能也带 `--force` 重装一遍，保证技能描述与 CLI 行为一致。
 :::
 
 ---
@@ -72,6 +77,8 @@ npx skills add fanxuankai/cli-anything-harnesses --skill ms-site-state
 npx skills add fanxuankai/cli-anything-harnesses --skill ms-site-signin
 npx skills add fanxuankai/cli-anything-harnesses --skill ms-download
 npx skills add fanxuankai/cli-anything-harnesses --skill ms-nas-state
+npx skills add fanxuankai/cli-anything-harnesses --skill ms-calendar
+npx skills add fanxuankai/cli-anything-harnesses --skill ms-status
 npx skills add fanxuankai/cli-anything-harnesses --skill cli-anything-cliproxyapi
 ```
 
@@ -91,6 +98,8 @@ npx -y @openclaw/skills install fanxuankai/cli-anything-harnesses/skills/ms-site
 npx -y @openclaw/skills install fanxuankai/cli-anything-harnesses/skills/ms-site-signin --force
 npx -y @openclaw/skills install fanxuankai/cli-anything-harnesses/skills/ms-download --force
 npx -y @openclaw/skills install fanxuankai/cli-anything-harnesses/skills/ms-nas-state --force
+npx -y @openclaw/skills install fanxuankai/cli-anything-harnesses/skills/ms-calendar --force
+npx -y @openclaw/skills install fanxuankai/cli-anything-harnesses/skills/ms-status --force
 npx -y @openclaw/skills install fanxuankai/cli-anything-harnesses/skills/cli-anything-cliproxyapi --force
 ```
 
@@ -112,6 +121,8 @@ npx -y @openclaw/skills install fanxuankai/cli-anything-harnesses/skills/cli-any
 请安装技能 https://github.com/fanxuankai/cli-anything-harnesses/tree/main/skills/ms-site-signin
 请安装技能 https://github.com/fanxuankai/cli-anything-harnesses/tree/main/skills/ms-download
 请安装技能 https://github.com/fanxuankai/cli-anything-harnesses/tree/main/skills/ms-nas-state
+请安装技能 https://github.com/fanxuankai/cli-anything-harnesses/tree/main/skills/ms-calendar
+请安装技能 https://github.com/fanxuankai/cli-anything-harnesses/tree/main/skills/ms-status
 请安装技能 https://github.com/fanxuankai/cli-anything-harnesses/tree/main/skills/cli-anything-cliproxyapi
 ```
 
@@ -129,6 +140,8 @@ hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-site-state --f
 hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-site-signin --force
 hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-download --force
 hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-nas-state --force
+hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-calendar --force
+hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-status --force
 hermes skills install fanxuankai/cli-anything-harnesses/skills/cli-anything-cliproxyapi --force
 ```
 
@@ -144,15 +157,15 @@ hermes skills install fanxuankai/cli-anything-harnesses/skills/cli-anything-clip
 
 ### 📺 ms-sub · 搜索与影视订阅
 
-> 用 `cli-anything-ms` 搜索影视、订阅影视、查看订阅列表
+> 用 `cli-anything-ms` 搜索影视、订阅影视、管理已有订阅、查季集和演员信息
 
 **功能一：搜索影视**
 
 适用于「搜索电影流浪地球」「搜一下电视剧西游记」「先搜一下」等场景。
 
 - 每次搜索前先确认用户要找电影还是电视剧，不明确时先询问
-- 去掉外壳词，只保留用于 TMDB 搜索的标题部分
-- 只搜索 TMDB，不搜豆瓣
+- 去掉外壳词，只保留用于搜索的标题部分
+- 优先搜索 TMDB；TMDB 搜不到时（国产综艺、冷门动漫等），会提示可以全源聚合搜索再试一次，结果按来源分组展示
 - 精确匹配优先；多个候选时展示最多 3 个让用户确认；无结果时明确告知
 - 只搜索时，展示候选后停止，不自动进入订阅流程
 
@@ -160,26 +173,32 @@ hermes skills install fanxuankai/cli-anything-harnesses/skills/cli-anything-clip
 
 适用于「订阅电影流浪地球」「订阅电视剧西游记第二季」「检查复仇者联盟有没有订阅，没有就订阅」等场景。
 
-- 订阅流程必须建立在 TMDB 搜索结果之上，不跳过搜索直接订阅
+- 订阅流程必须建立在搜索结果之上，不跳过搜索直接订阅
+- 订阅时会把搜索结果里的 TMDB 编号一并透传，后端识别更准
 - 订阅前同时检查是否已订阅和是否已入库：
   - 已订阅 → 回复 `ℹ️ 已订阅`
   - 未订阅但已入库 → 默认不再新增订阅，明确告知用户
   - 既没订阅也没入库 → 执行新增订阅，成功后回复 `✅ 订阅成功`
 - 电视剧未指定季数时，默认订阅第 1 季
-- 使用 TMDB 返回的规范标题和年份，不使用用户输入的原始文字
+- 筛选器、下载器、保存目录等细节配置由后端订阅默认设置自动兜底，无需逐项确认
+- 使用搜索返回的规范标题和年份，不使用用户输入的原始文字
 
-**功能三：查看订阅**
+**功能三：查看与管理订阅**
 
-适用于「看看电影订阅」「查看电视剧订阅」「电视剧订阅前 20 个」等场景。
+- 「看看电影订阅」「电视剧订阅前 20 个」：直接查询订阅列表，支持分页，用自然中文说明名称、年份、类型、季数和状态
+- 「暂停这个订阅」「恢复订阅」「删掉这个订阅」「刷新这个订阅」「刷新全部电视剧订阅」：管理已有订阅的生命周期
+  - 删除是不可逆操作，执行前必须复述目标订阅名称让用户确认
+  - 暂停会停止自动与手动触发；恢复会立即补搜一次
 
-- 直接查询订阅列表，不先做 TMDB 搜索
-- 支持分页：默认第 1 页、每页 20 条；用户说「前 N 个」取 N 个，说「第 N 页」取对应页
-- 输出用自然中文说明名称、年份、类型、季数、状态和 TMDB 信息
+**功能四：查季集与演员**
+
+- 「XX 第二季一共多少集」「更新到哪了」：查询指定季的集数信息，汇总总集数、播出日期和已入库情况
+- 「XX 还演过什么」：查询演员详情介绍（需要演员编号，可从影片详情获取）
 
 ::: tip 💡 说明
-- TMDB 是唯一搜索源，不搜豆瓣
 - 一句话包含多个搜索、查看订阅或订阅意图时，逐个处理并逐条返回结果
 - 订阅前不仅看是否已订阅，还要考虑是否已入库
+- 不做批量编辑、批量对齐默认配置、重新订阅这类管理操作
 :::
 
 **效果演示：**
@@ -222,17 +241,22 @@ hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-sub --force
 
 ### 🔍 ms-gap-filler · 漏集补齐
 
-> 查电视剧漏集、确认补订阅，并按剧逐季转成 Media Saber 订阅
+> 查电视剧漏集，并按后端给出的决策把缺集并入订阅或新建订阅
 
 **工作流程：**
 
-1. **检查漏集** — 无论说「查漏集」还是「补漏集」，都先调用 `media-server miss-episodes-check` 获取完整漏集列表，按原始顺序处理
-2. **汇总展示** — 按剧为单位给出摘要（标题、年份、漏集季数、缺少哪些集），不直接倾倒 JSON；查完后追问用户是否要补漏集
+1. **检查漏集** — 无论说「查漏集」还是「补漏集」，都先通过媒体健康接口查询漏集问题（`media-health page --type missing`），按原始顺序处理
+2. **汇总展示** — 按剧为单位给出摘要（标题、年份、缺哪一季、缺哪些集），不直接倾倒 JSON；查完后追问用户是否要补漏集
 3. **确认补齐范围** — 支持两种方式：
    - 指定某一部剧名（按标题近似匹配）
    - 补前 N 个（默认前 3 个，最多 10 个，按原始顺序计数）
-4. **执行补订阅** — 直接使用漏集结果里的 `title`、`year`、`season`，不做 TMDB 搜索；每个漏集季执行一次 `subscribe add`
-5. **返回结果** — 执行前告知将补哪些剧哪些季，执行后逐条返回并给出成功/失败汇总
+4. **预览决策再执行** — 每部剧先预览后端决策并用人话告知，再执行补订阅：
+   - `create` → 还没有订阅，将新建订阅
+   - `merge` → 已有订阅，把缺失的集并入现有订阅
+   - `research` → 已有订阅，重新触发搜索
+   - `noop` → 无需处理，跳过
+   - 同一部剧只执行一次，不再逐季拆分
+5. **返回结果** — 执行前告知将补哪些剧、各自会怎么做，执行后逐条返回并给出成功/失败汇总
 
 **触发场景举例：**
 - 查漏集
@@ -241,9 +265,9 @@ hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-sub --force
 - 补猎罪图鉴
 
 ::: tip 💡 说明
-- 此技能只处理电视剧，不处理电影
+- 此技能只处理电视剧漏集，不处理电影，也不处理未匹配、可升级、缺字幕等其他健康问题
 - 漏集结果为空时直接告知「无漏集」，不继续执行
-- 同一部剧有多个漏集季时，默认全部补，不逐季二次确认
+- 支持忽略单个漏集问题（「别再提醒这部剧」）和恢复已忽略的问题
 - 单条失败不中断后续，最终给出完整汇总
 :::
 
@@ -279,6 +303,62 @@ openclaw skills install fanxuankai/cli-anything-harnesses/skills/ms-gap-filler
 
 ```bash
 hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-gap-filler --force
+```
+
+:::
+
+---
+
+### 📅 ms-calendar · 追剧日历
+
+> 查看订阅日历的按天更新安排、全平台播出日历，或获取加到手机日历 App 的 iCal 订阅地址
+
+**工作流程：**
+
+1. **订阅日历** — 「今天有什么更新」「本周追剧日历」「XX 什么时候更新」时查询订阅日历，默认未来 7 天，按天分组展示剧名、季集和具体时间；支持 `--days` 调整范围、从指定日期开始、只看某部剧
+2. **全平台播出日历** — 「最近有什么在播」「这周有什么新剧」时走平台播出日历：先查媒体类型，再查平台，然后看一段时间内每天的播出数量；对某天感兴趣时再看当天播出明细
+3. **iCal 订阅地址** — 「把追剧日历加到手机日历」时获取完整订阅地址，并说明一步添加方法；地址包含访问凭据，会提醒不要公开分享
+
+**触发场景举例：**
+- 今天有什么更新
+- 本周追剧日历
+- 最近有什么在播
+- 把追剧日历加到手机日历
+- 给我日历订阅地址
+
+::: tip 💡 说明
+- 此技能只查日历，不新增订阅、不刷新订阅；想订阅某部剧交给 `ms-sub`
+- 获取订阅地址需要已配置外部访问域名和 API Key，缺失时会给出一句话指引
+:::
+
+**安装：**
+
+::: tabs
+
+@tab npx
+
+```bash
+npx -y @openclaw/skills install fanxuankai/cli-anything-harnesses/skills/ms-calendar --force
+```
+
+@tab OpenClaw 小龙虾
+
+在 OpenClaw 对话框中粘贴 GitHub 链接：
+
+```text
+请安装技能 https://github.com/fanxuankai/cli-anything-harnesses/tree/main/skills/ms-calendar
+```
+
+或使用命令行：
+
+```bash
+openclaw skills install fanxuankai/cli-anything-harnesses/skills/ms-calendar
+```
+
+@tab Hermes 爱马仕
+
+```bash
+hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-calendar --force
 ```
 
 :::
