@@ -493,29 +493,34 @@ hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-rank --force
 
 ---
 
-### ☁️ ms-cloud-resource · 云端资源查询与下载
+### ☁️ ms-cloud-resource · 云端资源与站点种子
 
-> 用 `cli-anything-ms` 查询云端资源，并可继续发起下载或转存
+> 用 `cli-anything-ms` 查询云端资源和站点种子，并可继续发起下载、转存和跟踪任务进度
 
 **工作流程：**
 
-1. **解析查询意图** — 识别关键词、TMDB ID、页码、贡献者 ID、季/集等筛选条件
-2. **查询云端资源** — 支持关键词搜索和 TMDB ID 搜索；TMDB 搜索时需明确电影或电视剧类型
+1. **解析查询意图** — 识别关键词、TMDB ID、页码、贡献者 ID、季/集等筛选条件；支持「按体积排序」「看最新发布」
+2. **查询资源** — 支持关键词搜索和 TMDB ID 搜索；TMDB 搜索时需明确电影或电视剧类型；结果同时包含网盘资源和站点种子
 3. **展示结果** — 最多展示 5 条，说明标题、大小、网盘、贡献者、TMDB、链接类型、是否可下载
-4. **确认执行动作** — 只有用户明确说「下载」「转存」时才提交，基于本轮搜索结果中的 `download_request` 执行
-5. **结果回报** — 下载命令只表示任务已提交，不代表已完成
+4. **确认执行动作** — 只有用户明确说「下载」「转存」时才提交，基于本轮搜索结果中的 `download_request` 执行：
+   - 网盘资源（云分享/云下载）提交转存或离线下载任务
+   - 站点种子（PT/磁力）直接提交到下载器
+5. **任务跟踪** — 「下载好了吗」「转存完成没」时按资源类型查进度：网盘资源查云存储任务（状态、进度百分比、失败原因），站点种子查下载任务
 
 **触发场景举例：**
 - 查庆余年云端资源
 - 搜网盘资源
 - 下载第 1 个云端资源
 - 转存这个资源
+- 帮我下这个种子
 - 找 TMDB 95842 第 1 季第 46 集
 - 看贡献者 931 的资源
 
 ::: tip 💡 说明
 - 不手写 `download_request`，只使用搜索结果里已有的字段
+- 资源不支持的使用方式会被前置拦截（如网盘资源标注的能力不符）
 - 不自动批量下载全部结果，除非用户明确要求
+- 只查任务进度，不重试、不取消、不清空任务
 - 不删除、不移动、不重命名云端文件
 :::
 
@@ -606,18 +611,20 @@ hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-cloud-resource
 
 ### 🗂️ ms-media-server · 媒体服务器状态与同步
 
-> 用 `cli-anything-ms` 查看媒体服务器状态、同步信息、媒体库和播放数据
+> 用 `cli-anything-ms` 查看媒体服务器状态、同步信息、媒体库、播放数据，并支持库内实时检索
 
 **工作流程：**
 
 1. **默认查询** — 用户说「媒体服务器」「同步信息」时，列出服务器名称、类型、是否开启、电影数、电视剧数、同步耗时等
 2. **服务器选择** — 用户给了名称按名称匹配；有多个候选时让用户确认；未指定时先列出让用户选择
 3. **常用查询** — 支持媒体库列表、同步统计、同步明细（含漏集筛选）、正在播放、最近添加、继续观看
-4. **立即同步** — 只有用户明确说「同步」「立即同步」「刷新媒体库」时才执行，执行后只说明任务已发起
+4. **库内检索** — 「库里有没有 XX」「我库里的电影/剧」「帮我在 Emby 里搜 XX」时在媒体服务器实时库中检索，直接回答有没有并列出匹配条目；想看某片时会把媒体服务器的播放页链接直接给出
+5. **立即同步** — 只有用户明确说「同步」「立即同步」「刷新媒体库」时才执行，执行后只说明任务已发起
 
 **触发场景举例：**
 - 媒体服务器状态
 - 媒体服务同步信息
+- 库里有没有流浪地球
 - 媒体库列表
 - 同步历史
 - 正在播放 / 最近添加 / 继续观看
@@ -671,7 +678,8 @@ hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-media-server -
 1. **默认查询** — 用户说「站点状态」「站点统计」时，先查总体上传量、下载量、做种数量、做种体积和魔力值，再列出重点站点状态
 2. **站点列表** — 支持按启用状态、类型（统计/签到/搜索）、站点名称筛选
 3. **单站查询** — 用户指定站点名称时，查询该站最新数据；多个候选时让用户确认
-4. **展示规则** — 最多展示前 10 个站点，重点说明站点名、是否登录、签到状态、分享率、上传/下载量、魔力值、做种数据
+4. **手动刷新** — 用户觉得数据旧并明确要求「刷新站点数据」时发起刷新任务，提交后建议稍后重查；这是本技能唯一的写操作
+5. **展示规则** — 最多展示前 10 个站点，重点说明站点名、是否登录、签到状态、分享率、上传/下载量、魔力值、做种数据
 
 **触发场景举例：**
 - 站点状态
@@ -681,7 +689,7 @@ hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-media-server -
 - 今天站点数据
 
 ::: tip 💡 说明
-- 此技能只读，不签到、不同步站点数据、不修改站点配置
+- 此技能默认只读，不签到、不修改站点配置；仅「刷新站点数据」这一个显式写操作
 - 有未登录站点时会明确点名
 :::
 
@@ -725,7 +733,7 @@ hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-site-state --f
 
 **工作流程：**
 
-1. **查看签到记录** — 用户问「签到记录」「哪些站签到失败」时查询签到历史，优先点名失败、未登录或异常站点
+1. **查看签到记录** — 用户问「签到记录」「哪些站签到失败」时查询签到历史（支持只看失败记录），优先点名失败、未登录或异常站点
 2. **执行签到** — 只有用户明确说「签到」「执行签到」「给某站签到」时才执行；指定站点签到前先确认目标 ID
 3. **全部签到** — 用户明确要求全部已开启签到的站点签到时执行，执行后建议查看签到记录确认结果
 
@@ -919,6 +927,61 @@ hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-nas-state --fo
 
 ---
 
+### 🩺 ms-status · 系统总览与体检
+
+> 一句话总览 ms 系统运行情况、查看系统体检结果和版本更新状态
+
+**工作流程：**
+
+1. **一句话总览** — 「系统状态」「家里服务怎么样」「今天概况」时查看工作台聚合概览，像正常汇报一样总结站点、系统、媒体库、播放四个方面的关键数字，异常或为零的项点名
+2. **系统体检** — 「体检怎么样」「有没有什么问题」时先看低成本的即时概览（资源占用、任务队列）；数值明显偏高会显式提示；追问明细时再看完整体检报告，只点名非正常检查项并转述结论和建议
+3. **版本状态** — 「有没有新版本」时查询版本更新状态，有更新时告知最新版本号，只提示不引导升级
+
+**触发场景举例：**
+- 系统状态
+- 家里服务怎么样
+- 体检有没有问题
+- 有没有新版本
+
+::: tip 💡 说明
+- 硬件细节（磁盘温度、风扇、UPS）问的是 NAS 本身，交给 `ms-nas-state`；这个技能只管 ms 服务侧
+- 不做任何变更操作（不重测体检项、不忽略问题、不升级系统）
+:::
+
+**安装：**
+
+::: tabs
+
+@tab npx
+
+```bash
+npx -y @openclaw/skills install fanxuankai/cli-anything-harnesses/skills/ms-status --force
+```
+
+@tab OpenClaw 小龙虾
+
+在 OpenClaw 对话框中粘贴 GitHub 链接：
+
+```text
+请安装技能 https://github.com/fanxuankai/cli-anything-harnesses/tree/main/skills/ms-status
+```
+
+或使用命令行：
+
+```bash
+openclaw skills install fanxuankai/cli-anything-harnesses/skills/ms-status
+```
+
+@tab Hermes 爱马仕
+
+```bash
+hermes skills install fanxuankai/cli-anything-harnesses/skills/ms-status --force
+```
+
+:::
+
+---
+
 ### 🔧 cli-anything-cliproxyapi · CLIProxyAPI 代理管理
 
 > 通过 Management API 管理 CLIProxyAPI 代理服务器的完整 CLI 工具
@@ -1093,7 +1156,7 @@ pip install cli-anything-ms --user
 **Q：执行订阅时提示「还没有安装秘籍」或「插件未启用」？**
 
 **A：** 这是 Media Saber 后端返回的错误，说明对应插件未安装或未启用：
-- `ms-sub` / `ms-gap-filler` / `ms-recommend` / `ms-rank` / `ms-cloud-resource` / `ms-cloud-resource-rank` / `ms-media-server` / `ms-site-state` / `ms-site-signin` / `ms-download`：确认 Media Saber 已正常运行，且 `cli-anything-ms` 配置的连接地址和 API Key 正确
+- `ms-sub` / `ms-gap-filler` / `ms-calendar` / `ms-recommend` / `ms-rank` / `ms-cloud-resource` / `ms-cloud-resource-rank` / `ms-media-server` / `ms-site-state` / `ms-site-signin` / `ms-download` / `ms-status`：确认 Media Saber 已正常运行，且 `cli-anything-ms` 配置的连接地址和 API Key 正确
 - `ms-nas-state`：需要在 Media Saber 修仙秘籍中安装对应设备的服务助手（极空间/绿联/飞牛/PVE）
 
 ---
