@@ -164,11 +164,11 @@ Media Saber 未内置任何站点支持！**在添加站点前必须先配置站
 
 #### 猪猪
 
-猪猪已适配官方 API（api.piggo.me），**无需 Cookie**，通过 API Key 认证。
+猪猪已适配官方 API（api.piggo.me），**无需 Cookie**，通过存取令牌认证。
 
 **步骤：**
-1. 登录猪猪站点，在控制台的 API 管理页面生成 API Key（入口以站点实际为准）
-2. 在站点维护中添加请求头：`X-API-Key:YOUR_TOKEN`
+1. 登录猪猪站点，进入「二师兄个人中心」→「安全」→ 输入密码 → 创建存取令牌
+2. 在站点维护中添加请求头：`Authorization:Bearer YOUR_TOKEN`
 3. Cookie 字段可留空，搜索、数据统计均走 API 接口
 
 #### 好大
