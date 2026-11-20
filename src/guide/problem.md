@@ -437,6 +437,25 @@ docker exec -i media-saber psql -U postgres -d media_saber < media-saber-db-back
 
 ---
 
+### PostgreSQL 日志频繁出现 collation version mismatch 警告？
+
+日志中反复出现 `collation version mismatch` / `collation "..." has version mismatch` 类警告，是 PostgreSQL 底座镜像升级（glibc 版本变化）后产生的登记不一致，**不是程序故障**，数据可以正常读写。
+
+消除警告（可选）：
+
+```bash
+# 让数据库重新登记当前 glibc 的 collation 版本，警告即消失
+docker exec -it <postgres容器名> psql -U postgres -d ms -c "ALTER DATABASE ms REFRESH COLLATION VERSION;"
+```
+
+如需彻底求稳（旧 glibc 下生成的文本索引排序与新版本可能存在细微差异），可再重建一次全库索引，几十 MB 级别的库通常几秒完成：
+
+```bash
+docker exec -it <postgres容器名> psql -U postgres -d ms -c "REINDEX DATABASE ms;"
+```
+
+---
+
 ## 📥 下载相关
 
 ### 下载后文件无法正常移动/整理？
