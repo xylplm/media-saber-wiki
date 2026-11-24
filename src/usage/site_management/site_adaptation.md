@@ -636,11 +636,42 @@ value 支持 string、number、bool 类型
         - list
         - fields
         - field
+- login_assist: 登录辅助（可选块，供浏览器扩展在站点登录页自动识别/填充验证码与两步验证码；不配置则消费方走内置默认规则）
+    - login_paths: 登录/两步验证步骤页的 URL 路径子串列表（用于注入判定；不要写 takelogin.php 等 POST 落地页）
+    - captcha: 图片验证码（图片与输入框选择器必须成对配置，只配一侧无效）
+        - image_selectors: 验证码图片选择器
+        - input_selectors: 验证码输入框选择器
+    - two_factor: 两步验证
+        - input_selectors: 常规单输入框选择器（先尝试）
+        - segmented: 分离式输入配置（可选，单框未命中时逐位填充）
+            - container_selector: 输入容器选择器
+            - digit_selector: 分位显示元素选择器
+            - hidden_input_selector: 承载真实值的隐藏输入框选择器
+
+#### login_assist 继承与约束
+
+- 站点配置了 `login_assist` 时，`captcha` / `two_factor` **子块整体覆盖** `commons/NexusPHP.json` 的对应默认（不与默认数组合并）；未配置的子块继承 commons 默认
+- 选择器为标准 CSS selector（`querySelector` 语义），每子项建议 ≤4 条，首条放最精确的
+- 本配置仅含页面结构选择器，**严禁包含任何用户数据**（密钥、Cookie、账号等）
+- 消费链路需后端与浏览器扩展均为支持 `login_assist` 的版本；旧版本组合自动降级为内置默认规则（行为等同未配置）
+
+#### login_assist 配置示例（star_space）
+
+```json
+"login_assist": {
+    "login_paths": ["/p_login/login.php"],
+    "captcha": {
+        "image_selectors": ["img[alt='CAPTCHA']", "img[src*='login_image.php']"],
+        "input_selectors": ["input[name='txt_code']"]
+    }
+}
+```
 
 ### 站点公共配置 JSON 说明：
 
 - id: 架构
 - requests: 同上
+- login_assist: 该架构的登录辅助默认（NexusPHP 已内置标准登录页/验证码/两步验证选择器，站点按需覆盖）
 
 ## 注意事项
 
