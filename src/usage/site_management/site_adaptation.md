@@ -683,6 +683,21 @@ value 支持 string、number、bool 类型
 
 - 重写了接口，如果不需要分页，请禁用 list 的继承，headers 视情况禁用
 
+### 验证码自动填充适配提示
+
+浏览器扩展的验证码自动识别会按以下顺序尝试定位验证码**输入框**（命中任意一个即可自动填充）：
+
+```text
+#imagestring
+input[name="imagestring"]
+.captcha-input
+input[placeholder*="验证码"]
+input[name*="code"]
+input[name*="Code"]
+```
+
+适配含图形验证码的站点（如 NexusPHP 的 `takelogin.php` / recover 页面）时，**登录 / 重置表单里的验证码输入框尽量使用以上命名**（NexusPHP 默认的 `imagestring` 天然支持），即可让扩展的验证码自动识别直接生效，无需额外配置。
+
 ## 常见问题
 
 - css selector 要注意，使用 > 时必须保证为直接下级，否则会失败。应该有很多地方需要修改。例如：table.torrentname >
