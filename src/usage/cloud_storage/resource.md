@@ -77,7 +77,7 @@ date: 2026-09-22 12:00:00
 
 ## 🔬 媒体信息（规格徽章与详情）
 
-上报本地文件时会自动用 ffprobe 探测并归一媒体信息（采集细节见 [云存储 HASH 上报](/usage/cultivation_secrets/cs_hash_reporter.html)）：
+上报本地文件时会自动用 ffprobe 探测并归一媒体信息：
 
 - 列表中的 **规格徽章**（2160p / 1080p / …）与 HDR 标识展示 **生效值**（人工标注优先，未标注时为探测结果）
 - 资源详情弹窗展示探测到的媒体信息：容器、时长、总码率，以及音轨 / 字幕语言明细
@@ -146,5 +146,4 @@ date: 2026-09-22 12:00:00
 ## 🔗 相关文档
 
 - 🏔️ [修为境界](/usage/user_level/)——仙石怎么赚、使用怎么计费
-- 📤 [云存储 HASH 上报](/usage/cultivation_secrets/cs_hash_reporter.html)——把你的资源贡献进云端资源库
 - 📁 [云端文件](/usage/cloud_storage/home.html)——转存完成后管理你网盘里的文件

@@ -154,8 +154,6 @@ date: 2023-09-27 12:16:17
 |------|------|
 | [云存储增量整理](/usage/cultivation_secrets/cloud_storage_watcher.html) | 定时扫描目录，整理增量文件 |
 | [115 生活事件](/usage/cultivation_secrets/open115_life_event.html) | 拉取 115 操作事件，自动整理和生成 Strm |
-| [云存储 HASH 上报](/usage/cultivation_secrets/cs_hash_reporter.html) | 扫描本地目录，上报文件 HASH 到云端 |
-| [ED2K HASH 上报](/usage/cultivation_secrets/ed2k_hash_reporter.html) | 从 ED2K 链接提取 HASH 上报 |
 | [CloudDrive2 配置](/usage/cultivation_secrets/cloud_drive2_config.html) | 配置 CD2 API 用于缓存刷新 |
 | [云备份](/usage/cultivation_secrets/cloud_backup.html) | 定时同步本地文件至云存储，支持加解密 |
 | [CPA 监控](/usage/cultivation_secrets/cpa_monitor.html) | 巡检 CPA 认证文件，自动处理异常账号 |

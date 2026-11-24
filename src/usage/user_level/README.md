@@ -116,7 +116,6 @@ date: 2026-11-11 10:00:00
 
 - 🗺️ [出发历练](/usage/user_level/expedition.html)——秘境探险与劫匪对决玩法
 - ☁️ [云端资源](/usage/cloud_storage/resource.html)——检索与使用云端资源库（使用时按境界扣费）
-- 📤 [云存储 HASH 上报](/usage/cultivation_secrets/cs_hash_reporter.html)——赚取云端贡献的途径
 - 🔤 [识别词](/usage/media_organization/recog_words.html)——参与云识别词维护
 - 🏅 [首页 · Hash 贡献榜](/usage/main_page.html)——工作台榜单与境界条
 
