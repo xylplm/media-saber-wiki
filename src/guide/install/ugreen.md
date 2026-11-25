@@ -69,7 +69,6 @@ services:
       - MS_PGSQL_DBNAME=media_saber
       - MS_AUTH_EMAIL=your-email@example.com         # 修改为你的邮箱
       - MS_AUTH_SLOGAN=YourAuthSlogan                # 修改为你的认证口令
-      - MS_SITE_CONFIG_DIR=/app/config/site_configs
       - MS_LOG_MODE=file
       - MS_LOG_LEVEL=info
       - MS_PGSQL_LOG_MODE=prod

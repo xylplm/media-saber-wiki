@@ -65,7 +65,6 @@ services:
       - MS_PORT=8888                   # Web UI 端口
       - MS_AUTH_EMAIL=your-email@example.com  # 修改为你的邮箱
       - MS_AUTH_SLOGAN=YourAuthSlogan  # 修改为你的认证口令
-      - MS_SITE_CONFIG_DIR=/app/config/site_configs
       - MS_LOG_LEVEL=info
       - MS_REDIS_HOST=redis:6379
       - MS_REDIS_PASS=your-redis-password     # 修改为你的 Redis 密码
